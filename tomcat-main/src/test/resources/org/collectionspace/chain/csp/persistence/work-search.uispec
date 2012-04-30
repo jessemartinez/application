@@ -1,0 +1,330 @@
+{
+    ".csc-work-publisher-label": {
+        "messagekey": "work-publisherLabel"
+    },
+    ".csc-work-creatorGroup": {
+        "decorators": [
+            {
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-work-creator": {
+                                    "decorators": [
+                                        {
+                                            "func": "cspace.autocomplete",
+                                            "type": "fluid",
+                                            "options": {
+                                                "queryUrl": "../../../tenant/core/vocabularies/work/autocomplete/creator",
+                                                "vocabUrl": "../../../tenant/core/vocabularies/work/source-vocab/creator"
+                                            }
+                                        }
+                                    ],
+                                    "value": "${{row}.creator}"
+                                }
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "creatorGroup",
+                    "hidePrimary": true
+                }
+            }
+        ]
+    },
+    ".csc-work-creatorType-label": {
+        "messagekey": "work-creatorTypeLabel"
+    },
+    ".csc-work-useFor-label": {
+        "messagekey": "work-useForLabel"
+    },
+    ".csc-work-useFor": {
+        "decorators": [
+            {
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-work-useFor": {
+                                    "decorators": [
+                                        {
+                                            "func": "cspace.autocomplete",
+                                            "type": "fluid",
+                                            "options": {
+                                                "queryUrl": "../../../tenant/core/vocabularies/work/autocomplete/useFor",
+                                                "vocabUrl": "../../../tenant/core/vocabularies/work/source-vocab/useFor"
+                                            }
+                                        }
+                                    ],
+                                    "value": "${{row}.useFor}"
+                                }
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "useFors",
+                    "hidePrimary": true
+                }
+            }
+        ]
+    },
+    ".csc-work-creator-label": {
+        "messagekey": "work-creatorLabel"
+    },
+    ".csc-work-workDateGroup-label": {
+        "messagekey": "work-workDateGroupLabel"
+    },
+    ".csc-work-updatedAtStart-label": {
+        "messagekey": "work-updatedAtStartLabel"
+    },
+    ".csc-work-updatedBy-label": {
+        "messagekey": "work-updatedByLabel"
+    },
+    ".csc-work-updatedAtStart": {
+        "decorators": [
+            {
+                "func": "cspace.datePicker",
+                "type": "fluid"
+            }
+        ],
+        "value": "${updatedAtStart}"
+    },
+    ".csc-work-updatedAtEnd-label": {
+        "messagekey": "work-updatedAtEndLabel"
+    },
+    ".csc-work-displayName": {
+        "decorators": [
+            {
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-work-displayName": "${{row}.displayName}"
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "displayNames",
+                    "hidePrimary": true
+                }
+            }
+        ]
+    },
+    ".csc-work-updatedAt-label": {
+        "messagekey": "work-updatedAtLabel"
+    },
+    ".csc-work-updatedAtEnd": {
+        "decorators": [
+            {
+                "func": "cspace.datePicker",
+                "type": "fluid"
+            }
+        ],
+        "value": "${updatedAtEnd}"
+    },
+    ".csc-work-createdBy-label": {
+        "messagekey": "work-createdByLabel"
+    },
+    ".csc-work-workDateGroupStart": {
+        "decorators": [
+            {
+                "func": "",
+                "type": "fluid",
+                "options": {
+                    "elPath": "fields.work-workDateGroupStart",
+                    "elPaths": {
+                        "dateEarliestSingleQualifier": "fields.workDateGroupStart.dateEarliestSingleQualifier",
+                        "dateLatestDay": "fields.workDateGroupStart.dateLatestDay",
+                        "dateLatestYear": "fields.workDateGroupStart.dateLatestYear",
+                        "dateAssociation": "fields.workDateGroupStart.dateAssociation",
+                        "dateEarliestSingleEra": "fields.workDateGroupStart.dateEarliestSingleEra",
+                        "dateDisplayDate": "fields.workDateGroupStart.dateDisplayDate",
+                        "dateEarliestSingleCertainty": "fields.workDateGroupStart.dateEarliestSingleCertainty",
+                        "dateLatestEra": "fields.workDateGroupStart.dateLatestEra",
+                        "dateEarliestSingleQualifierValue": "fields.workDateGroupStart.dateEarliestSingleQualifierValue",
+                        "dateLatestCertainty": "fields.workDateGroupStart.dateLatestCertainty",
+                        "dateEarliestSingleYear": "fields.workDateGroupStart.dateEarliestSingleYear",
+                        "dateLatestQualifier": "fields.workDateGroupStart.dateLatestQualifier",
+                        "dateLatestQualifierValue": "fields.workDateGroupStart.dateLatestQualifierValue",
+                        "dateEarliestSingleQualifierUnit": "fields.workDateGroupStart.dateEarliestSingleQualifierUnit",
+                        "datePeriod": "fields.workDateGroupStart.datePeriod",
+                        "dateEarliestScalarValue": "fields.workDateGroupStart.dateEarliestScalarValue",
+                        "dateLatestMonth": "fields.workDateGroupStart.dateLatestMonth",
+                        "dateNote": "fields.workDateGroupStart.dateNote",
+                        "dateLatestScalarValue": "fields.workDateGroupStart.dateLatestScalarValue",
+                        "dateLatestQualifierUnit": "fields.workDateGroupStart.dateLatestQualifierUnit",
+                        "dateEarliestSingleDay": "fields.workDateGroupStart.dateEarliestSingleDay",
+                        "dateEarliestSingleMonth": "fields.workDateGroupStart.dateEarliestSingleMonth"
+                    }
+                }
+            }
+        ],
+        "value": "${fields.work-workDateGroupStart}"
+    },
+    ".csc-work-displayName-label": {
+        "messagekey": "work-displayNameLabel"
+    },
+    ".csc-work-createdBy": {
+        "decorators": [
+            {
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-work-createdBy": "${{row}.createdBy}"
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "createdBys",
+                    "hidePrimary": true
+                }
+            }
+        ]
+    },
+    ".csc-work-publisherType-label": {
+        "messagekey": "work-publisherTypeLabel"
+    },
+    ".csc-work-workDateGroupEnd": {
+        "decorators": [
+            {
+                "func": "",
+                "type": "fluid",
+                "options": {
+                    "elPath": "fields.work-workDateGroupEnd",
+                    "elPaths": {
+                        "dateEarliestSingleQualifier": "fields.workDateGroupEnd.dateEarliestSingleQualifier",
+                        "dateLatestDay": "fields.workDateGroupEnd.dateLatestDay",
+                        "dateLatestYear": "fields.workDateGroupEnd.dateLatestYear",
+                        "dateAssociation": "fields.workDateGroupEnd.dateAssociation",
+                        "dateEarliestSingleEra": "fields.workDateGroupEnd.dateEarliestSingleEra",
+                        "dateDisplayDate": "fields.workDateGroupEnd.dateDisplayDate",
+                        "dateEarliestSingleCertainty": "fields.workDateGroupEnd.dateEarliestSingleCertainty",
+                        "dateLatestEra": "fields.workDateGroupEnd.dateLatestEra",
+                        "dateEarliestSingleQualifierValue": "fields.workDateGroupEnd.dateEarliestSingleQualifierValue",
+                        "dateLatestCertainty": "fields.workDateGroupEnd.dateLatestCertainty",
+                        "dateEarliestSingleYear": "fields.workDateGroupEnd.dateEarliestSingleYear",
+                        "dateLatestQualifier": "fields.workDateGroupEnd.dateLatestQualifier",
+                        "dateLatestQualifierValue": "fields.workDateGroupEnd.dateLatestQualifierValue",
+                        "dateEarliestSingleQualifierUnit": "fields.workDateGroupEnd.dateEarliestSingleQualifierUnit",
+                        "datePeriod": "fields.workDateGroupEnd.datePeriod",
+                        "dateEarliestScalarValue": "fields.workDateGroupEnd.dateEarliestScalarValue",
+                        "dateLatestMonth": "fields.workDateGroupEnd.dateLatestMonth",
+                        "dateNote": "fields.workDateGroupEnd.dateNote",
+                        "dateLatestScalarValue": "fields.workDateGroupEnd.dateLatestScalarValue",
+                        "dateLatestQualifierUnit": "fields.workDateGroupEnd.dateLatestQualifierUnit",
+                        "dateEarliestSingleDay": "fields.workDateGroupEnd.dateEarliestSingleDay",
+                        "dateEarliestSingleMonth": "fields.workDateGroupEnd.dateEarliestSingleMonth"
+                    }
+                }
+            }
+        ],
+        "value": "${fields.work-workDateGroupEnd}"
+    },
+    ".csc-work-termStatus-label": {
+        "messagekey": "work-termStatusLabel"
+    },
+    ".csc-work-updatedBy": {
+        "decorators": [
+            {
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-work-updatedBy": "${{row}.updatedBy}"
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "updatedBys",
+                    "hidePrimary": true
+                }
+            }
+        ]
+    },
+    ".csc-work-publisherGroup": {
+        "decorators": [
+            {
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-work-publisher": {
+                                    "decorators": [
+                                        {
+                                            "func": "cspace.autocomplete",
+                                            "type": "fluid",
+                                            "options": {
+                                                "queryUrl": "../../../tenant/core/vocabularies/work/autocomplete/publisher",
+                                                "vocabUrl": "../../../tenant/core/vocabularies/work/source-vocab/publisher"
+                                            }
+                                        }
+                                    ],
+                                    "value": "${{row}.publisher}"
+                                }
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "publisherGroup",
+                    "hidePrimary": true
+                }
+            }
+        ]
+    },
+    ".csc-work-termStatus": {
+        "decorators": [
+            {
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-work-termStatus": {
+                                    "default": "",
+                                    "optionnames": [
+                                        "Please select a value",
+                                        "Quick Added",
+                                        "Needs Attention",
+                                        "In Progress",
+                                        "Complete"
+                                    ],
+                                    "optionlist": [
+                                        "",
+                                        "quickadded",
+                                        "needsattantion",
+                                        "inprogress",
+                                        "complete"
+                                    ],
+                                    "selection": "${{row}.termStatus}"
+                                }
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "termStatuss",
+                    "hidePrimary": true
+                }
+            }
+        ]
+    },
+    ".csc-work-workDateGroupEnd-label": {
+        "messagekey": "work-workDateGroupEndLabel"
+    },
+    ".csc-work-workDateGroupStart-label": {
+        "messagekey": "work-workDateGroupStartLabel"
+    }
+}

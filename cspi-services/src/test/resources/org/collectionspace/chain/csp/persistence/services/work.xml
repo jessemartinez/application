@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ns2:works_common xmlns:ns2="http://collectionspace.org/services/concept">
+	<shortIdentifier>worktest1</shortIdentifier>
+	<displayName>Muppets Take Manhattan (1984)</displayName>
+	<displayNameComputed>false</displayNameComputed>
+	<shortDisplayName>muppetstakemanhattan</shortDisplayName>
+	<shortDisplayNameComputed>false</shortDisplayNameComputed>
+	<termStatus>complete</termStatus>
+	<medium>film</medium>
+	<source>other</source>
+	<scopeNotes>scope notes go here</scopeNotes>
+	<indexingNotes>indexing notes go here</indexingNotes>
+	<historyNotes>history notes go here</historyNotes>
+	<sourceNotes>source notes go here</sourceNotes>
+	<creatorGroupList>
+		<creatorGroup>
+			<creator>Frank Oz</creator>
+			<creatorType>director</creatorType>
+		</creatorGroup>
+	</creatorGroupList>
+	<publisherGroupList>
+		<publisherGroup>
+			<publisher>TriStar Pictures</publisher>
+			<publisherType>distributioncompany</publisherType>
+		</publisherGroup>
+	</publisherGroupList>
+	<useFors>
+		<useFor>Muppets Take Manhattan</useFor>
+	</useFors>
+</ns2:works_common>

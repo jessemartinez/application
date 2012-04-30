@@ -1,0 +1,145 @@
+{
+    "work": {
+        "properties": {
+            "useFors": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "useFor": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "createdBys": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "createdBy": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "termStatuss": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "termStatus": {
+                            "default": "",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "workDateGroupStart": {
+                "properties": {
+                    "scalarValuesComputed": {
+                        "default": "",
+                        "type": "string"
+                    },
+                    "_primary": {
+                        "default": true,
+                        "type": "boolean"
+                    }
+                },
+                "type": "object"
+            },
+            "publisherGroup": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "publisher": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "updatedAtEnd": {
+                "type": "date"
+            },
+            "workDateGroupEnd": {
+                "properties": {
+                    "scalarValuesComputed": {
+                        "default": "",
+                        "type": "string"
+                    },
+                    "_primary": {
+                        "default": true,
+                        "type": "boolean"
+                    }
+                },
+                "type": "object"
+            },
+            "displayNames": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "displayName": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "updatedBys": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "updatedBy": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "updatedAtStart": {
+                "type": "date"
+            },
+            "creatorGroup": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "creator": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            }
+        },
+        "type": "object"
+    }
+}

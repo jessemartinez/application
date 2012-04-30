@@ -1,0 +1,30 @@
+{
+    "indexingNotes": "indexing notes go here",
+    "shortIdentifier": "worktest1",
+    "useFors": [
+        {
+            "_primary": true,
+            "useFor": "Muppets Take Manhattan"
+        }
+    ],
+    "source": "other",
+    "termStatus": "complete",
+    "publisherGroup": [
+        {
+            "_primary": true,
+            "publisherType": "distributioncompany",
+            "publisher": "TriStar Pictures"
+        }
+    ],
+    "historyNotes": "history notes go here",
+    "scopeNotes": "scope notes go here",
+    "displayName": "Muppets Take Manhattan (1984)",
+    "medium": "film",
+    "creatorGroup": [
+        {
+            "_primary": true,
+            "creatorType": "director",
+            "creator": "Frank Oz"
+        }
+    ]
+}

@@ -2,23 +2,56 @@
     "recordtypes": {
         "properties": {
             "vocabularies": {
-                "default": ["location","organization","organizationtest","person","persontest1","persontest2","activity","concept", "material","placetest1","placetest2","place","taxon"],
-                "type": "array"
-            },
-            "procedures": {
-                "default": ["intake", "loanin", "loanout", "acquisition", "movement", "media", "objectexit", "group"],
-                "type": "array"
-            },
-            "all": {
-                "default": [ "all" ],
-                "type": "array"
-            },
-            "cataloging": {
-                "default": ["cataloging"],
+                "default": [
+                    "persontest1",
+                    "persontest2",
+                    "person",
+                    "activity",
+                    "concept",
+                    "material",
+                    "location",
+                    "organization",
+                    "organizationtest",
+                    "placetest1",
+                    "placetest2",
+                    "place",
+                    "work",
+                    "worktest1",
+                    "worktest2"
+                ],
                 "type": "array"
             },
             "administration": {
-                "default": ["role","termlist", "users"],
+                "default": [
+                    "users",
+                    "termlist",
+                    "role"
+                ],
+                "type": "array"
+            },
+            "all": {
+                "default": [
+                    "all"
+                ],
+                "type": "array"
+            },
+            "cataloging": {
+                "default": [
+                    "cataloging"
+                ],
+                "type": "array"
+            },
+            "procedures": {
+                "default": [
+                    "loanin",
+                    "loanout",
+                    "acquisition",
+                    "movement",
+                    "objectexit",
+                    "intake",
+                    "group",
+                    "media"
+                ],
                 "type": "array"
             }
         },

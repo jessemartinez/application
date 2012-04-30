@@ -1,6 +1,38 @@
 {
     "namespaces": {
         "properties": {
+            "work": {
+                "properties": {
+                    "work": {
+                        "properties": {
+                            "nptAllowed": {
+                                "default": true,
+                                "type": "boolean"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "worktest2": {
+                        "properties": {
+                            "nptAllowed": {
+                                "default": true,
+                                "type": "boolean"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "worktest1": {
+                        "properties": {
+                            "nptAllowed": {
+                                "default": true,
+                                "type": "boolean"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "type": "object"
+            },
             "organization": {
                 "properties": {
                     "organization": {
@@ -51,7 +83,7 @@
                                 "type": "boolean"
                             }
                         },
-												"type": "object"
+                        "type": "object"
                     }
                 },
                 "type": "object"
@@ -123,20 +155,6 @@
                         "type": "object"
                     },
                     "placetest1": {
-                        "properties": {
-                            "nptAllowed": {
-                                "default": true,
-                                "type": "boolean"
-                            }
-                        },
-                        "type": "object"
-                    }
-                },
-                "type": "object"
-            },
-            "taxon": {
-                "properties": {
-                    "taxon": {
                         "properties": {
                             "nptAllowed": {
                                 "default": true,

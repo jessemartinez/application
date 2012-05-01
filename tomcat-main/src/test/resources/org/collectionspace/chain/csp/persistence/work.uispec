@@ -288,7 +288,6 @@
         ".csc-work-csid-label": {
             "messagekey": "work-csidLabel"
         },
-        ".csc-work-workIdentifier": "${fields.workIdentifier}",
         ".csc-work-uri-label": {
             "messagekey": "work-uriLabel"
         },
@@ -322,9 +321,6 @@
                     }
                 }
             ]
-        },
-        ".csc-work-workIdentifier-label": {
-            "messagekey": "work-workIdentifierLabel"
         },
         ".csc-work-useFor-label": {
             "messagekey": "work-useForLabel"

@@ -310,7 +310,6 @@ public class TestBase extends TestData {
 	 * @throws Exception
 	 */
 	public HttpTester POSTData(String url, String data, ServletTester jetty) throws IOException, Exception{
-		log.info("POSTdata: start");
 		HttpTester out = jettyDo(jetty,"POST","/tenant/"+defaulttenant+url,data);
 		assertEquals(out.getMethod(),null);
 		Integer status = getStatus(out.getContent(),  out.getStatus());

@@ -1,3 +1,4 @@
+
 {
     "work": {
         "properties": {
@@ -199,9 +200,6 @@
                         "default": "",
                         "type": "string"
                     },
-                    "workIdentifier": {
-                        "type": "string"
-                    },
                     "creatorGroup": {
                         "items": {
                             "properties": {
@@ -221,11 +219,11 @@
                         },
                         "type": "array"
                     },
-                    "updatedAt": {
-                        "type": "date"
-                    },
                     "indexingNotes": {
                         "type": "string"
+                    },
+                    "updatedAt": {
+                        "type": "date"
                     },
                     "createdBy": {
                         "type": "string"

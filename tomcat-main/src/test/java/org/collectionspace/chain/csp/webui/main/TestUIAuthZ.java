@@ -88,6 +88,7 @@ public class TestUIAuthZ {
 		log.info("CREATE READ USER");
 		out = tester.POSTData("/role",tester.roleRead(),jetty);
 		String roler_id = out.getHeader("Location");
+		deleteme.add(roler_id);
 		JSONObject userrdata = tester.createUserWithRolesById(jetty,tester.userRead(),roler_id); 
 		out=tester.POSTData("/users/",tester.makeRequest(userrdata).toString(),jetty);
 		String user_r_id = out.getHeader("Location");

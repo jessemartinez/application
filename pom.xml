@@ -49,7 +49,7 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
             <!-- need more memory than the default for our unit tests -->
-            <argLine>-Xmx768m -Dfile.encoding=UTF8</argLine>
+            <argLine>-Xmx1050m -Dfile.encoding=UTF8</argLine>
             
           <excludes>
             <exclude>**/TestDummyData.java</exclude>

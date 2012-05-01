@@ -32,9 +32,9 @@
             </view>
         </structure>
     </structures>
-				
+
     <include src="domain-authority-work.xml" strip-root="yes"/>
-				
+
     <instances>
         <instance id="work-work">
             <web-url>work</web-url>
@@ -61,7 +61,6 @@
     </section>
     <section id="workAuthorityInformation">
 		<group id="workDateGroup" ui-type="groupfield/structureddate" primarykey="dateDisplayDate" ui-func="cspace.structuredDate" ui-search="range"></group>
-        <field id="workIdentifier"/>
         <field id="displayName" ui-search="repeatable" in-title="yes" display-name="yes" mini="summary,number,search,list,relate,terms">
             <title-selector>titleBar-displayName</title-selector>
         </field>
@@ -75,27 +74,11 @@
                 <option id="complete">Complete</option>
             </options>
         </field>
-		<field id="source" autocomplete="vocab-workstatus"  ui-type="enum" />
-			<!-- To be turned into a dynamic termlist 
-			<options>
-				<option id="" default="yes">Please select a value</option>
-                <option id="aficatalog">AFI Catalog</option>
-                <option id="featurefilms">Feature Films</option>
-                <option id="allmoviecom">AllMovie.com</option>
-                <option id="ammiacquisitiondatabase">AMMI Acquisitions Database</option>
-                <option id="ascap">ASCAP</option>
-                <option id="libraryofcongress">Library of Congress</option>
-                <option id="other">Other</option>
-                <option id="thecompletedirectorytoprimetimenetworkandcabletvshows">The Complete Directory to Primetime Network and Cable TV Shows</option>
-                <option id="totaltelevision4thedition">Total Television, 4th Edition</option>
-                <option id="rhizomeorg">Rhizome.org</option>
-                <option id="artbase">Artbase</option>
-            </options>
-		</field> -->
+		<field id="source" autocomplete="vocab-worksource"  ui-type="enum" />
 		<field id="scopeNotes"/>
 		<field id="indexingNotes"/>
 		<field id="historyNotes"/>
-		<field id="status"/> <!-- look into removing -->
+		<field id="status"/>
 		<field id="genre">
 			<options>
 				<option id="" default="yes">Please select a value</option>
@@ -113,7 +96,7 @@
         <repeat id="creatorGroupList/creatorGroup">
             <field id="creator" ui-search="repeatable" autocomplete="person-person"/>
             <field id="creatorType">
-				  <options>
+				  <options> <!-- to be turned into a dynamic term list -->
 						<option id="" default="yes">Please select a value</option>
 						<option id="artist">Artist</option>
 						<option id="director">Director</option>
@@ -126,7 +109,7 @@
         <repeat id="publisherGroupList/publisherGroup">
             <field id="publisher" ui-search="repeatable" autocomplete="person-person"/>
             <field id="publisherType">
-				  <options>
+				  <options>  <!-- to be turned into a dynamic term list -->
 						<option id="" default="yes">Please select a value</option>
 						<option id="networkcableservice">Network/cable service</option>
 						<option id="distributioncompany">Distribution company</option>

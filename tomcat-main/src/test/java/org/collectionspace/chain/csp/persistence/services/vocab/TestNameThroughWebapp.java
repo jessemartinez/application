@@ -221,7 +221,7 @@ public class TestNameThroughWebapp{
 		
 		// Delete the entry from the database
 		tester.DELETEData("/vocabularies/"+url,jetty);
-		log.info("NAME: NamesSearch: test_start");
+		log.info("NAME: NamesSearch: test_end");
 	}
 	@Test public void testNamesSearch() throws Exception {
 		ServletTester jetty = tester.setupJetty();
@@ -264,6 +264,7 @@ public class TestNameThroughWebapp{
 		assertTrue(found);
 	}
 	*/
+	/*
 	@Test public void testPersonWithContactAuthorityCRUD() throws Exception {
 		ServletTester jetty = tester.setupJetty();
 		log.info("NAME: PersonWithContactAuthorityCRUD: test_start");
@@ -275,7 +276,7 @@ public class TestNameThroughWebapp{
 		log.info("NAME: PersonWithContactAuthorityCRUD: test_end");
 		tester.stopJetty(jetty);
 	}
-	
+	*/
 	//XXX disable until soft delete works better everywhere @Test 
 	public void testNames2vocabsCreateSearchDelete() throws Exception {
 		ServletTester jetty = tester.setupJetty();

@@ -19,8 +19,8 @@
         <object>n</object>
         <childname>narrowerContext</childname>
         <directional>false</directional>
-        <sourceTypes>location,locationauthorities,personauthorities,person,organization,taxon,taxonomyauthority,concept,conceptauthorities,place,placeauthorities</sourceTypes>
-        <destinationTypes>location,locationauthorities,personauthorities,person,organization,taxon,taxonomyauthority,concept,conceptauthorities,place,placeauthorities</destinationTypes>
+        <sourceTypes>location,locationauthorities,personauthorities,person,organization,taxon,taxonomyauthority,concept,conceptauthorities,place,placeauthorities,work,workauthorities</sourceTypes>
+        <destinationTypes>location,locationauthorities,personauthorities,person,organization,taxon,taxonomyauthority,concept,conceptauthorities,place,placeauthorities,work,workauthorities</destinationTypes>
         <showinui>true</showinui>
     </relation>
     <relation id="broader">

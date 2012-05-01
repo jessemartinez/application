@@ -310,10 +310,16 @@ public class TestBase extends TestData {
 	 * @throws Exception
 	 */
 	public HttpTester POSTData(String url, String data, ServletTester jetty) throws IOException, Exception{
+		log.info("POSTdata: start");
+		log.info("url: " + url + " data: " + data);
 		HttpTester out = jettyDo(jetty,"POST","/tenant/"+defaulttenant+url,data);
+		log.info("out: " + out);
 		assertEquals(out.getMethod(),null);
+		log.info("assertEquals passes");
 		Integer status = getStatus(out.getContent(),  out.getStatus());
 		assertTrue("Status "+Integer.toString(status)+" was wrong for a POST url: /tenant/"+defaulttenant+url+" with data: "+data +"/n"+out.getContent(),testStatus("POST",status));
+		log.info("assertTrue passes");
+		log.info("POSTdata: exit");
 		return out;
 	}
 	

@@ -103,7 +103,7 @@ public class TestUIAuthZ {
 		String user_w_id = out.getHeader("Location");
 		deleteme.add(user_w_id);
 //NONE
-		/*log.info("CREATE HALF NONE USER");
+		log.info("CREATE HALF NONE USER");
 		out = tester.POSTData("/role",tester.roleNone1(),jetty);
 		String rolen1_id = out.getHeader("Location");
 		deleteme.add(rolen1_id);
@@ -128,7 +128,7 @@ public class TestUIAuthZ {
 		JSONObject userndata = tester.createUserWithRolesById(jetty,tester.userNone(),rolen_id); 
 		out=tester.POSTData("/users/",tester.makeRequest(userndata).toString(),jetty);
 		String user_n_id = out.getHeader("Location");
-		deleteme.add(user_n_id);*/
+		deleteme.add(user_n_id);
 		}
 	}
 

@@ -264,7 +264,6 @@ public class TestNameThroughWebapp{
 		assertTrue(found);
 	}
 	*/
-	/*
 	@Test public void testPersonWithContactAuthorityCRUD() throws Exception {
 		ServletTester jetty = tester.setupJetty();
 		log.info("NAME: PersonWithContactAuthorityCRUD: test_start");
@@ -276,7 +275,7 @@ public class TestNameThroughWebapp{
 		log.info("NAME: PersonWithContactAuthorityCRUD: test_end");
 		tester.stopJetty(jetty);
 	}
-	*/
+
 	//XXX disable until soft delete works better everywhere @Test 
 	public void testNames2vocabsCreateSearchDelete() throws Exception {
 		ServletTester jetty = tester.setupJetty();

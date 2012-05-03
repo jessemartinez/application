@@ -60,66 +60,65 @@
         <field id="updatedAt" ui-search="range" ui-type="date" section="collectionspace_core" attributes="GET" mini="search,list,relate"></field>
     </section>
     <section id="workAuthorityInformation">
-		<group id="workDateGroup" ui-type="groupfield/structureddate" primarykey="dateDisplayDate" ui-func="cspace.structuredDate" ui-search="range"></group>
+	<group id="workDateGroup" ui-type="groupfield/structureddate" primarykey="dateDisplayDate" ui-func="cspace.structuredDate" ui-search="range"></group>
         <field id="displayName" ui-search="repeatable" in-title="yes" display-name="yes" mini="summary,number,search,list,relate,terms">
             <title-selector>titleBar-displayName</title-selector>
         </field>
         <field id="termStatus" ui-search="repeatable" seperate_ui_container="true" mini="search,list,relate">
             <selector>work-termStatus</selector>
             <options>
-				<option id="" default="yes">Please select a value</option>
+		<option id="" default="yes">Please select a value</option>
                 <option id="quickadded">Quick Added</option>
                 <option id="needsattantion">Needs Attention</option>
                 <option id="inprogress">In Progress</option>
                 <option id="complete">Complete</option>
             </options>
         </field>
-		<field id="source" autocomplete="vocab-worksource"  ui-type="enum" />
-		<field id="scopeNotes"/>
-		<field id="indexingNotes"/>
-		<field id="historyNotes"/>
-		<field id="status"/>
-		<field id="genre">
-			<options>
-				<option id="" default="yes">Please select a value</option>
-                <option id="film">Film</option>
-                <option id="other">Other</option>
-            </options>
-		</field>
-		<field id="medium">
-			<options>
-				<option id="" default="yes">Please select a value</option>
-                <option id="film">Film</option>
-                <option id="other">Other</option>
-            </options>
-		</field>
+	<field id="source" autocomplete="vocab-worksource" ui-type="enum" />
+	<field id="scopeNotes"/>
+	<field id="indexingNotes"/>
+	<field id="historyNotes"/>
+	<field id="genre">
+		<options>
+			<option id="" default="yes">Please select a value</option>
+			<option id="film">Film</option>
+			<option id="other">Other</option>
+		</options>
+	</field>
+	<field id="medium">
+		<options>
+			<option id="" default="yes">Please select a value</option>
+			<option id="film">Film</option>
+			<option id="other">Other</option>
+		</options>
+	</field>
         <repeat id="creatorGroupList/creatorGroup">
-            <field id="creator" ui-search="repeatable" autocomplete="person-person"/>
+            <field id="creator" ui-type="enum" autocomplete="person-person"/>
             <field id="creatorType">
-				  <options> <!-- to be turned into a dynamic term list -->
-						<option id="" default="yes">Please select a value</option>
-						<option id="artist">Artist</option>
-						<option id="director">Director</option>
-						<option id="publishingcompany">Publishing Company</option>
-						<option id="developer">Developer</option>
-						<option id="productioncompany">Production Company</option>
-		           </options>
-			</field>
+		  <options> <!-- to be turned into a dynamic term list -->
+			<option id="" default="yes">Please select a value</option>
+			<option id="artist">Artist</option>
+			<option id="director">Director</option>
+			<option id="publishingcompany">Publishing Company</option>
+			<option id="developer">Developer</option>
+			<option id="productioncompany">Production Company</option>
+	           </options>
+	    </field>
         </repeat>
         <repeat id="publisherGroupList/publisherGroup">
-            <field id="publisher" ui-search="repeatable" autocomplete="person-person"/>
+            <field id="publisher" ui-type="enum" autocomplete="person-person"/>
             <field id="publisherType">
-				  <options>  <!-- to be turned into a dynamic term list -->
-						<option id="" default="yes">Please select a value</option>
-						<option id="networkcableservice">Network/cable service</option>
-						<option id="distributioncompany">Distribution company</option>
-						<option id="publishingcompany">Publishing Company</option>
-		           </options>
-			</field>
+		  <options>  <!-- to be turned into a dynamic term list -->
+			<option id="" default="yes">Please select a value</option>
+			<option id="networkcableservice">Network/cable service</option>
+			<option id="distributioncompany">Distribution company</option>
+			<option id="publishingcompany">Publishing Company</option>
+	           </options>
+	    </field>
         </repeat>
-		<repeat id="useFors">
-			<field id="useFor" ui-search="repeatable" autocomplete="person-person"/>
-		</repeat>
+	<repeat id="useFors">
+		<field id="useFor" ui-type="enum" autocomplete="person-person"/>
+	</repeat>
     </section>
     <!-- not used in UI except in autocompletes -->
     <section>

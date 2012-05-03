@@ -60,7 +60,6 @@
         <field id="updatedAt" ui-search="range" ui-type="date" section="collectionspace_core" attributes="GET" mini="search,list,relate"></field>
     </section>
     <section id="workAuthorityInformation">
-	<group id="workDateGroup" ui-type="groupfield/structureddate" primarykey="dateDisplayDate" ui-func="cspace.structuredDate" ui-search="range"></group>
         <field id="displayName" ui-search="repeatable" in-title="yes" display-name="yes" mini="summary,number,search,list,relate,terms">
             <title-selector>titleBar-displayName</title-selector>
         </field>
@@ -116,6 +115,9 @@
 	           </options>
 	    </field>
         </repeat>
+	<field id="workDateGroup" ui-search="repeatable" ui-type="groupfield/structureddate"
+		 primarykey="fieldCollectionDate.dateDisplayDate" ui-func="cspace.structuredDate">
+	</field>
 	<repeat id="useFors">
 		<field id="useFor" ui-type="enum" autocomplete="person-person"/>
 	</repeat>

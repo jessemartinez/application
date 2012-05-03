@@ -115,9 +115,11 @@
 	           </options>
 	    </field>
         </repeat>
-	<field id="workDateGroup" ui-search="repeatable" ui-type="groupfield/structureddate"
-		 primarykey="fieldCollectionDate.dateDisplayDate" ui-func="cspace.structuredDate">
-	</field>
+	<repeat id="workDateGroupList/workDateGroup">
+		<group id="workDate" xxx-services-no-repeat="true"
+				ui-type="groupfield/structureddate" primarykey="dateDisplayDate"
+				ui-func="cspace.structuredDate"/>
+	</repeat>
 	<repeat id="useFors">
 		<field id="useFor" ui-type="enum" autocomplete="person-person"/>
 	</repeat>

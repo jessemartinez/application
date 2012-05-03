@@ -52,7 +52,6 @@
                         },
                         "type": "array"
                     },
-                    "type": "object",
                     "updatedBy": {
                         "type": "string"
                     },

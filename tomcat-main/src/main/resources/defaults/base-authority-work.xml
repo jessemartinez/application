@@ -73,18 +73,18 @@
                 <option id="complete">Complete</option>
             </options>
         </field>
-	<field id="source" autocomplete="vocab-worksource" ui-type="enum" />
-	<field id="scopeNotes"/>
-	<field id="indexingNotes"/>
-	<field id="historyNotes"/>
-	<field id="genre">
+	<field id="source" autocomplete="vocab-worksource" ui-type="enum"/>
+	<field id="scopeNotes" ui-search="repeatable"/>
+	<field id="indexingNotes"  ui-search="repeatable"/>
+	<field id="historyNotes"  ui-search="repeatable"/>
+	<field id="genre" seperate_ui_container="true" ui-search="repeatable">
 		<options>
 			<option id="" default="yes">Please select a value</option>
 			<option id="film">Film</option>
 			<option id="other">Other</option>
 		</options>
 	</field>
-	<field id="medium">
+	<field id="medium" seperate_ui_container="true" ui-search="repeatable">
 		<options>
 			<option id="" default="yes">Please select a value</option>
 			<option id="film">Film</option>
@@ -92,8 +92,8 @@
 		</options>
 	</field>
         <repeat id="creatorGroupList/creatorGroup">
-            <field id="creator" ui-type="enum" autocomplete="person-person"/>
-            <field id="creatorType">
+            <field id="creator" ui-type="enum" autocomplete="person-person" ui-search="repeatable"/>
+            <field id="creatorType" seperate_ui_container="true">
 		  <options> <!-- to be turned into a dynamic term list -->
 			<option id="" default="yes">Please select a value</option>
 			<option id="artist">Artist</option>
@@ -105,8 +105,8 @@
 	    </field>
         </repeat>
         <repeat id="publisherGroupList/publisherGroup">
-            <field id="publisher" ui-type="enum" autocomplete="person-person"/>
-            <field id="publisherType">
+            <field id="publisher" ui-type="enum" autocomplete="person-person" ui-search="repeatable"/>
+            <field id="publisherType" seperate_ui_container="true">
 		  <options>  <!-- to be turned into a dynamic term list -->
 			<option id="" default="yes">Please select a value</option>
 			<option id="networkcableservice">Network/cable service</option>

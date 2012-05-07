@@ -93,8 +93,8 @@
 			</options>
 		</field>
         <repeat id="creatorGroupList/creatorGroup">
-            <field id="creator" ui-type="enum" autocomplete="person-person" ui-search="repeatable"/>
-            <field id="creatorType" seperate_ui_container="true">
+            <field id="creator" autocomplete="person-person" ui-search="repeatable"/>
+            <field id="creatorType">
 		  		<options> <!-- to be turned into a dynamic term list -->
 					<option id="" default="yes">Please select a value</option>
 					<option id="artist">Artist</option>
@@ -106,8 +106,8 @@
 	    </field>
         </repeat>
         <repeat id="publisherGroupList/publisherGroup">
-            <field id="publisher" ui-type="enum" autocomplete="person-person" ui-search="repeatable"/>
-            <field id="publisherType" seperate_ui_container="true">
+            <field id="publisher" autocomplete="person-person" ui-search="repeatable"/>
+            <field id="publisherType">
 		  		<options>  <!-- to be turned into a dynamic term list -->
 					<option id="" default="yes">Please select a value</option>
 					<option id="networkcableservice">Network/cable service</option>

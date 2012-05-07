@@ -1,378 +1,334 @@
 {
-    ".csc-work-publisher-label": {
-        "messagekey": "work-publisherLabel"
-    },
-    ".csc-work-creatorGroup": {
-        "decorators": [
-            {
-                "func": "cspace.makeRepeatable",
-                "type": "fluid",
-                "options": {
-                    "repeatTree": {
-                        "expander": {
-                            "tree": {
-                                ".csc-work-creator": {
-                                    "decorators": [
-                                        {
-                                            "func": "cspace.termList",
-                                            "type": "fluid",
-                                            "options": {
-                                                "root": "{row}",
-                                                "elPath": "creator",
-                                                "termListType": "creator"
-                                            }
-                                        }
-                                    ]
-                                }
-                            },
-                            "type": "fluid.noexpand"
-                        }
-                    },
-                    "elPath": "creatorGroup",
-                    "hidePrimary": true
-                }
-            }
-        ]
-    },
-    ".csc-work-creatorType-label": {
-        "messagekey": "work-creatorTypeLabel"
-    },
-    ".csc-work-sourceNote-label": {
-        "messagekey": "work-sourceNoteLabel"
-    },
-    ".csc-work-creator-label": {
-        "messagekey": "work-creatorLabel"
-    },
-    ".csc-work-updatedAtStart-label": {
-        "messagekey": "work-updatedAtStartLabel"
-    },
-    ".csc-work-updatedBy-label": {
-        "messagekey": "work-updatedByLabel"
-    },
-    ".csc-work-indexingNote": {
-        "decorators": [
-            {
-                "func": "cspace.makeRepeatable",
-                "type": "fluid",
-                "options": {
-                    "repeatTree": {
-                        "expander": {
-                            "tree": {
-                                ".csc-work-indexingNote": "${{row}.indexingNote}"
-                            },
-                            "type": "fluid.noexpand"
-                        }
-                    },
-                    "elPath": "indexingNotes",
-                    "hidePrimary": true
-                }
-            }
-        ]
-    },
-    ".csc-work-scopeNote-label": {
-        "messagekey": "work-scopeNoteLabel"
-    },
-    ".csc-work-updatedAtStart": {
-        "decorators": [
-            {
-                "func": "cspace.datePicker",
-                "type": "fluid"
-            }
-        ],
-        "value": "${updatedAtStart}"
-    },
-    ".csc-work-sourceNote": {
-        "decorators": [
-            {
-                "func": "cspace.makeRepeatable",
-                "type": "fluid",
-                "options": {
-                    "repeatTree": {
-                        "expander": {
-                            "tree": {
-                                ".csc-work-sourceNote": "${{row}.sourceNote}"
-                            },
-                            "type": "fluid.noexpand"
-                        }
-                    },
-                    "elPath": "sourceNotes",
-                    "hidePrimary": true
-                }
-            }
-        ]
-    },
-    ".csc-work-updatedAtEnd-label": {
-        "messagekey": "work-updatedAtEndLabel"
-    },
-    ".csc-work-displayName": {
-        "decorators": [
-            {
-                "func": "cspace.makeRepeatable",
-                "type": "fluid",
-                "options": {
-                    "repeatTree": {
-                        "expander": {
-                            "tree": {
-                                ".csc-work-displayName": "${{row}.displayName}"
-                            },
-                            "type": "fluid.noexpand"
-                        }
-                    },
-                    "elPath": "displayNames",
-                    "hidePrimary": true
-                }
-            }
-        ]
-    },
-    ".csc-work-medium-label": {
-        "messagekey": "work-mediumLabel"
-    },
-    ".csc-work-updatedAt-label": {
-        "messagekey": "work-updatedAtLabel"
-    },
-    ".csc-work-historyNote": {
-        "decorators": [
-            {
-                "func": "cspace.makeRepeatable",
-                "type": "fluid",
-                "options": {
-                    "repeatTree": {
-                        "expander": {
-                            "tree": {
-                                ".csc-work-historyNote": "${{row}.historyNote}"
-                            },
-                            "type": "fluid.noexpand"
-                        }
-                    },
-                    "elPath": "historyNotes",
-                    "hidePrimary": true
-                }
-            }
-        ]
-    },
-    ".csc-work-medium": {
-        "decorators": [
-            {
-                "func": "cspace.makeRepeatable",
-                "type": "fluid",
-                "options": {
-                    "repeatTree": {
-                        "expander": {
-                            "tree": {
-                                ".csc-work-medium": {
-                                    "default": "",
-                                    "optionnames": [
-                                        "Please select a value",
-                                        "Film",
-                                        "Other"
-                                    ],
-                                    "optionlist": [
-                                        "",
-                                        "film",
-                                        "other"
-                                    ],
-                                    "selection": "${{row}.medium}"
-                                }
-                            },
-                            "type": "fluid.noexpand"
-                        }
-                    },
-                    "elPath": "mediums",
-                    "hidePrimary": true
-                }
-            }
-        ]
-    },
-    ".csc-work-updatedAtEnd": {
-        "decorators": [
-            {
-                "func": "cspace.datePicker",
-                "type": "fluid"
-            }
-        ],
-        "value": "${updatedAtEnd}"
-    },
-    ".csc-work-createdBy-label": {
-        "messagekey": "work-createdByLabel"
-    },
-    ".csc-work-displayName-label": {
-        "messagekey": "work-displayNameLabel"
-    },
-    ".csc-work-genre": {
-        "decorators": [
-            {
-                "func": "cspace.makeRepeatable",
-                "type": "fluid",
-                "options": {
-                    "repeatTree": {
-                        "expander": {
-                            "tree": {
-                                ".csc-work-genre": {
-                                    "default": "",
-                                    "optionnames": [
-                                        "Please select a value",
-                                        "Film",
-                                        "Other"
-                                    ],
-                                    "optionlist": [
-                                        "",
-                                        "film",
-                                        "other"
-                                    ],
-                                    "selection": "${{row}.genre}"
-                                }
-                            },
-                            "type": "fluid.noexpand"
-                        }
-                    },
-                    "elPath": "genres",
-                    "hidePrimary": true
-                }
-            }
-        ]
-    },
-    ".csc-work-createdBy": {
-        "decorators": [
-            {
-                "func": "cspace.makeRepeatable",
-                "type": "fluid",
-                "options": {
-                    "repeatTree": {
-                        "expander": {
-                            "tree": {
-                                ".csc-work-createdBy": "${{row}.createdBy}"
-                            },
-                            "type": "fluid.noexpand"
-                        }
-                    },
-                    "elPath": "createdBys",
-                    "hidePrimary": true
-                }
-            }
-        ]
-    },
-    ".csc-work-historyNote-label": {
-        "messagekey": "work-historyNoteLabel"
-    },
-    ".csc-work-scopeNote": {
-        "decorators": [
-            {
-                "func": "cspace.makeRepeatable",
-                "type": "fluid",
-                "options": {
-                    "repeatTree": {
-                        "expander": {
-                            "tree": {
-                                ".csc-work-scopeNote": "${{row}.scopeNote}"
-                            },
-                            "type": "fluid.noexpand"
-                        }
-                    },
-                    "elPath": "scopeNotes",
-                    "hidePrimary": true
-                }
-            }
-        ]
-    },
-    ".csc-work-publisherType-label": {
-        "messagekey": "work-publisherTypeLabel"
-    },
-    ".csc-work-termStatus-label": {
-        "messagekey": "work-termStatusLabel"
-    },
-    ".csc-work-updatedBy": {
-        "decorators": [
-            {
-                "func": "cspace.makeRepeatable",
-                "type": "fluid",
-                "options": {
-                    "repeatTree": {
-                        "expander": {
-                            "tree": {
-                                ".csc-work-updatedBy": "${{row}.updatedBy}"
-                            },
-                            "type": "fluid.noexpand"
-                        }
-                    },
-                    "elPath": "updatedBys",
-                    "hidePrimary": true
-                }
-            }
-        ]
-    },
-    ".csc-work-publisherGroup": {
-        "decorators": [
-            {
-                "func": "cspace.makeRepeatable",
-                "type": "fluid",
-                "options": {
-                    "repeatTree": {
-                        "expander": {
-                            "tree": {
-                                ".csc-work-publisher": {
-                                    "decorators": [
-                                        {
-                                            "func": "cspace.termList",
-                                            "type": "fluid",
-                                            "options": {
-                                                "root": "{row}",
-                                                "elPath": "publisher",
-                                                "termListType": "publisher"
-                                            }
-                                        }
-                                    ]
-                                }
-                            },
-                            "type": "fluid.noexpand"
-                        }
-                    },
-                    "elPath": "publisherGroup",
-                    "hidePrimary": true
-                }
-            }
-        ]
-    },
-    ".csc-work-termStatus": {
-        "decorators": [
-            {
-                "func": "cspace.makeRepeatable",
-                "type": "fluid",
-                "options": {
-                    "repeatTree": {
-                        "expander": {
-                            "tree": {
-                                ".csc-work-termStatus": {
-                                    "default": "",
-                                    "optionnames": [
-                                        "Please select a value",
-                                        "Quick Added",
-                                        "Needs Attention",
-                                        "In Progress",
-                                        "Complete"
-                                    ],
-                                    "optionlist": [
-                                        "",
-                                        "quickadded",
-                                        "needsattantion",
-                                        "inprogress",
-                                        "complete"
-                                    ],
-                                    "selection": "${{row}.termStatus}"
-                                }
-                            },
-                            "type": "fluid.noexpand"
-                        }
-                    },
-                    "elPath": "termStatuss",
-                    "hidePrimary": true
-                }
-            }
-        ]
-    },
-    ".csc-work-indexingNote-label": {
-        "messagekey": "work-indexingNoteLabel"
-    },
-    ".csc-work-genre-label": {
-        "messagekey": "work-genreLabel"
-    }
+	".csc-work-publisher-label": {
+		"messagekey": "work-publisherLabel"
+	},
+	".csc-work-creatorGroup": {
+		"decorators": [{
+			"func": "cspace.makeRepeatable",
+			"type": "fluid",
+			"options": {
+				"repeatTree": {
+					"expander": {
+						"tree": {
+							".csc-work-creator": {
+								"decorators": [{
+									"func": "cspace.autocomplete",
+									"type": "fluid",
+									"options": {
+										"queryUrl": "../../../tenant/core/vocabularies/work/autocomplete/creator",
+										"vocabUrl": "../../../tenant/core/vocabularies/work/source-vocab/creator"
+									}
+								}],
+								"value": "${{row}.creator}"
+							}
+						},
+						"type": "fluid.noexpand"
+					}
+				},
+				"elPath": "creatorGroup",
+				"hidePrimary": true
+			}
+		}]
+	},
+	".csc-work-creatorType-label": {
+		"messagekey": "work-creatorTypeLabel"
+	},
+	".csc-work-sourceNote-label": {
+		"messagekey": "work-sourceNoteLabel"
+	},
+	".csc-work-creator-label": {
+		"messagekey": "work-creatorLabel"
+	},
+	".csc-work-updatedAtStart-label": {
+		"messagekey": "work-updatedAtStartLabel"
+	},
+	".csc-work-updatedBy-label": {
+		"messagekey": "work-updatedByLabel"
+	},
+	".csc-work-indexingNote": {
+		"decorators": [{
+			"func": "cspace.makeRepeatable",
+			"type": "fluid",
+			"options": {
+				"repeatTree": {
+					"expander": {
+						"tree": {
+							".csc-work-indexingNote": "${{row}.indexingNote}"
+						},
+						"type": "fluid.noexpand"
+					}
+				},
+				"elPath": "indexingNotes",
+				"hidePrimary": true
+			}
+		}]
+	},
+	".csc-work-scopeNote-label": {
+		"messagekey": "work-scopeNoteLabel"
+	},
+	".csc-work-updatedAtStart": {
+		"decorators": [{
+			"func": "cspace.datePicker",
+			"type": "fluid"
+		}],
+		"value": "${updatedAtStart}"
+	},
+	".csc-work-sourceNote": {
+		"decorators": [{
+			"func": "cspace.makeRepeatable",
+			"type": "fluid",
+			"options": {
+				"repeatTree": {
+					"expander": {
+						"tree": {
+							".csc-work-sourceNote": "${{row}.sourceNote}"
+						},
+						"type": "fluid.noexpand"
+					}
+				},
+				"elPath": "sourceNotes",
+				"hidePrimary": true
+			}
+		}]
+	},
+	".csc-work-updatedAtEnd-label": {
+		"messagekey": "work-updatedAtEndLabel"
+	},
+	".csc-work-displayName": {
+		"decorators": [{
+			"func": "cspace.makeRepeatable",
+			"type": "fluid",
+			"options": {
+				"repeatTree": {
+					"expander": {
+						"tree": {
+							".csc-work-displayName": "${{row}.displayName}"
+						},
+						"type": "fluid.noexpand"
+					}
+				},
+				"elPath": "displayNames",
+				"hidePrimary": true
+			}
+		}]
+	},
+	".csc-work-medium-label": {
+		"messagekey": "work-mediumLabel"
+	},
+	".csc-work-updatedAt-label": {
+		"messagekey": "work-updatedAtLabel"
+	},
+	".csc-work-historyNote": {
+		"decorators": [{
+			"func": "cspace.makeRepeatable",
+			"type": "fluid",
+			"options": {
+				"repeatTree": {
+					"expander": {
+						"tree": {
+							".csc-work-historyNote": "${{row}.historyNote}"
+						},
+						"type": "fluid.noexpand"
+					}
+				},
+				"elPath": "historyNotes",
+				"hidePrimary": true
+			}
+		}]
+	},
+	".csc-work-medium": {
+		"decorators": [{
+			"func": "cspace.makeRepeatable",
+			"type": "fluid",
+			"options": {
+				"repeatTree": {
+					"expander": {
+						"tree": {
+							".csc-work-medium": {
+								"default": "",
+								"optionnames": ["Please select a value",
+								"Film",
+								"Other"],
+								"optionlist": ["",
+								"film",
+								"other"],
+								"selection": "${{row}.medium}"
+							}
+						},
+						"type": "fluid.noexpand"
+					}
+				},
+				"elPath": "mediums",
+				"hidePrimary": true
+			}
+		}]
+	},
+	".csc-work-updatedAtEnd": {
+		"decorators": [{
+			"func": "cspace.datePicker",
+			"type": "fluid"
+		}],
+		"value": "${updatedAtEnd}"
+	},
+	".csc-work-createdBy-label": {
+		"messagekey": "work-createdByLabel"
+	},
+	".csc-work-displayName-label": {
+		"messagekey": "work-displayNameLabel"
+	},
+	".csc-work-genre": {
+		"decorators": [{
+			"func": "cspace.makeRepeatable",
+			"type": "fluid",
+			"options": {
+				"repeatTree": {
+					"expander": {
+						"tree": {
+							".csc-work-genre": {
+								"default": "",
+								"optionnames": ["Please select a value",
+								"Film",
+								"Other"],
+								"optionlist": ["",
+								"film",
+								"other"],
+								"selection": "${{row}.genre}"
+							}
+						},
+						"type": "fluid.noexpand"
+					}
+				},
+				"elPath": "genres",
+				"hidePrimary": true
+			}
+		}]
+	},
+	".csc-work-createdBy": {
+		"decorators": [{
+			"func": "cspace.makeRepeatable",
+			"type": "fluid",
+			"options": {
+				"repeatTree": {
+					"expander": {
+						"tree": {
+							".csc-work-createdBy": "${{row}.createdBy}"
+						},
+						"type": "fluid.noexpand"
+					}
+				},
+				"elPath": "createdBys",
+				"hidePrimary": true
+			}
+		}]
+	},
+	".csc-work-historyNote-label": {
+		"messagekey": "work-historyNoteLabel"
+	},
+	".csc-work-scopeNote": {
+		"decorators": [{
+			"func": "cspace.makeRepeatable",
+			"type": "fluid",
+			"options": {
+				"repeatTree": {
+					"expander": {
+						"tree": {
+							".csc-work-scopeNote": "${{row}.scopeNote}"
+						},
+						"type": "fluid.noexpand"
+					}
+				},
+				"elPath": "scopeNotes",
+				"hidePrimary": true
+			}
+		}]
+	},
+	".csc-work-publisherType-label": {
+		"messagekey": "work-publisherTypeLabel"
+	},
+	".csc-work-termStatus-label": {
+		"messagekey": "work-termStatusLabel"
+	},
+	".csc-work-updatedBy": {
+		"decorators": [{
+			"func": "cspace.makeRepeatable",
+			"type": "fluid",
+			"options": {
+				"repeatTree": {
+					"expander": {
+						"tree": {
+							".csc-work-updatedBy": "${{row}.updatedBy}"
+						},
+						"type": "fluid.noexpand"
+					}
+				},
+				"elPath": "updatedBys",
+				"hidePrimary": true
+			}
+		}]
+	},
+	".csc-work-publisherGroup": {
+		"decorators": [{
+			"func": "cspace.makeRepeatable",
+			"type": "fluid",
+			"options": {
+				"repeatTree": {
+					"expander": {
+						"tree": {
+							".csc-work-publisher": {
+								"decorators": [{
+									"func": "cspace.autocomplete",
+									"type": "fluid",
+									"options": {
+										"queryUrl": "../../../tenant/core/vocabularies/work/autocomplete/publisher",
+										"vocabUrl": "../../../tenant/core/vocabularies/work/source-vocab/publisher"
+									}
+								}],
+								"value": "${{row}.publisher}"
+							}
+						},
+						"type": "fluid.noexpand"
+					}
+				},
+				"elPath": "publisherGroup",
+				"hidePrimary": true
+			}
+		}]
+	},
+	".csc-work-termStatus": {
+		"decorators": [{
+			"func": "cspace.makeRepeatable",
+			"type": "fluid",
+			"options": {
+				"repeatTree": {
+					"expander": {
+						"tree": {
+							".csc-work-termStatus": {
+								"default": "",
+								"optionnames": ["Please select a value",
+								"Quick Added",
+								"Needs Attention",
+								"In Progress",
+								"Complete"],
+								"optionlist": ["",
+								"quickadded",
+								"needsattantion",
+								"inprogress",
+								"complete"],
+								"selection": "${{row}.termStatus}"
+							}
+						},
+						"type": "fluid.noexpand"
+					}
+				},
+				"elPath": "termStatuss",
+				"hidePrimary": true
+			}
+		}]
+	},
+	".csc-work-indexingNote-label": {
+		"messagekey": "work-indexingNoteLabel"
+	},
+	".csc-work-genre-label": {
+		"messagekey": "work-genreLabel"
+	}
 }

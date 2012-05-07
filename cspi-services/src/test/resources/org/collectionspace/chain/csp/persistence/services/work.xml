@@ -8,10 +8,10 @@
 	<termStatus>complete</termStatus>
 	<medium>film</medium>
 	<source>other</source>
-	<scopeNotes>scope notes go here</scopeNotes>
-	<indexingNotes>indexing notes go here</indexingNotes>
-	<historyNotes>history notes go here</historyNotes>
-	<sourceNotes>source notes go here</sourceNotes>
+	<scopeNote>scope note goes here</scopeNote>
+	<indexingNote>indexing note goes here</indexingNote>
+	<historyNote>history note goes here</historyNote>
+	<sourceNote>source note goes here</sourceNote>
 	<creatorGroupList>
 		<creatorGroup>
 			<creator>Frank Oz</creator>
@@ -24,9 +24,6 @@
 			<publisherType>distributioncompany</publisherType>
 		</publisherGroup>
 	</publisherGroupList>
-	<useFors>
-		<useFor>Muppets Take Manhattan</useFor>
-	</useFors>
 	<workDateGroupList>
 		<workDateGroup>
 			<dateEarliestSingleQualifier>-</dateEarliestSingleQualifier>

@@ -1,14 +1,15 @@
 {
     "work": {
         "properties": {
-            "useFors": {
+            "mediums": {
                 "items": {
                     "properties": {
                         "_primary": {
                             "default": true,
                             "type": "boolean"
                         },
-                        "useFor": {
+                        "medium": {
+                            "default": "",
                             "type": "string"
                         }
                     },
@@ -24,6 +25,37 @@
                             "type": "boolean"
                         },
                         "createdBy": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "genres": {
+                "items": {
+                    "properties": {
+                        "genre": {
+                            "default": "",
+                            "type": "string"
+                        },
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "sourceNotes": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "sourceNote": {
                             "type": "string"
                         }
                     },
@@ -47,19 +79,6 @@
                 },
                 "type": "array"
             },
-            "workDateGroupStart": {
-                "properties": {
-                    "scalarValuesComputed": {
-                        "default": "",
-                        "type": "string"
-                    },
-                    "_primary": {
-                        "default": true,
-                        "type": "boolean"
-                    }
-                },
-                "type": "object"
-            },
             "publisherGroup": {
                 "items": {
                     "properties": {
@@ -68,6 +87,7 @@
                             "type": "boolean"
                         },
                         "publisher": {
+                            "default": "",
                             "type": "string"
                         }
                     },
@@ -78,18 +98,54 @@
             "updatedAtEnd": {
                 "type": "date"
             },
-            "workDateGroupEnd": {
-                "properties": {
-                    "scalarValuesComputed": {
-                        "default": "",
-                        "type": "string"
+            "updatedAtStart": {
+                "type": "date"
+            },
+            "creatorGroup": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "creator": {
+                            "default": "",
+                            "type": "string"
+                        }
                     },
-                    "_primary": {
-                        "default": true,
-                        "type": "boolean"
-                    }
+                    "type": "object"
                 },
-                "type": "object"
+                "type": "array"
+            },
+            "indexingNotes": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "indexingNote": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "historyNotes": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "historyNote": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
             },
             "displayNames": {
                 "items": {
@@ -106,6 +162,21 @@
                 },
                 "type": "array"
             },
+            "scopeNotes": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "scopeNote": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
             "updatedBys": {
                 "items": {
                     "properties": {
@@ -114,24 +185,6 @@
                             "type": "boolean"
                         },
                         "updatedBy": {
-                            "type": "string"
-                        }
-                    },
-                    "type": "object"
-                },
-                "type": "array"
-            },
-            "updatedAtStart": {
-                "type": "date"
-            },
-            "creatorGroup": {
-                "items": {
-                    "properties": {
-                        "_primary": {
-                            "default": true,
-                            "type": "boolean"
-                        },
-                        "creator": {
                             "type": "string"
                         }
                     },

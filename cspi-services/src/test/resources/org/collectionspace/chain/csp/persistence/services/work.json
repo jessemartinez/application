@@ -1,12 +1,6 @@
 {
-    "indexingNotes": "indexing notes go here",
+    "indexingNote": "indexing note goes here",
     "shortIdentifier": "worktest1",
-    "useFors": [
-        {
-            "_primary": true,
-            "useFor": "Muppets Take Manhattan"
-        }
-    ],
     "source": "other",
     "termStatus": "complete",
     "publisherGroup": [
@@ -16,8 +10,9 @@
             "publisher": "TriStar Pictures"
         }
     ],
-    "historyNotes": "history notes go here",
-    "scopeNotes": "scope notes go here",
+    "historyNote": "history note goes here",
+    "scopeNote": "scope note goes here",
+ 	"sourceNote": "source note goes here",
     "displayName": "Muppets Take Manhattan (1984)",
     "medium": "film",
     "creatorGroup": [

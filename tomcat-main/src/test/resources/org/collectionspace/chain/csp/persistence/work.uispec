@@ -150,6 +150,9 @@
             "messagekey": "work-publisherLabel"
         },
         ".csc-work-uri": "${fields.uri}",
+        ".csc-work-termLanguage-label": {
+            "messagekey": "work-termLanguageLabel"
+        },
         ".csc-work-termSource-label": {
             "messagekey": "work-termSourceLabel"
         },
@@ -164,6 +167,9 @@
         },
         ".csc-work-updatedBy-label": {
             "messagekey": "work-updatedByLabel"
+        },
+        ".csc-work-termPrefForLang-label": {
+            "messagekey": "work-termPrefForLangLabel"
         },
         ".csc-work-scopeNote-label": {
             "messagekey": "work-scopeNoteLabel"
@@ -276,6 +282,9 @@
         ".csc-work-indexingNote-label": {
             "messagekey": "work-indexingNoteLabel"
         },
+        ".csc-work-termType-label": {
+            "messagekey": "work-termTypeLabel"
+        },
         ".csc-work-creatorGroup": {
             "decorators": [
                 {
@@ -347,6 +356,9 @@
                         "repeatTree": {
                             "expander": {
                                 "tree": {
+                                    ".csc-work-termType": "${{row}.termType}",
+                                    ".csc-work-termPrefForLang": "${{row}.termPrefForLang}",
+                                    ".csc-work-termLanguage": "${{row}.termLanguage}",
                                     ".csc-work-termDisplayName": "${{row}.termDisplayName}",
                                     ".csc-work-termSourceID": "${{row}.termSourceID}",
                                     ".csc-work-termSourceNote": "${{row}.termSourceNote}",
@@ -382,6 +394,7 @@
                                         "selection": "${{row}.termStatus}"
                                     },
                                     ".csc-work-termSourceDetail": "${{row}.termSourceDetail}",
+                                    ".csc-work-termQualifier": "${{row}.termQualifier}",
                                     ".csc-work-termName": "${{row}.termName}"
                                 },
                                 "type": "fluid.noexpand"
@@ -495,6 +508,9 @@
         },
         ".csc-work-publisherGroup-label": {
             "messagekey": "work-publisherGroupLabel"
+        },
+        ".csc-work-termQualifier-label": {
+            "messagekey": "work-termQualifierLabel"
         },
         ".csc-work-genre-label": {
             "messagekey": "work-genreLabel"

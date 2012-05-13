@@ -2,6 +2,12 @@
     ".csc-work-publisher-label": {
         "messagekey": "work-publisherLabel"
     },
+    ".csc-work-termLanguage-label": {
+        "messagekey": "work-termLanguageLabel"
+    },
+    ".csc-work-termSource-label": {
+        "messagekey": "work-termSourceLabel"
+    },
     ".csc-work-creatorGroup": {
         "decorators": [
             {
@@ -33,9 +39,6 @@
                 }
             }
         ]
-    },
-    ".csc-work-termSource-label": {
-        "messagekey": "work-termSourceLabel"
     },
     ".csc-work-termName-label": {
         "messagekey": "work-termNameLabel"
@@ -112,6 +115,9 @@
                 }
             }
         ]
+    },
+    ".csc-work-termPrefForLang-label": {
+        "messagekey": "work-termPrefForLangLabel"
     },
     ".csc-work-scopeNote-label": {
         "messagekey": "work-scopeNoteLabel"
@@ -219,11 +225,11 @@
     ".csc-work-termSourceNote-label": {
         "messagekey": "work-termSourceNoteLabel"
     },
-    ".csc-work-createdBy-label": {
-        "messagekey": "work-createdByLabel"
-    },
     ".csc-work-termSourceDetail-label": {
         "messagekey": "work-termSourceDetailLabel"
+    },
+    ".csc-work-createdBy-label": {
+        "messagekey": "work-createdByLabel"
     },
     ".csc-work-genre": {
         "decorators": [
@@ -365,10 +371,16 @@
     ".csc-work-indexingNote-label": {
         "messagekey": "work-indexingNoteLabel"
     },
+    ".csc-work-termQualifier-label": {
+        "messagekey": "work-termQualifierLabel"
+    },
     ".csc-work-genre-label": {
         "messagekey": "work-genreLabel"
     },
     ".csc-work-termDisplayName-label": {
         "messagekey": "work-termDisplayNameLabel"
+    },
+    ".csc-work-termType-label": {
+        "messagekey": "work-termTypeLabel"
     }
 }

@@ -70,12 +70,18 @@
                     "workTermGroup": {
                         "items": {
                             "properties": {
+                                "termPrefForLang": {
+                                    "type": "string"
+                                },
                                 "termName": {
                                     "type": "string"
                                 },
                                 "_primary": {
                                     "default": true,
                                     "type": "boolean"
+                                },
+                                "termType": {
+                                    "type": "string"
                                 },
                                 "termDisplayName": {
                                     "type": "string"
@@ -91,10 +97,16 @@
                                 "termSourceID": {
                                     "type": "string"
                                 },
+                                "termQualifier": {
+                                    "type": "string"
+                                },
                                 "termSourceDetail": {
                                     "type": "string"
                                 },
                                 "termSourceNote": {
+                                    "type": "string"
+                                },
+                                "termLanguage": {
                                     "type": "string"
                                 }
                             },

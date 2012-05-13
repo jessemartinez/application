@@ -107,7 +107,7 @@
             </field>
             <field id="termName"/>
             <field id="termLanguage"/>
-            <field id="termPerfForLang"/>
+            <field id="termPrefForLang"/>
             <field id="termType"/>
             <field id="termQualifier"/>
             <field id="termSource" autocomplete="vocab-worksource" ui-type="enum"/>

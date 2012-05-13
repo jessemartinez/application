@@ -26,7 +26,7 @@
             <termType>term type</termType>
             <termQualifier>term qualifier</termQualifier>
             <termSource>other</termSource>
-            <termSourceID>12345<termSourceID>
+            <termSourceID>12345</termSourceID>
             <termSourceDetail>term source detail</termSourceDetail>
             <termSourceNote>source note goes here</termSourceNote>
             <termStatus>complete</termStatus>

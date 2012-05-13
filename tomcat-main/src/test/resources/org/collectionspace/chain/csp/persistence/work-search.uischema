@@ -1,196 +1,184 @@
 {
-	"work": {
-		"properties": {
-			"mediums": {
-				"items": {
-					"properties": {
-						"_primary": {
-							"default": true,
-							"type": "boolean"
-						},
-						"medium": {
-							"default": "",
-							"type": "string"
-						}
-					},
-					"type": "object"
-				},
-				"type": "array"
-			},
-			"createdBys": {
-				"items": {
-					"properties": {
-						"_primary": {
-							"default": true,
-							"type": "boolean"
-						},
-						"createdBy": {
-							"type": "string"
-						}
-					},
-					"type": "object"
-				},
-				"type": "array"
-			},
-			"genres": {
-				"items": {
-					"properties": {
-						"genre": {
-							"default": "",
-							"type": "string"
-						},
-						"_primary": {
-							"default": true,
-							"type": "boolean"
-						}
-					},
-					"type": "object"
-				},
-				"type": "array"
-			},
-			"sourceNotes": {
-				"items": {
-					"properties": {
-						"_primary": {
-							"default": true,
-							"type": "boolean"
-						},
-						"sourceNote": {
-							"type": "string"
-						}
-					},
-					"type": "object"
-				},
-				"type": "array"
-			},
-			"termStatuss": {
-				"items": {
-					"properties": {
-						"_primary": {
-							"default": true,
-							"type": "boolean"
-						},
-						"termStatus": {
-							"default": "",
-							"type": "string"
-						}
-					},
-					"type": "object"
-				},
-				"type": "array"
-			},
-			"publisherGroup": {
-				"items": {
-					"properties": {
-						"_primary": {
-							"default": true,
-							"type": "boolean"
-						},
-						"publisher": {
-							"type": "string"
-						}
-					},
-					"type": "object"
-				},
-				"type": "array"
-			},
-			"updatedAtEnd": {
-				"type": "date"
-			},
-			"updatedAtStart": {
-				"type": "date"
-			},
-			"creatorGroup": {
-				"items": {
-					"properties": {
-						"_primary": {
-							"default": true,
-							"type": "boolean"
-						},
-						"creator": {
-							"type": "string"
-						}
-					},
-					"type": "object"
-				},
-				"type": "array"
-			},
-			"indexingNotes": {
-				"items": {
-					"properties": {
-						"_primary": {
-							"default": true,
-							"type": "boolean"
-						},
-						"indexingNote": {
-							"type": "string"
-						}
-					},
-					"type": "object"
-				},
-				"type": "array"
-			},
-			"historyNotes": {
-				"items": {
-					"properties": {
-						"_primary": {
-							"default": true,
-							"type": "boolean"
-						},
-						"historyNote": {
-							"type": "string"
-						}
-					},
-					"type": "object"
-				},
-				"type": "array"
-			},
-			"displayNames": {
-				"items": {
-					"properties": {
-						"_primary": {
-							"default": true,
-							"type": "boolean"
-						},
-						"displayName": {
-							"type": "string"
-						}
-					},
-					"type": "object"
-				},
-				"type": "array"
-			},
-			"scopeNotes": {
-				"items": {
-					"properties": {
-						"_primary": {
-							"default": true,
-							"type": "boolean"
-						},
-						"scopeNote": {
-							"type": "string"
-						}
-					},
-					"type": "object"
-				},
-				"type": "array"
-			},
-			"updatedBys": {
-				"items": {
-					"properties": {
-						"_primary": {
-							"default": true,
-							"type": "boolean"
-						},
-						"updatedBy": {
-							"type": "string"
-						}
-					},
-					"type": "object"
-				},
-				"type": "array"
-			}
-		},
-		"type": "object"
-	}
+    "work": {
+        "properties": {
+            "mediums": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "medium": {
+                            "default": "",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "createdBys": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "createdBy": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "genres": {
+                "items": {
+                    "properties": {
+                        "genre": {
+                            "default": "",
+                            "type": "string"
+                        },
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "sourceNotes": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "sourceNote": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "publisherGroup": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "publisher": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "updatedAtEnd": {
+                "type": "date"
+            },
+            "workTermGroup": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "termDisplayName": {
+                            "type": "string"
+                        },
+                        "termStatus": {
+                            "default": "",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "updatedAtStart": {
+                "type": "date"
+            },
+            "creatorGroup": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "creator": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "indexingNotes": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "indexingNote": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "historyNotes": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "historyNote": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "scopeNotes": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "scopeNote": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "updatedBys": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "updatedBy": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            }
+        },
+        "type": "object"
+    }
 }

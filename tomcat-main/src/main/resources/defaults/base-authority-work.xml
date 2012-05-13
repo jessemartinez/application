@@ -106,6 +106,14 @@
                 <title-selector>titleBar-termDisplayName</title-selector>
             </field>
             <field id="termName"/>
+            <field id="termLanguage"/>
+            <field id="termPerfForLang"/>
+            <field id="termType"/>
+            <field id="termQualifier"/>
+            <field id="termSource" autocomplete="vocab-worksource" ui-type="enum"/>
+            <field id="termSourceDetail"/>
+            <field id="termSourceID"/>
+            <field id="termSourceNote"/>
             <field id="termStatus" ui-search="repeatable" seperate_ui_container="true" mini="search,list,relate">
                 <options>
                     <option id="" default="yes">Please select a value</option>
@@ -115,10 +123,6 @@
                     <option id="complete">Complete</option>
                 </options>
             </field>
-            <field id="termSource" autocomplete="vocab-worksource" ui-type="enum"/>
-            <field id="termSourceDetail"/>
-            <field id="termSourceID"/>
-            <field id="termSourceNote"/>
         </repeat>
         <repeat id="workDateGroupList/workDateGroup">
             <group id="workDate" xxx-services-no-repeat="true"

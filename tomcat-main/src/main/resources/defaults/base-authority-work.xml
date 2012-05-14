@@ -51,7 +51,7 @@
             <title>Test Work Authority 2</title>
         </instance>
     </instances>
-    <section>
+    <section id="coreInformation">
         <field id="tenantID" section="collectionspace_core" attributes="GET"></field>
         <field id="createdBy" ui-search="repeatable" section="collectionspace_core" attributes="GET"></field>
         <field id="updatedBy" ui-search="repeatable" section="collectionspace_core" attributes="GET"></field>
@@ -107,7 +107,7 @@
             </field>
             <field id="termName"/>
             <field id="termLanguage"/>
-            <field id="termPrefForLang"/>
+            <field id="termPrefForLang" datatype="boolean"/>
             <field id="termType"/>
             <field id="termQualifier"/>
             <field id="termSource" autocomplete="vocab-worksource" ui-type="enum"/>
@@ -131,7 +131,7 @@
         </repeat>
     </section>
     <!-- not used in UI except in autocompletes -->
-    <section>
+    <section id="otherInformation">
         <field id="shortIdentifier" mini="search,list,relate" attributes="GET"></field>
         <field id="csid" mini="search,list,relate" attributes="GET"></field>
         <field id="refName" mini="search,list,relate" attributes="GET"></field>

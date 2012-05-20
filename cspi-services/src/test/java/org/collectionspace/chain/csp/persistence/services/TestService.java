@@ -134,7 +134,7 @@ public class TestService extends ServicesBaseClass {
 		testJSONXML(spec, "work", "work.xml", "work.json");
         testJSONXML(spec, "place", "placeXMLJSON.xml", "placeJSON.json");
 		testJSONXML(spec, "collection-object", "objectsXMLJSON.xml",
-		 		"objectsJSON.json");
+				"objectsJSON.json");
 		
 		testJSONXML(spec, "acquisition", "acquisitionXMLJSON.xml",
 		 		"acquisitionJSON.json");
@@ -161,7 +161,7 @@ public class TestService extends ServicesBaseClass {
 		log.info("Converting JSON to XML for record type " + objtype);
 		Record r = spec.getRecord(objtype);
 		JSONObject j = getJSON(jsonfile);
-		log.info("Original JSON:\n" + j.toString());
+		//log.info("Original JSON:\n" + j.toString());
 		Map<String, Document> parts = new HashMap<String, Document>();
 		Document doc = null;
 		JSONObject testjson = new JSONObject();
@@ -171,7 +171,7 @@ public class TestService extends ServicesBaseClass {
 				String[] record_path = path.split(":", 2);
 				doc = XmlJsonConversion.convertToXml(r, j, section, "");
 				parts.put(record_path[0], doc);
-				log.info("After JSON->XML conversion:\n" + doc.asXML());
+				//log.info("After JSON->XML conversion:\n" + doc.asXML());
 				JSONObject repeatjson = org.collectionspace.chain.csp.persistence.services.XmlJsonConversion
 						.convertToJson(r, doc, "", "common","","");// this is where we
 																// specify the
@@ -181,14 +181,19 @@ public class TestService extends ServicesBaseClass {
 				for (String name : JSONObject.getNames(repeatjson)) {
 					testjson.put(name, repeatjson.get(name));
 				}
-				log.info("After XML->JSON re-conversion:\n"
-						+ testjson.toString());
+				//log.info("After XML->JSON re-conversion:\n" + testjson.toString());
 			}
 		}
 		// convert json -> xml and back to json and see if it still looks the
 		// same..
-		assertTrue("JSON->XML->JSON round-trip doesn't match original JSON",
-				JSONUtils.checkJSONEquivOrEmptyStringKey(j,testjson));
+		boolean result = JSONUtils.checkJSONEquivOrEmptyStringKey(j,testjson);
+		if(!result) {
+			log.info("Original JSON:\n" + j.toString());
+			log.info("After JSON->XML conversion:\n" + doc.asXML());
+			log.info("After XML->JSON re-conversion:\n" + testjson.toString());
+		}
+		assertTrue("JSON->XML->JSON round-trip for record type: "+objtype+" doesn't match original JSON",
+				result);
 
 	}
 
@@ -207,16 +212,19 @@ public class TestService extends ServicesBaseClass {
 		log.info("Converting XML to JSON for record type " + objtype);
 		Document testxml = getDocument(xmlfile);
 		String test = testxml.asXML();
-		log.info("Original XML:\n" + test);
+		log.trace("Original XML:\n" + test);
 		JSONObject j = getJSON(jsonfile);
-		log.info("Original JSON:\n" + j.toString());
+		//log.info("Original JSON:\n" + j.toString());
 		Record r = spec.getRecord(objtype);
 		JSONObject repeatjson = org.collectionspace.chain.csp.persistence.services.XmlJsonConversion
 				.convertToJson(r, testxml, "", "common","",""); // this is where we specify the multipart section
 															// we are considering
-		log.info("After XML->JSON conversion:\n" + repeatjson.toString());
-		assertTrue("Generated JSON doesn't match original JSON", JSONUtils
-				.checkJSONEquivOrEmptyStringKey(repeatjson, j));
+		boolean result = JSONUtils.checkJSONEquivOrEmptyStringKey(repeatjson, j);
+		if(!result) {
+			log.info("Original JSON:\n" + j.toString());
+			log.info("After XML->JSON conversion:\n" + repeatjson.toString());
+		}
+		assertTrue("Generated JSON for record type: "+objtype+" doesn't match original JSON",result );
 
 	}
 
@@ -827,7 +835,7 @@ public class TestService extends ServicesBaseClass {
 		}
 		assertEquals("Failed to receive expected 200 status code on read", 200,
 				getStatus);
-		log.info("RETRIEVED RECORD " + doc.asXML());
+		log.trace("RETRIEVED RECORD " + doc.asXML());
 		assertNotNull("Record received on read was unexpectedly null", doc);
 		Node n = doc.selectSingleNode(xpath);
 		assertNotNull("Expected XPath expression was not found in record", n);
@@ -843,9 +851,9 @@ public class TestService extends ServicesBaseClass {
 
 		assertEquals("Failed to receive expected 200 status code on list read",
 				200, getStatus);
-		log.info("LISTLISTLIST");
-		log.info(doc.asXML());
-		log.info("LISTLISTLIST");
+		log.trace("LISTLISTLIST");
+		log.trace(doc.asXML());
+		log.trace("LISTLISTLIST");
 
 		// DELETE (Delete)
 		int status = conn.getNone(RequestMethod.DELETE, url.getURL(), null,

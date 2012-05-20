@@ -1,60 +1,64 @@
-{
-    "recordtypes": {
-        "properties": {
-            "vocabularies": {
-                "default": [
-                    "persontest1",
-                    "persontest2",
-                    "person",
-                    "activity",
-                    "concept",
-                    "material",
-                    "location",
-                    "organization",
-                    "organizationtest",
-                    "placetest1",
-                    "placetest2",
-                    "place",
-                    "work",
-                    "worktest1",
-                    "worktest2"
-                ],
-                "type": "array"
-            },
-            "administration": {
-                "default": [
-                    "users",
-                    "termlist",
-                    "role"
-                ],
-                "type": "array"
-            },
-            "all": {
-                "default": [
-                    "all"
-                ],
-                "type": "array"
-            },
-            "cataloging": {
-                "default": [
-                    "cataloging"
-                ],
-                "type": "array"
-            },
-            "procedures": {
-                "default": [
-                    "loanin",
-                    "loanout",
-                    "acquisition",
-                    "movement",
-                    "objectexit",
-                    "intake",
-                    "group",
-                    "media"
-                ],
-                "type": "array"
-            }
-        },
-        "type": "object"
+{"recordtypes": {
+  "properties": {
+    "vocabularies": {
+      "default": [
+        "activity",
+        "associatedconcept_ca",
+        "common_ta",
+        "concept",
+        "local_place",
+        "local_sla",
+        "local_ta",
+        "local_work",
+        "location",
+        "material_ca",
+        "offsite_sla",
+        "organization",
+        "organizationtest",
+        "person",
+        "persontest1",
+        "persontest2",
+        "place",
+        "placetest1",
+        "placetest2",
+        "taxon",
+        "tgn_place",
+        "ulan_oa",
+        "ulan_pa",
+        "work",
+        "worktest1"
+      ],
+      "type": "array"
+    },
+    "procedures": {
+      "default": [
+        "acquisition",
+        "group",
+        "intake",
+        "loanin",
+        "loanout",
+        "media",
+        "movement",
+        "objectexit"
+      ],
+      "type": "array"
+    },
+    "cataloging": {
+      "default": ["cataloging"],
+      "type": "array"
+    },
+    "all": {
+      "default": ["all"],
+      "type": "array"
+    },
+    "administration": {
+      "default": [
+        "role",
+        "termlist",
+        "users"
+      ],
+      "type": "array"
     }
-}
+  },
+  "type": "object"
+}}

@@ -12,5 +12,8 @@ tomcat-main/src/main/resources/tenants/core/cow.xml
 .gitignore
 *.bak
 target/
+.DS_Store
+<<<<<<< HEAD
+=======
 
-
+>>>>>>> master

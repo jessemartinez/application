@@ -446,6 +446,12 @@
         ".csc-work-workAuthorityInformation-label": {
             "messagekey": "work-workAuthorityInformationLabel"
         },
+        ".csc-work-coreInformation-label": {
+            "messagekey": "work-coreInformationLabel"
+        },
+        ".csc-work-otherInformation-label": {
+            "messagekey": "work-otherInformationLabel"
+        },
         ".csc-work-termSourceNote-label": {
             "messagekey": "work-termSourceNoteLabel"
         },

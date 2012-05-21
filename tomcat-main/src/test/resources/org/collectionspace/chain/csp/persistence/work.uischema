@@ -71,7 +71,8 @@
                         "items": {
                             "properties": {
                                 "termPrefForLang": {
-                                    "type": "string"
+                                    "default": false,
+                                    "type": "boolean"
                                 },
                                 "termName": {
                                     "type": "string"

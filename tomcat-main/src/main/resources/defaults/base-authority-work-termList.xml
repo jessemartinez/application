@@ -12,7 +12,7 @@
             <field id="termLanguage">
                 <selector>workAuthority-termLanguage</selector>
             </field>
-            <field id="termPrefForLang">
+            <field id="termPrefForLang" datatype="boolean">
                 <selector>workAuthority-termPrefForLang</selector>
             </field>
             <field id="termType">

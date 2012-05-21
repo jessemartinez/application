@@ -3,10 +3,10 @@
         "messagekey": "work-publisherLabel"
     },
     ".csc-work-termLanguage-label": {
-        "messagekey": "work-termLanguageLabel"
+        "messagekey": "preferredWork-termLanguageLabel"
     },
     ".csc-work-termSource-label": {
-        "messagekey": "work-termSourceLabel"
+        "messagekey": "preferredWork-termSourceLabel"
     },
     ".csc-work-creatorGroup": {
         "decorators": [
@@ -41,12 +41,12 @@
         ]
     },
     ".csc-work-termName-label": {
-        "messagekey": "work-termNameLabel"
+        "messagekey": "preferredWork-termNameLabel"
     },
     ".csc-work-creatorType-label": {
         "messagekey": "work-creatorTypeLabel"
     },
-    ".csc-work-workTermGroup": {
+    ".csc-preferredWork-workTermGroup": {
         "decorators": [
             {
                 "func": "cspace.makeRepeatable",
@@ -55,8 +55,7 @@
                     "repeatTree": {
                         "expander": {
                             "tree": {
-                                ".csc-work-termDisplayName": "${{row}.termDisplayName}",
-                                ".csc-work-termStatus": {
+                                ".csc-workAuthority-termStatus": {
                                     "default": "",
                                     "optionnames": [
                                         "Please select a value",
@@ -73,7 +72,8 @@
                                         "complete"
                                     ],
                                     "selection": "${{row}.termStatus}"
-                                }
+                                },
+                                ".csc-preferredWork-termDisplayName": "${{row}.termDisplayName}"
                             },
                             "type": "fluid.noexpand"
                         }
@@ -117,7 +117,7 @@
         ]
     },
     ".csc-work-termPrefForLang-label": {
-        "messagekey": "work-termPrefForLangLabel"
+        "messagekey": "preferredWork-termPrefForLangLabel"
     },
     ".csc-work-scopeNote-label": {
         "messagekey": "work-scopeNoteLabel"
@@ -223,10 +223,10 @@
         "value": "${updatedAtEnd}"
     },
     ".csc-work-termSourceNote-label": {
-        "messagekey": "work-termSourceNoteLabel"
+        "messagekey": "preferredWork-termSourceNoteLabel"
     },
     ".csc-work-termSourceDetail-label": {
-        "messagekey": "work-termSourceDetailLabel"
+        "messagekey": "preferredWork-termSourceDetailLabel"
     },
     ".csc-work-createdBy-label": {
         "messagekey": "work-createdByLabel"
@@ -311,7 +311,7 @@
         "messagekey": "work-publisherTypeLabel"
     },
     ".csc-work-termStatus-label": {
-        "messagekey": "work-termStatusLabel"
+        "messagekey": "preferredWork-termStatusLabel"
     },
     ".csc-work-updatedBy": {
         "decorators": [
@@ -366,21 +366,21 @@
         ]
     },
     ".csc-work-termSourceID-label": {
-        "messagekey": "work-termSourceIDLabel"
+        "messagekey": "preferredWork-termSourceIDLabel"
     },
     ".csc-work-indexingNote-label": {
         "messagekey": "work-indexingNoteLabel"
     },
     ".csc-work-termQualifier-label": {
-        "messagekey": "work-termQualifierLabel"
+        "messagekey": "preferredWork-termQualifierLabel"
     },
     ".csc-work-genre-label": {
         "messagekey": "work-genreLabel"
     },
     ".csc-work-termDisplayName-label": {
-        "messagekey": "work-termDisplayNameLabel"
+        "messagekey": "preferredWork-termDisplayNameLabel"
     },
     ".csc-work-termType-label": {
-        "messagekey": "work-termTypeLabel"
+        "messagekey": "preferredWork-termTypeLabel"
     }
 }

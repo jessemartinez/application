@@ -45,11 +45,6 @@
             <title-ref>local_work</title-ref>
             <title>Local Work</title>
         </instance>
-        <instance id="work-worktest1">
-            <web-url>worktest1</web-url>
-            <title-ref>worktest1</title-ref>
-            <title>Test Work Authority 1</title>
-        </instance>
     </instances>
     <section id="coreInformation">
         <field id="tenantID" section="collectionspace_core" attributes="GET"></field>

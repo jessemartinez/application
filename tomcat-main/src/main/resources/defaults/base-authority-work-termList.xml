@@ -33,7 +33,7 @@
             <field id="termSourceNote">
                 <selector>workAuthority-termSourceNote</selector>
             </field>
-            <field id="termStatus" ui-search="repeatable" seperate_ui_container="true" mini="search,list,relate">
+            <field id="termStatus" seperate_ui_container="true" mini="search,list,relate">
                 <selector>workAuthority-termStatus</selector>
                 <options>
                     <option id="" default="yes">Please select a value</option>

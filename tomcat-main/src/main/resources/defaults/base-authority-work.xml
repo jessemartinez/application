@@ -38,12 +38,12 @@
         <instance id="work-work">
             <web-url>work</web-url>
             <title-ref>work</title-ref>
-            <title>Default Work Authority</title>
+            <title>Local Works</title>
         </instance>
-        <instance id="work-local_work">
-            <web-url>local_work</web-url>
-            <title-ref>local_work</title-ref>
-            <title>Local Work</title>
+        <instance id="work-cona_work">
+            <web-url>cona_work</web-url>
+            <title-ref>cona_work</title-ref>
+            <title>CONA Works</title>
         </instance>
     </instances>
     <section id="coreInformation">

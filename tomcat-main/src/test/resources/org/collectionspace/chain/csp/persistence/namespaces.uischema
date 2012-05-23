@@ -35,15 +35,6 @@
             }, 
             "type": "object"
           }, 
-          "associatedconcept_ca": {
-            "properties": {
-              "nptAllowed": {
-                "default": true, 
-                "type": "boolean"
-              }
-            }, 
-            "type": "object"
-          }, 
           "concept": {
             "properties": {
               "nptAllowed": {
@@ -67,15 +58,6 @@
       }, 
       "location": {
         "properties": {
-          "local_sla": {
-            "properties": {
-              "nptAllowed": {
-                "default": true, 
-                "type": "boolean"
-              }
-            }, 
-            "type": "object"
-          }, 
           "location": {
             "properties": {
               "nptAllowed": {
@@ -108,15 +90,6 @@
             }, 
             "type": "object"
           }, 
-          "organizationtest": {
-            "properties": {
-              "nptAllowed": {
-                "default": true, 
-                "type": "boolean"
-              }
-            }, 
-            "type": "object"
-          }, 
           "ulan_oa": {
             "properties": {
               "nptAllowed": {
@@ -140,24 +113,6 @@
             }, 
             "type": "object"
           }, 
-          "persontest1": {
-            "properties": {
-              "nptAllowed": {
-                "default": true, 
-                "type": "boolean"
-              }
-            }, 
-            "type": "object"
-          }, 
-          "persontest2": {
-            "properties": {
-              "nptAllowed": {
-                "default": false, 
-                "type": "boolean"
-              }
-            }, 
-            "type": "object"
-          }, 
           "ulan_pa": {
             "properties": {
               "nptAllowed": {
@@ -172,34 +127,7 @@
       }, 
       "place": {
         "properties": {
-          "local_place": {
-            "properties": {
-              "nptAllowed": {
-                "default": true, 
-                "type": "boolean"
-              }
-            }, 
-            "type": "object"
-          }, 
           "place": {
-            "properties": {
-              "nptAllowed": {
-                "default": true, 
-                "type": "boolean"
-              }
-            }, 
-            "type": "object"
-          }, 
-          "placetest1": {
-            "properties": {
-              "nptAllowed": {
-                "default": true, 
-                "type": "boolean"
-              }
-            }, 
-            "type": "object"
-          }, 
-          "placetest2": {
             "properties": {
               "nptAllowed": {
                 "default": true, 
@@ -223,15 +151,6 @@
       "taxon": {
         "properties": {
           "common_ta": {
-            "properties": {
-              "nptAllowed": {
-                "default": true, 
-                "type": "boolean"
-              }
-            }, 
-            "type": "object"
-          }, 
-          "local_ta": {
             "properties": {
               "nptAllowed": {
                 "default": true, 

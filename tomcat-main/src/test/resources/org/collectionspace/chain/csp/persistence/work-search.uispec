@@ -55,24 +55,6 @@
                     "repeatTree": {
                         "expander": {
                             "tree": {
-                                ".csc-workAuthority-termStatus": {
-                                    "default": "",
-                                    "optionnames": [
-                                        "Please select a value",
-                                        "Quick Added",
-                                        "Needs Attention",
-                                        "In Progress",
-                                        "Complete"
-                                    ],
-                                    "optionlist": [
-                                        "",
-                                        "quickadded",
-                                        "needsattantion",
-                                        "inprogress",
-                                        "complete"
-                                    ],
-                                    "selection": "${{row}.termStatus}"
-                                },
                                 ".csc-preferredWork-termDisplayName": "${{row}.termDisplayName}"
                             },
                             "type": "fluid.noexpand"

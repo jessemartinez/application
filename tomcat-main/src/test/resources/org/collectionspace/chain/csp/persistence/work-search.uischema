@@ -90,10 +90,6 @@
                         },
                         "termDisplayName": {
                             "type": "string"
-                        },
-                        "termStatus": {
-                            "default": "",
-                            "type": "string"
                         }
                     },
                     "type": "object"

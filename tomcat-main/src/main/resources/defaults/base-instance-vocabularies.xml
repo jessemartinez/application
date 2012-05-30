@@ -181,12 +181,11 @@
                             <option id="possibly">Possibly</option>
                         </options>
                     </instance>
-                    <instance id="vocab-worksource">
-                        <web-url>workstatus</web-url>
-                        <title-ref>workstatus</title-ref>
-                        <title>Work Status</title>
+                    <instance id="vocab-worktermsource">
+                        <web-url>worktermsource</web-url>
+                        <title-ref>worktermsource</title-ref>
+                        <title>Work Term Source</title>
                         <options>
-							<option id="" default="yes">Please select a value</option>
 							<option id="aficatalog">AFI Catalog</option>
 							<option id="featurefilms">Feature Films</option>
 							<option id="allmoviecom">AllMovie.com</option>
@@ -209,4 +208,27 @@
                                 <option id="employee">Employee</option>
                         </options>
                     </instance>
+                    <instance id="vocab-workcreatortype">
+                        <web-url>workcreatortype</web-url>
+                        <title-ref>workcreatortype</title-ref>
+                        <title>Work Creator Type</title>
+                        <options>
+                            <option id="artist">Artist</option>
+                            <option id="director">Director</option>
+                            <option id="publishingcompany">Publishing Company</option>
+                            <option id="developer">Developer</option>
+                            <option id="productioncompany">Production Company</option>
+                        </options>
+                    </instance>
+                    <instance id="vocab-workpublishertype">
+                        <web-url>workpublishertype</web-url>
+                        <title-ref>workpublishertype</title-ref>
+                        <title>Work Publisher Type</title>
+                        <options>
+                            <option id="networkcableservice">Network/cable service</option>
+                            <option id="distributioncompany">Distribution company</option>
+                            <option id="publishingcompany">Publishing Company</option>
+                        </options>
+                    </instance>
+
 </instances>

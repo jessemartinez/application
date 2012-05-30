@@ -4,7 +4,8 @@
         <!-- List containing this item's preferred term and any non-preferred terms -->
         <repeat id="workTermGroupList/workTermGroup">
             <field id="termDisplayName" ui-search="repeatable" in-title="yes" display-name="yes" mini="summary,number,search,list,relate,terms">
-                <title-selector>titleBar-termDisplayName</title-selector>
+                <selector>workAuthority-termDisplayName</selector>
+                <title-selector>titleBar-displayName</title-selector>
             </field>
             <field id="termName">
                 <selector>workAuthority-termName</selector>

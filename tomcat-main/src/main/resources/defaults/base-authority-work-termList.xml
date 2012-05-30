@@ -9,7 +9,7 @@
             <field id="termName">
                 <selector>workAuthority-termName</selector>
             </field>
-            <field id="termLanguage">
+            <field id="termLanguage" autocomplete="vocab-languages" ui-type="enum">
                 <selector>workAuthority-termLanguage</selector>
             </field>
             <field id="termPrefForLang" datatype="boolean">

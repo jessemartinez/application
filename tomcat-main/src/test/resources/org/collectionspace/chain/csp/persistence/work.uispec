@@ -182,24 +182,17 @@
                                         "value": "${{row}.creator}"
                                     },
                                     ".csc-work-creatorType": {
-                                        "default": "",
-                                        "optionnames": [
-                                            "Please select a value",
-                                            "Artist",
-                                            "Director",
-                                            "Publishing Company",
-                                            "Developer",
-                                            "Production Company"
-                                        ],
-                                        "optionlist": [
-                                            "",
-                                            "artist",
-                                            "director",
-                                            "publishingcompany",
-                                            "developer",
-                                            "productioncompany"
-                                        ],
-                                        "selection": "${{row}.creatorType}"
+                                        "decorators": [
+                                            {
+                                                "func": "cspace.termList",
+                                                "type": "fluid",
+                                                "options": {
+                                                    "root": "{row}",
+                                                    "elPath": "creatorType",
+                                                    "termListType": "creatorType"
+                                                }
+                                            }
+                                        ]
                                     }
                                 },
                                 "type": "fluid.noexpand"
@@ -326,9 +319,21 @@
                                                                         }
                                                                     ]
                                                                 },
-                                                                ".csc-preferredWork-termDisplayName": "${{row}.termDisplayName}",
-                                                                ".csc-workAuthority-termLanguage": "${{row}.termLanguage}",
-                                                                ".csc-workAuthority-termSourceNote": "${{row}.termSourceNote}"
+                                                                ".csc-workAuthority-termLanguage": {
+                                                                    "decorators": [
+                                                                        {
+                                                                            "func": "cspace.termList",
+                                                                            "type": "fluid",
+                                                                            "options": {
+                                                                                "root": "{row}",
+                                                                                "elPath": "termLanguage",
+                                                                                "termListType": "termLanguage"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                ".csc-workAuthority-termSourceNote": "${{row}.termSourceNote}",
+                                                                ".csc-workAuthority-termDisplayName": "${{row}.termDisplayName}"
                                                             },
                                                             "type": "fluid.noexpand"
                                                         }
@@ -497,20 +502,17 @@
                             "expander": {
                                 "tree": {
                                     ".csc-work-publisherType": {
-                                        "default": "",
-                                        "optionnames": [
-                                            "Please select a value",
-                                            "Network/cable service",
-                                            "Distribution company",
-                                            "Publishing Company"
-                                        ],
-                                        "optionlist": [
-                                            "",
-                                            "networkcableservice",
-                                            "distributioncompany",
-                                            "publishingcompany"
-                                        ],
-                                        "selection": "${{row}.publisherType}"
+                                        "decorators": [
+                                            {
+                                                "func": "cspace.termList",
+                                                "type": "fluid",
+                                                "options": {
+                                                    "root": "{row}",
+                                                    "elPath": "publisherType",
+                                                    "termListType": "publisherType"
+                                                }
+                                            }
+                                        ]
                                     },
                                     ".csc-work-publisher": {
                                         "decorators": [

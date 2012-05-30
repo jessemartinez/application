@@ -108,6 +108,7 @@
                                     "type": "string"
                                 },
                                 "termLanguage": {
+                                    "default": "",
                                     "type": "string"
                                 }
                             },

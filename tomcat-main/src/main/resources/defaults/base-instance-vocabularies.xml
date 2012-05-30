@@ -186,16 +186,16 @@
                         <title-ref>worktermsource</title-ref>
                         <title>Work Term Source</title>
                         <options>
-							<option id="aficatalog">AFI Catalog</option>
-							<option id="featurefilms">Feature Films</option>
-							<option id="allmoviecom">AllMovie.com</option>
-							<option id="ammiacquisitiondatabase">AMMI Acquisitions Database</option>
-							<option id="ascap">ASCAP</option>
-							<option id="libraryofcongress">Library of Congress</option>
-							<option id="other">Other</option>
-							<option id="thecompletedirectorytoprimetimenetworkandcabletvshows">The Complete Directory to Primetime Network and Cable TV Shows</option>
-							<option id="totaltelevision4thedition">Total Television, 4th Edition</option>
-							<option id="rhizomeorgartbase">Rhizome.org Artbase</option>
+				<option id="aficatalog">AFI Catalog</option>
+				<option id="featurefilms">Feature Films</option>
+				<option id="allmoviecom">AllMovie.com</option>
+				<option id="ammiacquisitiondatabase">AMMI Acquisitions Database</option>
+				<option id="ascap">ASCAP</option>
+				<option id="libraryofcongress">Library of Congress</option>
+				<option id="other">Other</option>
+				<option id="thecompletedirectorytoprimetimenetworkandcabletvshows">The Complete Directory to Primetime Network and Cable TV Shows</option>
+				<option id="totaltelevision4thedition">Total Television, 4th Edition</option>
+				<option id="rhizomeorgartbase">Rhizome.org Artbase</option>
                         </options>
                     </instance>
                     <instance id="vocab-persontermtype">

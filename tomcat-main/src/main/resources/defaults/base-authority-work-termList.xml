@@ -22,7 +22,7 @@
             <field id="termQualifier">
                 <selector>workAuthority-termQualifier</selector>
             </field>
-            <field id="termSource" autocomplete="vocab-worksource" ui-type="enum">
+            <field id="termSource" autocomplete="vocab-worktermsource" ui-type="enum">
                 <selector>workAuthority-termSource</selector>
             </field>
             <field id="termSourceDetail">

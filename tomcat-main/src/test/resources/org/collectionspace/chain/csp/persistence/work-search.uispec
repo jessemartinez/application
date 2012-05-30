@@ -55,7 +55,7 @@
                     "repeatTree": {
                         "expander": {
                             "tree": {
-                                ".csc-preferredWork-termDisplayName": "${{row}.termDisplayName}"
+                                ".csc-workAuthority-termDisplayName": "${{row}.termDisplayName}"
                             },
                             "type": "fluid.noexpand"
                         }

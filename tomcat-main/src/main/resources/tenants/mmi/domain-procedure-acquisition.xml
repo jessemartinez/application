@@ -1,9 +1,0 @@
-<root>
-        <services-record-path id="mmi">acquisitions_mmi:http://collectionspace.org/services/acquisition/local/mmi,acquisitions_mmi</services-record-path>
-        <section id="domaindata">
-	        <field id="acquisitionExtent" section="mmi">
-        	        <selector>acquisition-acquisitionExtent</selector>
-        	</field>
-        </section>
-</root>
-

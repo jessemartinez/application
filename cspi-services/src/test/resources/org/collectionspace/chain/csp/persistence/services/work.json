@@ -8,6 +8,13 @@
             "publisher": "TriStar Pictures"
         }
     ],
+    "migratedEntityGroup": [
+        {
+            "_primary": true,
+            "migratedEntityType": "artist",
+            "migratedEntity": "Someone Else"
+        }
+    ],
     "historyNote": "history note goes here",
     "scopeNote": "scope note goes here",
     "medium": "film",

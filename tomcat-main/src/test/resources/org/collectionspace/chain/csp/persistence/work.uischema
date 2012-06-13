@@ -58,6 +58,25 @@
                         },
                         "type": "array"
                     },
+                    "migratedEntityGroup": {
+                        "items": {
+                            "properties": {
+                                "_primary": {
+                                    "default": true,
+                                    "type": "boolean"
+                                },
+                                "migratedEntityType": {
+                                    "default": "",
+                                    "type": "string"
+                                },
+                                "migratedEntity": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
                     "csid": {
                         "type": "string"
                     },
@@ -142,11 +161,11 @@
                         },
                         "type": "array"
                     },
-                    "shortIdentifier": {
-                        "type": "string"
-                    },
                     "updatedAt": {
                         "type": "date"
+                    },
+                    "shortIdentifier": {
+                        "type": "string"
                     },
                     "sourceNote": {
                         "type": "string"

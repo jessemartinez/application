@@ -56,22 +56,8 @@
         <field id="sourceNote" ui-search="repeatable"/>
         <field id="indexingNote" ui-search="repeatable"/>
         <field id="historyNote" ui-search="repeatable"/>
-        <field id="genre" ui-search="repeatable">
-            <options>
-                <option id="" default="yes">Please select a value</option>
-                <option id="short">Short</option>
-                <option id="feature">Feature</option>
-            </options>
-        </field>
-        <field id="medium" ui-search="repeatable">
-            <options>
-                <option id="" default="yes">Please select a value</option>
-                <option id="film">Film</option>
-                <option id="internet">Internet</option>
-                <option id="television">Television</option>
-                <option id="videogame">Video game</option>
-            </options>
-        </field>
+        <field id="genre" autocomplete="vocab-workgenre" ui-type="enum" ui-search="repeatable"/>
+        <field id="medium" autocomplete="vocab-workmedium" ui-type="enum" ui-search="repeatable" />
         <repeat id="creatorGroupList/creatorGroup">
             <field id="creator" autocomplete="person-person" ui-search="repeatable"/>
             <field id="creatorType" autocomplete="vocab-workcreatortype" ui-type="enum"/>

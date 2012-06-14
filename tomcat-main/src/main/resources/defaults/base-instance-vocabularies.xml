@@ -229,5 +229,24 @@
                             <option id="publishingcompany">Publishing Company</option>
                         </options>
                     </instance>
-
+                    <instance id="vocab-workgenre">
+                        <web-url>workgenre</web-url>
+                        <title-ref>workgenre</title-ref>
+                        <title>Work Genre</title>
+                        <options>
+                            <option id="short">Short</option>
+                            <option id="feature">Feature</option>
+                        </options>
+                    </instance>
+                    <instance id="vocab-workmedium">
+                        <web-url>workmedium</web-url>
+                        <title-ref>workmedium</title-ref>
+                        <title>Work Medium</title>
+                        <options>
+                            <option id="film">Film</option>
+                            <option id="internet">Internet</option>
+                            <option id="television">Television</option>
+                            <option id="videogame">Video game</option>
+                        </options>
+                    </instance>
 </instances>

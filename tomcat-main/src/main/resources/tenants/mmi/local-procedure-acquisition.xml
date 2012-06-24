@@ -10,5 +10,9 @@
                 <option id="restrictedgifts">Restricted gifts</option>
             </options>
         </field>
+	<!-- add new field -->
+        <field id="acquisitionExtent" section="mmi">
+            <selector>acquisition-acquisitionExtent</selector>
+        </field>
     </section>
 </record>

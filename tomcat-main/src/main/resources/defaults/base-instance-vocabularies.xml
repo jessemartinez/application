@@ -1,5 +1,5 @@
 <instances>
-					<include src="domain-instance-vocabularies.xml" strip-root="yes"/>
+                                        <include src="domain-instance-vocabularies.xml" strip-root="yes"/>
                     <instance id="vocab-xxx">
                         <web-url>xxx</web-url>
                         <title-ref>xxx</title-ref>
@@ -10,30 +10,30 @@
                         <title-ref>languages</title-ref>
                         <title>Languages</title>
                         <options>
-                    		<option id="ara">Arabic</option>
-						<option id="hye">Armenian</option>
-							<option id="zho">Chinese</option>
-							<option id="eng">English</option>
-							<option id="fra">French</option>
-							<option id="deu">German</option>
-							<option id="grc">Ancient Greek</option>
-							<option id="heb">Hebrew</option>
-						<option id="ind">Indonesian</option>
-							<option id="ita">Italian</option>
-							<option id="jpn">Japanese</option>
-							<option id="kor">Korean</option>
-							<option id="lat">Latin</option>
-						<option id="mal">Malaysian</option>
-							<option id="enm">Middle English</option>
-							<option id="ang">Old English</option>
-							<option id="por">Portuguese</option>
-						<option id="ron">Romanian</option>
-							<option id="rus">Russian</option>
-							<option id="spa">Spanish</option>
-							<option id="swa">Swahili</option>
-						<option id="swe">Swedish</option>
-						<option id="tgl">Tagalog</option>
-						<option id="yor">Yoruba</option>
+                                <option id="ara">Arabic</option>
+                                                <option id="hye">Armenian</option>
+                                                        <option id="zho">Chinese</option>
+                                                        <option id="eng">English</option>
+                                                        <option id="fra">French</option>
+                                                        <option id="deu">German</option>
+                                                        <option id="grc">Ancient Greek</option>
+                                                        <option id="heb">Hebrew</option>
+                                                <option id="ind">Indonesian</option>
+                                                        <option id="ita">Italian</option>
+                                                        <option id="jpn">Japanese</option>
+                                                        <option id="kor">Korean</option>
+                                                        <option id="lat">Latin</option>
+                                                <option id="mal">Malaysian</option>
+                                                        <option id="enm">Middle English</option>
+                                                        <option id="ang">Old English</option>
+                                                        <option id="por">Portuguese</option>
+                                                <option id="ron">Romanian</option>
+                                                        <option id="rus">Russian</option>
+                                                        <option id="spa">Spanish</option>
+                                                        <option id="swa">Swahili</option>
+                                                <option id="swe">Swedish</option>
+                                                <option id="tgl">Tagalog</option>
+                                                <option id="yor">Yoruba</option>
                         </options>
                     </instance>
                     <instance id="vocab-lostatus">
@@ -177,7 +177,7 @@
                             <option id="approximate">Approximate</option>
                             <option id="before">Before</option>
                             <option id="circa">Circa</option>
-                            <option id="probably">Probably</option> 
+                            <option id="probably">Probably</option>
                             <option id="possibly">Possibly</option>
                         </options>
                     </instance>
@@ -186,15 +186,15 @@
                         <title-ref>worktermsource</title-ref>
                         <title>Work Term Source</title>
                         <options>
-				<option id="afi">AFI Catalog</option>
-				<option id="amc">AllMovie.com</option>
-				<option id="ammiac">AMMI Acquisitions Database</option>
-				<option id="ascap">ASCAP</option>
-				<option id="loc">Library of Congress</option>
-				<option id="oth">Other</option>
-				<option id="cdptn">The Complete Directory to Primetime Network and Cable TV Shows</option>
-				<option id="tt">Total Television, 4th Edition</option>
-				<option id="roab">Rhizome.org Artbase</option>
+                                <option id="afi">AFI Catalog</option>
+                                <option id="amc">AllMovie.com</option>
+                                <option id="ammiac">AMMI Acquisitions Database</option>
+                                <option id="ascap">ASCAP</option>
+                                <option id="loc">Library of Congress</option>
+                                <option id="oth">Other</option>
+                                <option id="cdptn">The Complete Directory to Primetime Network and Cable TV Shows</option>
+                                <option id="tt">Total Television, 4th Edition</option>
+                                <option id="roab">Rhizome.org Artbase</option>
                         </options>
                     </instance>
                     <instance id="vocab-persontermtype">
@@ -229,5 +229,35 @@
                             <option id="publishingcompany">Publishing Company</option>
                         </options>
                     </instance>
-
+                        <instance id="vocab-workgenre">
+                        <web-url>workgenre</web-url>
+                        <title-ref>workgenre</title-ref>
+                        <title>Work Genre</title>
+                        <options>
+                            <option id="short">Short</option>
+                            <option id="feature">Feature</option>
+                        </options>
+                    </instance>
+                    <instance id="vocab-workmedium">
+                        <web-url>workmedium</web-url>
+                        <title-ref>workmedium</title-ref>
+                        <title>Work Medium</title>
+                        <options>
+                            <option id="film">Film</option>
+                            <option id="internet">Internet</option>
+                            <option id="television">Television</option>
+                            <option id="videogame">Video game</option>
+                        </options>
+                    </instance>
+                    <instance id="vocab-workdateassociation">
+                        <web-url>workdateassociation</web-url>
+                        <title-ref>workdateassociation</title-ref>
+                        <title>Work Date Association</title>
+                        <options>
+                            <option id="copyrightdate">Copyright date</option>
+                            <option id="releasedate">Release date</option>
+                            <option id="productiondate">Production date</option>
+                            <option id="runningdates">Running dates</option>
+                        </options>
+                    </instance>
 </instances>

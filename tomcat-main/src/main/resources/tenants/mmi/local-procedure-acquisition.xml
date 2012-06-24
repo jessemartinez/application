@@ -1,0 +1,14 @@
+<record id="acquisition">
+    <section id="acquisitionInformation">
+        <!-- changed options list -->
+        <field id="acquisitionMethod">
+            <options>
+                <option id="gift" default="yes">Gift</option>
+                <option id="purchase">Purchase</option>
+                <option id="bequest">Bequest</option>
+                <option id="loan">Loan</option>
+                <option id="restrictedgifts">Restricted gifts</option>
+            </options>
+        </field>
+    </section>
+</record>

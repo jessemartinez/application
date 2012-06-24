@@ -1,0 +1,17 @@
+<record id="acquisition">
+        <services-record-path id="mmi">acquisitions_mmi:http://collectionspace.org/services/acquisition/local/mmi,acquisitions_mmi</services-record-path>
+
+        <section id="acquisitionInformation">
+		<field id="acquisitionExtent" section="mmi">
+            		<selector>acquisition-acquisitionExtent</selector>
+        	</field>
+		<field id="mmiAccessionDate" ui-type="date" section="mmi">
+			<selector>acquisition-mmiAccessionDate</selector>
+		</field>
+		<repeat id="mmiAcquisitionDates" section="mmi">
+			<field id="mmiAcquisitionDate" ui-type="date" section="mmi">
+				<selector>acquisition-mmiAcquisitionDate</selector>
+			</field>
+		</repeat>
+        </section>
+</record>

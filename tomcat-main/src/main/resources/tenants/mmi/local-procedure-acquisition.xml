@@ -1,6 +1,6 @@
 <record id="acquisition">
     <section id="acquisitionInformation">
-        <!-- changed options list -->
+        <!-- update options list -->
         <field id="acquisitionMethod">
             <options>
                 <option id="gift" default="yes">Gift</option>
@@ -9,10 +9,6 @@
                 <option id="loan">Loan</option>
                 <option id="restrictedgifts">Restricted gifts</option>
             </options>
-        </field>
-	<!-- add new field -->
-        <field id="acquisitionExtent" section="mmi">
-            <selector>acquisition-acquisitionExtent</selector>
         </field>
     </section>
 </record>

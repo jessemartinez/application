@@ -1,0 +1,22 @@
+<record id="media">
+    <services-record-path id="mmi">media_mmi:http://collectionspace.org/services/media/local/mmi,media_mmi</services-record-path>
+
+    <section id="mediaInformation">
+        <field id="isPrimary" datatype="boolean" section="mmi">
+            <selector>media-isPrimary</selector>
+        </field>
+        
+        <field id="isOriginalMedia" datatype="boolean" section="mmi">
+            <selector>media-isOriginalMedia</selector>
+        </field>
+
+        <field id="mediaStatus" section="mmi">
+            <selector>media-mediaStatus</selector>
+            <options>
+                <option id="">Please select a value</option>
+                <option id="display">Display</option>
+                <option id="private">Private</option>
+            </options>
+        </field>
+    </section>
+</record>

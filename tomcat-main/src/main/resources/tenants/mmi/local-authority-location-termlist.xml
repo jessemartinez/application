@@ -1,0 +1,16 @@
+<record id="preferredSLA">
+    <section id="termInformation">
+        <repeat id="locTermGroupList/locTermGroup">
+            <!-- updated option values -->
+            <field id="termStatus">
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="quickadded">Quick added</option>
+                    <option id="needsattention">Needs attention</option>
+                    <option id="inprogress">In progress</option>
+                    <option id="complete">Complete</option>
+                </options>
+            </field>
+        </repeat>
+    </section>
+</record>

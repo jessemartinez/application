@@ -1,14 +1,27 @@
 <record id="acquisition">
     <section id="acquisitionInformation">
-        <!-- update options list -->
+        <!-- updated options list -->
         <field id="acquisitionMethod">
             <options>
-                <option id="gift" default="yes">Gift</option>
+                <option id="">Please select a value</option>
+                <option id="gift">Gift</option>
                 <option id="purchase">Purchase</option>
                 <option id="bequest">Bequest</option>
                 <option id="loan">Loan</option>
                 <option id="restrictedgifts">Restricted gifts</option>
             </options>
         </field>
+        <!-- change autocomplete to only use person-person -->
+        <repeat id="acquisitionSources">
+            <field id="acquisitionSource" autocomplete="person-person"/>
+        </repeat>
+        <!-- change autocomplete to only use person-person -->
+        <repeat id="owners">
+            <field id="owner" autocomplete="person-person"/>
+        </repeat>
+        <!-- change autocomplete to only use person-person -->
+        <repeat id="acquisitionFundingList/acquisitionFunding">
+            <field id="acquisitionFundingSource" autocomplete="person-person"/>
+        </repeat>
     </section>
 </record>

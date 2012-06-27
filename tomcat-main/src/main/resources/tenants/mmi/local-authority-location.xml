@@ -1,0 +1,6 @@
+<record id="location">
+    <section id="locationTermInformation">
+       <!-- changed term list to dynamic : vocab-mmilocationtype -->
+       <!--<field id="locationType" autocomplete="vocab-mmilocationtype"/>-->
+    </section>
+</record>

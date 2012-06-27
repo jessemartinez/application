@@ -18,13 +18,13 @@
             <include src="base-procedure-intake.xml"/>
             <include src="base-procedure-loanin.xml"/>
             <include src="base-procedure-loanout.xml"/>
-            <include src="base-procedure-media.xml"/>
+            <include src="base-procedure-media.xml,local-procedure-media-new.xml" merge="xmlmerge.properties"/>
             <include src="base-procedure-movement.xml"/>
             <include src="base-procedure-objectexit.xml"/>
 
             <include src="base-authority-contact.xml"/>
             <!-- IMPORTANT: *-termList.xml files MUST precede their equivalent files. -->
-            <include src="base-authority-location-termList.xml"/>
+            <include src="base-authority-location-termList.xml,local-authority-location-termlist.xml" merge="xmlmerge.properties"/>
             <include src="base-authority-location.xml"/>
             <include src="base-authority-organization-termList.xml"/>
             <include src="base-authority-organization.xml"/>

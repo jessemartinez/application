@@ -1,0 +1,33 @@
+<record id="preferredPA">
+     <section id="termInformation">
+        <repeat id="personTermGroupList/personTermGroup">
+            <!-- updated option values -->
+            <field id="termType">
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="corporation">corporation</option>
+                    <option id="group">Group</option>
+                    <option id="individual">Individual</option>
+                </options>
+            </field>
+            <!-- updated option values -->
+            <field id="termStatus">
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="quickadded">Quick added</option>
+                    <option id="needsattention">Needs attention</option>
+                    <option id="inprogress">In progress</option>
+                    <option id="complete">Complete</option>
+                </options>
+            </field>
+            <!-- removed option values -->
+            <field id="salutation">
+                <selector>personAuthority-salutation</selector>
+            </field>
+            <!-- removed option values -->
+            <field id="title">
+                <selector>personAuthority-title</selector>
+            </field>
+        </repeat>
+     </section>
+</record>

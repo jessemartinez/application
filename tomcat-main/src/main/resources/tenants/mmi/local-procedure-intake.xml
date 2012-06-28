@@ -1,15 +1,7 @@
 <record id="intake">
     <section id="objectEntryInformation">
-        <!-- change autocomplete to only use person-person  -->
-        <field id="currentOwner" in-title="yes" mini="summary,search,list,relate" ui-search="repeatable" autocomplete="person-person">
-            <selector>intake-current-owner</selector>
-        </field>
-        <!-- change autocomplete to only use person-person  -->
-        <field id="depositor" ui-search="repeatable" autocomplete="person-person">
-            <selector>intake-depositor</selector>
-        </field>
-        <!-- changed options list  -->
         <field id="entryReason" ui-search="repeatable" seperate_ui_container="true">
+            <!-- changed options list  -->
             <options>
                 <option id="" default="yes">Please select a value</option>
                 <option id="consideration">Consideration</option>
@@ -17,18 +9,26 @@
                 <option id="loan">Loan</option>
             </options>
         </field>
+        <field id="currentOwner" in-title="yes" mini="summary,search,list,relate" ui-search="repeatable" autocomplete="person-person">
+            <!-- change autocomplete to only use person-person  -->
+            <selector>intake-current-owner</selector>
+        </field>
+        <field id="depositor" ui-search="repeatable" autocomplete="person-person">
+            <!-- change autocomplete to only use person-person  -->
+            <selector>intake-depositor</selector>
+        </field>
     </section>
     <section id="conditionInformation">
-        <!-- remove autocomplete attribute  -->
         <repeat id="conditionCheckMethods">
+            <!-- remove autocomplete attribute  -->
             <field id="conditionCheckMethod"></field>
         </repeat>
-        <!-- remove autocomplete attribute  -->
         <repeat id="conditionCheckReasons">
+             <!-- remove autocomplete attribute  -->
             <field id="conditionCheckReason"></field>
         </repeat>
-        <!-- change autocomplete to only use person-person -->
         <repeat id="conditionCheckersOrAssessors">
+            <!-- change autocomplete to only use person-person -->
             <field id="conditionCheckerOrAssessor" autocomplete="person-person"></field>
         </repeat>
     </section>

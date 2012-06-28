@@ -15,21 +15,21 @@
             <include src="base-procedure-acquisition.xml,local-procedure-acquisition-new.xml,local-procedure-acquisition.xml" merge="xmlmerge.properties"/>
             <include src="base-procedure-blobs.xml"/>
             <include src="base-procedure-groups.xml"/>
-            <include src="base-procedure-intake.xml"/>
+            <include src="base-procedure-intake.xml,local-procedure-intake.xml" merge="xmlmerge-mmi.properties"/>
             <include src="base-procedure-loanin.xml"/>
             <include src="base-procedure-loanout.xml"/>
             <include src="base-procedure-media.xml,local-procedure-media-new.xml" merge="xmlmerge.properties"/>
             <include src="base-procedure-movement.xml"/>
             <include src="base-procedure-objectexit.xml"/>
 
-            <include src="base-authority-contact.xml"/>
+            <include src="base-authority-contact.xml,local-authority-contact.xml" merge="xmlmerge.properties"/>
             <!-- IMPORTANT: *-termList.xml files MUST precede their equivalent files. -->
             <include src="base-authority-location-termList.xml,local-authority-location-termlist.xml" merge="xmlmerge.properties"/>
             <include src="base-authority-location.xml"/>
             <include src="base-authority-organization-termList.xml"/>
             <include src="base-authority-organization.xml"/>
-            <include src="base-authority-person-termList.xml"/>
-            <include src="base-authority-person.xml"/>
+            <include src="base-authority-person-termList.xml,local-authority-person-termlist.xml" merge="xmlmerge-mmi.properties"/>
+            <include src="base-authority-person.xml,local-authority-person-new.xml" merge="xmlmerge.properties"/>
             <include src="base-authority-place-termList.xml"/>
             <include src="base-authority-place.xml"/>
             <!-- Commented out to disable Taxon for the 'core' tenant per CSPACE-4466 -->
@@ -53,7 +53,7 @@
             <include src="base-other-dimension.xml"/>
             <include src="base-other-hierarchy.xml"/>
             <include src="base-other-idgenerator.xml"/>
-            <include src="base-other-structureddate.xml"/>
+            <include src="base-other-structureddate.xml,local-other-structureddate.xml" merge="xmlmerge.properties"/>
             <include src="base-other-termlist.xml"/>
             <include src="base-other-termlistitem.xml"/>
             <include src="base-other-reporting.xml"/>

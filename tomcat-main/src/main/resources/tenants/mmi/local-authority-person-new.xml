@@ -1,0 +1,54 @@
+<record id="person">
+    <services-record-path id="mmi">persons_mmi:http://collectionspace.org/services/person/local/mmi,persons_mmi</services-record-path>
+
+    <section id="personNameAuthorityInformation">
+        <repeat id="affiliatedPersonOrgGroupList/affiliatedPersonOrgGroup" section="mmi">
+            <field id="affiliatedPersonOrg" autocomplete="person-person" section="mmi">
+                <selector>personAuthority-affiliatedPersonOrg</selector>
+            </field>
+            <field id="affiliatedPersonOrgType" section="mmi">
+                <selector>personAuthority-affiliatedPersonOrgType</selector>
+                    <options>
+                    <option id="">Please select a value</option>
+                    <option id="employee">Employee</option>
+                    <option id="founder">Founder</option>
+                    <option id="member">Member</option>
+                    <option id="partner">Partner</option>
+                </options>
+            </field>
+        </repeat>
+        <field id="nameSource" seperate_ui_container="true" section="mmi">
+            <selector>personAuthority-nameSource</selector>
+            <options>
+                <option id="" default="yes">Please select a value</option>
+                <option id="aficatalog">AFI Catalog</option>
+                <option id="encyclopediaofearlycinema">Encyclopedia of Early Cinema</option>
+                <option id="halliwellswhoswhointhemovies">Halliwell's Who's Who in the Cinema</option>
+                <option id="libraryofcongressnameauthority">Library of Congress Name Authority</option>
+                <option id="other">Other</option>
+                <option id="root">Root</option>
+                <option id="silentfilmnecrology2ndedition">Silent Film Necrology, 2nd Edition</option>
+                <option id="thefilmencyclopedia4thedition">The Film Encyclopedia, 4th Edition</option>
+            </options>
+        </field>
+        <field id="lifeSpan" section="mmi">
+            <selector>personAuthority-lifeSpan</selector>
+        </field>
+        <field id="scopeNote" section="mmi">
+            <selector>personAuthority-scopeNote</selector>
+        </field>
+        <field id="sourceNote" section="mmi">
+            <selector>personAuthority-sourceNote</selector>
+        </field>
+        <repeat id="orgContactNames" section="mmi">
+            <field id="orgContactName" autocomplete="person-person" section="mmi">
+                <selector>personAuthority-orgContactName</selector>
+            </field>
+        </repeat>
+        <repeat id="nameFunctions" section="mmi">
+            <field id="nameFunction" section="mmi">
+                <selector>personAuthority-nameFunction</selector>
+            </field>
+        </repeat>
+    </section>
+</record>

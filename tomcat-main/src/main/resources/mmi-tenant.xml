@@ -18,7 +18,7 @@
             <include src="base-procedure-intake.xml,local-procedure-intake.xml" merge="xmlmerge-mmi.properties"/>
             <include src="base-procedure-loanin.xml"/>
             <include src="base-procedure-loanout.xml"/>
-            <include src="base-procedure-media.xml,local-procedure-media-new.xml" merge="xmlmerge.properties"/>
+            <include src="base-procedure-media.xml,local-procedure-media-new.xml,local-procedure-media.xml" merge="xmlmerge.properties"/>
             <include src="base-procedure-movement.xml"/>
             <include src="base-procedure-objectexit.xml"/>
 
@@ -50,7 +50,7 @@
             <include src="base-authz-userrole.xml"/>
             <include src="base-authz-users.xml"/>
 
-            <include src="base-other-dimension.xml"/>
+            <include src="base-other-dimension.xml,local-other-dimension.xml" merge="xmlmerge-mmi.properties"/>
             <include src="base-other-hierarchy.xml"/>
             <include src="base-other-idgenerator.xml"/>
             <include src="base-other-structureddate.xml,local-other-structureddate.xml" merge="xmlmerge.properties"/>

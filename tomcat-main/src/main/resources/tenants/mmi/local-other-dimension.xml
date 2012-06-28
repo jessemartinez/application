@@ -1,0 +1,10 @@
+<record id="dimension">
+    <section id="dimensionInformation">
+        <repeat id="measuredPartGroupList/measuredPartGroup">
+            <repeat id="dimensionSubGroupList/dimensionSubGroup">
+                <!-- removed autocomplate vocab -->
+                <field id="measuredBy" autocomplete="person-person"></field>
+            </repeat>
+        </repeat>
+    </section>
+</record>

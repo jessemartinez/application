@@ -1,0 +1,8 @@
+<record id="media">
+    <section id="mediaInformation">
+    	<!-- removed autocomplate vocab -->
+        <field id="creator" ui-search="repeatable" autocomplete="person-person"></field>
+        <!-- removed autocomplate vocab -->
+        <field id="rightsHolder" ui-search="repeatable" autocomplete="person-person"></field>
+    </section>
+</record>

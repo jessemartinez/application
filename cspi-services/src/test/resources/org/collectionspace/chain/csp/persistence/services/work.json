@@ -1,5 +1,4 @@
 {
-    "indexingNote": "indexing note goes here",
     "shortIdentifier": "worktest1",
     "publisherGroup": [
         {
@@ -8,7 +7,13 @@
             "publisher": "TriStar Pictures"
         }
     ],
-    "historyNote": "history note goes here",
+    "migratedEntityGroup": [
+        {
+            "_primary": true,
+            "migratedEntityType": "distributioncompany",
+            "migratedEntity": "TriStar Pictures"
+        }
+    ],
     "scopeNote": "scope note goes here",
     "medium": "film",
     "creatorGroup": [

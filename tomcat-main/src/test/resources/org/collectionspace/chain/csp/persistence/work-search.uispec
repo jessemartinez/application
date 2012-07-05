@@ -40,6 +40,26 @@
             }
         ]
     },
+    ".csc-work-migratedEntityGroup": {
+        "decorators": [
+            {
+                "func": "cspace.makeRepeatable",
+                "type": "fluid",
+                "options": {
+                    "repeatTree": {
+                        "expander": {
+                            "tree": {
+                                ".csc-work-migratedEntity": "${{row}.migratedEntity}"
+                            },
+                            "type": "fluid.noexpand"
+                        }
+                    },
+                    "elPath": "migratedEntityGroup",
+                    "hidePrimary": true
+                }
+            }
+        ]
+    },
     ".csc-work-termName-label": {
         "messagekey": "preferredWork-termNameLabel"
     },
@@ -72,37 +92,17 @@
     ".csc-work-sourceNote-label": {
         "messagekey": "work-sourceNoteLabel"
     },
+    ".csc-work-migratedEntityType-label": {
+        "messagekey": "work-migratedEntityTypeLabel"
+    },
     ".csc-work-updatedAtStart-label": {
         "messagekey": "work-updatedAtStartLabel"
-    },
-    ".csc-work-updatedBy-label": {
-        "messagekey": "work-updatedByLabel"
-    },
-    ".csc-work-indexingNote": {
-        "decorators": [
-            {
-                "func": "cspace.makeRepeatable",
-                "type": "fluid",
-                "options": {
-                    "repeatTree": {
-                        "expander": {
-                            "tree": {
-                                ".csc-work-indexingNote": "${{row}.indexingNote}"
-                            },
-                            "type": "fluid.noexpand"
-                        }
-                    },
-                    "elPath": "indexingNotes",
-                    "hidePrimary": true
-                }
-            }
-        ]
     },
     ".csc-work-termPrefForLang-label": {
         "messagekey": "preferredWork-termPrefForLangLabel"
     },
-    ".csc-work-scopeNote-label": {
-        "messagekey": "work-scopeNoteLabel"
+    ".csc-work-updatedBy-label": {
+        "messagekey": "work-updatedByLabel"
     },
     ".csc-work-updatedAtStart": {
         "decorators": [
@@ -112,6 +112,9 @@
             }
         ],
         "value": "${updatedAtStart}"
+    },
+    ".csc-work-scopeNote-label": {
+        "messagekey": "work-scopeNoteLabel"
     },
     ".csc-work-sourceNote": {
         "decorators": [
@@ -142,26 +145,6 @@
     ".csc-work-updatedAt-label": {
         "messagekey": "work-updatedAtLabel"
     },
-    ".csc-work-historyNote": {
-        "decorators": [
-            {
-                "func": "cspace.makeRepeatable",
-                "type": "fluid",
-                "options": {
-                    "repeatTree": {
-                        "expander": {
-                            "tree": {
-                                ".csc-work-historyNote": "${{row}.historyNote}"
-                            },
-                            "type": "fluid.noexpand"
-                        }
-                    },
-                    "elPath": "historyNotes",
-                    "hidePrimary": true
-                }
-            }
-        ]
-    },
     ".csc-work-medium": {
         "decorators": [
             {
@@ -172,18 +155,17 @@
                         "expander": {
                             "tree": {
                                 ".csc-work-medium": {
-                                    "default": "",
-                                    "optionnames": [
-                                        "Please select a value",
-                                        "Film",
-                                        "Other"
-                                    ],
-                                    "optionlist": [
-                                        "",
-                                        "film",
-                                        "other"
-                                    ],
-                                    "selection": "${{row}.medium}"
+                                    "decorators": [
+                                        {
+                                            "func": "cspace.termList",
+                                            "type": "fluid",
+                                            "options": {
+                                                "root": "{row}",
+                                                "elPath": "medium",
+                                                "termListType": "medium"
+                                            }
+                                        }
+                                    ]
                                 }
                             },
                             "type": "fluid.noexpand"
@@ -223,18 +205,17 @@
                         "expander": {
                             "tree": {
                                 ".csc-work-genre": {
-                                    "default": "",
-                                    "optionnames": [
-                                        "Please select a value",
-                                        "Film",
-                                        "Other"
-                                    ],
-                                    "optionlist": [
-                                        "",
-                                        "film",
-                                        "other"
-                                    ],
-                                    "selection": "${{row}.genre}"
+                                    "decorators": [
+                                        {
+                                            "func": "cspace.termList",
+                                            "type": "fluid",
+                                            "options": {
+                                                "root": "{row}",
+                                                "elPath": "genre",
+                                                "termListType": "genre"
+                                            }
+                                        }
+                                    ]
                                 }
                             },
                             "type": "fluid.noexpand"
@@ -265,9 +246,6 @@
                 }
             }
         ]
-    },
-    ".csc-work-historyNote-label": {
-        "messagekey": "work-historyNoteLabel"
     },
     ".csc-work-scopeNote": {
         "decorators": [
@@ -350,19 +328,19 @@
     ".csc-work-termSourceID-label": {
         "messagekey": "preferredWork-termSourceIDLabel"
     },
-    ".csc-work-indexingNote-label": {
-        "messagekey": "work-indexingNoteLabel"
+    ".csc-work-migratedEntity-label": {
+        "messagekey": "work-migratedEntityLabel"
     },
     ".csc-work-termQualifier-label": {
         "messagekey": "preferredWork-termQualifierLabel"
+    },
+    ".csc-work-termType-label": {
+        "messagekey": "preferredWork-termTypeLabel"
     },
     ".csc-work-genre-label": {
         "messagekey": "work-genreLabel"
     },
     ".csc-work-termDisplayName-label": {
         "messagekey": "preferredWork-termDisplayNameLabel"
-    },
-    ".csc-work-termType-label": {
-        "messagekey": "preferredWork-termTypeLabel"
     }
 }

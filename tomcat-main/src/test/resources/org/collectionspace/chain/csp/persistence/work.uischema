@@ -36,9 +36,6 @@
                         },
                         "type": "array"
                     },
-                    "historyNote": {
-                        "type": "string"
-                    },
                     "publisherGroup": {
                         "items": {
                             "properties": {
@@ -58,13 +55,33 @@
                         },
                         "type": "array"
                     },
+                    "migratedEntityGroup": {
+                        "items": {
+                            "properties": {
+                                "_primary": {
+                                    "default": true,
+                                    "type": "boolean"
+                                },
+                                "migratedEntityType": {
+                                    "default": "",
+                                    "type": "string"
+                                },
+                                "migratedEntity": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
                     "csid": {
                         "type": "string"
                     },
                     "uri": {
                         "type": "string"
                     },
-                    "indexingNote": {
+                    "medium": {
+                        "default": "",
                         "type": "string"
                     },
                     "workTermGroup": {
@@ -115,10 +132,6 @@
                             "type": "object"
                         },
                         "type": "array"
-                    },
-                    "medium": {
-                        "default": "",
-                        "type": "string"
                     },
                     "updatedBy": {
                         "type": "string"

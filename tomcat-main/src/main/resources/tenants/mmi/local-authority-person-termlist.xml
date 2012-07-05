@@ -2,7 +2,7 @@
      <section id="termInformation">
         <repeat id="personTermGroupList/personTermGroup">
             <!-- updated option values -->
-            <field id="termType" autocomplete="vocab-persontermtype" ui-type="enum">
+            <field id="termType">
                 <selector>personAuthority-termType</selector>
                 <options>
                     <option id="">Please select a value</option>

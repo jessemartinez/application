@@ -10,15 +10,15 @@
         <records>
             <enum-blank>Please select a value</enum-blank>
 
-            <include src="base-collectionobject.xml"/>
+            <include src="base-collectionobject.xml,local-collectionobject.xml" merge="xmlmerge-mmi.properties"/>
 
-            <include src="base-procedure-acquisition.xml,local-procedure-acquisition-new.xml,local-procedure-acquisition.xml" merge="xmlmerge.properties"/>
+            <include src="base-procedure-acquisition.xml,local-procedure-acquisition.xml" merge="xmlmerge.properties"/>
             <include src="base-procedure-blobs.xml"/>
             <include src="base-procedure-groups.xml"/>
             <include src="base-procedure-intake.xml,local-procedure-intake.xml" merge="xmlmerge-mmi.properties"/>
             <include src="base-procedure-loanin.xml"/>
             <include src="base-procedure-loanout.xml"/>
-            <include src="base-procedure-media.xml,local-procedure-media-new.xml,local-procedure-media.xml" merge="xmlmerge.properties"/>
+            <include src="base-procedure-media.xml,local-procedure-media.xml" merge="xmlmerge.properties"/>
             <include src="base-procedure-movement.xml"/>
             <include src="base-procedure-objectexit.xml"/>
 
@@ -29,7 +29,7 @@
             <include src="base-authority-organization-termList.xml"/>
             <include src="base-authority-organization.xml"/>
             <include src="base-authority-person-termList.xml,local-authority-person-termlist.xml" merge="xmlmerge-mmi.properties"/>
-            <include src="base-authority-person.xml,local-authority-person-new.xml" merge="xmlmerge.properties"/>
+            <include src="base-authority-person.xml,local-authority-person.xml" merge="xmlmerge.properties"/>
             <include src="base-authority-place-termList.xml"/>
             <include src="base-authority-place.xml"/>
             <!-- Commented out to disable Taxon for the 'core' tenant per CSPACE-4466 -->

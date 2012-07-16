@@ -1,0 +1,239 @@
+<record id="collection-object">
+    <services-record-path id="mmi">collectionobjects_mmi:http://collectionspace.org/services/collectionobject/local/mmi,collectionobjects_mmi</services-record-path>
+    <section id="identificationInformation">
+        <field id="administrativeRemarks" section="mmi">
+            <selector>object-identification-administrativeRemarks</selector>
+        </field>
+        <field id="provenance" section="mmi">
+            <selector>object-identification-provenance</selector>
+        </field>
+        <field id="objectTitle" section="mmi" mini="summary,search,list,relate" in-title="yes">
+            <title-selector>titleBar-object-identification-objectTitle</title-selector>
+            <selector>object-identification-objectTitle</selector>
+        </field>
+        <field id="initialCatalogingCompleted" datatype="boolean" section="mmi">
+            <selector>object-identification-initialCatalogingCompleted</selector>
+        </field>
+        <field id="additionalResearchRequired" datatype="boolean" section="mmi">
+            <selector>object-identification-additionalResearchRequired</selector>
+        </field>
+        <repeat id="artifactClassWorkTypeList/artifactClassWorkTypeGroup" section="mmi">
+            <field id="artifactClass" section="mmi" autocomplete="vocab-artifactclassworktype" ui-type="enum">
+                <selector>object-identification-artifactClass</selector>
+            </field>
+            <field id="workType" section="mmi" autocomplete="vocab-artifactclassworktype" ui-type="enum">
+                <selector>object-identification-workType</selector>
+            </field>
+        </repeat>
+        <repeat id="otherNumberList/otherNumber">
+            <selector>object-identification-otherNumbers</selector>
+            <field id="numberValue" in-tab="yes">
+                <selector>object-identification-other-number</selector>
+            </field>
+            <!-- change autocomplete to use vocab-numbertype -->
+            <field id="numberType" in-tab="yes" autocomplete="vocab-numbertype" ui-type="enum" seperate_ui_container="true">
+                <selector>object-identification-other-number-type</selector>
+            </field>
+        </repeat>
+        <repeat id="responsibleDepartments" has-primary="yes">
+            <selector>object-identification-responsible-department</selector>
+            <!-- updated option values -->
+            <field id="responsibleDepartment" ui-search="repeatable" mini="search" seperate_ui_container="true">
+                <selector>object-identification-responsible-department</selector>
+                <options>
+                    <option id="notyetassigned" default="yes">Not yet assigned</option>
+                    <option id="distribution">Distribution</option>
+                    <option id="exhibition">Exhibition</option>
+                    <option id="industryasawhole">Industry (as a whole)</option>
+                    <option id="marketing">Marketing</option>
+                    <option id="merchandising">Merchandising</option>
+                    <option id="production">Production</option>
+                    <option id="reception">Reception</option>
+                    <option id="worksofart">Works of art</option>
+                </options>
+            </field>
+        </repeat>
+        <field id="recordStatus" ui-search="repeatable" seperate_ui_container="true">
+            <!-- updated option values -->
+            <selector>object-identification-record-status</selector>
+            <options>
+                <option id="new" default="yes">New</option>
+                <option id="firstedit">First edit</option>
+                <option id="finaledit">Final edit</option>
+                <option id="completedpublish">Completed/Publish</option>
+                <option id="completeddonotpublish">Completed/Do Not Publish</option>
+            </options>
+        </field>
+        <repeat id="titleGroupList/titleGroup">
+            <!-- selector>collection-object-titleGroup</selector -->
+            <field id="title">
+                <!-- removing title-selector tag -->
+                <!--title-selector>titleBar-object-identification-object-title</title-selector-->
+                <selector>object-identification-object-title</selector>
+            </field>
+            <field id="titleLanguage" autocomplete="vocab-languages" ui-type="enum">
+                <enum>
+                  <default>eng</default>
+                </enum>
+                <selector>object-identification-object-title-language</selector>
+            </field>
+
+            <repeat id="titleTranslationSubGroupList/titleTranslationSubGroup">
+                <field id="titleTranslation">
+                  <selector>object-identification-object-title-translation</selector>
+                </field>
+                <field id="titleTranslationLanguage" autocomplete="vocab-languages" ui-type="enum">
+                  <enum>
+                    <default>eng</default>
+                    <blank-value>Please select a value</blank-value>
+                  </enum>
+                </field>
+            </repeat>
+
+            <field id="titleType" seperate_ui_container="true">
+                <selector>object-identification-object-title-type</selector>
+                <options>
+                  <option id="">Please select a value</option>
+                  <option id="assigned-by-artist">Assigned by Artist</option>
+                  <option id="collection">Collection</option>
+                  <option id="generic">Generic</option>
+                  <option id="popular">Popular</option>
+                  <option id="series">Series</option>
+                  <option id="trade">Trade</option>
+                </options>
+            </field>
+        </repeat>
+    </section>
+
+    <section id="descriptionInformation">
+        <repeat id="mmiInscriptionContents" has-primary="yes" section="mmi">
+            <field id="mmiInscriptionContent" section="mmi">
+                <selector>object-description-mmiInscriptionContent</selector>
+            </field>
+        </repeat>
+        <repeat id="copyrightStatements" has-primary="yes" section="mmi">
+            <field id="copyrightStatement" section="mmi">
+                <selector>object-description-copyrightStatement</selector>
+            </field>
+        </repeat>
+        <repeat id="mmiMaterials" has-primary="yes" section="mmi">
+            <field id="mmiMaterial" autocomplete="vocab-material" ui-type="enum" section="mmi">
+                <selector>object-description-mmiMaterial</selector>
+            </field>
+        </repeat>
+        <repeat id="objectComponentGroupList/objectComponentGroup">
+            <!-- removed option values -->
+            <field id="objectComponentName" ui-search="repeatable" seperate_ui_container="true">
+                <selector>object-description-object-component-name</selector>
+            </field>
+            <field id="objectComponentInformation">
+                <selector>object-description-object-component-information</selector>
+            </field>
+        </repeat>
+        <repeat id="technicalAttributeGroupList/technicalAttributeGroup">
+            <!-- change autocomplete to use vocab-technicalattribute -->
+            <field id="technicalAttribute" ui-search="repeatable"  autocomplete="vocab-technicalattribute" ui-type="enum" seperate_ui_container="true">
+                <selector>object-description-technical-attribute</selector>
+            </field>
+            <!-- change autocomplete to use vocab-technicalmeasurement -->
+            <field id="technicalAttributeMeasurement" autocomplete="vocab-technicalmeasurement" ui-type="enum" seperate_ui_container="true">
+                <selector>object-description-technical-attribute-measurement</selector>
+            </field>
+            <!-- change autocomplete to use vocab-technicalmeasurementunit -->
+            <field id="technicalAttributeMeasurementUnit" autocomplete="vocab-technicalmeasurementunit" ui-type="enum" seperate_ui_container="true">
+                <selector>object-description-technical-attribute-unit</selector>
+            </field>
+        </repeat>
+        <section id="contentInformation">
+            <repeat id="contentEntityList/contentEntityGroup" section="mmi">
+                <field id="contentEntity" autocomplete="person-person" section="mmi">
+                     <selector>object-description-contentEntity</selector>
+                </field>
+                <field id="contentEntityType" section="mmi">
+                    <selector>object-description-contentEntityType</selector>
+                    <options>
+                        <option id="">Please select a value</option>
+                        <option id="depicts">Depicts</option>
+                        <option id="references">References</option>
+                        <option id="seealso">See also</option>
+                    </options>
+                </field>
+            </repeat>
+            <repeat id="contentLanguages">
+                <!-- added option values -->
+                <field id="contentLanguage">
+                    <selector>object-description-content-language</selector>
+                    <options>
+                        <option id="">Please select a value</option>
+                        <option id="eng">English</option>
+                        <option id="fra">French</option>
+                        <option id="spa">Spanish</option>
+                    </options>
+                </field>
+            </repeat>
+        </section>
+    </section>
+
+    <section id="objectProductionInformation">
+        <repeat id="objectProductionDateGroupList/objectProductionDateGroup">
+            <!-- setting custom person structured date component -->
+            <group id="objectProductionDate" xxx-services-no-repeat="true"
+                ui-type="groupfield/structureddate" primarykey="dateDisplayDate"
+                ui-func="cspace.catalogingStructuredDate"/>
+        </repeat>
+        <repeat id="objectProductionOrganizationGroupList/objectProductionOrganizationGroup">
+            <!-- add autocomplete to only use person-person -->
+            <field id="objectProductionOrganization" ui-search="repeatable" autocomplete="person-person">
+                <selector>object-production-organization</selector>
+            </field>
+            <!-- add autocomplete to use vocab-productionrole -->
+            <field id="objectProductionOrganizationRole" autocomplete="vocab-productionrole" ui-type="enum"></field>
+        </repeat>
+        <repeat id="mmiTechniques" has-primary="yes" section="mmi">
+            <field id="mmiTechnique" section="mmi" autocomplete="vocab-technique" ui-type="enum">
+                <selector>object-production-mmiTechnique</selector>
+            </field>
+        </repeat>
+    </section>
+
+    <section id="objectHistoryAssociationInformation">
+        <field id="historicalNoteSources" section="mmi">
+            <selector>object-history-association-historicalNoteSources</selector>
+        </field>
+        <section id="associationInformation">
+            <repeat id="assocProductionList/assocProductionGroup" section="mmi">
+                <field id="assocProduction" autocomplete="work-work" section="mmi">
+                    <selector>object-history-assocProduction</selector>
+                </field>
+                <field id="assocProductionType" section="mmi" autocomplete="vocab-assocproductiontype" ui-type="enum">
+                    <selector>object-history-assocProductionType</selector>
+                </field>
+            </repeat>
+            <repeat id="assocPublicationList/assocPublicationGroup" section="mmi">
+                <field id="assocPublication" autocomplete="work-work" section="mmi">
+                    <selector>object-history-assocPublication</selector>
+                </field>
+                <field id="assocPublicationType" section="mmi"  autocomplete="vocab-assocpublicationtype" ui-type="enum">
+                    <selector>object-history-assocPublicationType</selector>
+                </field>
+            </repeat>
+            <repeat id="assocOrganizationGroupList/assocOrganizationGroup">
+                <!-- add autocomplete to only use person-person -->
+                <field id="assocOrganization" autocomplete="person-person"></field>
+                <!-- add autocomplete to use vocab-associatedentitytype -->
+                <field id="assocOrganizationType" ui-type="enum" autocomplete="vocab-associatedentitytype"></field>
+                <field id="assocOrganizationNote"></field>
+            </repeat>
+            <repeat id="assocDateGroupList/assocDateGroup">
+                <selector>object-history-association-assocDateGroup</selector>
+                <!-- setting custom person structured date component -->
+                <group id="assocStructuredDateGroup" ui-type="groupfield/structureddate"
+                  primarykey="dateDisplayDate" ui-func="cspace.catalogingStructuredDate">
+                  <selector>object-history-association-assocDate</selector>
+                </group>
+                <field id="assocDateType"/>
+                <field id="assocDateNote"/>
+            </repeat>
+        </section>
+    </section>
+</record>

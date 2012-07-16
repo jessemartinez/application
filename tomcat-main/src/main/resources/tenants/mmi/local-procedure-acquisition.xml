@@ -1,5 +1,17 @@
 <record id="acquisition">
+    <services-record-path id="mmi">acquisitions_mmi:http://collectionspace.org/services/acquisition/local/mmi,acquisitions_mmi</services-record-path>
     <section id="acquisitionInformation">
+        <field id="acquisitionExtent" section="mmi">
+            <selector>acquisition-acquisitionExtent</selector>
+        </field>
+        <field id="mmiAccessionDate" ui-type="date" section="mmi">
+            <selector>acquisition-mmiAccessionDate</selector>
+        </field>
+        <repeat id="mmiAcquisitionDates" section="mmi">
+            <field id="mmiAcquisitionDate" ui-type="date" section="mmi">
+                <selector>acquisition-mmiAcquisitionDate</selector>
+            </field>
+        </repeat>
         <!-- updated options list -->
         <field id="acquisitionMethod">
             <options>
@@ -11,16 +23,16 @@
                 <option id="restrictedgifts">Restricted gifts</option>
             </options>
         </field>
-        <!-- change autocomplete to only use person-person -->
         <repeat id="acquisitionSources">
+            <!-- change autocomplete to only use person-person -->
             <field id="acquisitionSource" autocomplete="person-person"/>
         </repeat>
-        <!-- change autocomplete to only use person-person -->
         <repeat id="owners">
+            <!-- change autocomplete to only use person-person -->
             <field id="owner" autocomplete="person-person"/>
         </repeat>
-        <!-- change autocomplete to only use person-person -->
         <repeat id="acquisitionFundingList/acquisitionFunding">
+            <!-- change autocomplete to only use person-person -->
             <field id="acquisitionFundingSource" autocomplete="person-person"/>
         </repeat>
     </section>

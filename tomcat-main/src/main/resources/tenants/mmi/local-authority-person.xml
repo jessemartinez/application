@@ -20,9 +20,6 @@
         <field id="lifeSpan" section="mmi">
             <selector>personAuthority-lifeSpan</selector>
         </field>
-        <field id="scopeNote" section="mmi">
-            <selector>personAuthority-scopeNote</selector>
-        </field>
         <repeat id="orgContactNames" section="mmi">
             <field id="orgContactName" autocomplete="person-person" section="mmi">
                 <selector>personAuthority-orgContactName</selector>

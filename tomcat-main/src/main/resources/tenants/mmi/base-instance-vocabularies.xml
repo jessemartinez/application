@@ -215,9 +215,9 @@
         <options>
             <option id="artist">Artist</option>
             <option id="director">Director</option>
-            <option id="publishingcompany">Publishing Company</option>
+            <option id="publishingcompany">Publishing company</option>
             <option id="developer">Developer</option>
-            <option id="productioncompany">Production Company</option>
+            <option id="productioncompany">Production company</option>
         </options>
     </instance>
     <instance id="vocab-workpublishertype">
@@ -227,7 +227,7 @@
         <options>
             <option id="networkcableservice">Network/cable service</option>
             <option id="distributioncompany">Distribution company</option>
-            <option id="publishingcompany">Publishing Company</option>
+            <option id="publishingcompany">Publishing company</option>
         </options>
     </instance>
         <instance id="vocab-workgenre">

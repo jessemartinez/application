@@ -449,7 +449,7 @@
         <title-ref>artifactclassworktype</title-ref>
         <title>Artifact Class Work Type</title>
         <options>
-            <option id="wt350">*Undetermined</option>
+            <option id="wt350">~Undetermined</option>
             <option id="wt5">Animation materials</option>
             <option id="wt27">(Animation materials) Animation cameras</option>
             <option id="wt28">(Animation materials) Animation cels</option>

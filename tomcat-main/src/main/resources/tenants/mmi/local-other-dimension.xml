@@ -1,6 +1,21 @@
 <record id="dimension">
     <section id="dimensionInformation">
         <repeat id="measuredPartGroupList/measuredPartGroup">
+        	<field id="measuredPart" seperate_ui_container="true">
+        		<!-- add new term -->
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="artifact">artifact</option>
+                    <option id="base">base</option>
+                    <option id="frame">frame</option>
+                    <option id="framed">framed</option>
+                    <option id="image-size">image size</option>
+                    <option id="mount">mount</option>
+                    <option id="paper-size">paper size</option>
+                    <option id="plate-size">plate size</option>
+                    <option id="unframed">unframed</option>
+                </options>
+            </field>
             <repeat id="dimensionSubGroupList/dimensionSubGroup">
                 <!-- removed autocomplate vocab -->
                 <field id="measuredBy" autocomplete="person-person"></field>

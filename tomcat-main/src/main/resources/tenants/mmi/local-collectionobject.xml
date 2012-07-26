@@ -23,14 +23,9 @@
         <field id="workType" autocomplete="vocab-artifactclassworktype" ui-type="enum" section="mmi">
             <selector>object-identification-workType</selector>
         </field>
-        <!--repeat id="artifactClassWorkTypeList/artifactClassWorkTypeGroup" section="mmi">
-            <field id="artifactClass" section="mmi" autocomplete="vocab-artifactclassworktype" ui-type="enum">
-                <selector>object-identification-artifactClass</selector>
-            </field>
-            <field id="workType" section="mmi" autocomplete="vocab-artifactclassworktype" ui-type="enum">
-                <selector>object-identification-workType</selector>
-            </field>
-        </repeat-->
+        <field id="caption" section="mmi">
+            <selector>object-identification-caption</selector>
+        </field>
         <repeat id="otherNumberList/otherNumber">
             <selector>object-identification-otherNumbers</selector>
             <field id="numberValue" in-tab="yes">
@@ -164,6 +159,9 @@
                         <option id="seealso">See also</option>
                     </options>
                 </field>
+                <field id="contentEntityNote" section="mmi">
+                     <selector>object-description-contentEntityNote</selector>
+                </field>
             </repeat>
             <repeat id="contentLanguages">
                 <!-- added option values -->
@@ -187,13 +185,18 @@
                 ui-type="groupfield/structureddate" primarykey="dateDisplayDate"
                 ui-func="cspace.catalogingStructuredDate"/>
         </repeat>
-        <repeat id="objectProductionOrganizationGroupList/objectProductionOrganizationGroup">
+        <repeat id="objProdEntityList/objProdEntityGroup" section="mmi">
             <!-- add autocomplete to only use person-person -->
-            <field id="objectProductionOrganization" ui-search="repeatable" autocomplete="person-person">
-                <selector>object-production-organization</selector>
+            <field id="objProdEntity" ui-search="repeatable" autocomplete="person-person" section="mmi">
+                <selector>object-production-objProdEntity</selector>
             </field>
             <!-- add autocomplete to use vocab-productionrole -->
-            <field id="objectProductionOrganizationRole" autocomplete="vocab-productionrole" ui-type="enum"></field>
+            <field id="objProdEntityRole" autocomplete="vocab-productionrole" ui-type="enum" section="mmi">
+                <selector>object-production-objProdEntityRole</selector>
+            </field>
+            <field id="objProdEntityNote" section="mmi">
+                <selector>object-production-objProdEntityNote</selector>
+            </field>
         </repeat>
         <repeat id="mmiTechniques" has-primary="yes" section="mmi">
             <field id="mmiTechnique" section="mmi" autocomplete="vocab-technique" ui-type="enum">
@@ -207,20 +210,15 @@
             <selector>object-history-association-historicalNoteSources</selector>
         </field>
         <section id="associationInformation">
-            <repeat id="assocProductionList/assocProductionGroup" section="mmi">
-                <field id="assocProduction" autocomplete="work-work" section="mmi">
-                    <selector>object-history-assocProduction</selector>
+            <repeat id="contentWorkList/contentWorkGroup" section="mmi">
+                <field id="contentWork" autocomplete="work-work" section="mmi">
+                    <selector>object-history-contentWork</selector>
                 </field>
-                <field id="assocProductionType" section="mmi" autocomplete="vocab-assocproductiontype" ui-type="enum">
-                    <selector>object-history-assocProductionType</selector>
+                <field id="contentWorkType" section="mmi"  autocomplete="vocab-contentworktype" ui-type="enum">
+                    <selector>object-history-contentWorkType</selector>
                 </field>
-            </repeat>
-            <repeat id="assocPublicationList/assocPublicationGroup" section="mmi">
-                <field id="assocPublication" autocomplete="work-work" section="mmi">
-                    <selector>object-history-assocPublication</selector>
-                </field>
-                <field id="assocPublicationType" section="mmi"  autocomplete="vocab-assocpublicationtype" ui-type="enum">
-                    <selector>object-history-assocPublicationType</selector>
+                <field id="contentWorkNote" section="mmi">
+                    <selector>object-history-contentWorkNote</selector>
                 </field>
             </repeat>
             <repeat id="assocOrganizationGroupList/assocOrganizationGroup">

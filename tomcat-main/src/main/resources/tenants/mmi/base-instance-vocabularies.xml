@@ -413,27 +413,18 @@
             <option id="wood">Wood</option>
         </options>
     </instance>
-    <instance id="vocab-assocproductiontype">
-        <web-url>assocproductiontype</web-url>
-        <title-ref>assocproductiontype</title-ref>
-        <title>Associated Production Type</title>
+    <instance id="vocab-contentworktype">
+        <web-url>contentworktype</web-url>
+        <title-ref>contentworktype</title-ref>
+        <title>Content Work Type</title>
         <options>
             <option id="depicts">Depicts</option>
             <option id="isfrom">Is from</option>
-            <option id="references">References</option>
-        </options>
-    </instance>
-    <instance id="vocab-assocpublicationtype">
-        <web-url>assocpublicationtype</web-url>
-        <title-ref>assocpublicationtype</title-ref>
-        <title>Associated Publication Type</title>
-        <options>
             <option id="issueof">Issue of</option>
-            <option id="isfrom">Is from</option>
             <option id="references">References</option>
         </options>
     </instance>
-     <instance id="vocab-productiondateassoc">
+    <instance id="vocab-productiondateassoc">
         <web-url>productiondateassoc</web-url>
         <title-ref>productiondateassoc</title-ref>
         <title>Production Date Association</title>

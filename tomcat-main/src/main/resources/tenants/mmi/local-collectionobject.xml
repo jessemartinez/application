@@ -1,5 +1,21 @@
 <record id="collection-object">
     <services-record-path id="mmi">collectionobjects_mmi:http://collectionspace.org/services/collectionobject/local/mmi,collectionobjects_mmi</services-record-path>
+    <instances id="location">
+        <instance id="location-offsite_sla">
+            <web-url>offsite_sla</web-url>
+            <title-ref>offsite_sla</title-ref>
+            <!-- deactivating non-preferred terms in term completion -->
+            <nptAllowed>false</nptAllowed>
+            <title>Offsite Storage Locations</title>
+        </instance>
+        <instance id="location-location">
+            <web-url>location</web-url>
+            <title-ref>location</title-ref>
+            <!-- deactivating non-preferred terms in term completion -->
+            <nptAllowed>false</nptAllowed>
+            <title>Local Storage Locations</title>
+        </instance>
+    </instances>
     <section id="identificationInformation">
         <field id="administrativeRemarks" section="mmi">
             <selector>object-identification-administrativeRemarks</selector>
@@ -173,6 +189,12 @@
                         <option id="fra">French</option>
                         <option id="spa">Spanish</option>
                     </options>
+                </field>
+            </repeat>
+            <repeat id="contentPlaces">
+                <!-- adding new autocomplete -->
+                <field id="contentPlace" autocomplete="place-place">
+                    <selector>object-description-content-place</selector>
                 </field>
             </repeat>
         </section>

@@ -1,6 +1,21 @@
 <record id="person">
     <services-record-path id="mmi">persons_mmi:http://collectionspace.org/services/person/local/mmi,persons_mmi</services-record-path>
-
+    <instances id="person">
+        <instance id="person-person">
+            <web-url>person</web-url>
+            <title-ref>person</title-ref>
+            <!-- deactivating non-preferred terms in term completion -->
+            <nptAllowed>false</nptAllowed>
+            <title>Local Persons</title>
+        </instance>
+        <instance id="person-ulan_pa">
+            <web-url>ulan_pa</web-url>
+            <title-ref>ulan_pa</title-ref>
+            <!-- deactivating non-preferred terms in term completion -->
+            <nptAllowed>false</nptAllowed>
+            <title>ULAN Persons</title>
+        </instance>
+    </instances>
     <section id="personNameAuthorityInformation">
         <repeat id="affiliatedPersonOrgGroupList/affiliatedPersonOrgGroup" section="mmi">
             <field id="affiliatedPersonOrg" autocomplete="person-person" section="mmi">

@@ -1,0 +1,25 @@
+<record id="concept" type="authority">
+    <instances id="concept">
+        <instance id="concept-material_ca">
+            <web-url>material_ca</web-url>
+            <title-ref>material_ca</title-ref>
+            <!-- deactivating non-preferred terms in term completion -->
+            <nptAllowed>false</nptAllowed>
+            <title>Material Concepts</title>
+        </instance>
+        <instance id="concept-concept">
+            <web-url>concept</web-url>
+            <title-ref>concept</title-ref>
+            <!-- deactivating non-preferred terms in term completion -->
+            <nptAllowed>false</nptAllowed>
+            <title>Associated Concepts</title>
+        </instance>
+        <instance id="concept-activity">
+            <web-url>activity</web-url>
+            <title-ref>activity</title-ref>
+            <!-- deactivating non-preferred terms in term completion -->
+            <nptAllowed>false</nptAllowed>
+            <title>Activity Concepts</title>
+        </instance>
+    </instances>
+</record>

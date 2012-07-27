@@ -1,0 +1,18 @@
+<record id="work" type="authority">
+    <instances id="work">
+        <instance id="work-work">
+            <web-url>work</web-url>
+            <title-ref>work</title-ref>
+            <!-- deactivating non-preferred terms in term completion -->
+            <nptAllowed>false</nptAllowed>
+            <title>Local Works</title>
+        </instance>
+        <instance id="work-cona_work">
+            <web-url>cona_work</web-url>
+            <title-ref>cona_work</title-ref>
+            <!-- deactivating non-preferred terms in term completion -->
+            <nptAllowed>false</nptAllowed>
+            <title>CONA Works</title>
+        </instance>
+    </instances>
+</record>

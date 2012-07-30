@@ -1,0 +1,8 @@
+<record id="objectexit">
+	<section id="objectexitInformation">
+		<!-- removed org-org vocab -->
+	    <field id="currentOwner" ui-search="repeatable" autocomplete="person-person" mini="summary,list" in-title="yes"></field>
+	    <!-- removed org-org vocab -->
+	    <field id="depositor" ui-search="repeatable" autocomplete="person-person"></field>
+	</section>
+</record>

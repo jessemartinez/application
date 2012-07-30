@@ -35,6 +35,10 @@
         </field>
         <field id="artifactClass" autocomplete="vocab-artifactclassworktype" ui-type="enum" section="mmi">
             <selector>object-identification-artifactClass</selector>
+            <!-- make the term item '~Undetermined' the default value -->
+            <enum>
+                <default>urn:cspace:movingimage.us:vocabularies:name(artifactclassworktype):item:name(wt350)'~Undetermined'</default>
+            </enum>
         </field>
         <field id="workType" autocomplete="vocab-artifactclassworktype" ui-type="enum" section="mmi">
             <selector>object-identification-workType</selector>

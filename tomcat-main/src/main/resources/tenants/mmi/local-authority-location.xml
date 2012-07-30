@@ -1,4 +1,4 @@
-<record id="location">
+<record id="location" type="authority">
     <instances id="location">
         <instance id="location-offsite_sla">
             <web-url>offsite_sla</web-url>

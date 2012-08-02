@@ -47,13 +47,13 @@
         </repeat>
         <!-- setting custom person structured date component -->
         <field id="birthDateGroup" in-title="yes" ui-type="groupfield/structureddate" 
-            primarykey="birthDateGroup.dateDisplayDate" ui-func="cspace.personStructuredDate">
+            primarykey="birthDateGroup.dateEarliestSingleYear" ui-func="cspace.personStructuredDate">
             <selector>personAuthority-birthDate</selector>
             <title-selector>titleBar-birthDate</title-selector>
         </field>
         <!-- setting custom person structured date component -->
         <field id="deathDateGroup" in-title="yes" ui-type="groupfield/structureddate" 
-            primarykey="deathDateGroup.dateDisplayDate" ui-func="cspace.personStructuredDate">
+            primarykey="deathDateGroup.dateEarliestSingleYear" ui-func="cspace.personStructuredDate">
             <selector>personAuthority-deathDate</selector>
             <title-selector>titleBar-deathDate</title-selector>
         </field>

@@ -435,6 +435,50 @@
             <option id="publication">Publication</option>
         </options>
     </instance>
+    <instance id="vocab-format">
+        <web-url>format</web-url>
+        <title-ref>format</title-ref>
+        <title>Format</title>
+        <options>
+            <option id="n1inch">1"</option>
+            <option id="n1slash2inch">1/2"</option>
+            <option id="n17dot5mm">17.5mm</option>
+            <option id="n2inch">2"</option>
+            <option id="n22mm">22mm</option>
+            <option id="n28mm">28mm</option>
+            <option id="n33sp1slash3sprpm">33 1/3 rpm</option>
+            <option id="n35mm">35mm</option>
+            <option id="n35mmslide">35mm slide</option>
+            <option id="n3d">3-D</option>
+            <option id="n45rpm">45 rpm</option>
+            <option id="n70mm">70mm</option>
+            <option id="n78rpm">78 rpm</option>
+            <option id="n8mm">8mm</option>
+            <option id="9dot5mm">9.5mm</option>
+            <option id="cd">CD</option>
+            <option id="cassettetape">cassette tape</option>
+            <option id="dvd">DVD</option>
+            <option id="halfsheet">half-sheet</option>
+            <option id="hardcover">hardcover</option>
+            <option id="insert">insert</option>
+            <option id="lanternslide">lantern slide</option>
+            <option id="leaflet">leaflet</option>
+            <option id="magazine">magazine</option>
+            <option id="negative">negative</option>
+            <option id="onesheet">one-sheet</option>
+            <option id="onestop">one-stop</option>
+            <option id="pamphlet">pamphlet</option>
+            <option id="paperback">paperback</option>
+            <option id="photograph">photograph</option>
+            <option id="sixsheet">sixsheet</option>
+            <option id="super8mm">Super 8mm</option>
+            <option id="threesheet">three-sheet</option>
+            <option id="transparency">transparency</option>
+            <option id="twentyfoursheet">twenty-four-sheet</option>
+            <option id="umatic">U-Matic</option>
+            <option id="vhs">VHS</option>
+        </options>
+    </instance>
     <instance id="vocab-artifactclassworktype">
         <web-url>artifactclassworktype</web-url>
         <title-ref>artifactclassworktype</title-ref>

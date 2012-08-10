@@ -142,6 +142,10 @@
                 <selector>object-description-mmiMaterial</selector>
             </field>
         </repeat>
+        <field id="physicalDescription" autocomplete="vocab-format" ui-type="enum">
+            <!-- added vocab -->
+            <selector>object-description-physical-description</selector>
+        </field>
         <repeat id="objectComponentGroupList/objectComponentGroup">
             <!-- removed option values -->
             <field id="objectComponentName" ui-search="repeatable" seperate_ui_container="true">

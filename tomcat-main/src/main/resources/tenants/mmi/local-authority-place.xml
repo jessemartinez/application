@@ -1,9 +1,8 @@
 <record id="place" type="authority">
     <instances id="place">
+        <!-- remove place-tgn_place -->
         <instance id="place-tgn_place">
             <web-url>tgn_place</web-url>
-            <!-- deactivating non-preferred terms in term completion -->
-            <nptAllowed>false</nptAllowed>
             <title-ref>tgn_place</title-ref>
             <title>Thesaurus of Geographic Names</title>
         </instance>

@@ -7,11 +7,10 @@
             <nptAllowed>false</nptAllowed>
             <title>Local Works</title>
         </instance>
+        <!-- remove work-cona_work -->
         <instance id="work-cona_work">
             <web-url>cona_work</web-url>
             <title-ref>cona_work</title-ref>
-            <!-- deactivating non-preferred terms in term completion -->
-            <nptAllowed>false</nptAllowed>
             <title>CONA Works</title>
         </instance>
     </instances>

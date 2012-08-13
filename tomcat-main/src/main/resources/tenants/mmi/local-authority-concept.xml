@@ -13,7 +13,7 @@
             <nptAllowed>false</nptAllowed>
             <title>Associated Concepts</title>
         </instance>
-        <!-- remove concept-activity instance ->
+        <!-- remove concept-activity instance -->
         <instance id="concept-activity">
             <web-url>activity</web-url>
             <title-ref>activity</title-ref>

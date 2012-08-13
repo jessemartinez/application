@@ -8,7 +8,7 @@
             <nptAllowed>false</nptAllowed>
             <title>Local Entities</title>
         </instance>
-        <!-- remove person-ulan_pa -->
+        <!-- remove person-ulan_pa instance -->
         <instance id="person-ulan_pa">
             <web-url>ulan_pa</web-url>
             <title-ref>ulan_pa</title-ref>

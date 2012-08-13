@@ -1,6 +1,6 @@
 <record id="location" type="authority">
     <instances id="location">
-        <!-- remove location-offsite_sla -->
+        <!-- remove location-offsite_sla instance -->
         <instance id="location-offsite_sla">
             <web-url>offsite_sla</web-url>
             <title-ref>offsite_sla</title-ref>

@@ -7,7 +7,7 @@
             <nptAllowed>false</nptAllowed>
             <title>Local Works</title>
         </instance>
-        <!-- remove work-cona_work -->
+        <!-- remove work-cona_work instance -->
         <instance id="work-cona_work">
             <web-url>cona_work</web-url>
             <title-ref>cona_work</title-ref>

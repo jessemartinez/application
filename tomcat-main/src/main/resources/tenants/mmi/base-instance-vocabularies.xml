@@ -442,6 +442,7 @@
         <options>
             <option id="n1inch">1"</option>
             <option id="n1slash2inch">1/2"</option>
+            <option id="n16mm">16mm</option>
             <option id="n17dot5mm">17.5mm</option>
             <option id="n2inch">2"</option>
             <option id="n22mm">22mm</option>

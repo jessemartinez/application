@@ -125,6 +125,11 @@
                 <selector>object-description-mmiInscriptionContent</selector>
             </field>
         </repeat>
+        <repeat id="formats" section="mmi">
+            <field id="format" autocomplete="vocab-format" ui-type="enum" section="mmi">
+                <selector>object-description-format</selector>
+            </field>
+        </repeat>
         <repeat id="copyrightStatements" has-primary="yes" section="mmi">
             <field id="copyrightStatement" section="mmi">
                 <selector>object-description-copyrightStatement</selector>
@@ -135,10 +140,6 @@
                 <selector>object-description-mmiMaterial</selector>
             </field>
         </repeat>
-        <field id="physicalDescription" autocomplete="vocab-format" ui-type="enum">
-            <!-- added vocab -->
-            <selector>object-description-physical-description</selector>
-        </field>
         <repeat id="objectComponentGroupList/objectComponentGroup">
             <!-- removed option values -->
             <field id="objectComponentName" ui-search="repeatable" seperate_ui_container="true">

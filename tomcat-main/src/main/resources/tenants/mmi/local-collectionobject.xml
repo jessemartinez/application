@@ -23,6 +23,9 @@
         <field id="initialCatalogingCompleted" datatype="boolean" section="mmi">
             <selector>object-identification-initialCatalogingCompleted</selector>
         </field>
+        <field id="approvedByCurator" datatype="boolean" section="mmi">
+            <selector>object-identification-approvedByCurator</selector>
+        </field>
         <field id="additionalResearchRequired" datatype="boolean" section="mmi">
             <selector>object-identification-additionalResearchRequired</selector>
         </field>

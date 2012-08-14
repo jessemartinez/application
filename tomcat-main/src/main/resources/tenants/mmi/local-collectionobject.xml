@@ -149,20 +149,6 @@
                 <selector>object-description-object-component-information</selector>
             </field>
         </repeat>
-        <repeat id="technicalAttributeGroupList/technicalAttributeGroup">
-            <!-- change autocomplete to use vocab-technicalattribute -->
-            <field id="technicalAttribute" ui-search="repeatable"  autocomplete="vocab-technicalattribute" ui-type="enum" seperate_ui_container="true">
-                <selector>object-description-technical-attribute</selector>
-            </field>
-            <!-- change autocomplete to use vocab-technicalmeasurement -->
-            <field id="technicalAttributeMeasurement" autocomplete="vocab-technicalmeasurement" ui-type="enum" seperate_ui_container="true">
-                <selector>object-description-technical-attribute-measurement</selector>
-            </field>
-            <!-- change autocomplete to use vocab-technicalmeasurementunit -->
-            <field id="technicalAttributeMeasurementUnit" autocomplete="vocab-technicalmeasurementunit" ui-type="enum" seperate_ui_container="true">
-                <selector>object-description-technical-attribute-unit</selector>
-            </field>
-        </repeat>
         <section id="contentInformation">
             <repeat id="contentEntityList/contentEntityGroup" section="mmi">
                 <field id="contentEntity" autocomplete="person-person" section="mmi">

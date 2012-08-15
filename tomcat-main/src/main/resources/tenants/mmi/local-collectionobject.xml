@@ -20,23 +20,23 @@
             <title-selector>titleBar-object-identification-objectTitle</title-selector>
             <selector>object-identification-objectTitle</selector>
         </field>
-        <field id="initialCatalogingCompleted" datatype="boolean" section="mmi">
+        <field id="initialCatalogingCompleted" datatype="boolean" ui-search="single" section="mmi">
             <selector>object-identification-initialCatalogingCompleted</selector>
         </field>
-        <field id="approvedByCurator" datatype="boolean" section="mmi">
+        <field id="approvedByCurator" datatype="boolean" ui-search="single" section="mmi">
             <selector>object-identification-approvedByCurator</selector>
         </field>
-        <field id="additionalResearchRequired" datatype="boolean" section="mmi">
+        <field id="additionalResearchRequired" datatype="boolean" ui-search="single" section="mmi">
             <selector>object-identification-additionalResearchRequired</selector>
         </field>
-        <field id="artifactClass" autocomplete="vocab-artifactclassworktype" ui-type="enum" section="mmi">
+        <field id="artifactClass" autocomplete="vocab-artifactclassworktype" ui-search="single" ui-type="enum" section="mmi">
             <selector>object-identification-artifactClass</selector>
             <!-- make the term item '~Undetermined' the default value -->
             <enum>
                 <default>urn:cspace:movingimage.us:vocabularies:name(artifactclassworktype):item:name(wt350)'~Undetermined'</default>
             </enum>
         </field>
-        <field id="workType" autocomplete="vocab-artifactclassworktype" ui-type="enum" section="mmi">
+        <field id="workType" autocomplete="vocab-artifactclassworktype" ui-type="enum" ui-search="single" section="mmi">
             <selector>object-identification-workType</selector>
         </field>
         <field id="caption" section="mmi">
@@ -211,8 +211,8 @@
                 ui-func="cspace.catalogingStructuredDate"/>
         </repeat>
         <repeat id="objProdEntityList/objProdEntityGroup" section="mmi">
-            <!-- add autocomplete to only use person-person -->
-            <field id="objProdEntity" ui-search="repeatable" autocomplete="person-person" section="mmi">
+            <!-- add autocomplete to only use person-person; remove ui-search -->
+            <field id="objProdEntity" autocomplete="person-person" section="mmi">
                 <selector>object-production-objProdEntity</selector>
             </field>
             <!-- add autocomplete to use vocab-productionrole -->
@@ -236,7 +236,7 @@
         </field>
         <section id="associationInformation">
             <repeat id="contentWorkList/contentWorkGroup" section="mmi">
-                <field id="contentWork" autocomplete="work-work" section="mmi">
+                <field id="contentWork" autocomplete="work-work" ui-search="repeatable" section="mmi">
                     <selector>object-history-contentWork</selector>
                 </field>
                 <field id="contentWorkType" section="mmi"  autocomplete="vocab-contentworktype" ui-type="enum">

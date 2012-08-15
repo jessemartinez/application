@@ -46,26 +46,26 @@
     </instances>
     <section id="coreInformation">
         <field id="tenantID" section="collectionspace_core" attributes="GET"></field>
-        <field id="createdBy" ui-search="repeatable" section="collectionspace_core" attributes="GET"></field>
+        <field id="createdBy" section="collectionspace_core" attributes="GET"></field>
         <field id="updatedBy" ui-search="repeatable" section="collectionspace_core" attributes="GET"></field>
         <field id="createdAt" section="collectionspace_core" attributes="GET"></field>
         <field id="updatedAt" ui-search="range" ui-type="date" section="collectionspace_core" attributes="GET" mini="search,list,relate"></field>
     </section>
     <section id="workAuthorityInformation">
-        <field id="scopeNote" ui-search="repeatable"/>
-        <field id="sourceNote" ui-search="repeatable"/>
-        <field id="genre" autocomplete="vocab-workgenre" ui-type="enum" ui-search="repeatable"/>
-        <field id="medium" autocomplete="vocab-workmedium" ui-type="enum" ui-search="repeatable" />
+        <field id="scopeNote"/>
+        <field id="sourceNote"/>
+        <field id="genre" ui-search="repeatable" autocomplete="vocab-workgenre" ui-type="enum"/>
+        <field id="medium" ui-search="repeatable" autocomplete="vocab-workmedium" ui-type="enum"/>
         <repeat id="creatorGroupList/creatorGroup">
-            <field id="creator" autocomplete="person-person" ui-search="repeatable"/>
+            <field id="creator" autocomplete="person-person"/>
             <field id="creatorType" autocomplete="vocab-workcreatortype" ui-type="enum"/>
         </repeat>
         <repeat id="publisherGroupList/publisherGroup">
-            <field id="publisher" autocomplete="person-person" ui-search="repeatable"/>
+            <field id="publisher" autocomplete="person-person"/>
             <field id="publisherType" autocomplete="vocab-workpublishertype" ui-type="enum"/>
         </repeat>
         <repeat id="migratedEntityGroupList/migratedEntityGroup">
-            <field id="migratedEntity" ui-search="repeatable"/>
+            <field id="migratedEntity"/>
             <field id="migratedEntityType">
                 <options>
                     <option id="" default="yes">Please select a value</option>

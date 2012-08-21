@@ -54,8 +54,6 @@
     <section id="workAuthorityInformation">
         <field id="scopeNote" ui-search="repeatable"/>
         <field id="sourceNote" ui-search="repeatable"/>
-        <field id="indexingNote" ui-search="repeatable"/>
-        <field id="historyNote" ui-search="repeatable"/>
         <field id="genre" autocomplete="vocab-workgenre" ui-type="enum" ui-search="repeatable"/>
         <field id="medium" autocomplete="vocab-workmedium" ui-type="enum" ui-search="repeatable" />
         <repeat id="creatorGroupList/creatorGroup">

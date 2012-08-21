@@ -17,6 +17,12 @@
             <publisherType>distributioncompany</publisherType>
         </publisherGroup>
     </publisherGroupList>
+    <migratedEntityGroupList>
+        <migratedEntityGroup>
+            <migratedEntity>Someone Else</migratedEntity>
+            <migratedEntityType>artist</migratedEntityType>
+        </migratedEntityGroup>
+    </migratedEntityGroupList>
     <workTermGroupList>
         <workTermGroup>
             <termDisplayName>Muppets Take Manhattan (1984)</termDisplayName>

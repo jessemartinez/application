@@ -81,6 +81,21 @@
             "updatedAtEnd": {
                 "type": "date"
             },
+            "migratedEntityGroup": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "migratedEntity": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
             "workTermGroup": {
                 "items": {
                     "properties": {

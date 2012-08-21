@@ -56,20 +56,8 @@
         <field id="sourceNote" ui-search="repeatable"/>
         <field id="indexingNote" ui-search="repeatable"/>
         <field id="historyNote" ui-search="repeatable"/>
-        <field id="genre" ui-search="repeatable">
-            <options>
-                <option id="" default="yes">Please select a value</option>
-                <option id="film">Film</option>
-                <option id="other">Other</option>
-            </options>
-        </field>
-        <field id="medium" ui-search="repeatable">
-            <options>
-                <option id="" default="yes">Please select a value</option>
-                <option id="film">Film</option>
-                <option id="other">Other</option>
-            </options>
-        </field>
+        <field id="genre" autocomplete="vocab-workgenre" ui-type="enum" ui-search="repeatable"/>
+        <field id="medium" autocomplete="vocab-workmedium" ui-type="enum" ui-search="repeatable" />
         <repeat id="creatorGroupList/creatorGroup">
             <field id="creator" autocomplete="person-person" ui-search="repeatable"/>
             <field id="creatorType" autocomplete="vocab-workcreatortype" ui-type="enum"/>
@@ -77,6 +65,21 @@
         <repeat id="publisherGroupList/publisherGroup">
             <field id="publisher" autocomplete="person-person" ui-search="repeatable"/>
             <field id="publisherType" autocomplete="vocab-workpublishertype" ui-type="enum"/>
+        </repeat>
+        <repeat id="migratedEntityGroupList/migratedEntityGroup">
+            <field id="migratedEntity" ui-search="repeatable"/>
+            <field id="migratedEntityType">
+                <options>
+                    <option id="" default="yes">Please select a value</option>
+                    <option id="artist">Artist</option>
+                    <option id="director">director</option>
+                    <option id="publishingcompany">Publishing company</option>
+                    <option id="developer">Developer</option>
+                    <option id="productioncompany">Production company</option>
+                    <option id="networkcableservice">Network/cable service</option>
+                    <option id="distributioncompany">Distribution company</option>
+                </options>
+            </field>
         </repeat>
         <field id="preferredWork" ui-type="groupfield/preferredWork/selfrenderer" ui-func="cspace.preferred">
             <selector>preferred-workAuthority</selector>

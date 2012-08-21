@@ -186,16 +186,15 @@
                         <title-ref>worktermsource</title-ref>
                         <title>Work Term Source</title>
                         <options>
-				<option id="aficatalog">AFI Catalog</option>
-				<option id="featurefilms">Feature Films</option>
-				<option id="allmoviecom">AllMovie.com</option>
-				<option id="ammiacquisitiondatabase">AMMI Acquisitions Database</option>
+				<option id="afi">AFI Catalog</option>
+				<option id="amc">AllMovie.com</option>
+				<option id="ammiac">AMMI Acquisitions Database</option>
 				<option id="ascap">ASCAP</option>
-				<option id="libraryofcongress">Library of Congress</option>
-				<option id="other">Other</option>
-				<option id="thecompletedirectorytoprimetimenetworkandcabletvshows">The Complete Directory to Primetime Network and Cable TV Shows</option>
-				<option id="totaltelevision4thedition">Total Television, 4th Edition</option>
-				<option id="rhizomeorgartbase">Rhizome.org Artbase</option>
+				<option id="loc">Library of Congress</option>
+				<option id="oth">Other</option>
+				<option id="cdptn">The Complete Directory to Primetime Network and Cable TV Shows</option>
+				<option id="tt">Total Television, 4th Edition</option>
+				<option id="roab">Rhizome.org Artbase</option>
                         </options>
                     </instance>
                     <instance id="vocab-persontermtype">
@@ -230,5 +229,24 @@
                             <option id="publishingcompany">Publishing Company</option>
                         </options>
                     </instance>
-
+                    <instance id="vocab-workgenre">
+                        <web-url>workgenre</web-url>
+                        <title-ref>workgenre</title-ref>
+                        <title>Work Genre</title>
+                        <options>
+                            <option id="short">Short</option>
+                            <option id="feature">Feature</option>
+                        </options>
+                    </instance>
+                    <instance id="vocab-workmedium">
+                        <web-url>workmedium</web-url>
+                        <title-ref>workmedium</title-ref>
+                        <title>Work Medium</title>
+                        <options>
+                            <option id="film">Film</option>
+                            <option id="internet">Internet</option>
+                            <option id="television">Television</option>
+                            <option id="videogame">Video game</option>
+                        </options>
+                    </instance>
 </instances>

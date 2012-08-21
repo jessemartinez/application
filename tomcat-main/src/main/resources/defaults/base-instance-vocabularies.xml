@@ -177,24 +177,8 @@
                             <option id="approximate">Approximate</option>
                             <option id="before">Before</option>
                             <option id="circa">Circa</option>
-                            <option id="probably">Probably</option> 
+                            <option id="probably">Probably</option>
                             <option id="possibly">Possibly</option>
-                        </options>
-                    </instance>
-                    <instance id="vocab-worktermsource">
-                        <web-url>worktermsource</web-url>
-                        <title-ref>worktermsource</title-ref>
-                        <title>Work Term Source</title>
-                        <options>
-				<option id="afi">AFI Catalog</option>
-				<option id="amc">AllMovie.com</option>
-				<option id="ammiac">AMMI Acquisitions Database</option>
-				<option id="ascap">ASCAP</option>
-				<option id="loc">Library of Congress</option>
-				<option id="oth">Other</option>
-				<option id="cdptn">The Complete Directory to Primetime Network and Cable TV Shows</option>
-				<option id="tt">Total Television, 4th Edition</option>
-				<option id="roab">Rhizome.org Artbase</option>
                         </options>
                     </instance>
                     <instance id="vocab-persontermtype">
@@ -205,6 +189,22 @@
                                 <option id="artist">Artist</option>
                                 <option id="donor">Donor</option>
                                 <option id="employee">Employee</option>
+                        </options>
+                    </instance>
+                    <instance id="vocab-worktermsource">
+                        <web-url>worktermsource</web-url>
+                        <title-ref>worktermsource</title-ref>
+                        <title>Work Term Source</title>
+                        <options>
+                                <option id="afi">AFI Catalog</option>
+                                <option id="amc">AllMovie.com</option>
+                                <option id="ammiac">AMMI Acquisitions Database</option>
+                                <option id="ascap">ASCAP</option>
+                                <option id="loc">Library of Congress</option>
+                                <option id="oth">Other</option>
+                                <option id="cdptn">The Complete Directory to Primetime Network and Cable TV Shows</option>
+                                <option id="tt">Total Television, 4th Edition</option>
+                                <option id="roab">Rhizome.org Artbase</option>
                         </options>
                     </instance>
                     <instance id="vocab-workcreatortype">
@@ -247,6 +247,17 @@
                             <option id="internet">Internet</option>
                             <option id="television">Television</option>
                             <option id="videogame">Video game</option>
+                        </options>
+                    </instance>
+                    <instance id="vocab-workdateassociation">
+                        <web-url>workdateassociation</web-url>
+                        <title-ref>workdateassociation</title-ref>
+                        <title>Work Date Association</title>
+                        <options>
+                            <option id="copyrightdate">Copyright date</option>
+                            <option id="releasedate">Release date</option>
+                            <option id="productiondate">Production date</option>
+                            <option id="runningdates">Running dates</option>
                         </options>
                     </instance>
 </instances>

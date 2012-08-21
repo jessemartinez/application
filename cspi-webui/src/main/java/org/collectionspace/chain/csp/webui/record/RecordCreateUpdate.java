@@ -53,7 +53,7 @@ public class RecordCreateUpdate implements WebMethod {
 		this.reader=new RecordRead(r);
 		this.avi = new AuthoritiesVocabulariesInitialize(r,false);
 		this.reader.configure(spec);
-		this.searcher = new RecordSearchList(r,false);
+		this.searcher = new RecordSearchList(r,RecordSearchList.MODE_LIST);
 	}
 		
 	private void deleteAllRelations(Storage storage,String csid) throws JSONException, ExistException, UnimplementedException, UnderlyingStorageException {

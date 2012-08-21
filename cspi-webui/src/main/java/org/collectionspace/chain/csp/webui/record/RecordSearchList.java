@@ -36,18 +36,28 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class RecordSearchList implements WebMethod {
+	public static final int MODE_LIST = 0;
+	public static final int MODE_SEARCH = 1;
+	public static final int MODE_SEARCH_RELATED = 2;
+	
 	private static final Logger log=LoggerFactory.getLogger(RecordSearchList.class);
-	private boolean search;
+	private int mode;
 	private String base;
 	private Spec spec;
 	private Record r;
 	private Map<String,String> type_to_url=new HashMap<String,String>();
+	private String searchAllGroup;
 	
-	public RecordSearchList(Record r,boolean search) {
+	public RecordSearchList(Record r, int mode) {
+		this(r, mode, null);
+	}
+	
+	public RecordSearchList(Record r, int mode, String searchAllGroup) {
 		this.r = r;
 		this.spec=r.getSpec();
 		this.base=r.getID();
-		this.search=search;
+		this.mode=mode;
+		this.searchAllGroup = searchAllGroup;
 	}
 	
 	/**
@@ -63,7 +73,7 @@ public class RecordSearchList implements WebMethod {
 	 */
 	private JSONObject generateMiniRecord(Storage storage,String type,String csid) throws JSONException  {
 		String postfix = "list";
-		if(this.search){
+		if(this.mode==MODE_SEARCH){
 			postfix = "search";
 		}
 		JSONObject restrictions = new JSONObject();
@@ -85,7 +95,7 @@ public class RecordSearchList implements WebMethod {
 				
 				String[] parts=uri.split("/");
 				String recordurl = parts[0];
-				Record itemr = r.getSpec().getRecordByServicesUrl(recordurl);
+				Record itemr = r.getSpec().getRecordByServicesUrl(recordurl); // This may return null so we should add a check for null
 				recordtype = type_to_url.get(itemr.getID());
 			}
 			out.put("recordtype", recordtype);
@@ -189,66 +199,11 @@ public class RecordSearchList implements WebMethod {
 	 */
 	private void search_or_list(Storage storage,UIRequest ui,String path) throws UIException {
 		try {
-			JSONObject restrictedkey = GenericSearch.setRestricted(ui,null,null,null,search,this.r);
+			JSONObject restrictedkey = GenericSearch.setRestricted(ui,null,null,null,(mode==MODE_SEARCH),this.r);
 			JSONObject restriction = restrictedkey.getJSONObject("restriction");
 			String key = restrictedkey.getString("key");
 			
-			JSONObject results = new JSONObject();
-
-			if(this.r.getID().equals("permission")){
-				//pagination isn't properly implemented in permissions so just keep looping til we get everything
-				int pgnum = 0;
-				if(restriction.has("pageNum")){ //just get teh page specified
-					results = getJSON(storage,restriction,key,base);
-				}
-				else{ // if not specified page then loop over them all.
-					JSONArray newitems =new JSONArray();
-					results = getJSON(storage,restriction,key,base);
-					while(results.has(key) && results.getJSONArray(key).length()>0){
-
-						JSONArray items = results.getJSONArray(key);
-						for(int i=0;i<items.length();i++){
-							newitems.put(items.get(i));
-						}
-						pgnum++;
-						restriction.put("pageNum", Integer.toString(pgnum));
-						
-						results = getJSON(storage,restriction,key,base);
-					}
-					results.put(key, newitems);
-				}
-			}
-			else if(r.getID().equals("reports")){
-				String type= "";
-				if(path!=null && !path.equals("")){
-					restriction.put("queryTerm", "doctype");
-					restriction.put("queryString", spec.getRecordByWebUrl(path).getServicesTenantSg());
-				}
-				
-				if(restriction.has("queryTerm") && restriction.getString("queryTerm").equals("doctype")){
-					type = restriction.getString("queryString");
-					results = getJSON(storage,restriction,key,base);
-					results = showReports(results, type, key);
-				}
-				else{
-					JSONObject reporting = new JSONObject();
-					for(Record r2 : spec.getAllRecords()) {
-						if(r2.isInRecordList()){
-							type = r2.getServicesTenantSg();
-							restriction.put("queryTerm","doctype");
-							restriction.put("queryString",type);
-						
-							JSONObject rdata = getJSON(storage,restriction,key,base);
-							JSONObject procedurereports = showReports(rdata, type, key);
-							reporting.put(r2.getWebURL(), procedurereports);
-						}
-					}
-					results.put("reporting", reporting);
-				}
-			}				
-			else{
-				results = getJSON(storage,restriction,key,base);
-			}
+			JSONObject results = getResults(storage, restriction, key, path);
 			//cache for record traverser
 			if(results.has("pagination") && results.getJSONObject("pagination").has("separatelists")){
 				GenericSearch.createTraverser(ui, this.r.getID(), "", results, restriction, key, 1);
@@ -264,6 +219,88 @@ public class RecordSearchList implements WebMethod {
 			UIException uiexception =  new UIException(x.getMessage(),x.getStatus(),x.getUrl(),x);
 			ui.sendJSONResponse(uiexception.getJSON());
 		}			
+	}
+	
+	/**
+	 * This function is the general function that calls the correct funtions to get all the data that the UI requested and get it in the 
+	 * correct format for the UI.
+	 * @param {Storage} storage The type of storage requested (e.g. RecordStorage, AuthorizationStorage,...) 
+	 * @param {UIRequest} ui The request from the ui to which we send a response.
+	 * @param {String} param If a querystring has been added to the URL(e.g.'?query='), it will be in this param 
+	 * @param {String} pageSize The amount of results per page requested.
+	 * @param {String} pageNum The amount of pages requested.
+	 * @throws UIException
+	 * @throws UnderlyingStorageException 
+	 * @throws UnimplementedException 
+	 * @throws ExistException 
+	 * @throws JSONException 
+	 */
+	protected JSONObject getResults(Storage storage,JSONObject restriction, String key, String path) throws UIException, JSONException, ExistException, UnimplementedException, UnderlyingStorageException {
+
+		JSONObject results = new JSONObject();
+
+		if(this.r.getID().equals("permission")){
+			//pagination isn't properly implemented in permissions so just keep looping til we get everything
+			int pgnum = 0;
+			if(restriction.has("pageNum")){ //just get teh page specified
+				results = getJSON(storage,restriction,key,base);
+			}
+			else{ // if not specified page then loop over them all.
+				JSONArray newitems =new JSONArray();
+				results = getJSON(storage,restriction,key,base);
+				while(results.has(key) && results.getJSONArray(key).length()>0){
+
+					JSONArray items = results.getJSONArray(key);
+					for(int i=0;i<items.length();i++){
+						newitems.put(items.get(i));
+					}
+					pgnum++;
+					restriction.put("pageNum", Integer.toString(pgnum));
+
+					results = getJSON(storage,restriction,key,base);
+				}
+				results.put(key, newitems);
+			}
+		}
+		else if(r.getID().equals("reports")){
+			String type= "";
+			if(path!=null && !path.equals("")){
+				restriction.put("queryTerm", "doctype");
+				restriction.put("queryString", spec.getRecordByWebUrl(path).getServicesTenantSg());
+			}
+
+			if(restriction.has("queryTerm") && restriction.getString("queryTerm").equals("doctype")){
+				type = restriction.getString("queryString");
+				results = getJSON(storage,restriction,key,base);
+				results = showReports(results, type, key);
+			}
+			else{
+				JSONObject reporting = new JSONObject();
+				for(Record r2 : spec.getAllRecords()) {
+					if(r2.isInRecordList()){
+						type = r2.getServicesTenantSg();
+						restriction.put("queryTerm","doctype");
+						restriction.put("queryString",type);
+
+						JSONObject rdata = getJSON(storage,restriction,key,base);
+						JSONObject procedurereports = showReports(rdata, type, key);
+						reporting.put(r2.getWebURL(), procedurereports);
+					}
+				}
+				results.put("reporting", reporting);
+			}
+		}				
+		else{
+			if((mode==MODE_SEARCH_RELATED) && !path.isEmpty()) {
+				// This is a related to case
+				restriction.put(GenericSearch.SEARCH_RELATED_TO_CSID_AS_SUBJECT, path);
+			}
+			if((searchAllGroup != null) && r.isType("searchall")) { // Add a new service group name to 
+				restriction.put(GenericSearch.SEARCH_ALL_GROUP, searchAllGroup);
+			}
+			results = getJSON(storage,restriction,key,base);
+		}
+		return results;
 	}
 	
 
@@ -289,7 +326,7 @@ public class RecordSearchList implements WebMethod {
 		try {
 
 			JSONObject results = new JSONObject();
-			JSONObject restrictedkey = GenericSearch.setRestricted(ui,null,null,null,search,this.r);
+			JSONObject restrictedkey = GenericSearch.setRestricted(ui,null,null,null,true,this.r);
 			JSONObject restriction = restrictedkey.getJSONObject("restriction");
 			String key = restrictedkey.getString("key");
 			GenericSearch.buildQuery(this.r,params, restriction);
@@ -331,7 +368,8 @@ public class RecordSearchList implements WebMethod {
 	
 
 	/* Wrapper exists to be used inRead, hence not private */
-	public JSONObject getJSON(Storage storage,JSONObject restriction, String key, String mybase) throws JSONException, UIException, ExistException, UnimplementedException, UnderlyingStorageException{
+	public JSONObject getJSON(Storage storage,JSONObject restriction, String key, String mybase)
+			throws JSONException, UIException, ExistException, UnimplementedException, UnderlyingStorageException{
 		JSONObject out = new JSONObject();
 
 		JSONObject data = storage.getPathsJSON(mybase,restriction);
@@ -355,6 +393,9 @@ public class RecordSearchList implements WebMethod {
 		searchtype(q.getStorage(),q.getUIRequest(),StringUtils.join(tail,"/"));
 	}
 
+	public void configure(Spec spec) {
+		configure(null, spec);
+	}
 	public void configure(WebUI ui,Spec spec) {
 		for(Record r : spec.getAllRecords()) {
 			type_to_url.put(r.getID(),r.getWebURL());

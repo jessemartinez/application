@@ -96,6 +96,36 @@
                 },
                 "type": "array"
             },
+            "scopeNotes": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "scopeNote": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "updatedBys": {
+                "items": {
+                    "properties": {
+                        "_primary": {
+                            "default": true,
+                            "type": "boolean"
+                        },
+                        "updatedBy": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
             "workTermGroup": {
                 "items": {
                     "properties": {
@@ -122,66 +152,6 @@
                             "type": "boolean"
                         },
                         "creator": {
-                            "type": "string"
-                        }
-                    },
-                    "type": "object"
-                },
-                "type": "array"
-            },
-            "indexingNotes": {
-                "items": {
-                    "properties": {
-                        "_primary": {
-                            "default": true,
-                            "type": "boolean"
-                        },
-                        "indexingNote": {
-                            "type": "string"
-                        }
-                    },
-                    "type": "object"
-                },
-                "type": "array"
-            },
-            "historyNotes": {
-                "items": {
-                    "properties": {
-                        "_primary": {
-                            "default": true,
-                            "type": "boolean"
-                        },
-                        "historyNote": {
-                            "type": "string"
-                        }
-                    },
-                    "type": "object"
-                },
-                "type": "array"
-            },
-            "scopeNotes": {
-                "items": {
-                    "properties": {
-                        "_primary": {
-                            "default": true,
-                            "type": "boolean"
-                        },
-                        "scopeNote": {
-                            "type": "string"
-                        }
-                    },
-                    "type": "object"
-                },
-                "type": "array"
-            },
-            "updatedBys": {
-                "items": {
-                    "properties": {
-                        "_primary": {
-                            "default": true,
-                            "type": "boolean"
-                        },
-                        "updatedBy": {
                             "type": "string"
                         }
                     },

@@ -98,34 +98,11 @@
     ".csc-work-updatedAtStart-label": {
         "messagekey": "work-updatedAtStartLabel"
     },
-    ".csc-work-updatedBy-label": {
-        "messagekey": "work-updatedByLabel"
-    },
     ".csc-work-termPrefForLang-label": {
         "messagekey": "preferredWork-termPrefForLangLabel"
     },
-    ".csc-work-indexingNote": {
-        "decorators": [
-            {
-                "func": "cspace.makeRepeatable",
-                "type": "fluid",
-                "options": {
-                    "repeatTree": {
-                        "expander": {
-                            "tree": {
-                                ".csc-work-indexingNote": "${{row}.indexingNote}"
-                            },
-                            "type": "fluid.noexpand"
-                        }
-                    },
-                    "elPath": "indexingNotes",
-                    "hidePrimary": true
-                }
-            }
-        ]
-    },
-    ".csc-work-scopeNote-label": {
-        "messagekey": "work-scopeNoteLabel"
+    ".csc-work-updatedBy-label": {
+        "messagekey": "work-updatedByLabel"
     },
     ".csc-work-updatedAtStart": {
         "decorators": [
@@ -135,6 +112,9 @@
             }
         ],
         "value": "${updatedAtStart}"
+    },
+    ".csc-work-scopeNote-label": {
+        "messagekey": "work-scopeNoteLabel"
     },
     ".csc-work-sourceNote": {
         "decorators": [
@@ -165,26 +145,6 @@
     ".csc-work-updatedAt-label": {
         "messagekey": "work-updatedAtLabel"
     },
-    ".csc-work-historyNote": {
-        "decorators": [
-            {
-                "func": "cspace.makeRepeatable",
-                "type": "fluid",
-                "options": {
-                    "repeatTree": {
-                        "expander": {
-                            "tree": {
-                                ".csc-work-historyNote": "${{row}.historyNote}"
-                            },
-                            "type": "fluid.noexpand"
-                        }
-                    },
-                    "elPath": "historyNotes",
-                    "hidePrimary": true
-                }
-            }
-        ]
-    },
     ".csc-work-medium": {
         "decorators": [
             {
@@ -195,22 +155,17 @@
                         "expander": {
                             "tree": {
                                 ".csc-work-medium": {
-                                    "default": "",
-                                    "optionnames": [
-                                        "Please select a value",
-                                        "Film",
-                                        "Internet",
-                                        "Television",
-                                        "Video game"
-                                    ],
-                                    "optionlist": [
-                                        "",
-                                        "film",
-                                        "internet",
-                                        "television",
-                                        "videogame"
-                                    ],
-                                    "selection": "${{row}.medium}"
+                                    "decorators": [
+                                        {
+                                            "func": "cspace.termList",
+                                            "type": "fluid",
+                                            "options": {
+                                                "root": "{row}",
+                                                "elPath": "medium",
+                                                "termListType": "medium"
+                                            }
+                                        }
+                                    ]
                                 }
                             },
                             "type": "fluid.noexpand"
@@ -250,18 +205,17 @@
                         "expander": {
                             "tree": {
                                 ".csc-work-genre": {
-                                    "default": "",
-                                    "optionnames": [
-                                        "Please select a value",
-                                        "Short",
-                                        "Feature"
-                                    ],
-                                    "optionlist": [
-                                        "",
-                                        "short",
-                                        "feature"
-                                    ],
-                                    "selection": "${{row}.genre}"
+                                    "decorators": [
+                                        {
+                                            "func": "cspace.termList",
+                                            "type": "fluid",
+                                            "options": {
+                                                "root": "{row}",
+                                                "elPath": "genre",
+                                                "termListType": "genre"
+                                            }
+                                        }
+                                    ]
                                 }
                             },
                             "type": "fluid.noexpand"
@@ -292,9 +246,6 @@
                 }
             }
         ]
-    },
-    ".csc-work-historyNote-label": {
-        "messagekey": "work-historyNoteLabel"
     },
     ".csc-work-scopeNote": {
         "decorators": [
@@ -379,9 +330,6 @@
     },
     ".csc-work-migratedEntity-label": {
         "messagekey": "work-migratedEntityLabel"
-    },
-    ".csc-work-indexingNote-label": {
-        "messagekey": "work-indexingNoteLabel"
     },
     ".csc-work-termQualifier-label": {
         "messagekey": "preferredWork-termQualifierLabel"

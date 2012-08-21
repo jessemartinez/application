@@ -3,8 +3,6 @@
     <shortIdentifier>worktest1</shortIdentifier>
     <medium>film</medium>
     <scopeNote>scope note goes here</scopeNote>
-    <indexingNote>indexing note goes here</indexingNote>
-    <historyNote>history note goes here</historyNote>
     <creatorGroupList>
         <creatorGroup>
             <creator>Frank Oz</creator>
@@ -19,8 +17,8 @@
     </publisherGroupList>
     <migratedEntityGroupList>
         <migratedEntityGroup>
-            <migratedEntity>Someone Else</migratedEntity>
-            <migratedEntityType>artist</migratedEntityType>
+            <migratedEntity>TriStar Pictures</migratedEntity>
+            <migratedEntityType>distributioncompany</migratedEntityType>
         </migratedEntityGroup>
     </migratedEntityGroupList>
     <workTermGroupList>

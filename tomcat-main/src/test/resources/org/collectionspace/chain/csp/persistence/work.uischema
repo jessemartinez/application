@@ -36,9 +36,6 @@
                         },
                         "type": "array"
                     },
-                    "historyNote": {
-                        "type": "string"
-                    },
                     "publisherGroup": {
                         "items": {
                             "properties": {
@@ -83,7 +80,8 @@
                     "uri": {
                         "type": "string"
                     },
-                    "indexingNote": {
+                    "medium": {
+                        "default": "",
                         "type": "string"
                     },
                     "workTermGroup": {
@@ -134,10 +132,6 @@
                             "type": "object"
                         },
                         "type": "array"
-                    },
-                    "medium": {
-                        "default": "",
-                        "type": "string"
                     },
                     "updatedBy": {
                         "type": "string"

@@ -191,4 +191,62 @@
                                 <option id="employee">Employee</option>
                         </options>
                     </instance>
+                    <instance id="vocab-workcreatortype">
+                        <web-url>workcreatortype</web-url>
+                        <title-ref>workcreatortype</title-ref>
+                        <title>Work Creator Type</title>
+                        <options>
+                            <option id="artist">Artist</option>
+                            <option id="director">Director</option>
+                            <option id="publishingcompany">Publishing Company</option>
+                            <option id="developer">Developer</option>
+                            <option id="productioncompany">Production Company</option>
+                        </options>
+                    </instance>
+                    <instance id="vocab-workpublishertype">
+                        <web-url>workpublishertype</web-url>
+                        <title-ref>workpublishertype</title-ref>
+                        <title>Work Publisher Type</title>
+                        <options>
+                            <option id="networkcableservice">Network/cable service</option>
+                            <option id="distributioncompany">Distribution company</option>
+                            <option id="publishingcompany">Publishing Company</option>
+                        </options>
+                    </instance>
+                        <instance id="vocab-workgenre">
+                        <web-url>workgenre</web-url>
+                        <title-ref>workgenre</title-ref>
+                        <title>Work Genre</title>
+                        <options>
+                            <option id="short">Short</option>
+                            <option id="feature">Feature</option>
+                        </options>
+                    </instance>
+                    <instance id="vocab-workmedium">
+                        <web-url>workmedium</web-url>
+                        <title-ref>workmedium</title-ref>
+                        <title>Work Medium</title>
+                        <options>
+                            <option id="film">Film</option>
+                            <option id="internet">Internet</option>
+                            <option id="television">Television</option>
+                            <option id="videogame">Video game</option>
+                        </options>
+                    </instance>
+                    <instance id="vocab-worktermsource">
+                        <web-url>worktermsource</web-url>
+                        <title-ref>worktermsource</title-ref>
+                        <title>Work Term Source</title>
+                        <options>
+                            <option id="afi">AFI Catalog</option>
+                            <option id="amc">AllMovie.com</option>
+                            <option id="ammiac">AMMI Acquisitions Database</option>
+                            <option id="ascap">ASCAP</option>
+                            <option id="loc">Library of Congress</option>
+                            <option id="oth">Other</option>
+                            <option id="cdptn">The Complete Directory to Primetime Network and Cable TV Shows</option>
+                            <option id="tt">Total Television, 4th Edition</option>
+                            <option id="roab">Rhizome.org Artbase</option>
+                        </options>
+                    </instance>
 </instances>

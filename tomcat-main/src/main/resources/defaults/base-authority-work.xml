@@ -85,7 +85,7 @@
         <repeat id="workDateGroupList/workDateGroup">
             <group id="workDate" xxx-services-no-repeat="true"
                     ui-type="groupfield/structureddate" primarykey="dateDisplayDate"
-                    ui-func="cspace.workStructuredDate"/>
+                    ui-func="cspace.structuredDate"/>
         </repeat>
     </section>
     <!-- not used in UI except in autocompletes -->

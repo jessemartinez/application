@@ -358,6 +358,39 @@ public class UISpec extends SchemaStructure implements WebMethod {
 		out.put(getSelector(fs,context),generateDataTypeValidator(fs,context));
 	}
 	
+	/**
+	 * Overwrite with output you need for this thing you are doing
+	 * @param out
+	 * @param fs
+	 * @param context
+	 * @throws JSONException 
+	 */
+	protected void actualExternalURLField(JSONObject out, FieldSet fs, UISpecRunContext context) throws JSONException{
+		out.put(getSelector(fs,context),actualExternalURL(fs,context));
+	}
+	
+	/**
+	 * This is a bit of JSON needed by the UI so they display dates in the UIspec
+	 * @param f
+	 * @param context
+	 * @return
+	 * @throws JSONException
+	 */
+	protected JSONObject actualExternalURL(FieldSet fs,UISpecRunContext context) throws JSONException {
+		JSONObject out=new JSONObject();
+		JSONArray decorators=new JSONArray();
+		Field f = (Field)fs;
+		JSONObject decorator=getDecorator("fluid",null,"cspace.externalURL",null,f.isReadOnly());
+		if(!f.isRefactored()){
+			if(f.hasContainer()){
+				decorator.put("container",getSelector(f,context));
+			}
+		}
+		decorators.put(decorator);
+		out.put("decorators",decorators);
+		out.put("value", actualFieldEntry(f,context));
+		return out;
+	}
 
 	/**
 	 * treat just the same as a normal field - only need the distinction in UISchema
@@ -373,7 +406,14 @@ public class UISpec extends SchemaStructure implements WebMethod {
 	 * @throws JSONException 
 	 */
 	protected void actualField(JSONObject out, FieldSet fs, UISpecRunContext context) throws JSONException{
-		out.put(getSelector(fs,context),actualFieldEntry(fs,context));
+		// When generating the actual field entry for a structured date in the context
+		// of range search, we have to output a simple date spec
+		if(this.spectype.equals("search") && fs.getSearchType().equals("range")
+				&& isAStructureDate(fs)){
+			actualDateField(out, fs, context);
+		} else {
+			out.put(getSelector(fs,context),actualFieldEntry(fs,context));
+		}
 	}
 	
 	
@@ -1038,9 +1078,19 @@ public class UISpec extends SchemaStructure implements WebMethod {
 	 */
 	protected void makeAStructureDate(FieldSet fs, JSONObject out,
 			JSONObject subexpander, JSONObject options, Record subitems,
-			UISpecRunContext sub) throws JSONException {
-		actualStructuredDate(fs, out, sub, subexpander, subitems, options);
-		actualAddDecorator(fs, out, sub, options);
+			UISpecRunContext sub, UISpecRunContext mainContext) throws JSONException {
+		// We map structured-date range searches onto a range search on the scalar date fields. 
+		// We continue to refer to the structured date field so that the search builder can
+		// do the right thing, but here in the search schema, we act as though the structured
+		// date is really a scalar date, so the UI code will build the right UI
+		// Note that at this point, the fs is actually a synthetic copy of the original
+		// with the id changed to append "Start" or "End"
+		if( (this.spectype.equals("search") && fs.getSearchType().equals("range"))){
+			actualDateField(out, fs, mainContext);
+		} else {
+			actualStructuredDate(fs, out, sub, subexpander, subitems, options);
+			actualAddDecorator(fs, out, sub, options);
+		}
 	}
 	/**
 	 * 

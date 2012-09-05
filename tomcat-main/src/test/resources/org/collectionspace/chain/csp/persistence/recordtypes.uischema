@@ -1,60 +1,60 @@
 {
-  "recordtypes": {
-    "properties": {
-      "administration": {
-        "default": [
-          "users", 
-          "termlist", 
-          "role"
-        ], 
-        "type": "array"
-      }, 
-      "all": {
-        "default": [
-          "all"
-        ], 
-        "type": "array"
-      }, 
-      "cataloging": {
-        "default": [
-          "cataloging"
-        ], 
-        "type": "array"
-      }, 
-      "procedures": {
-        "default": [
-          "loanin", 
-          "loanout", 
-          "acquisition", 
-          "movement", 
-          "objectexit", 
-          "intake", 
-          "group", 
-          "media"
-        ], 
-        "type": "array"
-      }, 
-      "vocabularies": {
-        "default": [
-          "ulan_pa", 
-          "person", 
-          "activity", 
-          "concept", 
-          "material_ca", 
-          "offsite_sla", 
-          "location", 
-          "ulan_oa", 
-          "organization", 
-          "place", 
-          "tgn_place",
-          "common_ta",
-          "taxon",
-          "cona_work",
-          "work"
-        ], 
-        "type": "array"
-      }
-    }, 
-    "type": "object"
-  }
+    "recordtypes": {
+        "properties": {
+            "vocabularies": {
+                "default": [
+                    "ulan_pa",
+                    "person",
+                    "activity",
+                    "concept",
+                    "material_ca",
+                    "offsite_sla",
+                    "location",
+                    "ulan_oa",
+                    "organization",
+                    "place",
+                    "tgn_place",
+                    "cona_work",
+                    "work",
+                    "taxon",
+                    "common_ta"
+                ],
+                "type": "array"
+            },
+            "administration": {
+                "default": [
+                    "users",
+                    "termlist",
+                    "role"
+                ],
+                "type": "array"
+            },
+            "all": {
+                "default": [
+                    "all"
+                ],
+                "type": "array"
+            },
+            "cataloging": {
+                "default": [
+                    "cataloging"
+                ],
+                "type": "array"
+            },
+            "procedures": {
+                "default": [
+                    "loanin",
+                    "loanout",
+                    "acquisition",
+                    "movement",
+                    "objectexit",
+                    "intake",
+                    "group",
+                    "media"
+                ],
+                "type": "array"
+            }
+        },
+        "type": "object"
+    }
 }

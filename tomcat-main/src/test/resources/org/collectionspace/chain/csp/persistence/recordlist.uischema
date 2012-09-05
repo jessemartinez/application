@@ -17,10 +17,14 @@
             "movement",
             "place",
             "tgn_place",
-            "ulan_oa",
-            "ulan_pa",
+            "objectexit",
             "cona_work",
             "work",
+            "intake",
+            "group",
+            "media",
+            "taxon",
+            "common_ta"
         ],
         "type": "array"
     }

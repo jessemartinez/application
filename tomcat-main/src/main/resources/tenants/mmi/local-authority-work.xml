@@ -14,4 +14,12 @@
             <title>CONA Works</title>
         </instance>
     </instances>
+    <section id="workAuthorityInformation">
+        <!-- add custom work structured date module: workStructuredDate -->
+        <repeat id="workDateGroupList/workDateGroup">
+            <group id="workDate" xxx-services-no-repeat="true"
+                    ui-type="groupfield/structureddate" primarykey="dateDisplayDate"
+                    ui-func="cspace.workStructuredDate"/>
+        </repeat>
+    </section>
 </record>

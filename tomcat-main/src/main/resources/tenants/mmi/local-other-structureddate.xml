@@ -1,7 +1,7 @@
 <record id="structureddate">
     <section id="structuredDateInformation">
-    	<field id="dateAssociation" autocomplete="vocab-dateassociation" ui-type="enum">
-    		<!-- added autocomplate vocabs -->
+        <!-- added autocomplate vocab -->
+        <field id="dateAssociation" autocomplete="vocab-dateassociation" ui-type="enum">
         </field>
     </section>
 </record>

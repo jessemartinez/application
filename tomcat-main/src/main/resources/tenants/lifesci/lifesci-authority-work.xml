@@ -3,7 +3,7 @@
         <instance id="work-work">
                 <nptAllowed>false</nptAllowed>
         </instance>
-        <instance id="work-local_work">
+        <instance id="work-cona_work">
                 <nptAllowed>false</nptAllowed>
         </instance>
     </instances>

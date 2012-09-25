@@ -1,7 +1,7 @@
 <record id="movement">
     <section id="locationMovementInformation">
         <!-- removing unneeded authorities -->
-        <field id="currentLocation" ui-search="repeatable" in-title="yes" mini="summary,search,list,relate,terms" autocomplete="location-location">
+        <field id="currentLocation" ui-search="repeatable" in-title="yes" mini="summary,search,list,relate,terms" autocomplete="location-location,person-person">
             <title-selector>titleBar-currentLocation</title-selector>
         </field>
     </section>

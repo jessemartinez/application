@@ -6,7 +6,7 @@
                 <selector>personAuthority-termType</selector>
                 <options>
                     <option id="">Please select a value</option>
-                    <option id="corporation">corporation</option>
+                    <option id="corporation">Organization</option>
                     <option id="group">Group</option>
                     <option id="individual">Individual</option>
                 </options>

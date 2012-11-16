@@ -1,0 +1,13 @@
+<!-- these changes are also present in js/StructuredDate.js -->
+<record id="structureddate">
+    <section id="structuredDateInformation">
+        <field id="dateAssociation" autocomplete="vocab-timkendateassociation" ui-type="enum">
+        	<!-- added autocomplate vocab -->
+        </field>
+        <field id="datePeriod" autocomplete="concept-concept">
+        	<!-- adding concept authority -->
+            <selector>datePeriod</selector>
+            <preselector></preselector>
+        </field>
+    </section>
+</record>

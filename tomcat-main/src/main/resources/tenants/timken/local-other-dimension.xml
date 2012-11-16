@@ -1,0 +1,20 @@
+<record id="dimension">
+    <section id="dimensionInformation">
+        <repeat id="measuredPartGroupList/measuredPartGroup">
+            <field id="measuredPart" seperate_ui_container="true">
+                <!-- changing options list -->
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="object">Object</option>
+                    <option id="frame">Frame</option>
+                    <option id="crate">Crate</option>
+                </options>
+            </field>
+            <repeat id="dimensionSubGroupList/dimensionSubGroup">
+                <field id="measuredBy"  autocomplete="person-person">
+                    <!-- removing org authority -->
+                </field>
+            </repeat>
+        </repeat>
+    </section>
+</record>

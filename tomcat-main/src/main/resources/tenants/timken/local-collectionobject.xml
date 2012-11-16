@@ -1,0 +1,161 @@
+<record id="collection-object">
+    <services-record-path id="timken">collectionobjects_timken:http://collectionspace.org/services/collectionobject,collectionobjects_timken</services-record-path>
+    <section id="identificationInformation">
+        <repeat id="otherNumberList/otherNumber">
+            <selector>object-identification-otherNumbers</selector>
+            <field id="numberValue" in-tab="yes">
+                <selector>object-identification-other-number</selector>
+            </field>
+            <field id="numberType" in-tab="yes" seperate_ui_container="true" autocomplete="vocab-othernumbertype" ui-type="enum">
+                <!-- removing options list; adding vocab -->
+                <selector>object-identification-other-number-type</selector>
+            </field>
+        </repeat>
+        <field id="catalogLevel" section="timken">
+            <selector>object-identification-catalogLevel</selector>
+            <options>
+                <option id="">Please select a value</option>
+                <option id="whole">Whole</option>
+                <option id="part">Part</option>
+            </options>
+        </field>
+    </section>
+    <section id="descriptionInformation">
+        <repeat id="styles">
+            <field id="style" ui-search="repeatable" autocomplete="concept-concept">
+                <!-- adding contept authority -->
+                <selector>object-description-style</selector>
+            </field>
+        </repeat>
+        <repeat id="materialGroupList/materialGroup">
+            <field id="material" ui-search="repeatable" autocomplete="vocab-timkenmaterial" ui-type="enum">
+                <!-- adding vocab -->
+                <selector>object-description-material</selector>
+            </field>
+        </repeat>
+        <field id="physicalDescription" autocomplete="vocab-timkenphysicaldescription" ui-type="enum">
+            <!-- adding vocab -->
+            <selector>object-description-physical-description</selector>
+        </field>
+        <section id="contentInformation">
+            <repeat id="contentActivities">
+                <field id="contentActivity" autocomplete="concept-concept">
+                    <!-- adding contept authority -->
+                    <selector>object-description-content-activity</selector>
+                </field>
+            </repeat>
+            <repeat id="contentPeoples">
+                <field id="contentPeople" autocomplete="person-people">
+                    <!-- adding person-people authority -->
+                    <selector>object-description-content-people</selector>
+                </field>
+            </repeat>
+            <repeat id="contentPersons">
+                <field id="contentPerson" autocomplete="person-person">
+                    <!-- removing person-ulan_pa authority -->
+                    <selector>object-description-content-person</selector>
+                </field>
+              </repeat>
+            <repeat id="contentPlaces">
+                <field id="contentPlace" autocomplete="place-place">
+                    <!-- adding place authority -->
+                    <selector>object-description-content-place</selector>
+                </field>
+            </repeat>
+            <repeat id="contentOtherGroupList/contentOtherGroup">
+                <field id="contentOther" autocomplete="concept-concept">
+                     <!-- adding contept authority -->
+                    <selector>object-description-content-other</selector>
+                </field>
+                <field id="contentOtherType" autocomplete="concept-concept">
+                    <!-- adding contept authority -->
+                    <selector>object-description-content-other-type</selector>
+                </field>
+            </repeat>
+        </section>
+        <section id="textualInscriptionInformation">
+            <repeat id="textualInscriptionGroupList/textualInscriptionGroup">
+                <field id="inscriptionContentInscriber"
+                    autocomplete="person-person">
+                    <!-- removing org authority -->
+                    <selector>object-description-inscription-content-inscriber</selector>
+                </field>
+                <field id="inscriptionContentType" seperate_ui_container="true">
+                    <!-- changing options list -->
+                    <selector>object-description-inscription-content-type</selector>
+                    <options>
+                        <option id="">Please select a value</option>
+                        <option id="signature">Signature</option>
+                    </options>
+                </field>
+                <field id="inscriptionContentMethod" autocomplete="concept-concept">
+                    <!-- adding contept authority -->
+                    <selector>object-description-inscription-content-method</selector>
+                </field>
+            </repeat>
+        </section>
+    </section>
+    <section id="objectProductionInformation">
+        <repeat id="techniqueGroupList/techniqueGroup">
+            <field id="technique" ui-search="repeatable">
+                <!-- adding options list -->
+                <selector>object-production-technique</selector>
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="techniqueone">Technique One</option>
+                    <option id="techniquetwo">Technique Two</option>
+                    <option id="techniquethree">Technique Three</option>
+                </options>
+            </field>
+            <field id="techniqueType" autocomplete="concept-concept">
+                <!-- adding concept authority -->
+                <selector>object-production-technique-type</selector>
+            </field>
+        </repeat>
+        <repeat id="objectProductionPlaceGroupList/objectProductionPlaceGroup">
+            <field id="objectProductionPlace" ui-search="repeatable" autocomplete="place-place">
+                <!-- adding place authority -->
+                <selector>object-production-place</selector>
+            </field>
+        </repeat>
+        <repeat id="objectProductionPeopleGroupList/objectProductionPeopleGroup">
+            <field id="objectProductionPeople" ui-search="repeatable" autocomplete="person-people">
+                <!-- adding person-people authority -->
+                <selector>object-production-people</selector>
+            </field>
+        </repeat>
+        <repeat id="objectProductionPersonGroupList/objectProductionPersonGroup">
+            <field id="objectProductionPersonRole" autocomplete="vocab-timkenpersonrole" ui-type="enum">
+                <!-- adding vocab -->
+            </field>
+        </repeat>
+        <repeat id="objectProductionOrganizationGroupList/objectProductionOrganizationGroup">
+            <field id="objectProductionOrganizationRole" autocomplete="vocab-timkenorganizationrole" ui-type="enum">
+                <!-- adding vocab -->
+            </field>
+        </repeat>
+    </section>
+    <section id="objectHistoryAssociationInformation">
+        <repeat id="owners">
+            <field id="owner" autocomplete="person-person,person-people">
+                <!-- adding person-people authority; removed org authority -->
+                <selector>object-history-association-owner</selector>
+            </field>
+        </repeat>
+        <field id="ownershipPlace" autocomplete="place-place">
+            <!-- adding place authority -->
+            <selector>object-history-association-ownership-place</selector>
+        </field>
+        <repeat id="provenanceGroupList/provenanceGroup" section="timken">
+            <field id="provenance" section="timken"/>
+            <field id="provenanceType" section="timken">
+                <selector>object-provenanceType</selector>
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="standard">Standard</option>
+                    <option id="putnam">Putnam</option>
+                </options>
+            </field>
+        </repeat>
+    </section>
+</record>

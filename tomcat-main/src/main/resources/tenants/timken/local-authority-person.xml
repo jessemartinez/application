@@ -1,0 +1,9 @@
+<record id="person">
+    <instances id="person">
+        <instance id="person-people">
+            <web-url>people</web-url>
+            <title-ref>people</title-ref>
+            <title>Local People</title>
+        </instance>
+    </instances>
+</record>

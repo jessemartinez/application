@@ -1,5 +1,5 @@
 <record id="collection-object">
-    <services-record-path id="timken">collectionobjects_timken:http://collectionspace.org/services/collectionobject,collectionobjects_timken</services-record-path>
+    <services-record-path id="timken">collectionobjects_timken:http://collectionspace.org/services/collectionobject/local/timken,collectionobjects_timken</services-record-path>
     <section id="identificationInformation">
         <repeat id="otherNumberList/otherNumber">
             <selector>object-identification-otherNumbers</selector>
@@ -147,9 +147,11 @@
             <selector>object-history-association-ownership-place</selector>
         </field>
         <repeat id="provenanceGroupList/provenanceGroup" section="timken">
-            <field id="provenance" section="timken"/>
+            <field id="provenance" section="timken">
+                <selector>object-history-provenance</selector>
+            </field>
             <field id="provenanceType" section="timken">
-                <selector>object-provenanceType</selector>
+                <selector>object-history-provenanceType</selector>
                 <options>
                     <option id="">Please select a value</option>
                     <option id="standard">Standard</option>

@@ -38,6 +38,8 @@
             tofile="${config_destination}/tenants/core/local-settings.xml"/>
         <copy file="${app_trunk}/tomcat-main/src/main/resources/tenants/lifesci/nightly-settings.xml"
             tofile="${config_destination}/tenants/lifesci/local-settings.xml"/>
+    	<copy file="${app_trunk}/tomcat-main/src/main/resources/man-tenant.xml" tofile="${config_destination}/cspace-config-man.xml" />
+	<copy file="${app_trunk}/tomcat-main/src/main/resources/tenants/man/local-settings.xml" tofile="${config_destination}/tenants/man/local-settings.xml"/>
     </target>
     
     <target name="localhost_is_nightly"

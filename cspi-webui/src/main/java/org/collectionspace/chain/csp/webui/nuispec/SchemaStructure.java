@@ -168,6 +168,9 @@ public class SchemaStructure {
 		else if("validated".equals(fs.getUIType())){
 			actualValidatedField(out, fs, context);
 		}
+		else if("externalURL".equals(fs.getUIType())){
+			actualExternalURLField(out, fs, context);
+		}
 		else if(fs.isASelfRenderer()){
 			actualSelfRendererField(out, fs, context);
 		}
@@ -211,6 +214,15 @@ public class SchemaStructure {
 	 */
 	protected void actualValidatedField(JSONObject out, FieldSet fs, UISpecRunContext context) throws JSONException{
 	}
+	/**
+	 * 
+	 * @param out
+	 * @param fs
+	 * @param context
+	 * @throws JSONException 
+	 */
+	protected void actualExternalURLField(JSONObject out, FieldSet fs, UISpecRunContext context) throws JSONException{
+	}
 	
 	/**
 	 * Overwrite with output you need for this thing you are doing
@@ -253,6 +265,9 @@ public class SchemaStructure {
 		if("validated".equals(fs.getUIType())){
 			actualValidatedField(out, fs, context);
 		}
+		else if("externalURL".equals(fs.getUIType())){
+			actualExternalURLField(out, fs, context);
+		}
 	}
 	/**
 	 * Overwrite with output you need for this thing you are doing
@@ -281,7 +296,14 @@ public class SchemaStructure {
 			return actualENUMField(f,context);
 		}
 		else if(isAGroupField(f)) {
-			return makeAGroupField(f,context);
+			// When generating the actual field entry for a structured date in the context
+			// of range search, we have to output a plain field, and not the structured date info
+			if(this.spectype.equals("search") && f.getSearchType().equals("range")
+					&& isAStructureDate(f)){
+				return displayAsplain(f, context);
+			} else {
+				return makeAGroupField(f,context);
+			}
 		}
 		
 		return makeAOtherField(f,context);	
@@ -605,7 +627,7 @@ public class SchemaStructure {
 			sub.setPad(false);
 
 			if(isAStructureDate(fs)){
-				makeAStructureDate(fs, out, subexpander, options, subitems, sub);
+				makeAStructureDate(fs, out, subexpander, options, subitems, sub, context);
 			}
 			else if(fs.isASelfRenderer()){
 				makeASelfRenderer(fs, context, out, subexpander, options,
@@ -629,7 +651,8 @@ public class SchemaStructure {
 	 */
 	protected void makeAStructureDate(FieldSet fs, JSONObject out,
 			JSONObject subexpander, JSONObject options, Record subitems,
-			UISpecRunContext sub) throws JSONException {
+			UISpecRunContext sub, UISpecRunContext mainContext) throws JSONException {
+		throw new JSONException("makeAStructuredDate must be overridden");
 	}
 	/**
 	 * 

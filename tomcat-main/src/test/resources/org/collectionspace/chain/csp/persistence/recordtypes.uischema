@@ -15,7 +15,9 @@
                     "place",
                     "tgn_place",
                     "cona_work",
-                    "work"
+                    "work",
+                    "taxon",
+                    "common_ta"
                 ],
                 "type": "array"
             },

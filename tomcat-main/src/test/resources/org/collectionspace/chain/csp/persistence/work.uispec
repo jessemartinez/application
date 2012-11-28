@@ -338,7 +338,7 @@
                                                                     "default": "",
                                                                     "optionnames": [
                                                                         "Please select a value",
-                                                                        "Quick Added",
+                                                                        "Quick Added", 
                                                                         "Needs Attention",
                                                                         "In Progress",
                                                                         "Complete"
@@ -346,7 +346,7 @@
                                                                     "optionlist": [
                                                                         "",
                                                                         "quickadded",
-                                                                        "needsattantion",
+                                                                        "needsattention",
                                                                         "inprogress",
                                                                         "complete"
                                                                     ],
@@ -462,7 +462,7 @@
                                     ".csc-workDateGroup-workDate": {
                                         "decorators": [
                                             {
-                                                "func": "cspace.workStructuredDate",
+                                                "func": "cspace.structuredDate",
                                                 "type": "fluid",
                                                 "options": {
                                                     "root": "{row}",

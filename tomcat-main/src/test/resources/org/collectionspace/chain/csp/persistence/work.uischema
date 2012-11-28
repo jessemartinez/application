@@ -155,11 +155,11 @@
                         },
                         "type": "array"
                     },
-                    "updatedAt": {
-                        "type": "date"
-                    },
                     "shortIdentifier": {
                         "type": "string"
+                    },
+                    "updatedAt": {
+                        "type": "date"
                     },
                     "sourceNote": {
                         "type": "string"

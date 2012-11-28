@@ -39,7 +39,7 @@
                 <options>
                     <option id="" default="yes">Please select a value</option>
                     <option id="quickadded">Quick Added</option>
-                    <option id="needsattantion">Needs Attention</option>
+                    <option id="needsattention">Needs Attention</option>
                     <option id="inprogress">In Progress</option>
                     <option id="complete">Complete</option>
                 </options>

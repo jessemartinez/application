@@ -22,7 +22,9 @@
             "work",
             "intake",
             "group",
-            "media"
+            "media",
+            "taxon",
+            "common_ta"
         ],
         "type": "array"
     }

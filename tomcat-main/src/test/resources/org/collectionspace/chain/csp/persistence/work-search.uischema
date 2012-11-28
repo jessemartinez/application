@@ -17,21 +17,6 @@
                 },
                 "type": "array"
             },
-            "createdBys": {
-                "items": {
-                    "properties": {
-                        "_primary": {
-                            "default": true,
-                            "type": "boolean"
-                        },
-                        "createdBy": {
-                            "type": "string"
-                        }
-                    },
-                    "type": "object"
-                },
-                "type": "array"
-            },
             "genres": {
                 "items": {
                     "properties": {
@@ -48,68 +33,8 @@
                 },
                 "type": "array"
             },
-            "sourceNotes": {
-                "items": {
-                    "properties": {
-                        "_primary": {
-                            "default": true,
-                            "type": "boolean"
-                        },
-                        "sourceNote": {
-                            "type": "string"
-                        }
-                    },
-                    "type": "object"
-                },
-                "type": "array"
-            },
-            "publisherGroup": {
-                "items": {
-                    "properties": {
-                        "_primary": {
-                            "default": true,
-                            "type": "boolean"
-                        },
-                        "publisher": {
-                            "type": "string"
-                        }
-                    },
-                    "type": "object"
-                },
-                "type": "array"
-            },
             "updatedAtEnd": {
                 "type": "date"
-            },
-            "migratedEntityGroup": {
-                "items": {
-                    "properties": {
-                        "_primary": {
-                            "default": true,
-                            "type": "boolean"
-                        },
-                        "migratedEntity": {
-                            "type": "string"
-                        }
-                    },
-                    "type": "object"
-                },
-                "type": "array"
-            },
-            "scopeNotes": {
-                "items": {
-                    "properties": {
-                        "_primary": {
-                            "default": true,
-                            "type": "boolean"
-                        },
-                        "scopeNote": {
-                            "type": "string"
-                        }
-                    },
-                    "type": "object"
-                },
-                "type": "array"
             },
             "updatedBys": {
                 "items": {
@@ -143,21 +68,6 @@
             },
             "updatedAtStart": {
                 "type": "date"
-            },
-            "creatorGroup": {
-                "items": {
-                    "properties": {
-                        "_primary": {
-                            "default": true,
-                            "type": "boolean"
-                        },
-                        "creator": {
-                            "type": "string"
-                        }
-                    },
-                    "type": "object"
-                },
-                "type": "array"
             }
         },
         "type": "object"

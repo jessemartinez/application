@@ -27,8 +27,18 @@
             <fileset dir="${app_resources_dir}"/>
             <globmapper from="*-tenant.xml" to="cspace-config-*.xml"/>
         </copy>
+	<!-- Timken Museum -->
         <copy file="${app_trunk}/tomcat-main/src/main/resources/timken-tenant.xml" tofile="${config_destination}/cspace-config-timken.xml" />
         <copy file="${app_trunk}/tomcat-main/src/main/resources/tenants/timken/local-settings.xml" tofile="${config_destination}/tenants/timken/local-settings.xml"/>
+	<!-- Museum of Man -->
+        <copy file="${app_trunk}/tomcat-main/src/main/resources/man-tenant.xml" tofile="${config_destination}/cspace-config-man.xml" />
+        <copy file="${app_trunk}/tomcat-main/src/main/resources/tenants/man/local-settings.xml" tofile="${config_destination}/tenants/man/local-settings.xml"/>
+	<!-- Museum of the Moving Image -->
+        <copy file="${app_trunk}/tomcat-main/src/main/resources/mmi-tenant.xml" tofile="${config_destination}/cspace-config-mmi.xml" />
+        <copy file="${app_trunk}/tomcat-main/src/main/resources/tenants/mmi/local-settings.xml" tofile="${config_destination}/tenants/mmi/local-settings.xml"/>
+	<!-- Walker Art Museum -->
+        <copy file="${app_trunk}/tomcat-main/src/main/resources/walkerart-tenant.xml" tofile="${config_destination}/cspace-config-walkerart.xml" />
+        <copy file="${app_trunk}/tomcat-main/src/main/resources/tenants/walkerart/local-settings.xml" tofile="${config_destination}/tenants/walkerart/local-settings.xml"/>
     </target>
     
     <target name="deploy_nightly_config"
@@ -38,8 +48,6 @@
             tofile="${config_destination}/tenants/core/local-settings.xml"/>
         <copy file="${app_trunk}/tomcat-main/src/main/resources/tenants/lifesci/nightly-settings.xml"
             tofile="${config_destination}/tenants/lifesci/local-settings.xml"/>
-    	<copy file="${app_trunk}/tomcat-main/src/main/resources/man-tenant.xml" tofile="${config_destination}/cspace-config-man.xml" />
-	<copy file="${app_trunk}/tomcat-main/src/main/resources/tenants/man/local-settings.xml" tofile="${config_destination}/tenants/man/local-settings.xml"/>
     </target>
     
     <target name="localhost_is_nightly"

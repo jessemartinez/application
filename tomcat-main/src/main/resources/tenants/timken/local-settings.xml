@@ -76,7 +76,7 @@
 					<recordtype>procedure</recordtype>
 					<file>/timken/html/record.html</file>
 					<configure>
-						<meta id="title">Timken Museum CollectionSpace - {record/web-url}</meta>
+						<meta id="title">Timken Museum - CollectionSpace - {record/web-url}</meta>
 					</configure>
 				</map>
 			</mappings>

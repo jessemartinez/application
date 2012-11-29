@@ -27,16 +27,6 @@
                 <selector>object-description-style</selector>
             </field>
         </repeat>
-        <repeat id="materialGroupList/materialGroup">
-            <field id="material" ui-search="repeatable" autocomplete="vocab-timkenmaterial" ui-type="enum">
-                <!-- adding vocab -->
-                <selector>object-description-material</selector>
-            </field>
-        </repeat>
-        <field id="physicalDescription" autocomplete="vocab-timkenphysicaldescription" ui-type="enum">
-            <!-- adding vocab -->
-            <selector>object-description-physical-description</selector>
-        </field>
         <section id="contentInformation">
             <repeat id="contentActivities">
                 <field id="contentActivity" autocomplete="concept-concept">
@@ -151,11 +141,6 @@
         </repeat>
         <repeat id="objectProductionPersonGroupList/objectProductionPersonGroup">
             <field id="objectProductionPersonRole" autocomplete="vocab-timkenpersonrole" ui-type="enum">
-                <!-- adding vocab -->
-            </field>
-        </repeat>
-        <repeat id="objectProductionOrganizationGroupList/objectProductionOrganizationGroup">
-            <field id="objectProductionOrganizationRole" autocomplete="vocab-timkenorganizationrole" ui-type="enum">
                 <!-- adding vocab -->
             </field>
         </repeat>

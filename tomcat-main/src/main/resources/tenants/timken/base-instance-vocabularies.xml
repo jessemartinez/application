@@ -201,36 +201,6 @@
             <option id="slidenumber">Slide number</option>
         </options>
     </instance>
-    <instance id="vocab-timkenmaterial">
-        <web-url>timkenmaterial</web-url>
-        <title-ref>timkenmaterial</title-ref>
-        <title>Timken Material</title>
-        <options>
-            <option id="materialone">Material One</option>
-            <option id="materialtwo">Material Two</option>
-            <option id="materialthree">Material Three</option>
-        </options>
-    </instance>
-    <instance id="vocab-timkenphysicaldescription">
-        <web-url>timkenphysicaldescription</web-url>
-        <title-ref>timkenphysicaldescription</title-ref>
-        <title>Timken Physical Description</title>
-        <options>
-            <option id="one">One</option>
-            <option id="two">Two</option>
-            <option id="three">Three</option>
-        </options>
-    </instance>
-    <instance id="vocab-timkenorganizationrole">
-        <web-url>timkenorganizationrole</web-url>
-        <title-ref>timkenorganizationrole</title-ref>
-        <title>Timken Object Production Organization Role</title>
-        <options>
-            <option id="roleone">Role One</option>
-            <option id="roletwo">Role Two</option>
-            <option id="rolethree">Role Three</option>
-        </options>
-    </instance>
     <instance id="vocab-timkenpersonrole">
         <web-url>timkenpersonrole</web-url>
         <title-ref>timkenpersonrole</title-ref>

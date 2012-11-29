@@ -14,10 +14,6 @@
             },
             "fields": {
                 "properties": {
-                    "genre": {
-                        "default": "",
-                        "type": "string"
-                    },
                     "tenantID": {
                         "type": "string"
                     },
@@ -35,6 +31,9 @@
                             "type": "object"
                         },
                         "type": "array"
+                    },
+                    "historyNote": {
+                        "type": "string"
                     },
                     "publisherGroup": {
                         "items": {
@@ -55,33 +54,10 @@
                         },
                         "type": "array"
                     },
-                    "migratedEntityGroup": {
-                        "items": {
-                            "properties": {
-                                "_primary": {
-                                    "default": true,
-                                    "type": "boolean"
-                                },
-                                "migratedEntityType": {
-                                    "default": "",
-                                    "type": "string"
-                                },
-                                "migratedEntity": {
-                                    "type": "string"
-                                }
-                            },
-                            "type": "object"
-                        },
-                        "type": "array"
-                    },
                     "csid": {
                         "type": "string"
                     },
                     "uri": {
-                        "type": "string"
-                    },
-                    "medium": {
-                        "default": "",
                         "type": "string"
                     },
                     "workTermGroup": {
@@ -99,6 +75,7 @@
                                     "type": "boolean"
                                 },
                                 "termType": {
+                                    "default": "",
                                     "type": "string"
                                 },
                                 "termDisplayName": {
@@ -155,16 +132,13 @@
                         },
                         "type": "array"
                     },
-                    "shortIdentifier": {
-                        "type": "string"
-                    },
                     "updatedAt": {
                         "type": "date"
                     },
-                    "sourceNote": {
+                    "shortIdentifier": {
                         "type": "string"
                     },
-                    "scopeNote": {
+                    "sourceNote": {
                         "type": "string"
                     },
                     "createdBy": {
@@ -174,6 +148,10 @@
                         "type": "string"
                     },
                     "createdAt": {
+                        "type": "string"
+                    },
+                    "workAuthType": {
+                        "default": "",
                         "type": "string"
                     },
                     "refName": {

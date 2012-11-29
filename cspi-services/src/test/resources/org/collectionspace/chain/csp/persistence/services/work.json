@@ -3,19 +3,12 @@
     "publisherGroup": [
         {
             "_primary": true,
-            "publisherType": "distributioncompany",
+            "publisherType": "distributor",
             "publisher": "TriStar Pictures"
         }
     ],
-    "migratedEntityGroup": [
-        {
-            "_primary": true,
-            "migratedEntityType": "distributioncompany",
-            "migratedEntity": "TriStar Pictures"
-        }
-    ],
-    "scopeNote": "scope note goes here",
-    "medium": "film",
+    "historyNote": "history note goes here",
+    "workAuthType": "movingimage",
     "creatorGroup": [
         {
             "_primary": true,

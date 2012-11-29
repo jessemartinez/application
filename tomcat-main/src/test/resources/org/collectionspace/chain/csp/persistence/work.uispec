@@ -203,62 +203,19 @@
                 }
             ]
         },
+        ".csc-work-createdAt": "${fields.createdAt}",
+        ".csc-work-refName": "${fields.refName}",
         ".csc-work-csid-label": {
             "messagekey": "work-csidLabel"
         },
-        ".csc-work-migratedEntityGroup": {
-            "decorators": [
-                {
-                    "func": "cspace.makeRepeatable",
-                    "type": "fluid",
-                    "options": {
-                        "repeatTree": {
-                            "expander": {
-                                "tree": {
-                                    ".csc-work-migratedEntityType": {
-                                        "default": "",
-                                        "optionnames": [
-                                            "Please select a value",
-                                            "Artist",
-                                            "Director",
-                                            "Publishing company",
-                                            "Developer",
-                                            "Production company",
-                                            "Network/cable service",
-                                            "Distribution company"
-                                        ],
-                                        "optionlist": [
-                                            "",
-                                            "artist",
-                                            "director",
-                                            "publishingcompany",
-                                            "developer",
-                                            "productioncompany",
-                                            "networkcableservice",
-                                            "distributioncompany"
-                                        ],
-                                        "selection": "${{row}.migratedEntityType}"
-                                    },
-                                    ".csc-work-migratedEntity": "${{row}.migratedEntity}"
-                                },
-                                "type": "fluid.noexpand"
-                            }
-                        },
-                        "elPath": "fields.migratedEntityGroup"
-                    }
-                }
-            ]
-        },
-        ".csc-work-createdAt": "${fields.createdAt}",
-        ".csc-work-refName": "${fields.refName}",
         ".csc-work-creatorType-label": {
             "messagekey": "work-creatorTypeLabel"
         },
-        ".csc-work-uri-label": {
-            "messagekey": "work-uriLabel"
-        },
         ".csc-workDateGroup-workDate-label": {
             "messagekey": "workDateGroup-workDateLabel"
+        },
+        ".csc-work-uri-label": {
+            "messagekey": "work-uriLabel"
         },
         ".csc-work-createdAt-label": {
             "messagekey": "work-createdAtLabel"
@@ -269,9 +226,6 @@
         ".csc-work-creator-label": {
             "messagekey": "work-creatorLabel"
         },
-        ".csc-work-migratedEntityType-label": {
-            "messagekey": "work-migratedEntityTypeLabel"
-        },
         ".csc-work-domaindata-label": {
             "messagekey": "work-domaindataLabel"
         },
@@ -281,13 +235,7 @@
         ".csc-work-updatedBy-label": {
             "messagekey": "work-updatedByLabel"
         },
-        ".csc-work-scopeNote-label": {
-            "messagekey": "work-scopeNoteLabel"
-        },
         ".csc-work-sourceNote": "${fields.sourceNote}",
-        ".csc-work-migratedEntityGroup-label": {
-            "messagekey": "work-migratedEntityGroupLabel"
-        },
         ".csc-work-updatedAt": {
             "decorators": [
                 {
@@ -330,7 +278,19 @@
                                                     "repeatTree": {
                                                         "expander": {
                                                             "tree": {
-                                                                ".csc-workAuthority-termType": "${{row}.termType}",
+                                                                ".csc-workAuthority-termType": {
+                                                                    "decorators": [
+                                                                        {
+                                                                            "func": "cspace.termList",
+                                                                            "type": "fluid",
+                                                                            "options": {
+                                                                                "root": "{row}",
+                                                                                "elPath": "termType",
+                                                                                "termListType": "termType"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                },
                                                                 ".csc-workAuthority-termPrefForLang": "${{row}.termPrefForLang}",
                                                                 ".csc-workAuthority-termName": "${{row}.termName}",
                                                                 ".csc-workAuthority-termQualifier": "${{row}.termQualifier}",
@@ -338,7 +298,7 @@
                                                                     "default": "",
                                                                     "optionnames": [
                                                                         "Please select a value",
-                                                                        "Quick Added", 
+                                                                        "Quick Added",
                                                                         "Needs Attention",
                                                                         "In Progress",
                                                                         "Complete"
@@ -423,24 +383,10 @@
                 }
             ]
         },
-        ".csc-work-medium-label": {
-            "messagekey": "work-mediumLabel"
-        },
         ".csc-work-updatedAt-label": {
             "messagekey": "work-updatedAtLabel"
         },
-        ".csc-work-medium": {
-            "decorators": [
-                {
-                    "func": "cspace.termList",
-                    "type": "fluid",
-                    "options": {
-                        "elPath": "fields.medium",
-                        "termListType": "medium"
-                    }
-                }
-            ]
-        },
+        ".csc-work-historyNote": "${fields.historyNote}",
         ".csc-work-shortIdentifier-label": {
             "messagekey": "work-shortIdentifierLabel"
         },
@@ -514,20 +460,13 @@
         ".csc-work-createdBy-label": {
             "messagekey": "work-createdByLabel"
         },
-        ".csc-work-genre": {
-            "decorators": [
-                {
-                    "func": "cspace.termList",
-                    "type": "fluid",
-                    "options": {
-                        "elPath": "fields.genre",
-                        "termListType": "genre"
-                    }
-                }
-            ]
+        ".csc-work-workAuthType-label": {
+            "messagekey": "work-workAuthTypeLabel"
         },
         ".csc-work-createdBy": "${fields.createdBy}",
-        ".csc-work-scopeNote": "${fields.scopeNote}",
+        ".csc-work-historyNote-label": {
+            "messagekey": "work-historyNoteLabel"
+        },
         ".csc-work-publisherType-label": {
             "messagekey": "work-publisherTypeLabel"
         },
@@ -579,9 +518,6 @@
         ".csc-work-publisherGroup-label": {
             "messagekey": "work-publisherGroupLabel"
         },
-        ".csc-work-migratedEntity-label": {
-            "messagekey": "work-migratedEntityLabel"
-        },
         ".csc-work-csid": "${fields.csid}",
         ".csc-work-otherInformation-label": {
             "messagekey": "work-otherInformationLabel"
@@ -589,8 +525,17 @@
         ".csc-work-tenantID-label": {
             "messagekey": "work-tenantIDLabel"
         },
-        ".csc-work-genre-label": {
-            "messagekey": "work-genreLabel"
+        ".csc-work-workAuthType": {
+            "decorators": [
+                {
+                    "func": "cspace.termList",
+                    "type": "fluid",
+                    "options": {
+                        "elPath": "fields.workAuthType",
+                        "termListType": "workAuthType"
+                    }
+                }
+            ]
         }
     }
 }

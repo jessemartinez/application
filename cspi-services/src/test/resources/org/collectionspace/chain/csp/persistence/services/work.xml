@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <ns2:works_common xmlns:ns2="http://collectionspace.org/services/work">
     <shortIdentifier>worktest1</shortIdentifier>
-    <medium>film</medium>
-    <scopeNote>scope note goes here</scopeNote>
+    <workAuthType>movingimage</workAuthType>
+    <historyNote>history note goes here</historyNote>
     <creatorGroupList>
         <creatorGroup>
             <creator>Frank Oz</creator>
@@ -12,15 +12,9 @@
     <publisherGroupList>
         <publisherGroup>
             <publisher>TriStar Pictures</publisher>
-            <publisherType>distributioncompany</publisherType>
+            <publisherType>distributor</publisherType>
         </publisherGroup>
     </publisherGroupList>
-    <migratedEntityGroupList>
-        <migratedEntityGroup>
-            <migratedEntity>TriStar Pictures</migratedEntity>
-            <migratedEntityType>distributioncompany</migratedEntityType>
-        </migratedEntityGroup>
-    </migratedEntityGroupList>
     <workTermGroupList>
         <workTermGroup>
             <termDisplayName>Muppets Take Manhattan (1984)</termDisplayName>

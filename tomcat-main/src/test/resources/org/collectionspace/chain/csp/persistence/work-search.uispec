@@ -14,37 +14,8 @@
     ".csc-work-termName-label": {
         "messagekey": "preferredWork-termNameLabel"
     },
-    ".csc-work-genre": {
-        "decorators": [
-            {
-                "func": "cspace.makeRepeatable",
-                "type": "fluid",
-                "options": {
-                    "repeatTree": {
-                        "expander": {
-                            "tree": {
-                                ".csc-work-genre": {
-                                    "decorators": [
-                                        {
-                                            "func": "cspace.termList",
-                                            "type": "fluid",
-                                            "options": {
-                                                "root": "{row}",
-                                                "elPath": "genre",
-                                                "termListType": "genre"
-                                            }
-                                        }
-                                    ]
-                                }
-                            },
-                            "type": "fluid.noexpand"
-                        }
-                    },
-                    "elPath": "genres",
-                    "hidePrimary": true
-                }
-            }
-        ]
+    ".csc-work-workAuthType-label": {
+        "messagekey": "work-workAuthTypeLabel"
     },
     ".csc-preferredWork-workTermGroup": {
         "decorators": [
@@ -69,11 +40,11 @@
     ".csc-work-updatedAtStart-label": {
         "messagekey": "work-updatedAtStartLabel"
     },
-    ".csc-work-termPrefForLang-label": {
-        "messagekey": "preferredWork-termPrefForLangLabel"
-    },
     ".csc-work-updatedBy-label": {
         "messagekey": "work-updatedByLabel"
+    },
+    ".csc-work-termPrefForLang-label": {
+        "messagekey": "preferredWork-termPrefForLangLabel"
     },
     ".csc-work-updatedAtStart": {
         "decorators": [
@@ -113,13 +84,10 @@
     ".csc-work-termSourceID-label": {
         "messagekey": "preferredWork-termSourceIDLabel"
     },
-    ".csc-work-medium-label": {
-        "messagekey": "work-mediumLabel"
-    },
     ".csc-work-updatedAt-label": {
         "messagekey": "work-updatedAtLabel"
     },
-    ".csc-work-medium": {
+    ".csc-work-workAuthType": {
         "decorators": [
             {
                 "func": "cspace.makeRepeatable",
@@ -128,15 +96,15 @@
                     "repeatTree": {
                         "expander": {
                             "tree": {
-                                ".csc-work-medium": {
+                                ".csc-work-workAuthType": {
                                     "decorators": [
                                         {
                                             "func": "cspace.termList",
                                             "type": "fluid",
                                             "options": {
                                                 "root": "{row}",
-                                                "elPath": "medium",
-                                                "termListType": "medium"
+                                                "elPath": "workAuthType",
+                                                "termListType": "workAuthType"
                                             }
                                         }
                                     ]
@@ -145,7 +113,7 @@
                             "type": "fluid.noexpand"
                         }
                     },
-                    "elPath": "mediums",
+                    "elPath": "workAuthTypes",
                     "hidePrimary": true
                 }
             }
@@ -163,13 +131,10 @@
         ],
         "value": "${updatedAtEnd}"
     },
-    ".csc-work-termType-label": {
-        "messagekey": "preferredWork-termTypeLabel"
-    },
-    ".csc-work-genre-label": {
-        "messagekey": "work-genreLabel"
-    },
     ".csc-work-termDisplayName-label": {
         "messagekey": "preferredWork-termDisplayNameLabel"
+    },
+    ".csc-work-termType-label": {
+        "messagekey": "preferredWork-termTypeLabel"
     }
 }

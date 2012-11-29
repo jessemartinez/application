@@ -16,7 +16,7 @@
             <field id="termPrefForLang" datatype="boolean">
                 <selector>workAuthority-termPrefForLang</selector>
             </field>
-            <field id="termType">
+            <field id="termType" autocomplete="vocab-worktermtype" ui-type="enum">
                 <selector>workAuthority-termType</selector>
             </field>
             <field id="termQualifier">

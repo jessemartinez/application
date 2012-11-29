@@ -1,32 +1,16 @@
 {
     "work": {
         "properties": {
-            "mediums": {
+            "workAuthTypes": {
                 "items": {
                     "properties": {
                         "_primary": {
                             "default": true,
                             "type": "boolean"
                         },
-                        "medium": {
+                        "workAuthType": {
                             "default": "",
                             "type": "string"
-                        }
-                    },
-                    "type": "object"
-                },
-                "type": "array"
-            },
-            "genres": {
-                "items": {
-                    "properties": {
-                        "genre": {
-                            "default": "",
-                            "type": "string"
-                        },
-                        "_primary": {
-                            "default": true,
-                            "type": "boolean"
                         }
                     },
                     "type": "object"

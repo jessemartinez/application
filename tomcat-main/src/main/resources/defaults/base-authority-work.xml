@@ -52,10 +52,12 @@
         <field id="updatedAt" ui-search="range" ui-type="date" section="collectionspace_core" attributes="GET" mini="search,list,relate"></field>
     </section>
     <section id="workAuthorityInformation">
-        <field id="scopeNote"/>
+        <!--field id="scopeNote"/-->
+        <field id="historyNote"/>
         <field id="sourceNote"/>
-        <field id="genre" ui-search="repeatable" autocomplete="vocab-workgenre" ui-type="enum"/>
-        <field id="medium" ui-search="repeatable" autocomplete="vocab-workmedium" ui-type="enum"/>
+        <!--field id="genre" ui-search="repeatable" autocomplete="vocab-workgenre" ui-type="enum"/-->
+        <!--field id="medium" ui-search="repeatable" autocomplete="vocab-workmedium" ui-type="enum"/-->
+        <field id="workAuthType" ui-search="repeatable" autocomplete="vocab-workauthtype" ui-type="enum"/>
         <repeat id="creatorGroupList/creatorGroup">
             <field id="creator" autocomplete="person-person"/>
             <field id="creatorType" autocomplete="vocab-workcreatortype" ui-type="enum"/>
@@ -64,7 +66,7 @@
             <field id="publisher" autocomplete="person-person"/>
             <field id="publisherType" autocomplete="vocab-workpublishertype" ui-type="enum"/>
         </repeat>
-        <repeat id="migratedEntityGroupList/migratedEntityGroup">
+        <!--repeat id="migratedEntityGroupList/migratedEntityGroup">
             <field id="migratedEntity"/>
             <field id="migratedEntityType">
                 <options>
@@ -78,7 +80,7 @@
                     <option id="distributioncompany">Distribution company</option>
                 </options>
             </field>
-        </repeat>
+        </repeat-->
         <field id="preferredWork" ui-type="groupfield/preferredWork/selfrenderer" ui-func="cspace.preferred">
             <selector>preferred-workAuthority</selector>
         </field>

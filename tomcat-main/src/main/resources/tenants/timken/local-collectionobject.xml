@@ -102,9 +102,34 @@
                 <selector>object-production-technique</selector>
                 <options>
                     <option id="">Please select a value</option>
-                    <option id="techniqueone">Technique One</option>
-                    <option id="techniquetwo">Technique Two</option>
-                    <option id="techniquethree">Technique Three</option>
+                    <option id="timkenmedia1">Brass</option>
+                    <option id="timkenmedia2">Cast Brass</option>
+                    <option id="timkenmedia3">Cast Brass w/ blue enamel</option>
+                    <option id="timkenmedia4">Cast Brass w/ blue enamel and white enamel</option>
+                    <option id="timkenmedia5">Egg tempra on flat panel w/ no gesso or linen. Handmade Oklad.</option>
+                    <option id="timkenmedia6">Egg tempra on gessoed flat panel. Silverplate</option>
+                    <option id="timkenmedia7">Egg tempra on gessoed panel</option>
+                    <option id="timkenmedia8">Egg tempra on gessoed panel &amp; oklad</option>
+                    <option id="timkenmedia9">Egg tempra on gessoed panel with brass oklad</option>
+                    <option id="timkenmedia10">Egg tempra on gessoed panel with oklad</option>
+                    <option id="timkenmedia11">Egg tempra on gessoed panel, layer of textile</option>
+                    <option id="timkenmedia12">Egg tempra on gessoed panel.</option>
+                    <option id="timkenmedia13">Egg tempra on gessoed panel. Handmade oklad</option>
+                    <option id="timkenmedia14">Egg tempra on panel</option>
+                    <option id="timkenmedia15">Hand painted and gold gilt porcelain</option>
+                    <option id="timkenmedia16">Hand painted porcelain</option>
+                    <option id="timkenmedia17">Hand painted porcelain, highlighted with gold</option>
+                    <option id="timkenmedia18">Hand painted white glazed earthenware</option>
+                    <option id="timkenmedia19">Ink on Paper in gessoed gold leaf frame</option>
+                    <option id="timkenmedia20">Leather bound book/portfolio</option>
+                    <option id="timkenmedia21">Mixed Woods with metal discs and other metal mechanical pieces.</option>
+                    <option id="timkenmedia22">Oil on canvas</option>
+                    <option id="timkenmedia23">Oil on oak panel</option>
+                    <option id="timkenmedia24">Oil on panel</option>
+                    <option id="timkenmedia25">Porcelain</option>
+                    <option id="timkenmedia26">Sterling Silver and glass</option>
+                    <option id="timkenmedia27">Tempera and gold leaf on panel</option>
+                    <option id="timkenmedia28">Tempera on panel</option>
                 </options>
             </field>
             <field id="techniqueType" autocomplete="concept-concept">

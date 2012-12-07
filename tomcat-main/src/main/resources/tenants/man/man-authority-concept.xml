@@ -1,0 +1,16 @@
+<record id="concept" type="authority">
+	<instances id="concept">
+		<instance id="concept-concept">
+			<!-- renaming label for this concept authority -->
+            <web-url>concept</web-url>
+            <title-ref>concept</title-ref>
+            <title>Nomenclature</title>
+        </instance>
+        <instance id="concept-subject">
+        	<!-- add new concept authority -->
+            <web-url>subject</web-url>
+            <title-ref>subject</title-ref>
+            <title>Subjects</title>
+        </instance>
+    </instances>
+</record>

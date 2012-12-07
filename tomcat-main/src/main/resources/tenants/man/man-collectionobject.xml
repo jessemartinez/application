@@ -1,0 +1,100 @@
+<record id="collection-object">
+    <services-record-path id="man">collectionobjects_man:http://collectionspace.org/services/collectionobject/local/man,collectionobjects_man</services-record-path>
+    <section id="identificationInformation">
+        <field id="collection" ui-search="repeatable" seperate_ui_container="true">
+            <selector>object-identification-collection</selector>
+            <!-- updating term list -->
+            <options>
+                <option id="">Please select a value</option>
+                <option id="test1">Museum of Man Collection term</option>
+            </options>
+        </field>
+        <repeat id="objectNameList/objectNameGroup">
+            <field id="objectName" ui-search="repeatable" mini="search" autocomplete="concept-concept">
+                <!-- adding concept-concept authority -->
+                <selector>object-identification-object-name</selector>
+              </field>
+        </repeat>
+        <repeat id="classes" section="man">
+            <field id="class" section="man">
+                <selector>object-identification-class</selector>
+            </field>
+        </repeat>
+        <field id="catalogDate" ui-search="range" ui-type="date" section="man">
+            <selector>object-identification-catalogDate</selector>
+        </field>
+        <!-- in case field is a structured date -->
+        <!--field id="catalogDate" ui-search="repeatable" ui-type="groupfield/structureddate" section="man"
+            primarykey="catalogDate.dateDisplayDate" ui-func="cspace.structuredDate">
+            <services-tag>catalogDateGroup</services-tag>
+            <selector>collection-object-catalogDate</selector>
+        </field-->
+        <field id="catalogedBy" section="man" autocomplete="person-person">
+            <selector>object-identification-catalogedBy</selector>
+        </field>
+        <repeat id="categories" section="man">
+            <field id="category" section="man" autocomplete="concept-concept">
+                <selector>object-identification-category</selector>
+            </field>
+        </repeat>
+        <repeat id="subCategories" section="man">
+            <field id="subCategory" section="man" autocomplete="concept-concept">
+                <selector>object-identification-subCategory</selector>
+            </field>
+        </repeat>
+        <repeat id="curatorialComments" section="man">
+            <field id="curatorialComment" section="man">
+                <selector>object-identification-curatorialComment</selector>
+            </field>
+        </repeat>
+    </section>
+    <section id="descriptionInformation">
+        <section id="contentInformation">
+            <repeat id="contentConcepts">
+                <field id="contentConcept" autocomplete="concept-concept,concept-subject">
+                    <!-- adding concept-subject authority -->
+                    <selector>object-description-content-concept</selector>
+                </field>
+            </repeat>
+        </section>
+        <section id="textualInscriptionInformation">
+            <repeat id="textualInscriptionGroupList/textualInscriptionGroup">
+                <field id="inscriptionContentPosition" seperate_ui_container="true">
+                    <selector>object-description-inscription-content-position</selector>
+                    <!-- updating term list -->
+                    <options>
+                        <option id="">Please select a value</option>
+                        <option id="test1">Museum of Man Sig Loc term</option>
+                    </options>
+                </field>
+            </repeat>
+        </section>
+        <section id="nonTextualInscriptionInformation">
+            <repeat id="nonTextualInscriptionGroupList/nonTextualInscriptionGroup">
+                <field id="inscriptionDescriptionPosition" seperate_ui_container="true">
+                    <selector>object-description-inscription-description-position</selector>
+                    <!-- updating term list -->
+                    <options>
+                        <option id="">Please select a value</option>
+                        <option id="test1">Museum of Man Inscription Position term</option>
+                    </options>
+                </field>
+                <field id="inscriptionDescriptionType" seperate_ui_container="true">
+                    <selector>object-description-inscription-description-type</selector>
+                    <!-- updating term list -->
+                    <options>
+                        <option id="">Please select a value</option>
+                        <option id="test1">Museum of Man Inscription Type term</option>
+                    </options>
+                </field>
+            </repeat>
+        </section>
+    </section>
+    <section id="objectCollectionInformation">
+        <repeat id="provenances" section="man">
+            <field id="provenance" section="man">
+                <selector>collection-object-provenance</selector>
+            </field>
+        </repeat>
+    </section>
+</record>

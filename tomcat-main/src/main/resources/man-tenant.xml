@@ -10,7 +10,7 @@
 		<records>
 			<enum-blank>Please select a value</enum-blank>
 
-			<include src="base-collectionobject.xml"/>
+			<include src="base-collectionobject.xml,man-collectionobject.xml" merge="xmlmerge.properties"/>
 
 			<include src="base-procedure-acquisition.xml"/>
 			<include src="base-procedure-blobs.xml"/>
@@ -36,7 +36,7 @@
 			<!-- include src="base-authority-taxon-termList.xml"/ -->
                         <!-- include src="base-authority-taxon.xml"/ -->
 			<include src="base-authority-concept-termList.xml"/>
-			<include src="base-authority-concept.xml"/>
+			<include src="base-authority-concept.xml,man-authority-concept.xml" merge="xmlmerge.properties"/>
 
 			<include src="base-vocabularies.xml"/>
 

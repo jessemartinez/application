@@ -1,12 +1,31 @@
 <record id="collection-object">
     <services-record-path id="man">collectionobjects_man:http://collectionspace.org/services/collectionobject/local/man,collectionobjects_man</services-record-path>
     <section id="identificationInformation">
+        <repeat id="responsibleDepartments" has-primary="yes">
+            <selector>object-identification-responsible-department</selector>
+            <field id="responsibleDepartment" ui-search="repeatable" mini="search"
+                seperate_ui_container="true">
+                <selector>object-identification-responsible-department</selector>
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="momrespdept1">Archaeology</option>
+                    <option id="momrespdept2">Art</option>
+                    <option id="momrespdept3">Geology</option>
+                    <option id="momrespdept4">History</option>
+                    <option id="momrespdept5">Natural History</option>
+                </options>
+            </field>
+        </repeat>
         <field id="collection" ui-search="repeatable" seperate_ui_container="true">
             <selector>object-identification-collection</selector>
             <!-- updating term list -->
             <options>
                 <option id="">Please select a value</option>
-                <option id="test1">Museum of Man Collection term</option>
+                <option id="momrespdept1">Archaeology</option>
+                <option id="momrespdept2">Art</option>
+                <option id="momrespdept3">Geology</option>
+                <option id="momrespdept4">History</option>
+                <option id="momrespdept5">Natural History</option>
             </options>
         </field>
         <repeat id="objectNameList/objectNameGroup">
@@ -23,12 +42,6 @@
         <field id="catalogDate" ui-search="range" ui-type="date" section="man">
             <selector>object-identification-catalogDate</selector>
         </field>
-        <!-- in case field is a structured date -->
-        <!--field id="catalogDate" ui-search="repeatable" ui-type="groupfield/structureddate" section="man"
-            primarykey="catalogDate.dateDisplayDate" ui-func="cspace.structuredDate">
-            <services-tag>catalogDateGroup</services-tag>
-            <selector>collection-object-catalogDate</selector>
-        </field-->
         <field id="catalogedBy" section="man" autocomplete="person-person">
             <selector>object-identification-catalogedBy</selector>
         </field>
@@ -64,7 +77,64 @@
                     <!-- updating term list -->
                     <options>
                         <option id="">Please select a value</option>
-                        <option id="test1">Museum of Man Sig Loc term</option>
+                        <option id="momsignpos1">Back</option>
+                        <option id="momsignpos2">Back of bolo</option>
+                        <option id="momsignpos3">Back of Nadja</option>
+                        <option id="momsignpos4">Back of retablo</option>
+                        <option id="momsignpos5">Base</option>
+                        <option id="momsignpos6">Base of bowl</option>
+                        <option id="momsignpos7">Base of jar</option>
+                        <option id="momsignpos8">Belly</option>
+                        <option id="momsignpos9">Bottom</option>
+                        <option id="momsignpos10">Bottom of arrowhead</option>
+                        <option id="momsignpos11">Bottom of bowl</option>
+                        <option id="momsignpos12">Bottom of feet</option>
+                        <option id="momsignpos13">Bottom of jar</option>
+                        <option id="momsignpos14">Bottom of left leg</option>
+                        <option id="momsignpos15">Bottom of tail</option>
+                        <option id="momsignpos16">Cones</option>
+                        <option id="momsignpos17">Cylinders at top</option>
+                        <option id="momsignpos18">Front center</option>
+                        <option id="momsignpos19">Front of base</option>
+                        <option id="momsignpos20">Front, lower left</option>
+                        <option id="momsignpos21">Inside</option>
+                        <option id="momsignpos22">Inside base</option>
+                        <option id="momsignpos23">Inside mask</option>
+                        <option id="momsignpos24">Inside top</option>
+                        <option id="momsignpos25">Interior</option>
+                        <option id="momsignpos26">Lower left</option>
+                        <option id="momsignpos27">Lower right</option>
+                        <option id="momsignpos28">Lower right corner</option>
+                        <option id="momsignpos29">Lower wall</option>
+                        <option id="momsignpos30">Near bottom</option>
+                        <option id="momsignpos31">On back</option>
+                        <option id="momsignpos32">On back of retablo</option>
+                        <option id="momsignpos33">On back, stamped</option>
+                        <option id="momsignpos34">On base</option>
+                        <option id="momsignpos35">On base bottom</option>
+                        <option id="momsignpos36">On belly</option>
+                        <option id="momsignpos37">On bottom</option>
+                        <option id="momsignpos38">On bottom of base</option>
+                        <option id="momsignpos39">On bottom of base.</option>
+                        <option id="momsignpos40">On cones</option>
+                        <option id="momsignpos41">On flaring mouth of horn</option>
+                        <option id="momsignpos42">On inside</option>
+                        <option id="momsignpos43">On reverse</option>
+                        <option id="momsignpos44">On side of vessel, vertically-oriented, in a dark</option>
+                        <option id="momsignpos45">On spine</option>
+                        <option id="momsignpos46">On top of base</option>
+                        <option id="momsignpos47">Paper tag</option>
+                        <option id="momsignpos48">Pedestal back</option>
+                        <option id="momsignpos49">Printed on base</option>
+                        <option id="momsignpos50">Proper lower left</option>
+                        <option id="momsignpos51">Side of jar</option>
+                        <option id="momsignpos52">Silver cones</option>
+                        <option id="momsignpos53">Stamped under base</option>
+                        <option id="momsignpos54">Under base</option>
+                        <option id="momsignpos55">Under side of base</option>
+                        <option id="momsignpos56">Upper corner</option>
+                        <option id="momsignpos57">Upper left</option>
+                        <option id="momsignpos58">Upper right corner</option>
                     </options>
                 </field>
             </repeat>
@@ -76,7 +146,12 @@
                     <!-- updating term list -->
                     <options>
                         <option id="">Please select a value</option>
-                        <option id="test1">Museum of Man Inscription Position term</option>
+                        <option id="mominscrpos1">Bottom of bowl</option>
+                        <option id="mominscrpos2">Hemline</option>
+                        <option id="mominscrpos3">On back of pendant</option>
+                        <option id="mominscrpos4">On base</option>
+                        <option id="mominscrpos5">On front of lintel</option>
+                        <option id="mominscrpos6">proper left foot</option>
                     </options>
                 </field>
                 <field id="inscriptionDescriptionType" seperate_ui_container="true">
@@ -84,7 +159,11 @@
                     <!-- updating term list -->
                     <options>
                         <option id="">Please select a value</option>
-                        <option id="test1">Museum of Man Inscription Type term</option>
+                        <option id="mominscrtype1">Hallmark</option>
+                        <option id="mominscrtype2">Inscription</option>
+                        <option id="mominscrtype3">Paper Tag</option>
+                        <option id="mominscrtype4">Signature</option>
+                        <option id="mominscrtype5">Stamp</option>
                     </options>
                 </field>
             </repeat>

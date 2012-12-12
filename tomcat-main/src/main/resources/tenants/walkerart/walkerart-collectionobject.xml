@@ -7,6 +7,9 @@
         <field id="rights" section="walkerart">
             <selector>object-identification-rights</selector>
         </field>
+        <field id="iaiaSubject" section="walkerart">
+            <selector>object-identification-iaiaSubject</selector>
+        </field>
     </section>
     <section id="descriptionInformation">
         <section id="textualInscriptionInformation">

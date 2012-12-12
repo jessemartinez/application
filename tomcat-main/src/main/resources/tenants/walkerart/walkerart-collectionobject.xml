@@ -1,0 +1,29 @@
+<record id="collection-object">
+    <services-record-path id="walkerart">collectionobjects_walkerart:http://collectionspace.org/services/collectionobject/local/walkerart,collectionobjects_walkerart</services-record-path>
+    <section id="identificationInformation">
+        <field id="creditLine" section="walkerart">
+            <selector>object-identification-creditLine</selector>
+        </field>
+        <field id="rights" section="walkerart">
+            <selector>object-identification-rights</selector>
+        </field>
+    </section>
+    <section id="descriptionInformation">
+        <section id="textualInscriptionInformation">
+            <repeat id="textualInscriptionGroupList/textualInscriptionGroup">
+                <field id="inscriptionContentType" seperate_ui_container="true">
+                    <!-- updating term list -->
+                    <selector>object-description-inscription-content-type</selector>
+                    <options>
+                        <option id="">Please select a value</option>
+                        <option id="term1">Signature</option>
+                        <option id="term2">Cast No.</option>
+                        <option id="term3">Workshop Number</option>
+                        <option id="term4">Signed/Location</option>
+                        <option id="term5">Printer's Marks</option>
+                    </options>
+                </field>
+            </repeat>
+        </section>
+    </section>
+</record>

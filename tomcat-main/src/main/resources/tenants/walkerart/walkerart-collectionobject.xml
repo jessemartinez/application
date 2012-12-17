@@ -1,6 +1,49 @@
 <record id="collection-object">
     <services-record-path id="walkerart">collectionobjects_walkerart:http://collectionspace.org/services/collectionobject/local/walkerart,collectionobjects_walkerart</services-record-path>
     <section id="identificationInformation">
+        <repeat id="otherNumberList/otherNumber">
+            <field id="numberType" in-tab="yes" seperate_ui_container="true">
+                <selector>object-identification-other-number-type</selector>
+                <!-- updating term list -->
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="OAI" default="yes">OAI</option>
+                </options>
+            </field>
+        </repeat>
+        <field id="collection" ui-search="repeatable" seperate_ui_container="true">
+            <selector>object-identification-collection</selector>
+            <!-- updating term list -->
+            <options>
+                <option id="">Please select a value</option>
+                <option id="Collection Walker Art Center" default="yes">Collection Walker Art Center</option>
+            </options>
+        </field>
+        <repeat id="objectNameList/objectNameGroup">
+            <field id="objectNameSystem" seperate_ui_container="true">
+                <selector>object-identification-object-system</selector>
+                <!-- updating term list -->
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="WAC">WAC</option>
+                </options>
+            </field>
+            <field id="objectNameType" seperate_ui_container="true">
+                <selector>object-identification-object-type</selector>
+                <!-- updating term list -->
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="Drawings">Drawings</option>
+                    <option id="Edition Prints/Proofs">Edition Prints/Proofs</option>
+                    <option id="Videotapes/Videodiscs">Videotapes/Videodiscs</option>
+                    <option id="Multiples">Multiples</option>
+                    <option id="Paintings">Paintings</option>
+                    <option id="Photographs">Photographs</option>
+                    <option id="Sculptures">Sculptures</option>
+                    <option id="Unique Works on Paper">Unique Works on Paper</option>
+                </options>
+          </field>
+        </repeat>
         <field id="creditLine" section="walkerart">
             <selector>object-identification-creditLine</selector>
         </field>

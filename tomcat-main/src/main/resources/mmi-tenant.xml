@@ -18,6 +18,7 @@
             <include src="base-procedure-intake.xml,local-procedure-intake.xml" merge="xmlmerge-mmi.properties"/>
             <include src="base-procedure-loanin.xml,local-procedure-loanin.xml" merge="xmlmerge-mmi.properties"/>
             <include src="base-procedure-loanout.xml,local-procedure-loanout.xml" merge="xmlmerge-mmi.properties"/>
+            <include src="base-procedure-conditioncheck.xml,local-procedure-conditioncheck.xml" merge="xmlmerge.properties"/>
             <include src="base-procedure-media.xml,local-procedure-media.xml" merge="xmlmerge.properties"/>
             <include src="base-procedure-movement.xml,local-procedure-movement.xml" merge="xmlmerge-mmi.properties"/>
             <include src="base-procedure-objectexit.xml,local-procedure-objectexit.xml" merge="xmlmerge-mmi.properties"/>

@@ -935,5 +935,70 @@
             <option id="wt522">(Video players, recorders and related equipment) Video player and recorder related equipment</option>
         </options>
     </instance>
+    <instance id="vocab-technicalchange">
+        <web-url>technicalchange</web-url>
+        <title-ref>technicalchange</title-ref>
+        <title>Technical Change</title>
+        <options>
+            <option id="codecompilation">Code compilation</option>
+            <option id="emulation">Emulation</option>
+            <option id="migration">Migration</option>
+            <option id="refurbishing">Refurbishing</option>
+        </options>
+    </instance>
+    <instance id="vocab-technicalchangereason">
+        <web-url>technicalchangereason</web-url>
+        <title-ref>technicalchangereason</title-ref>
+        <title>Technical Change Reason</title>
+        <options>
+            <option id="conservation">Conservation</option>
+            <option id="exhibition">Exhibition</option>
+            <option id="inventory">Inventory</option>
+            <option id="loan">Loan</option>
+            <option id="preservation">Preservation</option>
+        </options>
+    </instance>
+    <instance id="vocab-previoussupport">
+        <web-url>previoussupport</web-url>
+        <title-ref>previoussupport</title-ref>
+        <title>Previous Support</title>
+        <options>
+            <option id="n8mm">8mm</option>
+            <option id="n16mm">16mm</option>
+            <option id="n35mm">35mm</option>
+            <option id="n50mm">50mm</option>
+            <option id="n1slash2in">1/2 in</option>
+            <option id="n3slash4in">3/4 in</option>
+            <option id="n2in">2 in</option>
+            <option id="bluraydisc">Blu-ray disc</option>
+            <option id="cd">CD</option>
+            <option id="dvd">DVD</option>
+            <option id="floppydisk">Floppy disk</option>
+            <option id="laserdisc">Laserdisc</option>
+            <option id="tapecassette">Tape cassette</option>
+            <option id="videocassette">Video cassette</option>
+        </options>
+    </instance>
+    <instance id="vocab-newsupport">
+        <web-url>newsupport</web-url>
+        <title-ref>newsupport</title-ref>
+        <title>New Support</title>
+        <options>
+            <option id="n8mm">8mm</option>
+            <option id="n16mm">16mm</option>
+            <option id="n35mm">35mm</option>
+            <option id="n50mm">50mm</option>
+            <option id="n1slash2in">1/2 in</option>
+            <option id="n3slash4in">3/4 in</option>
+            <option id="n2in">2 in</option>
+            <option id="bluraydisc">Blu-ray disc</option>
+            <option id="cd">CD</option>
+            <option id="dvd">DVD</option>
+            <option id="floppydisk">Floppy disk</option>
+            <option id="laserdisc">Laserdisc</option>
+            <option id="tapecassette">Tape cassette</option>
+            <option id="videocassette">Video cassette</option>
+        </options>
+    </instance>
     
 </instances>

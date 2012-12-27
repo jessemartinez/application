@@ -1,0 +1,18 @@
+<record id="conditioncheck">
+    <services-record-path id="mmi">conditionchecks_mmi:http://collectionspace.org/services/conditioncheck/local/mmi,conditionchecks_mmi</services-record-path>
+    <section id="conditionCheckInformation">
+    	<!-- removing org auth -->
+    	<field id="conditionChecker" autocomplete="person-person"></field>
+    </section>
+    <section id="technicalChangeInformation" section="mmi">
+    	<repeat id="technicalChangeGroupList/technicalChangeGroup" section="mmi">
+            <field id="technicalChange" autocomplete="vocab-technicalchange" ui-type="enum" section="mmi"></field>
+            <field id="technicalChangeReason" autocomplete="vocab-technicalchangereason" ui-type="enum" section="mmi"></field>
+            <group id="technicalChangeDate" ui-type="groupfield/structureddate"
+                   primarykey="dateDisplayDate" ui-func="cspace.structuredDate" section="mmi"/>
+            <field id="technicalChangeNote" section="mmi"></field>
+            <field id="previousSupport" autocomplete="vocab-previoussupport" ui-type="enum" section="mmi"></field>
+            <field id="newSupport" autocomplete="vocab-newsupport" ui-type="enum" section="mmi"></field>
+        </repeat>
+    </section>
+</record>

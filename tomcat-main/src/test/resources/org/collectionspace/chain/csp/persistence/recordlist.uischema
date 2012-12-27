@@ -4,6 +4,7 @@
             "ulan_pa",
             "person",
             "activity",
+            "conditioncheck",
             "concept",
             "material_ca",
             "offsite_sla",

@@ -1,0 +1,37 @@
+<instances>
+    <instance id="vocab-omcacitationtermtype">
+        <web-url>omcacitationtermtype</web-url>
+        <title-ref>omcacitationtermtype</title-ref>
+        <title>OMCA Citation Termtype</title>
+        <options>
+            <option id="descriptor">Descriptor</option>
+            <option id="alternatedescriptor">Alternate descriptor</option>
+            <option id="usedforterm">Used for term</option>
+        </options>
+    </instance>
+    <instance id="vocab-publicationtype">
+        <web-url>publicationtype</web-url>
+        <title-ref>publicationtype</title-ref>
+        <title>Publication Type</title>
+        <options>
+            <option id="atlas">Atlas</option>
+            <option id="book">Book</option>
+            <option id="brochure">Brochure</option>
+            <option id="conditionreport">Condition report</option>
+            <option id="contract">Contract</option>
+            <option id="diary">Diary</option>
+            <option id="dictionary">Dictionary</option>
+            <option id="encyclopedia">Encyclopedia</option>
+            <option id="exhibitioncatalog">Exhibition catalog</option>
+            <option id="guidebook">Guide book</option>
+            <option id="inventory">Inventory</option>
+            <option id="journalarticle">Journal article</option>
+            <option id="letter">Letter</option>
+            <option id="monograph">Monograph</option>
+            <option id="newspaperarticle">Newspaper article</option>
+            <option id="obituary">Obituary</option>
+            <option id="verbalopinion">Verbal opinion</option>
+            <option id="onlinepublication">Online publication</option>
+        </options>
+    </instance>
+</instances>

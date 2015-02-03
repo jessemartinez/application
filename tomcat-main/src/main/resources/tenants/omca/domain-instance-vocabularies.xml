@@ -1,8 +1,8 @@
 <instances>
-    <instance id="vocab-omcacitationtermtype">
-        <web-url>omcacitationtermtype</web-url>
-        <title-ref>omcacitationtermtype</title-ref>
-        <title>OMCA Citation Termtype</title>
+    <instance id="vocab-termtype">
+        <web-url>termtype</web-url>
+        <title-ref>termtype</title-ref>
+        <title>Termtype</title>
         <options>
             <option id="descriptor">Descriptor</option>
             <option id="alternatedescriptor">Alternate descriptor</option>

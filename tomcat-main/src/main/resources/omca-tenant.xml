@@ -36,7 +36,7 @@
             <include src="base-authority-person.xml"/>
             <include src="base-authority-citation-termList.xml,omca-authority-citation-termList.xml" merge="xmlmerge.properties"/>
             <include src="base-authority-citation.xml,omca-authority-citation.xml" merge="xmlmerge.properties"/>
-            <include src="base-authority-place-termList.xml"/>
+            <include src="base-authority-place-termList.xml,omca-authority-place-termList.xml" merge="xmlmerge.properties"/>
             <include src="base-authority-place.xml,omca-authority-place.xml" merge="xmlmerge.properties"/>
             
             <!-- Commented out to disable Taxon for the 'core' tenant per CSPACE-4466 -->

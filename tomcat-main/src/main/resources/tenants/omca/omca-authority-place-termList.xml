@@ -1,9 +1,9 @@
-<record id="preferredCI" in-recordlist="no" separate-record="false">
+<record id="preferredPlace" in-recordlist="no" separate-record="false">
     <section id="termInformation">
-        <repeat id="citationTermGroupList/citationTermGroup">
+        <repeat id="placeTermGroupList/placeTermGroup">
             <field id="termType" ui-search="repeatable" autocomplete="vocab-termtype" ui-type="enum">
                 <!-- adding termtype authority -->
-                <selector>citationAuthority-termType</selector>
+                <selector>placeAuthority-termType</selector>
             </field>
         </repeat>
     </section>

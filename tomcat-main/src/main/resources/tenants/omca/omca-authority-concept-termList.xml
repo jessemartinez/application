@@ -1,0 +1,11 @@
+<record id="preferredCA" in-recordlist="no" separate-record="false">
+    <section id="termInformation">
+        <repeat id="conceptTermGroupList/conceptTermGroup">
+            <field id="termType" ui-search="repeatable" autocomplete="vocab-termtype" ui-type="enum">
+                <!-- adding termtype authority; deleting options list -->
+                <selector>conceptAuthority-termType</selector>
+                <options id="delete" />
+            </field>
+        </repeat>
+    </section>
+</record>

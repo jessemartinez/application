@@ -1,0 +1,16 @@
+<record id="contact" is-extension="true">
+    <section id="contactInformation">
+        <repeat id="addressGroupList/addressGroup">
+            <!-- updating options list -->
+            <field id="addressType">
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="business">business</option>
+                    <option id="home">home</option>
+                    <option id="mailing">mailing</option>
+                    <option id="other">other</option>
+                </options>
+            </field>
+        </repeat>
+    </section>
+</record>

@@ -1,0 +1,11 @@
+<record id="preferredOA" in-recordlist="no" separate-record="false">
+    <section id="termInformation">
+        <repeat id="orgTermGroupList/orgTermGroup">
+            <field id="termType" autocomplete="vocab-termtype" ui-type="enum">
+                <!-- adding termtype authority; deleting options list -->
+                <selector>orgAuthority-termType</selector>
+                <options id="delete" />
+            </field>
+        </repeat>
+    </section>
+</record>

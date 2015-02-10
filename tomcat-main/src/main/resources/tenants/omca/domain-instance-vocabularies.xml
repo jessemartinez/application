@@ -49,4 +49,13 @@
             <option id="Rev">Rev.</option>
         </options>
     </instance>
+    <instance id="vocab-organizationfunction">
+        <web-url>organizationfunction</web-url>
+        <title-ref>organizationfunction</title-ref>
+        <title>Organization Function</title>
+        <options>
+            <option id="printer">Printer</option>
+            <option id="publisher">Publisher</option>
+        </options>
+    </instance>
 </instances>

@@ -1,0 +1,39 @@
+<record id="taxon" is-extension="true">
+    <services-record-path id="omca">taxon_omca:http://collectionspace.org/services/taxonomy/local/omca,taxon_omca</services-record-path>
+    <section id="taxonNameAuthorityInformation">
+        <field id="taxonRank" ui-search="repeatable" seperate_ui_container="true">
+            <!-- changing options -->
+            <options>
+                <option id="" default="yes">Please select a value</option>
+                <option id="class">Class</option>
+                <option id="division">Division</option>
+                <option id="domain">Domain</option>
+                <option id="family">Family</option>
+                <option id="genus">Genus</option>
+                <option id="genusSpecies">Genus Species</option>
+                <option id="grade">Grade</option>
+                <option id="infraClass">Infraclass</option>
+                <option id="infraOrder">Infraorder</option>
+                <option id="kingdom">Kingdom</option>
+                <option id="order">Order</option>
+                <option id="phylum">Phylum</option>
+                <option id="section">Section</option>
+                <option id="species">Species</option>
+                <option id="subclass">Subclass</option>
+                <option id="subfamily">Subfamily</option>
+                <option id="subkingdom">Subkingdom</option>
+                <option id="suborder">Suborder</option>
+                <option id="subphylum">Subphylum</option>
+                <option id="variety">Variety</option>
+            </options>
+        </field>
+        <repeat id="commonNameGroupList/commonNameGroup" has-primary="yes">
+            <field id="commonName" ui-search="repeatable" autocomplete="citation-citation">
+                <!-- adding citation authority vocab -->
+            </field>
+        </repeat>
+        <field id="legacyArgusNotes" section="omca"></field>
+        <field id="legacyParents" section="omca"></field>
+        <field id="legacySeeAlso" section="omca"></field>
+    </section>
+</record>

@@ -58,4 +58,25 @@
             <option id="publisher">Publisher</option>
         </options>
     </instance>
+    <instance id="vocab-omcalocationtype">
+        <web-url>omcalocationtype</web-url>
+        <title-ref>omcalocationtype</title-ref>
+        <title>OMCA Location Types</title>
+        <options>
+            <option id="ConservationLabSecurestorage">Conservation Lab: Secure storage</option>
+            <option id="MuseumClassroom">Museum: Classroom</option>
+            <option id="Museumgallery">Museum: Gallery</option>
+            <option id="MuseumOffice">Museum: Office</option>
+            <option id="MuseumOutsidegrounds">Museum: Outside grounds</option>
+            <option id="MuseumSecurecoldstorage">Museum: Secure cold storage</option>
+            <option id="Museumsecurestorage">Museum: Secure storage</option>
+            <option id="MuseumSecuretemporarystorage">Museum: Secure temporary storage</option>
+            <option id="MuseumStorageresearchroom">Museum: Storage/research room</option>
+            <option id="Offsite">Offsite</option>
+            <option id="Voidlocation">Void location</option>
+            <option id="Missing">Missing</option>
+            <option id="Unlocated">Unlocated</option>
+            <option id="Warehousesecurestorage">Warehouse: Secure storage</option>
+        </options>
+    </instance>
 </instances>

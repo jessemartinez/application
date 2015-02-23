@@ -79,4 +79,54 @@
             <option id="whss">Warehouse: Secure storage</option>
         </options>
     </instance>
+    <instance id="vocab-fundsource">
+        <web-url>fundsource</web-url>
+        <title-ref>fundsource</title-ref>
+        <title>Funding Source</title>
+        <options>
+            <option id="mrsnovyfund">Acquired through funds provided by Mrs. Frederick G. Novy Jr.</option>
+            <option id="drmrsnovyfund">Acquired through funds provided by Dr. and Mrs. Frederick G. Novy Jr.</option>
+            <option id="aaf">Art Acquisition Fund</option>
+            <option id="acf">Art Curators Fund</option>
+            <option id="adf">Art Deaccession Fund P215520</option>
+            <option id="ag">Art Guild</option>
+            <option id="aacf">Arts and Crafts Fund</option>
+            <option id="befd">Bequest of the Estate of Fidel Danieli</option>
+            <option id="bf">Blaisdell Fund #1840-01-5112-30</option>
+            <option id="coo">City of Oakland, Petty cash</option>
+            <option id="df">Directors fund</option>
+            <option id="ff">Founders Fund</option>
+            <option id="fotm">Friends of the Museum</option>
+            <option id="fsnr">Fund Source Not Recorded</option>
+            <option id="geme">Gift of the Estate of Marjorie Eaton</option>
+            <option id="hpf">Helen Pritchard Fund</option>
+            <option id="hghf">Herbert Gray Hills Fund</option>
+            <option id="h756f">History 756 Fund</option>
+            <option id="hcf">History Curators Fund</option>
+            <option id="hg">History Guild</option>
+            <option id="hpf">History Photo Fund</option>
+            <option id="ims">Institute of Museum Services</option>
+            <option id="jeft">John Ehn Family Trust</option>
+            <option id="mmrhf">Mr. and Mrs. Robert Hotle Fund</option>
+            <option id="mdaf">Museum Donors Acquisition Fund</option>
+            <option id="mipf">Museum Income Purchase Fund</option>
+            <option id="nea">National Endowment for the Arts</option>
+            <option id="neh">National Endowment for the Humanities</option>
+            <option id="nehcgf">NEH Challenge Grant Funds for the History Dept.</option>
+            <option id="oiaf">Oakland International Airport Fund</option>
+            <option id="oma">Oakland Museum Association</option>
+            <option id="omwb">Oakland Museum Womens Board</option>
+            <option id="papf">Prints and Photographs Fund</option>
+            <option id="pwffdo">Purchased with funds from deaccessioned objects</option>
+            <option id="pwffcg">Purchased with funds from the Collectors Gallery</option>
+            <option id="rf">Reichel Fund</option>
+            <option id="tam">Tamarack</option>
+            <option id="tarnf">Ted and Ruth Nash Fund</option>
+            <option id="tbf">The Bell Fund</option>
+            <option id="tshcf">The S. H. Cowell Foundation</option>
+            <option id="twagf">The Wallace Alexander Gerbode Foundation</option>
+            <option id="tf">Timken Fund</option>
+            <option id="vf">Valley Foundation</option>
+        </options>
+    </instance>
 </instances>

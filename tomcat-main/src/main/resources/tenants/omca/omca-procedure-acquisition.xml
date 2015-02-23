@@ -1,0 +1,51 @@
+<record id="acquisition" is-extension="true">
+    <services-record-path id="omca">acquisitions_omca:http://collectionspace.org/services/acquisition/local/omca,acquisitions_omca</services-record-path>
+    <section id="acquisitionInformation">
+        <field id="acquisitionMethod" ui-search="repeatable" seperate_ui_container="true">
+            <selector>acquisition-acquisition-method</selector>
+            <!-- updating options -->
+            <options>
+                <option id="">Please select a value</option>
+                <option id="bequest">Bequest</option>
+                <option id="exchange">Exchange</option>
+                <option id="gift">Gift</option>
+                <option id="purchase">Purchase</option>
+                <option id="gift-purchase">Gift/Purchase</option>
+                <option id="transfer">Transfer</option>
+                <option id="field-collected">Field Collected</option>
+            </options>
+        </field>
+        <repeat id="acquisitionFundingList/acquisitionFunding">
+            <field id="acquisitionFundingCurrency" autocomplete="vocab-currency" ui-type="enum">
+                <enum>
+                    <default>urn:cspace:museumca.org:vocabularies:name(currency):item:name(USD)'US Dollar'</default>
+                </enum>
+            </field>
+            <field id="acquisitionFundingValue" ui-type="validated" datatype="float"></field>
+            <field id="acquisitionFundingSource" ui-search="repeatable" autocomplete="vocab-fundsource" ui-type="enum">
+                <!-- adding vocab-fundsource vocab -->
+            </field>
+            <field id="acquisitionFundingSourceProvisos"></field>
+        </repeat>
+
+        <field id="sortableAcquisitionReferenceNumber" section="omca"></field>
+        <repeat id="contactGroupList/contactGroup" section="omca">
+            <field id="contact" autocomplete="person-person" section="omca"></field>
+            <field id="contactRole" section="omca">
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="auction-house">Auction House</option>
+                    <option id="contact">Contact</option>
+                    <option id="executor">Executor/trix</option>
+                    <option id="facilitator">Facilitator</option>
+                    <option id="field-collector">Field Collector</option>
+                    <option id="patron">Patron</option>
+                    <option id="transfer">Transfer</option>
+                </options>
+            </field>
+        </repeat>
+        <field id="sourceContactNote" section="omca"></field>
+        <field id="accessionDescription" section="omca"></field>
+        <field id="anonymous" datatype="boolean" section="omca"></field>
+    </section>
+</record>

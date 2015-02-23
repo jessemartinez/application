@@ -17,21 +17,21 @@
             <option id="atlas">Atlas</option>
             <option id="book">Book</option>
             <option id="brochure">Brochure</option>
-            <option id="conditionreport">Condition report</option>
+            <option id="condition_report">Condition report</option>
             <option id="contract">Contract</option>
             <option id="diary">Diary</option>
             <option id="dictionary">Dictionary</option>
             <option id="encyclopedia">Encyclopedia</option>
-            <option id="exhibitioncatalog">Exhibition catalog</option>
-            <option id="guidebook">Guide book</option>
+            <option id="exhibition_catalog">Exhibition catalog</option>
+            <option id="guide_book">Guide book</option>
             <option id="inventory">Inventory</option>
-            <option id="journalarticle">Journal article</option>
+            <option id="journal_article">Journal article</option>
             <option id="letter">Letter</option>
             <option id="monograph">Monograph</option>
-            <option id="newspaperarticle">Newspaper article</option>
+            <option id="newspaper_article">Newspaper article</option>
             <option id="obituary">Obituary</option>
-            <option id="verbalopinion">Verbal opinion</option>
-            <option id="onlinepublication">Online publication</option>
+            <option id="verbal_opinion">Verbal opinion</option>
+            <option id="online_publication">Online publication</option>
         </options>
     </instance>
     <instance id="vocab-persontitle">
@@ -63,20 +63,20 @@
         <title-ref>omcalocationtype</title-ref>
         <title>OMCA Location Types</title>
         <options>
-            <option id="ConservationLabSecurestorage">Conservation Lab: Secure storage</option>
-            <option id="MuseumClassroom">Museum: Classroom</option>
-            <option id="Museumgallery">Museum: Gallery</option>
-            <option id="MuseumOffice">Museum: Office</option>
-            <option id="MuseumOutsidegrounds">Museum: Outside grounds</option>
-            <option id="MuseumSecurecoldstorage">Museum: Secure cold storage</option>
-            <option id="Museumsecurestorage">Museum: Secure storage</option>
-            <option id="MuseumSecuretemporarystorage">Museum: Secure temporary storage</option>
-            <option id="MuseumStorageresearchroom">Museum: Storage/research room</option>
-            <option id="Offsite">Offsite</option>
-            <option id="Voidlocation">Void location</option>
-            <option id="Missing">Missing</option>
-            <option id="Unlocated">Unlocated</option>
-            <option id="Warehousesecurestorage">Warehouse: Secure storage</option>
+            <option id="clss">Conservation Lab: Secure storage</option>
+            <option id="musclass">Museum: Classroom</option>
+            <option id="musgallery">Museum: Gallery</option>
+            <option id="musoffice">Museum: Office</option>
+            <option id="musoutside">Museum: Outside grounds</option>
+            <option id="musscs">Museum: Secure cold storage</option>
+            <option id="musss">Museum: Secure storage</option>
+            <option id="mussts">Museum: Secure temporary storage</option>
+            <option id="mussrr">Museum: Storage/research room</option>
+            <option id="offsite">Offsite</option>
+            <option id="void">Void location</option>
+            <option id="missing">Missing</option>
+            <option id="unlocated">Unlocated</option>
+            <option id="whss">Warehouse: Secure storage</option>
         </options>
     </instance>
 </instances>

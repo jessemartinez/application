@@ -1,9 +1,15 @@
 <record id="preferredPA" in-recordlist="no" separate-record="false">
     <section id="termInformation">
         <repeat id="personTermGroupList/personTermGroup">
-            <field id="termType" autocomplete="vocab-termtype" ui-type="enum">
-                <!-- adding termtype authority -->
+            <field id="termType" action="replace">
                 <selector>personAuthority-termType</selector>
+                <!-- normalizing termType options list -->
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="descriptor">Descriptor</option>
+                    <option id="alternatedescriptor">Alternate descriptor</option>
+                    <option id="usedforterm">Used for term</option>
+                </options>
             </field>
             <field id="title" autocomplete="vocab-persontitle" ui-type="enum">
                 <!-- adding persontitle authority; deleting options list -->

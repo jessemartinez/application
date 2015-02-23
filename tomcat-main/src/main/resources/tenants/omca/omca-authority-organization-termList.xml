@@ -1,10 +1,15 @@
 <record id="preferredOA" in-recordlist="no" separate-record="false">
     <section id="termInformation">
         <repeat id="orgTermGroupList/orgTermGroup">
-            <field id="termType" autocomplete="vocab-termtype" ui-type="enum">
-                <!-- adding termtype authority; deleting options list -->
+            <field id="termType">
                 <selector>orgAuthority-termType</selector>
-                <options id="delete" />
+                <!-- normalizing termType options list -->
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="descriptor">Descriptor</option>
+                    <option id="alternatedescriptor">Alternate descriptor</option>
+                    <option id="usedforterm">Used for term</option>
+                </options>
             </field>
         </repeat>
     </section>

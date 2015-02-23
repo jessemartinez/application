@@ -1,16 +1,14 @@
-<record id="preferredTA" in-recordlist="no" separate-record="false">
+<record id="preferredSLA" in-recordlist="no" separate-record="false">
     <section id="termInformation">
-        <repeat id="taxonTermGroupList/taxonTermGroup">
+        <repeat id="locTermGroupList/locTermGroup">
             <field id="termType">
-                <selector>taxonAuthority-termType</selector>
-                <!-- normalizing termType options list.
-                     adding new term -->
+                <selector>locationAuthority-termType</selector>
+                <!-- normalizing termType options list -->
                 <options>
                     <option id="">Please select a value</option>
                     <option id="descriptor">Descriptor</option>
                     <option id="alternatedescriptor">Alternate descriptor</option>
                     <option id="usedforterm">Used for term</option>
-                    <option id="commonName">Common name</option>
                 </options>
             </field>
         </repeat>

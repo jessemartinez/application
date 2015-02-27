@@ -2,20 +2,20 @@
     <services-record-path id="omca">persons_omca:http://collectionspace.org/services/person/local/omca,persons_omca</services-record-path>
     <section id="personNameAuthorityInformation">
         <repeat id="groups">
-            <field id="group" ui-search="repeatable" autocomplete="citation-citation">
-                <!-- adding citation authority vocab -->
+            <field id="group" ui-search="repeatable" autocomplete="concept-concept">
+                <!-- adding concept authority vocab -->
                 <selector>personAuthority-group</selector>
             </field>
         </repeat>
         <repeat id="nationalities">
-            <field id="nationality" ui-search="repeatable" autocomplete="citation-citation">
-                <!-- adding citation authority vocab -->
+            <field id="nationality" ui-search="repeatable" autocomplete="concept-concept">
+                <!-- adding concept authority vocab -->
                 <selector>personAuthority-nationality</selector>
             </field>
         </repeat>
         <repeat id="schoolsOrStyles">
-            <field id="schoolOrStyle" ui-search="repeatable" autocomplete="citation-citation">
-                <!-- adding citation authority vocab -->
+            <field id="schoolOrStyle" ui-search="repeatable" autocomplete="concept-concept">
+                <!-- adding concept authority vocab -->
                 <selector>personAuthority-schoolOrStyle</selector>
             </field>
         </repeat>

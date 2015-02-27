@@ -28,8 +28,8 @@
             </options>
         </field>
         <repeat id="commonNameGroupList/commonNameGroup" has-primary="yes">
-            <field id="commonName" ui-search="repeatable" autocomplete="citation-citation">
-                <!-- adding citation authority vocab -->
+            <field id="commonName" ui-search="repeatable" autocomplete="concept-concept">
+                <!-- adding concept authority vocab -->
             </field>
         </repeat>
         <field id="legacyArgusNotes" section="omca"></field>

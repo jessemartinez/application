@@ -11,6 +11,16 @@
                     <option id="usedforterm">Used for term</option>
                 </options>
             </field>
+            <field id="historicalStatus">
+                <selector>placeAuthority-historicalStatus</selector>
+                <!-- changing options list behavior -->
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="current">Current</option>
+                    <option id="historical">Historical</option>
+                    <option id="both">Both</option>
+                </options>
+            </field>
         </repeat>
     </section>
 </record>

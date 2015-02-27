@@ -129,4 +129,15 @@
             <option id="vf">Valley Foundation</option>
         </options>
     </instance>
+    <instance id="vocab-omcaentrymethod">
+        <web-url>omcaentrymethod</web-url>
+        <title-ref>omcaentrymethod</title-ref>
+        <title>OMCA Entry Method</title>
+        <options>
+            <option id="doorbooked">Doorbooked</option>
+            <option id="fieldcollected">Field Collected</option>
+            <option id="gift">Gift</option>
+            <option id="unknown">Unknown</option>
+        </options>
+    </instance>
 </instances>

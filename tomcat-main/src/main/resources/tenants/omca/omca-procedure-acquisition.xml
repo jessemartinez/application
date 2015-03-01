@@ -31,18 +31,7 @@
         <field id="sortableAcquisitionReferenceNumber" section="omca"></field>
         <repeat id="contactGroupList/contactGroup" section="omca">
             <field id="contact" autocomplete="person-person" section="omca"></field>
-            <field id="contactRole" section="omca">
-                <options>
-                    <option id="">Please select a value</option>
-                    <option id="auction-house">Auction House</option>
-                    <option id="contact">Contact</option>
-                    <option id="executor">Executor/trix</option>
-                    <option id="facilitator">Facilitator</option>
-                    <option id="field-collector">Field Collector</option>
-                    <option id="patron">Patron</option>
-                    <option id="transfer">Transfer</option>
-                </options>
-            </field>
+            <field id="contactRole" autocomplete="vocab-contactrole" ui-type="enum" section="omca"></field>
         </repeat>
         <field id="sourceContactNote" section="omca"></field>
         <field id="accessionDescription" section="omca"></field>

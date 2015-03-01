@@ -140,4 +140,18 @@
             <option id="unknown">Unknown</option>
         </options>
     </instance>
+    <instance id="vocab-contactrole">
+        <web-url>contactrole</web-url>
+        <title-ref>contactrole</title-ref>
+        <title>Contact Role</title>
+        <options>
+            <option id="auction_house">Auction House</option>
+            <option id="contact">Contact</option>
+            <option id="executor">Executor/trix</option>
+            <option id="facilitator">Facilitator</option>
+            <option id="field_collector">Field Collector</option>
+            <option id="patron">Patron</option>
+            <option id="transfer">Transfer</option>
+        </options>
+    </instance>
 </instances>

@@ -112,6 +112,7 @@ public class WebAutoComplete implements WebMethod {
 						JSONArray displayNames = JSONUtils.createJSONArrayFromSeparatedString(displayNameString);
 						String primaryDN = displayNames.getString(0);
 						String refid = data.getString("refid");
+						String termStatus = data.getString("termStatus");
 						// HACK - transition period with full instead of base URN value
 						if(refid.endsWith("'"+primaryDN+"'"))
 							refid = refid.substring(0,refid.length()-(primaryDN.length()+2));
@@ -119,6 +120,7 @@ public class WebAutoComplete implements WebMethod {
 						entry.put("csid",data.getString("csid"));
 						entry.put("type",n.getRecord().getWebURL());
 						entry.put("displayNames", displayNames);
+						entry.put("termStatus",termStatus);
 						//RefName.AuthorityItem item = RefName.AuthorityItem.parse(refid); 
 						//entry.put("namespace",item.getParentShortIdentifier());
 						entry.put("namespace",data.getString("namespace"));

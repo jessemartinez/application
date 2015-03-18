@@ -1,0 +1,246 @@
+<record id="collection-object" is-extension="true">
+    <services-record-path id="omca">collectionobjects_omca:http://collectionspace.org/services/collectionobject/local/omca,collectionobjects_omca</services-record-path>
+    <section id="identificationInformation">
+        <repeat id="responsibleDepartments" has-primary="yes">
+            <field id="responsibleDepartment" ui-search="repeatable" mini="search,list" seperate_ui_container="true">
+                <!-- updating options list -->
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="Art-Department">Art Department</option>
+                    <option id="History-Department">History Department</option>
+                    <option id="Science-Department">Science Department</option>
+                    <option id="Professional-Services-Department">Professional Services Department</option>
+                    <option id="Education-Department">Education Department</option>
+                    <option id="Multiple">Multiple</option>
+                    <option id="CIA" default="yes">CIA</option>
+                    <option id="CPC">CPC</option>
+                </options>
+            </field>
+        </repeat>
+        <field id="collection" ui-search="repeatable" seperate_ui_container="true">
+            <!-- updating options list -->
+            <options>
+                <option id="">Please select a value</option>
+                <option id="All-Of-Us-Or-None">All Of Us Or None</option>
+                <option id="Andrew-J-Russell">Andrew J. Russell</option>
+                <option id="Arthur-and-Lucia-Mathews">Arthur and Lucia Mathews</option>
+                <option id="Bob-Walker">Bob Walker</option>
+                <option id="Dorothea-Lange">Dorothea Lange</option>
+                <option id="Helen-Nestor">Helen Nestor</option>
+                <option id="Kahn-Collection">Kahn Collection</option>
+                <option id="Moses-Cohen">Moses Cohen</option>
+                <option id="Margaret-De-Patta">Margaret De Patta</option>
+                <option id="Ted-and-Ruth-Nash">Ted and Ruth Nash</option>
+                <option id="Tribune">Tribune</option>
+            </options>
+        </field>
+        <repeat id="titleGroupList/titleGroup">
+            <field id="titleType" autocomplete="vocab-titletype" ui-type="enum" seperate_ui_container="true">
+                <!-- removing options block; adding vocab-titletype vocab -->
+                <options action='delete'/>
+            </field>
+        </repeat>
+        <repeat id="objectNameList/objectNameGroup">
+            <field id="objectNameSystem" autocomplete="vocab-objectnamesystem" ui-type="enum" seperate_ui_container="true">
+                <!-- removing options block; adding vocab-objectnamesystem vocab -->
+                <options action='delete'/>
+            </field>
+            <field id="objectNameType" seperate_ui_container="true">
+                <!-- updating options list -->
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="classified">Classified</option>
+                    <option id="denomination">Denomination</option>
+                    <option id="simple">Simple</option>
+                    <option id="taxonomic">Taxonomic</option>
+                    <option id="typological">Typological</option>
+                    <option id="questionable">Questionable</option>
+                </options>
+            </field>
+            <field id="objectName" autocomplete="concept-concept" ui-search="repeatable" mini="search,list">
+                <!-- adding concept authority -->
+            </field>
+        </repeat>
+        <field id="argusCount" section="omca"></field>
+        <repeat id="categories" section="omca">
+            <field id="category" autocomplete="vocab-category" ui-type="enum" section="omca"></field>
+        </repeat>
+        <field id="art" datatype="boolean" section="omca"></field>
+        <field id="history" datatype="boolean" section="omca"></field>
+        <field id="science" datatype="boolean" section="omca"></field>
+        <field id="publishedOnWeb" datatype="boolean" section="omca"></field>
+        <repeat id="photos" section="omca">
+            <field id="photo" section="omca"></field>
+        </repeat>
+        <repeat id="determinationHistoryGroupList/determinationHistoryGroup" section="omca">
+            <field id="dhName" mini="list" autocomplete="taxon-taxon,taxon-common_ta" section="omca"></field>
+            <field id="dhQualifier" seperate_ui_container="true" section="omca">
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="Genus-species">Genus species</option>
+                    <option id="Family">Family</option>
+                    <option id="Common-Name">Common Name</option>
+                </options>
+            </field>
+            <field id="identBy" autocomplete="person-person" section="omca"></field>
+            <field id="identDate" ui-type="date" section="omca"></field>
+            <field id="institution" autocomplete="organization-organization" section="omca"></field>
+            <field id="identKind" seperate_ui_container="true" section="omca">
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="original-label-determination">original label determination</option>
+                    <option id="fide">fide</option>
+                    <option id="nomenclatural-change">nomenclatural change</option>
+                    <option id="taxonomic-change">taxonomic change</option>
+                </options>
+            </field>
+            <field id="dhReference" section="omca"></field>
+            <field id="dhPage" section="omca"></field>
+            <field id="dhNotes" section="omca"></field>
+        </repeat>
+    </section>
+    <section id="descriptionInformation">
+        <field id="phase" autocomplete="vocab-phase" ui-type="enum" ui-search="repeatable" seperate_ui_container="true">
+            <!-- removing options block; adding vocab-phase vocab -->
+            <options action='delete'/>
+        </field>
+        <repeat id="forms">
+            <field id="form" autocomplete="vocab-form" ui-type="enum" ui-search="repeatable" seperate_ui_container="true">
+                <!-- removing options block; adding vocab-form vocab -->
+                <options action='delete'/>
+            </field>
+        </repeat>
+        <repeat id="colors">
+            <field id="color" autocomplete="concept-concept">
+                <!-- adding concept authority -->
+            </field>
+        </repeat>
+        <repeat id="materialGroupList/materialGroup">
+            <field id="material" autocomplete="concept-concept" ui-search="repeatable">
+                <!-- adding concept authority -->
+            </field>
+        </repeat>
+        <repeat id="objectComponentGroupList/objectComponentGroup">
+            <field id="objectComponentName" ui-search="repeatable" seperate_ui_container="true">
+                <!-- updating options list -->
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="a">a</option>
+                    <option id="b">b</option>
+                    <option id="c">c</option>
+                    <option id="d">d</option>
+                    <option id="e">e</option>
+                    <option id="f">f</option>
+                    <option id="g">g</option>
+                    <option id="h">h</option>
+                    <option id="i">i</option>
+                    <option id="j">j</option>
+                    <option id="k">k</option>
+                    <option id="l">l</option>
+                    <option id="m">m</option>
+                    <option id="n">n</option>
+                    <option id="o">o</option>
+                    <option id="p">p</option>
+                    <option id="q">q</option>
+                    <option id="r">r</option>
+                    <option id="s">s</option>
+                    <option id="t">t</option>
+                    <option id="u">u</option>
+                    <option id="v">v</option>
+                    <option id="w">w</option>
+                    <option id="x">x</option>
+                    <option id="y">y</option>
+                    <option id="z">z</option>
+                </options>
+            </field>
+        </repeat>
+        <repeat id="technicalAttributeGroupList/technicalAttributeGroup">
+            <field id="technicalAttribute" autocomplete="vocab-technicalattribute" ui-type="enum" ui-search="repeatable" seperate_ui_container="true">
+                <!-- removing options block; adding vocab-technicalattribute vocab -->
+                <options action='delete'/>
+            </field>
+            <field id="technicalAttributeMeasurement" autocomplete="vocab-technicalattributemeasurement" ui-type="enum" seperate_ui_container="true">
+                <!-- removing options block; adding vocab-technicalattributemeasurement vocab -->
+                <options action='delete'/>
+            </field>
+            <field id="technicalAttributeMeasurementUnit" autocomplete="vocab-technicalattributemeasurementunit" ui-type="enum" seperate_ui_container="true">
+                <!-- removing options block; adding vocab-technicalattributemeasurementunit vocab -->
+                <options action='delete'/>
+            </field>
+        </repeat>
+        <section id="contentInformation">
+            <repeat id="contentPlaces">
+                <field id="contentPlace" autocomplete="place-place">
+                    <!-- adding place authority -->
+                </field>
+            </repeat>
+            <field id="argusSubject" section="omca"></field>
+        </section>
+        <section id="textualInscriptionInformation">
+            <repeat id="textualInscriptionGroupList/textualInscriptionGroup">
+                <field id="inscriptionContentPosition" seperate_ui_container="true">
+                    <!-- updating options list -->
+                    <options>
+                        <option id="">Please select a value</option>
+                        <option id="back">back</option>
+                        <option id="base">base</option>
+                        <option id="bottom">bottom</option>
+                        <option id="front">front</option>
+                        <option id="inside">inside</option>
+                        <option id="left">left</option>
+                        <option id="outside">outside</option>
+                        <option id="right">right</option>
+                        <option id="rim">rim</option>
+                        <option id="top">top</option>
+                    </options>
+                </field>
+                <field id="inscriptionContentScript" autocomplete="vocab-inscriptioncontentscript" ui-type="enum" seperate_ui_container="true">
+                    <!-- removing options block; adding vocab-inscriptioncontentscript vocab -->
+                    <options action='delete'/>
+                </field>
+                <field id="inscriptionContentType" autocomplete="vocab-inscriptioncontenttype" ui-type="enum" seperate_ui_container="true">
+                    <!-- removing options block; adding vocab-inscriptioncontenttype vocab -->
+                    <options action='delete'/>
+                </field>
+            </repeat>
+        </section>
+        <field id="argusDescription" section="omca"></field>
+        <field id="argusRemarks" section="omca"></field>
+        <field id="accessory" section="omca"></field>
+    </section>
+    <section id="objectProductionInformation">
+        <field id="argusMade" section="omca"></field>
+    </section>
+    <section id="objectHistoryAssociationInformation">
+        <section id="associationInformation">
+            <repeat id="assocCulturalContextGroupList/assocCulturalContextGroup">
+                <field id="assocCulturalContext" autocomplete="vocab-culturalaffinity" ui-type="enum">
+                    <!-- adding vocab-culturalaffinity vocab -->
+                </field>
+            </repeat>
+            <repeat id="assocPlaceGroupList/assocPlaceGroup">
+                <field id="assocPlace" autocomplete="place-place">
+                    <!-- adding place authority -->
+                </field>
+            </repeat>
+        </section>
+        <field id="argusFoundAndUsed" section="omca"></field>
+        <field id="exhibitionHistory" section="omca"></field>
+    </section>
+    <section id="objectViewerContributionInformation">
+        <field id="viewersRole" autocomplete="vocab-viewersrole" ui-type="enum">
+            <!-- adding vocab-viewersrole vocab -->
+        </field>
+        <repeat id="viewersNames" section="omca">
+            <field id="viewersName" autocomplete="person-person" section="omca"></field>
+        </repeat>
+        <field id="dateOfCompletion" ui-type="date" datatype="date" section="omca"></field>
+    </section>
+    <section id="objectCollectionInformation">
+        <repeat id="fieldCollectionMethods">
+            <field id="fieldCollectionMethod" autocomplete="vocab-fieldcollectionmethod" ui-type="enum">
+                <!-- changed vocab type -->
+            </field>
+        </repeat>
+    </section>
+</record>

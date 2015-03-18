@@ -154,4 +154,193 @@
             <option id="transfer">Transfer</option>
         </options>
     </instance>
+    <instance id="vocab-category">
+        <web-url>category</web-url>
+        <title-ref>category</title-ref>
+        <title>Category</title>
+        <options>
+            <option id="advertising">Advertising</option>
+            <option id="agriculture">Agriculture</option>
+            <option id="architectural_fragment">Architectural Fragment</option>
+            <option id="costume">Costume</option>
+            <option id="entomology">Entomology</option>
+            <option id="furniture">Furniture</option>
+            <option id="gallery_specimens">Gallery Specimens</option>
+            <option id="geology">Geology</option>
+            <option id="herbarium">Herbarium</option>
+            <option id="herpetology">Herpetology</option>
+            <option id="icthyology">Icthyology</option>
+            <option id="invertebrates">Invertebrates</option>
+            <option id="installation_art">Installation Artherpetology Herpetology</option>
+            <option id="lapidary">Lapidary</option>
+            <option id="malacology">Malacology</option>
+            <option id="mammalogy">Mammalogy</option>
+            <option id="miscellaneous">Miscellaneous</option>
+            <option id="moving_image">Moving Image</option>
+            <option id="north_american_indian">North American Indian</option>
+            <option id="ornithology">Ornithology</option>
+            <option id="painting">Painting</option>
+            <option id="paleontology">Paleontology</option>
+            <option id="photography">Photography</option>
+            <option id="sculpture">Sculpture</option>
+            <option id="snuff_bottles">Snuff Bottles</option>
+            <option id="textile">Textile</option>
+            <option id="toys">Toys</option>
+            <option id="transportation">Transportation</option>
+            <option id="Works_on_paper">Works on Paper</option>
+        </options>
+    </instance>
+    <instance id="vocab-titletype">
+        <web-url>titletype</web-url>
+        <title-ref>titletype</title-ref>
+        <title>Title Type</title>
+        <options>
+            <option id="assigned_by_artist">Assigned by Artist</option>
+            <option id="collection">Collection</option>
+            <option id="generic">Generic</option>
+            <option id="popular">Popular</option>
+            <option id="series">Series</option>
+            <option id="trade">Trade</option>
+            <option id="sic">Sic</option>
+        </options>
+    </instance>
+    <instance id="vocab-objectnamesystem">
+        <web-url>objectnamesystem</web-url>
+        <title-ref>objectnamesystem</title-ref>
+        <title>Object Name System</title>
+        <options>
+            <option id="art_and_architecture_thesaurus">Art &amp; Architecture Thesaurus</option>
+            <option id="nomenclature">Nomenclature</option>
+        </options>
+    </instance>
+    <instance id="vocab-phase">
+        <web-url>phase</web-url>
+        <title-ref>phase</title-ref>
+        <title>Phase</title>
+        <options>
+            <option id="adult">adult</option>
+            <option id="imago">imago</option>
+            <option id="larva">larva</option>
+            <option id="nymph">nymph</option>
+            <option id="pupa">pupa</option>
+        </options>
+    </instance>
+    <instance id="vocab-form">
+        <web-url>form</web-url>
+        <title-ref>form</title-ref>
+        <title>Form</title>
+        <options>
+            <option id="dry">dry</option>
+            <option id="pinned">pinned</option>
+            <option id="thin_section">thin section</option>
+            <option id="wet">wet</option>
+        </options>
+    </instance>
+    <instance id="vocab-technicalattribute">
+        <web-url>technicalattribute</web-url>
+        <title-ref>technicalattribute</title-ref>
+        <title>Technical Attribute</title>
+        <options>
+            <option id="magnetic_tape_type">magnetic tape type</option>
+            <option id="record_speed">record speed</option>
+        </options>
+    </instance>
+    <instance id="vocab-technicalattributemeasurement">
+        <web-url>technicalattributemeasurement</web-url>
+        <title-ref>technicalattributemeasurement</title-ref>
+        <title>Technical Attribute Measurement</title>
+        <options>
+            <option id="metal">metal</option>
+            <option id="78">78</option>
+        </options>
+    </instance>
+    <instance id="vocab-technicalattributemeasurementunit">
+        <web-url>technicalattributemeasurementunit</web-url>
+        <title-ref>technicalattributemeasurementunit</title-ref>
+        <title>Technical Attribute Measurement Unit</title>
+        <options>
+            <option id="rpm">rpm</option>
+        </options>
+    </instance>
+    <instance id="vocab-inscriptioncontentscript">
+        <web-url>inscriptioncontentscript</web-url>
+        <title-ref>inscriptioncontentscript</title-ref>
+        <title>Inscription Content Script</title>
+        <options>
+            <option id="handwritten_print">handwritten-print</option>
+            <option id="handwritten_cursive">handwritten-cursive</option>
+            <option id="printed">printed</option>
+            <option id="stamped">stamped</option>
+            <option id="embossed">embossed</option>
+        </options>
+    </instance>
+    <instance id="vocab-inscriptioncontenttype">
+        <web-url>inscriptioncontenttype</web-url>
+        <title-ref>inscriptioncontenttype</title-ref>
+        <title>Inscription Content Type</title>
+        <options>
+            <option id="brand">brand</option>
+            <option id="decoration">decoration</option>
+            <option id="estate_stamp">estate stamp</option>
+            <option id="graffiti">graffiti</option>
+            <option id="label">label</option>
+            <option id="makers_mark">maker's mark</option>
+            <option id="chop">chop</option>
+        </options>
+    </instance>
+    <instance id="vocab-culturalaffinity">
+        <web-url>culturalaffinity</web-url>
+        <title-ref>culturalaffinity</title-ref>
+        <title>Cultural Affinity</title>
+        <options>
+            <option id="arctic">Arctic Culture Area</option>
+            <option id="central_california">Central California Culture Area</option>
+            <option id="great_basin">Great Basin Culture Area</option>
+            <option id="great_plains">Great Plains Culture Area</option>
+            <option id="northeast">Northeast Culture Area</option>
+            <option id="northeast_california">Northeast California Culture Area</option>
+            <option id="northwest_california">Northwest California Culture Area</option>
+            <option id="northwest_coast">Northwest Coast Culture Area</option>
+            <option id="pacific_region">Pacific Region Culture Area</option>
+            <option id="plateau">Plateau Culture Area</option>
+            <option id="southeast">Southeast Culture Area</option>
+            <option id="southern_california">Southern California Culture Area</option>
+            <option id="southwest">Southwest Culture Area</option>
+            <option id="subarctic">Subarctic Culture Area</option>
+        </options>
+    </instance>
+    <instance id="vocab-viewersrole">
+        <web-url>viewersrole</web-url>
+        <title-ref>viewersrole</title-ref>
+        <title>Viewers Role</title>
+        <options>
+            <option id="scholar">scholar</option>
+            <option id="researcher">researcher</option>
+            <option id="curator">curator</option>
+            <option id="online_user">online user</option>
+            <option id="museum_visitor">museum visitor</option>
+            <option id="advisory_councilmember">advisory councilmember</option>
+            <option id="donor">donor</option>
+        </options>
+    </instance>
+    <instance id="vocab-fieldcollectionmethod">
+        <web-url>fieldcollectionmethod</web-url>
+        <title-ref>fieldcollectionmethod</title-ref>
+        <title>Field Collection Method</title>
+        <options>
+            <option id="borehole">borehole</option>
+            <option id="commissioned">commissioned</option>
+            <option id="donation">donation</option>
+            <option id="excavation">excavation</option>
+            <option id="exchanged">exchanged</option>
+            <option id="found_dead">found dead</option>
+            <option id="metal_detector">metal detector</option>
+            <option id="netted">netted</option>
+            <option id="photographed">photographed</option>
+            <option id="purchased">purchased</option>
+            <option id="salvaged">salvaged</option>
+            <option id="shot">shot</option>
+            <option id="trapped">trapped</option>
+        </options>
+    </instance>
 </instances>

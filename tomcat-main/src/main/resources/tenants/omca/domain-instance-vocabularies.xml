@@ -343,4 +343,20 @@
             <option id="trapped">trapped</option>
         </options>
     </instance>
+        <instance id="vocab-accessrestrictiontype">
+        <web-url>accessrestrictiontype</web-url>
+        <title-ref>accessrestrictiontype</title-ref>
+        <title>Access Restriction Type</title>
+        <options>
+            <option id="displayVisualRestriction">display/visual</option>
+            <option id="handlingGenderRestriction">handling: gender</option>
+            <option id="handlingOtherRestriction">handling: other</option>
+            <option id="lendingRestriction">lending</option>
+            <option id="publicationRestriction">publication</option>
+            <option id="researchAccessRestriction">research/access</option>
+            <option id="storageRestriction">storage</option>
+            <option id="treatmentRestriction">treatment</option>
+            <option id="unknown">unknown</option>
+        </options>
+    </instance>
 </instances>

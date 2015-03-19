@@ -343,7 +343,7 @@
             <option id="trapped">trapped</option>
         </options>
     </instance>
-        <instance id="vocab-accessrestrictiontype">
+    <instance id="vocab-accessrestrictiontype">
         <web-url>accessrestrictiontype</web-url>
         <title-ref>accessrestrictiontype</title-ref>
         <title>Access Restriction Type</title>
@@ -357,6 +357,34 @@
             <option id="storageRestriction">storage</option>
             <option id="treatmentRestriction">treatment</option>
             <option id="unknown">unknown</option>
+        </options>
+    </instance>
+    <instance id="vocab-measuredpart">
+        <web-url>measuredpart</web-url>
+        <title-ref>measuredpart</title-ref>
+        <title>Dimension - Measured Part</title>
+        <options>
+            <option id="base">base</option>
+            <option id="frame">frame</option>
+            <option id="framed">framed</option>
+            <option id="image_size">image size</option>
+            <option id="mount">mount</option>
+            <option id="paper_size">paper size</option>
+            <option id="plate_size">plate size</option>
+            <option id="unframed">unframed</option>
+            <option id="whole">whole</option>
+        </options>
+    </instance>
+    <instance id="vocab-measurementmethod">
+        <web-url>measurementmethod</web-url>
+        <title-ref>measurementmethod</title-ref>
+        <title>Dimension - Measurement Method</title>
+        <options>
+            <option id="calipers">calipers</option>
+            <option id="measuring_tape_cloth">measuring tape (cloth)</option>
+            <option id="measuring_tape_metal">measuring tape (metal)</option>
+            <option id="ruler">ruler</option>
+            <option id="scale">scale</option>
         </options>
     </instance>
 </instances>

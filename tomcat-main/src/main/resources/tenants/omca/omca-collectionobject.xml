@@ -1,6 +1,22 @@
 <record id="collection-object" is-extension="true">
     <services-record-path id="omca">collectionobjects_omca:http://collectionspace.org/services/collectionobject/local/omca,collectionobjects_omca</services-record-path>
     <section id="identificationInformation">
+        <repeat id="otherNumberList/otherNumber">
+            <field id="numberType" in-tab="yes" seperate_ui_container="true">
+                <!-- updating options list -->
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="doorbook-number">doorbook number</option>
+                    <option id="old-number">old number</option>
+                    <option id="old-count">old count</option>
+                    <option id="Lange-umber">Lange number</option>
+                    <option id="MoMA-number">MoMA number</option>
+                    <option id="negative-number">negative number</option>
+                    <option id="old-accession-number">old accession number</option>
+                    <option id="maker-number">maker number</option>
+                </options>
+            </field>
+        </repeat>
         <repeat id="responsibleDepartments" has-primary="yes">
             <field id="responsibleDepartment" ui-search="repeatable" mini="search,list" seperate_ui_container="true">
                 <!-- updating options list -->

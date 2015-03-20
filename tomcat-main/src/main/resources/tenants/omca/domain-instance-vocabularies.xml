@@ -171,7 +171,6 @@
             <option id="herpetology">Herpetology</option>
             <option id="icthyology">Icthyology</option>
             <option id="invertebrates">Invertebrates</option>
-            <option id="installation_art">Installation Artherpetology Herpetology</option>
             <option id="lapidary">Lapidary</option>
             <option id="malacology">Malacology</option>
             <option id="mammalogy">Mammalogy</option>
@@ -219,10 +218,12 @@
         <title>Phase</title>
         <options>
             <option id="adult">adult</option>
-            <option id="imago">imago</option>
             <option id="larva">larva</option>
-            <option id="nymph">nymph</option>
-            <option id="pupa">pupa</option>
+            <option id="immature">immature</option>
+            <option id="young">young</option>
+            <option id="duckling">duckling</option>
+            <option id="chick">chick</option>
+            <option id="juvenile">juvenile</option>
         </options>
     </instance>
     <instance id="vocab-form">
@@ -230,10 +231,19 @@
         <title-ref>form</title-ref>
         <title>Form</title>
         <options>
-            <option id="dry">dry</option>
             <option id="pinned">pinned</option>
-            <option id="thin_section">thin section</option>
-            <option id="wet">wet</option>
+            <option id="Riker_mount">Riker mount</option>
+            <option id="air_dried">air dried</option>
+            <option id="freeze_dried">freeze dried</option>
+            <option id="whole_mount">whole mount</option>
+            <option id="ROH">ROH</option>
+            <option id="mounted_in_microscope_slide">mounted in microscope slide</option>
+            <option id="conventional_taxidermy">conventional taxidermy</option>
+            <option id="conventional_mount">conventional mount</option>
+            <option id="frozen_specimen">frozen specimen</option>
+            <option id="pressed">pressed</option>
+            <option id="study_skin">study skin</option>
+            <option id="egg">egg</option>
         </options>
     </instance>
     <instance id="vocab-technicalattribute">

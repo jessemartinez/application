@@ -89,7 +89,7 @@
             <field id="photo" section="omca"></field>
         </repeat>
         <repeat id="determinationHistoryGroupList/determinationHistoryGroup" section="omca">
-            <field id="dhName" mini="list" autocomplete="taxon-taxon,taxon-common_ta" section="omca"></field>
+            <field id="dhName" mini="list" autocomplete="taxon-taxon" section="omca"></field>
             <field id="dhQualifier" seperate_ui_container="true" section="omca">
                 <options>
                     <option id="">Please select a value</option>
@@ -244,13 +244,16 @@
         <field id="exhibitionHistory" section="omca"></field>
     </section>
     <section id="objectViewerContributionInformation">
-        <field id="viewersRole" autocomplete="vocab-viewersrole" ui-type="enum">
-            <!-- adding vocab-viewersrole vocab -->
-        </field>
-        <repeat id="viewersNames" section="omca">
-            <field id="viewersName" autocomplete="person-person" section="omca"></field>
+        <repeat id="viewerContributionGroupList/viewerContributionGroup" section="omca">
+            <field id="viewerName" autocomplete="person-person" section="omca"></field>
+            <field id="viewerRole" autocomplete="vocab-viewersrole" ui-type="enum" section="omca"></field>
+            <field id="viewerContribution" section="omca"></field>
+            <field id="viewerContributionDate" ui-type="date" datatype="date" section="omca"></field>
+            <repeat id="viewerReferences" section="omca">
+                <field id="viewerReference" datatype="largetext" section="omca"></field>
+            </repeat>
+            <field id="viewerContributionNote" section="omca"></field>
         </repeat>
-        <field id="dateOfCompletion" ui-type="date" datatype="date" section="omca"></field>
     </section>
     <section id="objectCollectionInformation">
         <repeat id="fieldCollectionMethods">

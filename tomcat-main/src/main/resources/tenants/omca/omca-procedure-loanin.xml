@@ -1,0 +1,17 @@
+<record id="loanin" is-extension="true">
+    <services-record-path id="omca">loansin_omca:http://collectionspace.org/services/loanin/local/omca,loansin_omca</services-record-path>
+    <section id="loaninInformation">
+        <field id="loanPurpose" ui-search="repeatable" seperate_ui_container="true" autocomplete="vocab-loanpurpose" ui-type="enum">
+            <!-- removing options block; adding vocab-loanpurpose vocab -->
+            <options action='delete'/>
+        </field>
+        <repeat id="loanStatusGroupList/loanStatusGroup">
+            <field id="loanStatus" ui-search="repeatable" autocomplete="vocab-loaninstatus" ui-type="enum">
+                <!-- changing vocab to vocab-loaninstatus -->
+            </field>
+        </repeat>
+        <field id="lenderNote" section="omca"></field>
+        <field id="creditLine" section="omca"></field>
+        <field id="anonymous" datatype="boolean" section="omca"></field>
+    </section>
+</record>

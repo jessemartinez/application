@@ -397,4 +397,37 @@
             <option id="scale">scale</option>
         </options>
     </instance>
+    <instance id="vocab-loaninstatus">
+        <web-url>loaninstatus</web-url>
+        <title-ref>loaninstatus</title-ref>
+        <title>Loan In Status</title>
+        <options>
+            <option id="agreed">agreed</option>
+            <option id="authorized">authorized</option>
+            <option id="conservation">conservation</option>
+            <option id="photography_requested">photography requested</option>
+            <option id="refused">refused</option>
+            <option id="renewed">renewed</option>
+            <option id="requested">requested</option>
+            <option id="returned">returned</option>
+            <option id="sent">sent</option>
+            <option id="permanent">permanent</option>
+            <option id="temporary">temporary</option>
+            <option id="extended">extended</option>
+        </options>
+    </instance>
+    <instance id="vocab-loanpurpose">
+        <web-url>loanpurpose</web-url>
+        <title-ref>loanpurpose</title-ref>
+        <title>Loan Purpose</title>
+        <options>
+            <option id="exhibition">exhibition</option>
+            <option id="research">research</option>
+            <option id="scientific_or_exhibition_preparation">scientific or exhibition preparation</option>
+            <option id="analysis">analysis</option>
+            <option id="photography">photography</option>
+            <option id="conservation_or_other_requested_services">conservation or other requested services</option>
+            <option id="long_term_collections_management_and_storage">long term collections management and storage</option>
+        </options>
+    </instance>
 </instances>

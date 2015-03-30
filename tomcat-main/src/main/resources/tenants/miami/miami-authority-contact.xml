@@ -1,0 +1,10 @@
+<record id="contact" is-extension="true">
+    <section id="contactInformation">
+        <repeat id="webAddressGroupList/webAddressGroup">
+            <field id="webAddressType">
+                <!-- converting into plain text field -->
+                <options action="delete"/>
+            </field>
+        </repeat>
+    </section>
+</record>

@@ -1,0 +1,102 @@
+<instances>
+    <instance id="vocab-objectTag">
+        <web-url>objectTag</web-url>
+        <title-ref>objectTag</title-ref>
+        <title>Object Tag</title>
+        <options>
+            <option id="Abstract">Abstract</option>
+            <option id="Bronze">Bronze</option>
+            <option id="Ceramic">Ceramic</option>
+            <option id="Commemorative">Commemorative</option>
+            <option id="Conceptual">Conceptual</option>
+            <option id="Etching">Etching</option>
+            <option id="Flooring">Flooring</option>
+            <option id="Fountain">Fountain</option>
+            <option id="Functional">Functional</option>
+            <option id="Glass">Glass</option>
+            <option id="Iconic">Iconic</option>
+            <option id="Integrated">Integrated</option>
+            <option id="Interactive">Interactive</option>
+            <option id="Landscape_Design">Landscape Design</option>
+            <option id="Light_art">Light art</option>
+            <option id="Marble">Marble</option>
+            <option id="Metalwork">Metalwork</option>
+            <option id="Mosaic">Mosaic</option>
+            <option id="Mural">Mural</option>
+            <option id="Neon">Neon</option>
+            <option id="New_media">New media</option>
+            <option id="Op_art">Op art</option>
+            <option id="Painting">Painting</option>
+            <option id="Pavers">Pavers</option>
+            <option id="Photography">Photography</option>
+            <option id="Plaza">Plaza</option>
+            <option id="Sculpture">Sculpture</option>
+            <option id="Site_Specific">Site-Specific</option>
+            <option id="Sound_art">Sound art</option>
+            <option id="Technology">Technology</option>
+            <option id="Terrazzo">Terrazzo</option>
+            <option id="Three_dimensional">Three dimensional</option>
+            <option id="Tile">Tile</option>
+            <option id="Transportation">Transportation</option>
+            <option id="Two_dimensional">Two dimensional</option>
+            <option id="Video">Video</option>
+            <option id="Wall_Treatment">Wall Treatment</option>
+            <option id="Water">Water</option>
+        </options>
+    </instance>
+    <instance id="vocab-specialStatus">
+        <web-url>security</web-url>
+        <title-ref>security</title-ref>
+        <title>Security</title>
+        <options>
+            <option id="In_Progress">In Progress</option>
+            <option id="Available_for_Adoption">Available for Adoption</option>
+            <option id="Repair_and_Restoration">Repair and Restoration</option>
+        </options>
+    </instance>
+    <instance id="vocab-signageStatus">
+        <web-url>signageStatus</web-url>
+        <title-ref>signageStatus</title-ref>
+        <title>Signage Status</title>
+        <options>
+            <option id="installed">installed</option>
+            <option id="on_hand">on hand</option>
+            <option id="need_to_order">need to order</option>
+        </options>
+    </instance>
+    <instance id="vocab-security">
+        <web-url>security</web-url>
+        <title-ref>security</title-ref>
+        <title>Security</title>
+        <options>
+            <option id="secured">secured</option>
+            <option id="alarm">alarm</option>
+            <option id="unsecured">unsecured</option>
+        </options>
+    </instance>
+    <instance id="vocab-recordStatus">
+        <web-url>recordStatus</web-url>
+        <title-ref>recordStatus</title-ref>
+        <title>Record Status</title>
+        <options>
+            <option id="Active">Active</option>
+            <option id="Inactive">Inactive</option>
+        </options>
+    </instance>
+    <instance id="vocab-recordType">
+        <web-url>recordType</web-url>
+        <title-ref>recordType</title-ref>
+        <title>Record Type</title>
+        <options>
+            <option value="Lost_Stolen">Lost/Stolen</option>
+            <option value="Accessioned">Accessioned</option>
+            <option value="To_be_deaccessioned">To be deaccessioned</option>
+            <option value="Deaccessioned">Deaccessioned</option>
+            <option value="To_be_accessioned">To be accessioned</option>
+            <option value="Owned_by_Municipality">Owned by Municipality</option>
+            <option value="In_Progress">In Progress</option>
+            <option value="Duplicate">Duplicate</option>
+            <option value="Proposal_To_be_accessioned">Proposal; To be accessioned</option>
+        </options>
+    </instance>
+</instances>

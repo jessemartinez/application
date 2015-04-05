@@ -1,49 +1,44 @@
 <record id="collection-object" is-extension="true">
     <services-record-path id="miami">collectionobjects_miami:http://collectionspace.org/services/collectionobject/local/miami,collectionobjects_miami</services-record-path>
+    <section id="coreInformation">
+        <field id="nametitle" action="delete">
+            <!-- Removing field since we aren't combining objectName into a unified record name -->
+        </field>
+    </section>
     <section id="identificationInformation">
+        <field id="collection" ui-search="repeatable" seperate_ui_container="true">
+            <!-- removing options block -->
+            <options action="delete"/>
+        </field>
+        <field id="recordStatus" ui-search="repeatable" autocomplete="vocab-recordStatus" ui-type="enum" seperate_ui_container="true">
+            <!-- removing options block; adding vocab-recordStatus vocab -->
+            <options action="delete"/>
+        </field>
+        <repeat id="titleGroupList/titleGroup">
+            <field id="title" ui-search="repeatable" in-title="yes" mini="summary,search,list,relate">
+                <!-- Making Title the sole summary field; added 'summary' and 'relate' to mini attribute -->
+            </field>
+        </repeat>
         <repeat id="objectTags" section="miami">
-            <field id="objectTag" section="miami">
-                <options>
-                    <option id="">Please select a value</option>
-                    <option id="Abstract">Abstract</option>
-                    <option id="Bronze">Bronze</option>
-                    <option id="Ceramic">Ceramic</option>
-                    <option id="Commemorative">Commemorative</option>
-                    <option id="Conceptual">Conceptual</option>
-                    <option id="Etching">Etching</option>
-                    <option id="Flooring">Flooring</option>
-                    <option id="Fountain">Fountain</option>
-                    <option id="Functional">Functional</option>
-                    <option id="Glass">Glass</option>
-                    <option id="Iconic">Iconic</option>
-                    <option id="Integrated">Integrated</option>
-                    <option id="Interactive">Interactive</option>
-                    <option id="Landscape Design">Landscape Design</option>
-                    <option id="Light art">Light art</option>
-                    <option id="Marble">Marble</option>
-                    <option id="Metalwork">Metalwork</option>
-                    <option id="Mosaic">Mosaic</option>
-                    <option id="Mural">Mural</option>
-                    <option id="Neon">Neon</option>
-                    <option id="New media">New media</option>
-                    <option id="Op art">Op art</option>
-                    <option id="Painting">Painting</option>
-                    <option id="Pavers">Pavers</option>
-                    <option id="Photography">Photography</option>
-                    <option id="Plaza">Plaza</option>
-                    <option id="Sculpture">Sculpture</option>
-                    <option id="Site-Specific">Site-Specific</option>
-                    <option id="Sound art">Sound art</option>
-                    <option id="Technology">Technology</option>
-                    <option id="Terrazzo">Terrazzo</option>
-                    <option id="Three dimensional">Three dimensional</option>
-                    <option id="Tile">Tile</option>
-                    <option id="Transportation">Transportation</option>
-                    <option id="Two dimensional">Two dimensional</option>
-                    <option id="Video">Video</option>
-                    <option id="Wall Treatment">Wall Treatment</option>
-                    <option id="Water">Water</option>
-                </options>
+            <field id="objectTag" autocomplete="vocab-objectTag" ui-type="enum" section="miami"></field>
+        </repeat>
+        <field id="specialStatus" autocomplete="vocab-specialStatus" ui-type="enum" section="miami"></field>
+        <field id="exhibited" section="miami"></field>
+        <repeat id="policeReportGroupList/policeReportGroup" section="miami">
+            <field id="policeReportNumber" section="miami"></field>
+            <field id="policeReportDate" ui-type="date" datatype="date" section="miami"></field>
+            <field id="policeReportNote" section="miami"></field>
+        </repeat>
+        <field id="signageStatus" autocomplete="vocab-signageStatus" ui-type="enum" section="miami"></field>
+        <repeat id="securities" section="miami">
+            <field id="security" autocomplete="vocab-security" ui-type="enum" section="miami"></field>
+        </repeat>
+    </section>
+    <section id="descriptionInformation">
+        <repeat id="objectStatusList" services-type-anonymous="false">
+            <field id="objectStatus" ui-search="repeatable" autocomplete="vocab-recordType" ui-type="enum" seperate_ui_container="true">
+                <!-- removing options block; adding vocab-recordType vocab -->
+                <options action="delete"/>
             </field>
         </repeat>
     </section>

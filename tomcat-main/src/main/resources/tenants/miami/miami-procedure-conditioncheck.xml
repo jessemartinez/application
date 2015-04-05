@@ -1,0 +1,13 @@
+<record id="conditioncheck" is-extension="true">
+    <services-record-path id="miami">conditionchecks_miami:http://collectionspace.org/services/conditioncheck/local/miami,conditionchecks_miami</services-record-path>
+    <section id="objectConditionInformation">
+        <field id="conservationCostEstimateCurrency" autocomplete="vocab-currency" ui-type="enum" section="miami"></field>
+        <field id="conservationCostEstimateValue" ui-type="validated" datatype="float" section="miami"></field>
+        <field id="maintenanceSchedule" section="miami"></field>
+        <field id="previousMaintenance" section="miami"></field>
+        <field id="previousActionDate" ui-type="date" datatype="date" section="miami"></field>
+        <field id="previousActionDescription" section="miami"></field>
+        <field id="lastActionDate" ui-type="date" datatype="date" section="miami"></field>
+        <field id="lastActionDateNote" section="miami"></field>
+    </section>
+</record>

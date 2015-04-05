@@ -16,7 +16,7 @@
 
             <include src="base-procedure-acquisition.xml"/>
             <include src="base-procedure-blobs.xml"/>
-            <include src="base-procedure-conditioncheck.xml"/>
+            <include src="base-procedure-conditioncheck.xml,miami-procedure-conditioncheck.xml" merge="xmlmerge.properties"/>
             <include src="base-procedure-groups.xml"/>
             <include src="base-procedure-intake.xml"/>
             <include src="base-procedure-loanin.xml"/>

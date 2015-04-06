@@ -1,78 +1,8 @@
 <record id="location" is-extension="true">
     <services-record-path id="miami">locations_miami:http://collectionspace.org/services/location/local/miami,locations_miami</services-record-path>
     <section id="locationTermInformation">
-        <field id="addressAgency" ui-search="repeatable" section="miami">
-            <options>
-                <option id="">Please select a value</option>
-                <option id="(see detail)">(see detail)</option>
-                <option id="Advocacy">Advocacy</option>
-                <option id="Ag Mgr.">Ag Mgr.</option>
-                <option id="Animal Services">Animal Services</option>
-                <option id="APP">APP</option>
-                <option id="Arena">Arena</option>
-                <option id="Bayfront Park">Bayfront Park</option>
-                <option id="BCC">BCC</option>
-                <option id="CAHSD">CAHSD</option>
-                <option id="CAO">CAO</option>
-                <option id="CITT">CITT</option>
-                <option id="City of Aventura">City of Aventura</option>
-                <option id="City of Hialeah">City of Hialeah</option>
-                <option id="City of Miami">City of Miami</option>
-                <option id="City of North Miami">City of North Miami</option>
-                <option id="COC">COC</option>
-                <option id="Consumer Services">Consumer Services</option>
-                <option id="Courts">Courts</option>
-                <option id="CUA">CUA</option>
-                <option id="DCR">DCR</option>
-                <option id="DPM">DPM</option>
-                <option id="EOB">EOB</option>
-                <option id="ERD">ERD</option>
-                <option id="ETSD">ETSD</option>
-                <option id="FIN">FIN</option>
-                <option id="FTBG">FTBG</option>
-                <option id="HMSF">HMSF</option>
-                <option id="Housing">Housing</option>
-                <option id="Human Services">Human Services</option>
-                <option id="ISD">ISD</option>
-                <option id="ITC">ITC</option>
-                <option id="JTCHC">JTCHC</option>
-                <option id="LIB">LIB</option>
-                <option id="MAM">MAM</option>
-                <option id="MDAD">MDAD</option>
-                <option id="MDCR">MDCR</option>
-                <option id="MDFR">MDFR</option>
-                <option id="MDHT">MDHT</option>
-                <option id="MDPD">MDPD</option>
-                <option id="MDT">MDT</option>
-                <option id="Miami Dade College">Miami Dade College</option>
-                <option id="Miami Marlins">Miami Marlins</option>
-                <option id="MPO">MPO</option>
-                <option id="OFEP">OFEP</option>
-                <option id="Office of the Mayor">Office of the Mayor</option>
-                <option id="OMB">OMB</option>
-                <option id="PAC">PAC</option>
-                <option id="PHT">PHT</option>
-                <option id="PROS">PROS</option>
-                <option id="PWWM">PWWM</option>
-                <option id="RER">RER</option>
-                <option id="SAO">SAO</option>
-                <option id="Seaport">Seaport</option>
-                <option id="Unknown">Unknown</option>
-                <option id="Various">Various</option>
-                <option id="WASD">WASD</option>
-            </options>
-        </field>
-        <field id="addressRegion" section="miami">
-            <options>
-                <option id="">Please select a value</option>
-                <option id="central">central</option>
-                <option id="south">south</option>
-                <option id="southwest">southwest</option>
-                <option id="northwest">northwest</option>
-                <option id="north">north</option>
-                <option id="central">central</option>
-            </options>
-        </field>
+        <field id="addressAgency" autocomplete="vocab-addressAgency" ui-type="enum" section="miami"></field>
+        <field id="addressRegion" autocomplete="vocab-addressRegion" ui-type="enum" section="miami"></field>
         <field id="addressBuilding" section="miami"></field>
         <field id="addressStreet" section="miami"></field>
         <field id="addressCity" section="miami"></field>
@@ -100,5 +30,12 @@
         <field id="addressDirection" section="miami"></field>
         <field id="addressLongitude" ui-type="validated" datatype="float" section="miami"></field>
         <field id="addressLatitude"  ui-type="validated" datatype="float" section="miami"></field>
+        <field id="locatedOutside" section="miami">
+            <options>
+                <option id="">Please select a value</option>
+                <option id="yes">yes</option>
+                <option id="no">no</option>
+            </options>
+        </field>
     </section>
 </record>

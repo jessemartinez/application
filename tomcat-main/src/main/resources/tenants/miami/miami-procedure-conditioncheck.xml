@@ -1,6 +1,14 @@
 <record id="conditioncheck" is-extension="true">
     <services-record-path id="miami">conditionchecks_miami:http://collectionspace.org/services/conditioncheck/local/miami,conditionchecks_miami</services-record-path>
     <section id="objectConditionInformation">
+        <repeat id="conditionCheckGroupList/conditionCheckGroup">
+            <field id="condition" ui-search="repeatable" seperate_ui_container="true" mini="">
+                <!-- removing mini attributes -->
+            </field>
+        </repeat>
+        <field id="conservationTreatmentPriority" ui-search="repeatable" in-title="yes" mini="summary,search,list,relate" seperate_ui_container="">
+            <!-- adding mini attributes -->
+        </field>
         <field id="conservationCostEstimateCurrency" autocomplete="vocab-currency" ui-type="enum" section="miami"></field>
         <field id="conservationCostEstimateValue" ui-type="validated" datatype="float" section="miami"></field>
         <field id="maintenanceSchedule" section="miami"></field>

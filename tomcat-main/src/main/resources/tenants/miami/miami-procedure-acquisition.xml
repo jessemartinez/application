@@ -1,0 +1,12 @@
+<record id="acquisition" is-extension="true">
+    <section id="acquisitionInformation">
+        <repeat id="acquisitionFundingList/acquisitionFunding">
+            <field id="acquisitionFundingCurrency" autocomplete="vocab-currency" ui-type="enum">
+                <!-- updating default value -->
+                <enum>
+                    <default>urn:cspace:miamidadepublicart.org:vocabularies:name(currency):item:name(USD)'US Dollar'</default>
+                </enum>
+            </field>
+        </repeat>
+    </section>
+</record>

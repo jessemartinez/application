@@ -14,7 +14,7 @@
             <include src="base-collectionobject.xml,miami-collectionobject.xml" merge="xmlmerge.properties"/>
             <include src="base-authority.xml"/>
 
-            <include src="base-procedure-acquisition.xml"/>
+            <include src="base-procedure-acquisition.xml,miami-procedure-acquisition.xml" merge="xmlmerge.properties"/>
             <include src="base-procedure-blobs.xml"/>
             <include src="base-procedure-conditioncheck.xml,miami-procedure-conditioncheck.xml" merge="xmlmerge.properties"/>
             <include src="base-procedure-groups.xml"/>

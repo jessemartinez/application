@@ -9,7 +9,11 @@
         <field id="conservationTreatmentPriority" ui-search="repeatable" in-title="yes" mini="summary,search,list,relate" seperate_ui_container="">
             <!-- adding mini attributes -->
         </field>
-        <field id="conservationCostEstimateCurrency" autocomplete="vocab-currency" ui-type="enum" section="miami"></field>
+        <field id="conservationCostEstimateCurrency" autocomplete="vocab-currency" ui-type="enum" section="miami">
+            <enum>
+                <default>urn:cspace:miamidadepublicart.org:vocabularies:name(currency):item:name(USD)'US Dollar'</default>
+            </enum>
+        </field>
         <field id="conservationCostEstimateValue" ui-type="validated" datatype="float" section="miami"></field>
         <field id="maintenanceSchedule" section="miami"></field>
         <field id="previousMaintenance" section="miami"></field>

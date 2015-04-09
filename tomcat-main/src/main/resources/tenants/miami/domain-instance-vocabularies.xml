@@ -194,4 +194,27 @@
             <option id="Repair_welds">repair welds</option>
         </options>
     </instance>
+    <instance id="vocab-mediaType">
+        <web-url>mediaType</web-url>
+        <title-ref>mediaType</title-ref>
+        <title>Media Type</title>
+        <options>
+            <option id="Dataset">Dataset</option>
+            <option id="Document">Document</option>
+            <option id="Moving_image">Moving image</option>
+            <option id="Still_image">Still image</option>
+            <option id="Hi_res_photo">Hi-res photo</option>
+            <option id="Appraisal_photo_with_date_stamp">Appraisal photo with date stamp</option>
+            <option id="Web_use_photo">Web use photo</option>
+            <option id="Sound">Sound</option>
+            <option id="Catalog_worksheet">Catalog worksheet</option>
+            <option id="Condition_assessment_report">Condition/assessment report</option>
+            <option id="Memo">Memo</option>
+            <option id="Press_release">Press release</option>
+            <option id="Police_report">Police report</option>
+            <option id="Resolution">Resolution</option>
+            <option id="Signage_text">Signage text</option>
+            <option id="other_non_specified_document">Other (non-specified) document</option>
+        </options>
+    </instance>
 </instances>

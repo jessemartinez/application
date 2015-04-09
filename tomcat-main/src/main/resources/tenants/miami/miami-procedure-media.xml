@@ -1,0 +1,21 @@
+<record id="media" is-extension="true">
+    <services-record-path id="miami">media_miami:http://collectionspace.org/services/media/local/miami,media_miami</services-record-path>
+    <section id="mediaInformation">
+        <field id="title" ui-search="repeatable" mini="search,list" services-schema-qualify="true">
+            <!-- removing mini="summary,relate" attribute values -->
+        </field>
+        <repeat id="types">
+            <field id="type" ui-search="repeatable" autocomplete="vocab-mediaType" ui-type="enum">
+                <!-- removing options block; adding vocab-mediaType vocab -->
+                <options action="delete"/>
+            </field>
+        </repeat>
+        <field id="mediaSummary" mini="summary,list,relate" in-title="yes" section="miami"></field>
+        <field id="primaryMedia" mini="search,list"  section="miami">
+            <options>
+                <option id="" default="yes">no</option>
+                <option id="(primary media)">yes</option>
+            </options>
+        </field>
+    </section>
+</record>

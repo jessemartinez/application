@@ -217,4 +217,13 @@
             <option id="other_non_specified_document">Other (non-specified) document</option>
         </options>
     </instance>
+    <instance id="vocab-fairMarketValue">
+        <web-url>fairMarketValue</web-url>
+        <title-ref>fairMarketValue</title-ref>
+        <title>Fair Market Value</title>
+        <options>
+            <option id="Current_value">Current value</option>
+            <option id="Original_value">Original value</option>
+        </options>
+    </instance>
 </instances>

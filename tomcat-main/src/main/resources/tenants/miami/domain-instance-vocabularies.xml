@@ -174,4 +174,24 @@
             <option id="Southwest">Southwest</option>
         </options>
     </instance>
+    <instance id="vocab-maintenanceFrequency">
+        <web-url>maintenanceFrequency</web-url>
+        <title-ref>maintenanceFrequency</title-ref>
+        <title>Maintenance Frequency</title>
+        <options>
+            <option id="Monthly">Monthly</option>
+            <option id="Bi_annual">Bi-annual</option>
+            <option id="Annual">Annual</option>
+            <option id="Custom">Custom</option>
+        </options>
+    </instance>
+    <instance id="vocab-maintenanceActionRequired">
+        <web-url>maintenanceActionRequired</web-url>
+        <title-ref>maintenanceActionRequired</title-ref>
+        <title>Maintenance Action Required</title>
+        <options>
+            <option id="Cleaning">Cleaning</option>
+            <option id="Repair_welds">repair welds</option>
+        </options>
+    </instance>
 </instances>

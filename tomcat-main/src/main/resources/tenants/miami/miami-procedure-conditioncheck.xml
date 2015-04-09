@@ -15,7 +15,10 @@
             </enum>
         </field>
         <field id="conservationCostEstimateValue" ui-type="validated" datatype="float" section="miami"></field>
-        <field id="maintenanceSchedule" section="miami"></field>
+        <repeat id="maintenanceScheduleGroupList/maintenanceScheduleGroup" section="miami">
+            <field id="maintenanceFrequency" autocomplete="vocab-maintenanceFrequency" ui-type="enum" section="miami"></field>
+            <field id="maintenanceActionRequired" autocomplete="vocab-maintenanceActionRequired" ui-type="enum" section="miami"></field>
+        </repeat>
         <field id="previousMaintenance" section="miami"></field>
         <field id="previousActionDate" ui-type="date" datatype="date" section="miami"></field>
         <field id="previousActionDescription" section="miami"></field>

@@ -39,14 +39,25 @@
         <title-ref>persontitle</title-ref>
         <title>Person Title</title>
         <options>
-            <option id="Mr">Mr</option>
-            <option id="Mrs">Mrs</option>
-            <option id="Ms">Ms</option>
+            <option id="Mr">Mr.</option>
+            <option id="Mrs">Mrs.</option>
+            <option id="Ms">Ms.</option>
             <option id="Miss">Miss</option>
             <option id="Dr">Dr.</option>
             <option id="Prof">Prof.</option>
             <option id="Capt">Capt.</option>
             <option id="Rev">Rev.</option>
+        </options>
+    </instance>
+    <instance id="vocab-gender">
+        <web-url>gender</web-url>
+        <title-ref>gender</title-ref>
+        <title>Gender</title>
+        <options>
+            <option id="female">female</option>
+            <option id="male">male</option>
+            <option id="non_binary">non-binary</option>
+            <option id="transgender">transgender</option>
         </options>
     </instance>
     <instance id="vocab-organizationfunction">

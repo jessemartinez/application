@@ -13,6 +13,10 @@
                 <selector>personAuthority-nationality</selector>
             </field>
         </repeat>
+        <field id="gender" ui-search="repeatable" autocomplete="vocab-gender" ui-type="enum">
+            <!-- removing options block; adding vocab-gender vocab -->
+            <options action="delete"/>
+        </field>
         <repeat id="schoolsOrStyles">
             <field id="schoolOrStyle" ui-search="repeatable" autocomplete="concept-concept">
                 <!-- adding concept authority vocab -->

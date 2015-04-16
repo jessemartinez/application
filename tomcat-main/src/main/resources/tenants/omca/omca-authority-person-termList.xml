@@ -7,14 +7,22 @@
                 <options>
                     <option id="">Please select a value</option>
                     <option id="descriptor">Descriptor</option>
-                    <option id="alternatedescriptor">Alternate descriptor</option>
-                    <option id="usedforterm">Used for term</option>
+                    <option id="alternate-descriptor">Alternate descriptor</option>
+                    <option id="used-for-term">Used for term</option>
+                </options>
+            </field>
+            <field id="salutation">
+                <!-- adding default blank value -->
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="dear">Dear</option>
+                    <option id="hello">Hello</option>
+                    <option id="to">To</option>
                 </options>
             </field>
             <field id="title" autocomplete="vocab-persontitle" ui-type="enum">
                 <!-- adding persontitle authority; deleting options list -->
-                <selector>personAuthority-title</selector>
-                <options id="delete" />
+                <options action="delete" />
             </field>
         </repeat>
     </section>

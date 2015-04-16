@@ -7,8 +7,18 @@
                 <options>
                     <option id="">Please select a value</option>
                     <option id="descriptor">Descriptor</option>
-                    <option id="alternatedescriptor">Alternate descriptor</option>
-                    <option id="usedforterm">Used for term</option>
+                    <option id="alternate-descriptor">Alternate descriptor</option>
+                    <option id="used-for-term">Used for term</option>
+                </options>
+            </field>
+            <field id="historicalStatus">
+                <!-- adding default blank value -->
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="current">Current</option>
+                    <option id="historical">Historical</option>
+                    <option id="both">Both</option>
+                    <option id="unknown">Unknown</option>
                 </options>
             </field>
         </repeat>

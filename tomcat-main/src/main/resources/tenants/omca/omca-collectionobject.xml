@@ -2,19 +2,9 @@
     <services-record-path id="omca">collectionobjects_omca:http://collectionspace.org/services/collectionobject/local/omca,collectionobjects_omca</services-record-path>
     <section id="identificationInformation">
         <repeat id="otherNumberList/otherNumber">
-            <field id="numberType" in-tab="yes" seperate_ui_container="true">
-                <!-- updating options list -->
-                <options>
-                    <option id="">Please select a value</option>
-                    <option id="doorbook-number">doorbook number</option>
-                    <option id="old-number">old number</option>
-                    <option id="old-count">old count</option>
-                    <option id="Lange-umber">Lange number</option>
-                    <option id="MoMA-number">MoMA number</option>
-                    <option id="negative-number">negative number</option>
-                    <option id="old-accession-number">old accession number</option>
-                    <option id="maker-number">maker number</option>
-                </options>
+            <field id="numberType" in-tab="yes" autocomplete="vocab-numberType" ui-type="enum" seperate_ui_container="true">
+                <!-- removing options block; adding vocab-numberType vocab -->
+                <options action='delete'/>
             </field>
         </repeat>
         <repeat id="responsibleDepartments" has-primary="yes">
@@ -33,26 +23,23 @@
                 </options>
             </field>
         </repeat>
-        <field id="collection" ui-search="repeatable" seperate_ui_container="true">
+        <field id="collection" ui-search="repeatable" autocomplete="vocab-titletype" ui-type="enum" seperate_ui_container="true">
+             <!-- removing options block; adding vocab-numberType vocab -->
+            <options action='delete'/>
+        </field>
+        <field id="recordStatus" ui-search="repeatable" seperate_ui_container="true">
             <!-- updating options list -->
             <options>
-                <option id="">Please select a value</option>
-                <option id="All-Of-Us-Or-None">All Of Us Or None</option>
-                <option id="Andrew-J-Russell">Andrew J. Russell</option>
-                <option id="Arthur-and-Lucia-Mathews">Arthur and Lucia Mathews</option>
-                <option id="Bob-Walker">Bob Walker</option>
-                <option id="Dorothea-Lange">Dorothea Lange</option>
-                <option id="Helen-Nestor">Helen Nestor</option>
-                <option id="Kahn-Collection">Kahn Collection</option>
-                <option id="Moses-Cohen">Moses Cohen</option>
-                <option id="Margaret-De-Patta">Margaret De Patta</option>
-                <option id="Ted-and-Ruth-Nash">Ted and Ruth Nash</option>
-                <option id="Tribune">Tribune</option>
+                <option id="approved">Approved</option>
+                <option id="new" default="yes">New</option>
+                <option id="temporary">Temporary</option>
+                <option id="pending-curatorial-review">Pending curatorial review</option>
+                <option id="priority-cleanup">Priority cleanup</option>
             </options>
         </field>
         <repeat id="titleGroupList/titleGroup">
-            <field id="titleType" autocomplete="vocab-titletype" ui-type="enum" seperate_ui_container="true">
-                <!-- removing options block; adding vocab-titletype vocab -->
+            <field id="titleType" autocomplete="vocab-collection" ui-type="enum" seperate_ui_container="true">
+                <!-- removing options block; adding vocab-collection vocab -->
                 <options action='delete'/>
             </field>
         </repeat>
@@ -81,9 +68,9 @@
         <repeat id="categories" section="omca">
             <field id="category" autocomplete="vocab-category" ui-type="enum" section="omca"></field>
         </repeat>
-        <field id="art" datatype="boolean" section="omca"></field>
-        <field id="history" datatype="boolean" section="omca"></field>
-        <field id="science" datatype="boolean" section="omca"></field>
+        <field id="art" ui-search="single" datatype="boolean" section="omca"></field>
+        <field id="history" ui-search="single" datatype="boolean" section="omca"></field>
+        <field id="science" ui-search="single" datatype="boolean" section="omca"></field>
         <field id="publishedOnWeb" datatype="boolean" section="omca"></field>
         <repeat id="photos" section="omca">
             <field id="photo" section="omca"></field>
@@ -241,7 +228,9 @@
             </repeat>
         </section>
         <field id="argusFoundAndUsed" section="omca"></field>
-        <field id="exhibitionHistory" section="omca"></field>
+        <repeat id="exhibitionHistories" section="omca">
+            <field id="exhibitionHistory" section="omca"></field>
+        </repeat>
     </section>
     <section id="objectViewerContributionInformation">
         <repeat id="viewerContributionGroupList/viewerContributionGroup" section="omca">

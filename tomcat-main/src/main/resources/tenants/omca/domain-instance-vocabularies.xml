@@ -60,6 +60,39 @@
             <option id="transgender">transgender</option>
         </options>
     </instance>
+    <instance id="vocab-numberType">
+        <web-url>numberType</web-url>
+        <title-ref>numberType</title-ref>
+        <title>Number Type</title>
+        <options>
+            <option id="doorbook_number">doorbook number</option>
+            <option id="old_number">old number</option>
+            <option id="old_count">old count</option>
+            <option id="Lange_number">Lange number</option>
+            <option id="MoMA_number">MoMA number</option>
+            <option id="negative_number">negative number</option>
+            <option id="old_accession_number">old accession number</option>
+            <option id="maker_number">maker number</option>
+        </options>
+    </instance>
+    <instance id="vocab-collection">
+        <web-url>collection</web-url>
+        <title-ref>collection</title-ref>
+        <title>Collection</title>
+        <options>
+            <option id="All_Of_Us_Or_None">All Of Us Or None</option>
+            <option id="Andrew_J_Russell">Andrew J. Russell</option>
+            <option id="Arthur_and_Lucia_Mathews">Arthur and Lucia Mathews</option>
+            <option id="Bob_Walker">Bob Walker</option>
+            <option id="Dorothea_Lange">Dorothea Lange</option>
+            <option id="Helen_Nestor">Helen Nestor</option>
+            <option id="Kahn_Collection">Kahn Collection</option>
+            <option id="Moses_Cohen">Moses Cohen</option>
+            <option id="Margaret_De_Patta">Margaret De Patta</option>
+            <option id="Ted_and_Ruth_Nash">Ted and Ruth Nash</option>
+            <option id="Tribune">Tribune</option>
+        </options>
+    </instance>
     <instance id="vocab-organizationfunction">
         <web-url>organizationfunction</web-url>
         <title-ref>organizationfunction</title-ref>

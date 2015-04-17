@@ -29,10 +29,19 @@
                     <!-- updating options block -->
                     <options>
                         <option id="">Please select a value</option>
+                        <option id="carats">carats</option>
+                        <option id="centimeters">centimeters</option>
+                        <option id="cubic-centimeters">cubic centimeters</option>
                         <option id="feet">feet</option>
                         <option id="inches">inches</option>
+                        <option id="kilograms">kilograms</option>
+                        <option id="liters">liters</option>
+                        <option id="meters">meters</option>
+                        <option id="millimeters">millimeters</option>
                         <option id="minutes">minutes</option>
                         <option id="ounces">ounces</option>
+                        <option id="stories">stories</option>
+                        <option id="pixels">pixels</option>
                         <option id="pixels-per-inch">pixels per inch</option>
                         <option id="pounds">pounds</option>
                         <option id="square-feet">square feet</option>

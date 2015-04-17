@@ -75,6 +75,54 @@
             <option id="maker_number">maker number</option>
         </options>
     </instance>
+    <instance id="vocab-responsibleDepartment">
+        <web-url>responsibleDepartment</web-url>
+        <title-ref>responsibleDepartment</title-ref>
+        <title>Responsible Department</title>
+        <options>
+            <option id="Art_Department">Art Department</option>
+            <option id="History_Department">History Department</option>
+            <option id="Science_Department">Science Department</option>
+            <option id="Professional_Services_Department">Professional Services Department</option>
+            <option id="Education_Department">Education Department</option>
+            <option id="Multiple">Multiple</option>
+            <option id="CIA">CIA</option>
+            <option id="CPC">CPC</option>
+        </options>
+    </instance>
+    <instance id="vocab-recordStatus">
+        <web-url>recordStatus</web-url>
+        <title-ref>recordStatus</title-ref>
+        <title>Record Status</title>
+        <options>
+            <option id="approved">Approved</option>
+            <option id="new">New</option>
+            <option id="temporary">Temporary</option>
+            <option id="pending_curatorial_review">Pending curatorial review</option>
+            <option id="priority_cleanup">Priority cleanup</option>
+        </options>
+    </instance>
+    <instance id="vocab-determinationQualifier">
+        <web-url>determinationQualifier</web-url>
+        <title-ref>determinationQualifier</title-ref>
+        <title>Determination Qualifier</title>
+        <options>
+            <option id="Genus_species">Genus species</option>
+            <option id="Family">Family</option>
+            <option id="Common_Name">Common Name</option>
+        </options>
+    </instance>
+    <instance id="vocab-determinationKind">
+        <web-url>determinationKind</web-url>
+        <title-ref>determinationKind</title-ref>
+        <title>Determination Kind</title>
+        <options>
+            <option id="original_label_determination">original label determination</option>
+            <option id="fide">fide</option>
+            <option id="nomenclatural_change">nomenclatural change</option>
+            <option id="taxonomic_change">taxonomic change</option>
+        </options>
+    </instance>
     <instance id="vocab-collection">
         <web-url>collection</web-url>
         <title-ref>collection</title-ref>

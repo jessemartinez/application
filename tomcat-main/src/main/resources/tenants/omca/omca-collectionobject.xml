@@ -8,34 +8,26 @@
             </field>
         </repeat>
         <repeat id="responsibleDepartments" has-primary="yes">
-            <field id="responsibleDepartment" ui-search="repeatable" mini="search,list" seperate_ui_container="true">
-                <!-- updating options list -->
-                <options>
-                    <option id="">Please select a value</option>
-                    <option id="Art-Department">Art Department</option>
-                    <option id="History-Department">History Department</option>
-                    <option id="Science-Department">Science Department</option>
-                    <option id="Professional-Services-Department">Professional Services Department</option>
-                    <option id="Education-Department">Education Department</option>
-                    <option id="Multiple">Multiple</option>
-                    <option id="CIA" default="yes">CIA</option>
-                    <option id="CPC">CPC</option>
-                </options>
+            <field id="responsibleDepartment" autocomplete="vocab-responsibleDepartment" ui-type="enum" ui-search="repeatable" mini="search,list" seperate_ui_container="true">
+                <!-- removing options block; adding vocab-responsibleDepartment vocab -->
+                <options action='delete'/>
+                <!-- adding default responsibleDepartment value -->
+                <enum>
+                    <default>urn:cspace:museumca.org:vocabularies:name(responsibleDepartment):item:name(CIA)'CIA'</default>
+                </enum>
             </field>
         </repeat>
         <field id="collection" ui-search="repeatable" autocomplete="vocab-titletype" ui-type="enum" seperate_ui_container="true">
-             <!-- removing options block; adding vocab-numberType vocab -->
+            <!-- removing options block; adding vocab-numberType vocab -->
             <options action='delete'/>
         </field>
-        <field id="recordStatus" ui-search="repeatable" seperate_ui_container="true">
-            <!-- updating options list -->
-            <options>
-                <option id="approved">Approved</option>
-                <option id="new" default="yes">New</option>
-                <option id="temporary">Temporary</option>
-                <option id="pending-curatorial-review">Pending curatorial review</option>
-                <option id="priority-cleanup">Priority cleanup</option>
-            </options>
+        <field id="recordStatus" autocomplete="vocab-recordStatus" ui-type="enum" ui-search="repeatable" seperate_ui_container="true">
+                <!-- removing options block; adding vocab-recordStatus vocab -->
+                <options action='delete'/>
+                <!-- adding default recordStatus value -->
+                <enum>
+                    <default>urn:cspace:museumca.org:vocabularies:name(recordStatus):item:name(new)'New'</default>
+                </enum>
         </field>
         <repeat id="titleGroupList/titleGroup">
             <field id="titleType" autocomplete="vocab-collection" ui-type="enum" seperate_ui_container="true">
@@ -77,26 +69,11 @@
         </repeat>
         <repeat id="determinationHistoryGroupList/determinationHistoryGroup" section="omca">
             <field id="dhName" mini="list" autocomplete="taxon-taxon" section="omca"></field>
-            <field id="dhQualifier" seperate_ui_container="true" section="omca">
-                <options>
-                    <option id="">Please select a value</option>
-                    <option id="Genus-species">Genus species</option>
-                    <option id="Family">Family</option>
-                    <option id="Common-Name">Common Name</option>
-                </options>
-            </field>
+            <field id="dhQualifier" autocomplete="vocab-determinationQualifier" ui-type="enum" section="omca"></field>
             <field id="identBy" autocomplete="person-person" section="omca"></field>
             <field id="identDate" ui-type="date" section="omca"></field>
             <field id="institution" autocomplete="organization-organization" section="omca"></field>
-            <field id="identKind" seperate_ui_container="true" section="omca">
-                <options>
-                    <option id="">Please select a value</option>
-                    <option id="original-label-determination">original label determination</option>
-                    <option id="fide">fide</option>
-                    <option id="nomenclatural-change">nomenclatural change</option>
-                    <option id="taxonomic-change">taxonomic change</option>
-                </options>
-            </field>
+            <field id="identKind" autocomplete="vocab-determinationKind" ui-type="enum" section="omca"></field>
             <field id="dhReference" section="omca"></field>
             <field id="dhPage" section="omca"></field>
             <field id="dhNotes" section="omca"></field>

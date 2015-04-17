@@ -243,7 +243,6 @@
             <option id="facilitator">Facilitator</option>
             <option id="field_collector">Field Collector</option>
             <option id="patron">Patron</option>
-            <option id="transfer">Transfer</option>
         </options>
     </instance>
     <instance id="vocab-category">

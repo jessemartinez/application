@@ -522,4 +522,45 @@
             <option id="long_term_collections_management_and_storage">long term collections management and storage</option>
         </options>
     </instance>
+    <instance id="vocab-placeType">
+        <web-url>placeType</web-url>
+        <title-ref>placeType</title-ref>
+        <title>Place Type</title>
+        <options>
+            <option id="autonomous_region">Autonomous region</option>
+            <option id="borough">Borough</option>
+            <option id="building">Building</option>
+            <option id="city">City</option>
+            <option id="collection_site">Collection site</option>
+            <option id="continent">Continent</option>
+            <option id="country">Country</option>
+            <option id="country_code">Country code</option>
+            <option id="county">County</option>
+            <option id="dependent_state">Dependent state</option>
+            <option id="deserted_settlement">Deserted settlement</option>
+            <option id="district_national">District (national)</option>
+            <option id="general_region">General region</option>
+            <option id="governorate">Governorate</option>
+            <option id="inhabited_place">Inhabited place</option>
+            <option id="island">Island</option>
+            <option id="island_group">Island group</option>
+            <option id="locality">Locality</option>
+            <option id="metropolitan_area">Metropolitan area</option>
+            <option id="municipality">Municipality</option>
+            <option id="nation">Nation</option>
+            <option id="national_division">National division</option>
+            <option id="neighborhood">Neighborhood</option>
+            <option id="occupied_territory">Occupied territory</option>
+            <option id="prefecture">Prefecture</option>
+            <option id="province">Province</option>
+            <option id="region">Region</option>
+            <option id="state">State</option>
+            <option id="state_province">State province</option>
+            <option id="territory">Territory</option>
+            <option id="union_territory">Union territory</option>
+            <option id="unitary_authority">Unitary authority</option>
+            <option id="urban_prefecture">Urban prefecture</option>
+            <option id="water_body">Water body</option>
+        </options>
+    </instance>
 </instances>

@@ -6,8 +6,8 @@
             <options action='delete'/>
         </field>
         <repeat id="loanStatusGroupList/loanStatusGroup">
-            <field id="loanStatus" ui-search="repeatable" autocomplete="vocab-loanoutstatus" ui-type="enum">
-                <!-- changing vocab to vocab-loanoutstatus -->
+            <field id="loanStatus" ui-search="repeatable" autocomplete="vocab-omcaloanoutstatus" ui-type="enum">
+                <!-- changing vocab to vocab-omcaloanoutstatus -->
             </field>
         </repeat>
         <field id="sortableLoanOutNumber" section="omca"></field>

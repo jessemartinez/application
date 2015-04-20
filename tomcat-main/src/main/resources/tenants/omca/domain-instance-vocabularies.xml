@@ -573,10 +573,10 @@
             <option id="water_body">Water body</option>
         </options>
     </instance>
-    <instance id="vocab-loanoutstatus">
-        <web-url>loanoutstatus</web-url>
-        <title-ref>loanoutstatus</title-ref>
-        <title>Loan Out Status</title>
+    <instance id="vocab-omcaloanoutstatus">
+        <web-url>omcaloanoutstatus</web-url>
+        <title-ref>omcaloanoutstatus</title-ref>
+        <title>OMCA Loan Out Status</title>
         <options>
             <option id="agreed">agreed</option>
             <option id="authorized">authorized</option>

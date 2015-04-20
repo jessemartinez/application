@@ -10,6 +10,7 @@
                 <!-- changing vocab to vocab-loaninstatus -->
             </field>
         </repeat>
+        <field id="sortableLoanInNumber" section="omca"></field>
         <field id="lenderNote" section="omca"></field>
         <field id="creditLine" section="omca"></field>
         <field id="anonymous" datatype="boolean" section="omca"></field>

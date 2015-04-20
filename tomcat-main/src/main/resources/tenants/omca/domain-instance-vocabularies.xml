@@ -227,9 +227,20 @@
         <title>OMCA Entry Method</title>
         <options>
             <option id="doorbooked">Doorbooked</option>
-            <option id="fieldcollected">Field Collected</option>
+            <option id="field_collected">Field Collected</option>
             <option id="gift">Gift</option>
             <option id="unknown">Unknown</option>
+        </options>
+    </instance>
+    <instance id="vocab-entryReason">
+        <web-url>entryReason</web-url>
+        <title-ref>entryReason</title-ref>
+        <title>Entry Reason</title>
+        <options>
+            <option id="consideration">Consideration</option>
+            <option id="commission">Commission</option>
+            <option id="exhibit">Exhibit</option>
+            <option id="research">Research</option>
         </options>
     </instance>
     <instance id="vocab-contactrole">

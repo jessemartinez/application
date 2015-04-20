@@ -1,21 +1,13 @@
 <record id="intake" is-extension="true">
     <services-record-path id="omca">intakes_omca:http://collectionspace.org/services/intake/local/omca,intakes_omca</services-record-path>
     <section id="objectEntryInformation">
-        <field id="entryReason" ui-search="repeatable" seperate_ui_container="true">
-            <selector>intake-entry-reason</selector>
-            <!-- changing options list -->
-            <options>
-                <option id="" default="yes">Please select a value</option>
-                <option id="consideration">Consideration</option>
-                <option id="commission">Commission</option>
-                <option id="exhibit">Exhibit</option>
-                <option id="research">Research</option>
-            </options>
+        <field id="entryReason" ui-search="repeatable" autocomplete="vocab-entryReason" ui-type="enum" seperate_ui_container="true">
+            <!-- removing options block; adding vocab-entryReason vocab -->
+            <options action='delete'/>
         </field>
         <repeat id="entryMethods">
-            <selector>intake-entryMethod</selector>
             <field id="entryMethod" ui-search="repeatable" autocomplete="vocab-omcaentrymethod" ui-type="enum">
-                <!-- adding custom omcaentrymethod vocabulary -->
+                <!-- adding omcaentrymethod vocab -->
             </field>
         </repeat>
         <field id="sortableEntryNumber" section="omca"></field>

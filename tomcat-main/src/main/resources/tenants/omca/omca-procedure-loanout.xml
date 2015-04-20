@@ -1,0 +1,15 @@
+<record id="loanout" is-extension="true">
+    <services-record-path id="omca">loansout_omca:http://collectionspace.org/services/loanout/local/omca,loansout_omca</services-record-path>
+    <section id="loanoutInformation">
+        <field id="loanPurpose" ui-search="repeatable" autocomplete="vocab-loanpurpose" ui-type="enum" seperate_ui_container="true">
+            <!-- removing options block; adding vocab-loanpurpose vocab -->
+            <options action='delete'/>
+        </field>
+        <repeat id="loanStatusGroupList/loanStatusGroup">
+            <field id="loanStatus" ui-search="repeatable" autocomplete="vocab-loanoutstatus" ui-type="enum">
+                <!-- changing vocab to vocab-loanoutstatus -->
+            </field>
+        </repeat>
+        <field id="sortableLoanOutNumber" section="omca"></field>
+    </section>
+</record>

@@ -562,4 +562,20 @@
             <option id="water_body">Water body</option>
         </options>
     </instance>
+    <instance id="vocab-loanoutstatus">
+        <web-url>loanoutstatus</web-url>
+        <title-ref>loanoutstatus</title-ref>
+        <title>Loan Out Status</title>
+        <options>
+            <option id="agreed">agreed</option>
+            <option id="authorized">authorized</option>
+            <option id="conservation">conservation</option>
+            <option id="photography_requested">photography requested</option>
+            <option id="refused">refused</option>
+            <option id="renewed">renewed</option>
+            <option id="requested">requested</option>
+            <option id="returned">returned</option>
+            <option id="sent">sent</option>
+        </options>
+    </instance>
 </instances>

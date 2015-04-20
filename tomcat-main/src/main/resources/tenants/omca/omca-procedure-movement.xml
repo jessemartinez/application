@@ -1,0 +1,14 @@
+<record id="movement" is-extension="true">
+    <section id="locationMovementInformation">
+        <field id="currentLocationFitness" autocomplete="vocab-currentLocationFitness" ui-type="enum">
+            <!-- removing options block; adding vocab-currentLocationFitness vocab -->
+            <options action='delete'/>
+        </field>
+    </section>
+    <section id="inventory">
+        <field id="inventoryActionRequired" autocomplete="vocab-inventoryActionRequired" ui-type="enum" ui-search="repeatable">
+            <!-- removing options block; adding vocab-inventoryActionRequired vocab -->
+            <options action='delete'/>
+        </field>
+    </section>
+</record>

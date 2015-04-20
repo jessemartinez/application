@@ -589,4 +589,26 @@
             <option id="sent">sent</option>
         </options>
     </instance>
+    <instance id="vocab-currentLocationFitness">
+        <web-url>currentLocationFitness</web-url>
+        <title-ref>currentLocationFitness</title-ref>
+        <title>Current Location Fitness</title>
+        <options>
+            <option id="dangerous">Dangerous</option>
+            <option id="inventory">Inventory</option>
+            <option id="suitable">Suitable</option>
+            <option id="temporary">Temporary</option>
+            <option id="unsuitable">Unsuitable</option>
+        </options>
+    </instance>
+    <instance id="vocab-inventoryActionRequired">
+        <web-url>inventoryActionRequired</web-url>
+        <title-ref>inventoryActionRequired</title-ref>
+        <title>Inventory Action Required</title>
+        <options>
+            <option id="conservation">Conservation</option>
+            <option id="preservation">Preservation</option>
+            <option id="re_housing">Re-housing</option>
+        </options>
+    </instance>
 </instances>

@@ -24,7 +24,7 @@
             <include src="base-procedure-media.xml"/>
             <include src="base-procedure-valuationcontrol.xml"/>
             <include src="base-procedure-movement.xml"/>
-            <include src="base-procedure-objectexit.xml"/>
+            <include src="base-procedure-objectexit.xml,omca-procedure-objectexit.xml" merge="xmlmerge.properties"/>
 
             <include src="base-authority-contact.xml,omca-authority-contact.xml" merge="xmlmerge.properties"/>
             <!-- IMPORTANT: *-termList.xml files MUST precede their equivalent files. -->

@@ -1,0 +1,35 @@
+<record id="objectexit" is-extension="true">
+    <services-record-path id="omca">objectexit_omca:http://collectionspace.org/services/objectexit/local/omca,objectexit_omca</services-record-path>
+    <section id="objectexitInformation">
+        <repeat id="exitMethods">
+            <field id="exitMethod" ui-search="repeatable">
+                <!-- updating options list -->
+                <options>
+                    <option id="" default="yes">Please select a value</option>
+                    <option id="auction-house">Auction house</option>
+                    <option id="sold">Sold</option>
+                    <option id="destroyed">Destroyed</option>
+                    <option id="repatriated">Repatriated</option>
+                    <option id="stolen">Stolen</option>
+                    <option id="transferred">Transferred</option>
+                    <option id="white-elephant-sale">White Elephant sale</option>
+                    <option id="see-notes">See notes</option>
+                </options>
+            </field>
+        </repeat>
+        <field id="exitReason" ui-search="repeatable">
+            <!-- updating options list -->
+            <options>
+                <option id="" default="yes">Please select a value</option>
+                <option id="condition">Condition</option>
+                <option id="deaccession">Deaccession</option>
+                <option id="disposal">Disposal</option>
+                <option id="exchange">Exchange</option>
+                <option id="repatriation">Repatriation</option>
+                <option id="returned">Returned</option>
+                <option id="theft">Theft</option>                
+            </options>
+        </field>
+        <field id="sortableExitNumber" section="omca"></field>
+    </section>
+</record>

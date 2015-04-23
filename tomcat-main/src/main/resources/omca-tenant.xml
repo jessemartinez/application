@@ -21,7 +21,7 @@
             <include src="base-procedure-intake.xml,omca-procedure-intake.xml" merge="xmlmerge.properties"/>
             <include src="base-procedure-loanin.xml,omca-procedure-loanin.xml" merge="xmlmerge.properties"/>
             <include src="base-procedure-loanout.xml,omca-procedure-loanout.xml" merge="xmlmerge.properties"/>
-            <include src="base-procedure-media.xml"/>
+            <include src="base-procedure-media.xml,omca-procedure-media.xml" merge="xmlmerge.properties"/>
             <include src="base-procedure-valuationcontrol.xml,omca-procedure-valuationcontrol.xml" merge="xmlmerge.properties"/>
             <include src="base-procedure-movement.xml,omca-procedure-movement.xml" merge="xmlmerge.properties"/>
             <include src="base-procedure-objectexit.xml,omca-procedure-objectexit.xml" merge="xmlmerge.properties"/>

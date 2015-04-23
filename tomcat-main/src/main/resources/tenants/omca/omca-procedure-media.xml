@@ -1,0 +1,13 @@
+<record id="media" is-extension="true">
+    <services-record-path id="omca">media_omca:http://collectionspace.org/services/media/local/omca,media_omca</services-record-path>
+    <section id="mediaInformation">
+        <repeat id="types">
+            <field id="type" ui-search="repeatable" autocomplete="vocab-mediaType" ui-type="enum">
+                <!-- removing options block; adding vocab-mediaType vocab -->
+                <options action="delete"/>
+            </field>
+        </repeat>
+        <field id="isPrimary" datatype="boolean" section="omca"></field>
+        <field id="approveForPublic" datatype="boolean" section="omca"></field>
+    </section>
+</record>

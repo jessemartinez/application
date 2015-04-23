@@ -662,4 +662,16 @@
             <option id="Purchase">Purchase</option>
         </options>
     </instance>
+    <instance id="vocab-mediaType">
+        <web-url>mediaType</web-url>
+        <title-ref>mediaType</title-ref>
+        <title>Media Type</title>
+        <options>
+            <option id="dataset">Dataset</option>
+            <option id="document">Document</option>
+            <option id="moving_image">Moving image</option>
+            <option id="still_image">Still image</option>
+            <option id="sound">Sound</option>
+        </options>
+    </instance>
 </instances>

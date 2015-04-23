@@ -16,7 +16,7 @@
 
             <include src="base-procedure-acquisition.xml,omca-procedure-acquisition.xml" merge="xmlmerge.properties"/>
             <include src="base-procedure-blobs.xml"/>
-            <include src="base-procedure-conditioncheck.xml"/>
+            <include src="base-procedure-conditioncheck.xml,omca-procedure-conditioncheck.xml" merge="xmlmerge.properties"/>
             <include src="base-procedure-groups.xml"/>
             <include src="base-procedure-intake.xml,omca-procedure-intake.xml" merge="xmlmerge.properties"/>
             <include src="base-procedure-loanin.xml,omca-procedure-loanin.xml" merge="xmlmerge.properties"/>

@@ -611,4 +611,41 @@
             <option id="re_housing">Re-housing</option>
         </options>
     </instance>
+    <instance id="vocab-conditionCheckMethod">
+        <web-url>conditionCheckMethod</web-url>
+        <title-ref>conditionCheckMethod</title-ref>
+        <title>Condition Check Method</title>
+        <options>
+            <option id="observed">Observed</option>
+            <option id="x_rayed">X-rayed</option>
+        </options>
+    </instance>
+    <instance id="vocab-conditionCheckReason">
+        <web-url>conditionCheckReason</web-url>
+        <title-ref>conditionCheckReason</title-ref>
+        <title>Condition Check Reason</title>
+        <options>
+            <option id="Appraisal">Appraisal</option>
+            <option id="Damage">Damage</option>
+            <option id="Exhibition">Exhibition</option>
+            <option id="Insurance">Insurance</option>
+            <option id="Loan_out">Loan out</option>
+            <option id="Loan_return">Loan return</option>
+            <option id="Purchase">Purchase</option>
+            <option id="Treated">Treated</option>
+        </options>
+    </instance>
+    <instance id="vocab-condition">
+        <web-url>condition</web-url>
+        <title-ref>condition</title-ref>
+        <title>Condition</title>
+        <options>
+            <option id="Excellent">Excellent</option>
+            <option id="Good">Good</option>
+            <option id="Fair">Fair</option>
+            <option id="Poor">Poor</option>
+            <option id="Needs_attention">Needs attention</option>
+            <option id="Toxic">Toxic</option>
+        </options>
+    </instance>
 </instances>

@@ -1,0 +1,23 @@
+<record id="conditioncheck" is-extension="true">
+    <services-record-path id="omca">conditionchecks_omca:http://collectionspace.org/services/conditioncheck/local/omca,conditionchecks_omca</services-record-path>
+    <section id="objectConditionInformation">
+        <repeat id="conditionCheckGroupList/conditionCheckGroup">
+            <field id="condition" ui-search="repeatable" seperate_ui_container="true" mini="">
+                <!-- removing mini attribute values -->
+            </field>
+        </repeat>
+    </section>
+    <section id="conditionCheckInformation">
+        <field id="conditionCheckMethod" autocomplete="vocab-conditionCheckMethod" ui-type="enum">
+            <!-- removing options block; adding vocab-conditionCheckMethod vocab -->
+            <options action='delete'/>
+        </field>
+        <field id="conditionCheckReason" autocomplete="vocab-conditionCheckReason" ui-type="enum">
+            <!-- removing options block; adding vocab-conditionCheckReason vocab -->
+            <options action='delete'/>
+        </field>
+        <field id="condition" ui-search="repeatable" in-title="yes" autocomplete="vocab-condition" ui-type="enum" seperate_ui_container="true" mini="summary,search,list,relate" section="omca"></field>
+        <field id="conditionDate" ui-type="date" datatype="date" section="omca"></field>
+        <field id="conditionNote" section="omca"></field>
+    </section>
+</record>

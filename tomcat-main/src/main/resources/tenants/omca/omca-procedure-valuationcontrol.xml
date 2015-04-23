@@ -1,0 +1,8 @@
+<record id="valuationcontrol" is-extension="true">
+    <section id="objectValuationInformation">
+        <field id="valueType" autocomplete="vocab-valueType" ui-type="enum" ui-search="repeatable" in-title="yes" mini="summary,search,list,relate">
+            <!-- removing options block; adding vocab-valueType vocab -->
+            <options action='delete'/>
+        </field>
+    </section>
+</record>

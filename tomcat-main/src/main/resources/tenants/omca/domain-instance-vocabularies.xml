@@ -648,4 +648,18 @@
             <option id="Toxic">Toxic</option>
         </options>
     </instance>
+    <instance id="vocab-valueType">
+        <web-url>valueType</web-url>
+        <title-ref>valueType</title-ref>
+        <title>Valuation Type</title>
+        <options>
+            <option id="Appraisal">Appraisal</option>
+            <option id="Damage">Damage</option>
+            <option id="Exhibit">Exhibit</option>
+            <option id="Insurance">Insurance</option>
+            <option id="Loan_out">Loan out</option>
+            <option id="Loan_return">Loan return</option>
+            <option id="Purchase">Purchase</option>
+        </options>
+    </instance>
 </instances>

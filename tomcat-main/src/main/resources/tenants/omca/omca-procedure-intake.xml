@@ -11,6 +11,10 @@
             </field>
         </repeat>
         <field id="sortableEntryNumber" section="omca"></field>
+        <repeat id="depositorOMCAGroupList/depositorOMCAGroup" section="omca">
+            <field id="depositorOMCA" ui-search="repeatable" autocomplete="person-person,organization-organization" section="omca"></field>
+            <field id="depositorsRequirementsOMCA" section="omca"></field>
+        </repeat>
     </section>
     <section id="objectCollectionInformation">
         <field id="fieldCollectionPlace" autocomplete="place-place">

@@ -9,7 +9,7 @@
         <include src="base-schemas.xml"/>
 
         <records>
-            <enum-blank>Please select a value</enum-blank>
+            <enum-blank>no value selected</enum-blank>
 
             <include src="base-collectionobject.xml,anthropology-collectionobject.xml,omca-anthropology-collectionobject.xml,omca-collectionobject.xml" merge="xmlmerge.properties"/>
             <include src="base-authority.xml"/>

@@ -5,7 +5,7 @@
                 <selector>placeAuthority-termType</selector>
                 <!-- normalizing termType options list -->
                 <options>
-                    <option id="">Please select a value</option>
+                    <option id="">no value selected</option>
                     <option id="descriptor">Descriptor</option>
                     <option id="alternatedescriptor">Alternate descriptor</option>
                     <option id="usedforterm">Used for term</option>
@@ -15,7 +15,7 @@
                 <selector>placeAuthority-historicalStatus</selector>
                 <!-- changing options list behavior -->
                 <options>
-                    <option id="">Please select a value</option>
+                    <option id="">no value selected</option>
                     <option id="current">Current</option>
                     <option id="historical">Historical</option>
                     <option id="both">Both</option>

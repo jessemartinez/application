@@ -4,7 +4,7 @@
         <field id="taxonRank" ui-search="repeatable" seperate_ui_container="true">
             <!-- changing options -->
             <options>
-                <option id="" default="yes">Please select a value</option>
+                <option id="" default="yes">no value selected</option>
                 <option id="class">Class</option>
                 <option id="division">Division</option>
                 <option id="domain">Domain</option>

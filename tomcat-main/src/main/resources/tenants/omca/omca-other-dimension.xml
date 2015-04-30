@@ -9,7 +9,7 @@
                 <field id="dimension" seperate_ui_container="true">
                     <!-- updating options block -->
                     <options>
-                        <option id="">Please select a value</option>
+                        <option id="">no value selectede</option>
                         <option id="area">area</option>
                         <option id="circumference">circumference</option>
                         <option id="count">count</option>
@@ -28,7 +28,7 @@
                 <field id="measurementUnit" seperate_ui_container="true">
                     <!-- updating options block -->
                     <options>
-                        <option id="">Please select a value</option>
+                        <option id="">no value selected</option>
                         <option id="carats">carats</option>
                         <option id="centimeters">centimeters</option>
                         <option id="cubic-centimeters">cubic centimeters</option>

@@ -5,9 +5,6 @@
             <field id="numberType" in-tab="yes" autocomplete="vocab-numberType" ui-type="enum" seperate_ui_container="true">
                 <!-- removing options block; adding vocab-numberType vocab -->
                 <options action='delete'/>
-                <enum>
-                    <blank-value>no value selected</blank-value>
-                </enum>
             </field>
         </repeat>
         <repeat id="responsibleDepartments" has-primary="yes">
@@ -46,7 +43,7 @@
             <field id="objectNameType" seperate_ui_container="true">
                 <!-- updating options list -->
                 <options>
-                    <option id="">Please select a value</option>
+                    <option id="">no value selected</option>
                     <option id="classified">Classified</option>
                     <option id="denomination">Denomination</option>
                     <option id="simple">Simple</option>
@@ -107,7 +104,7 @@
             <field id="objectComponentName" ui-search="repeatable" seperate_ui_container="true">
                 <!-- updating options list -->
                 <options>
-                    <option id="">Please select a value</option>
+                    <option id="">no value selected</option>
                     <option id="a">a</option>
                     <option id="b">b</option>
                     <option id="c">c</option>
@@ -164,7 +161,7 @@
                 <field id="inscriptionContentPosition" seperate_ui_container="true">
                     <!-- updating options list -->
                     <options>
-                        <option id="">Please select a value</option>
+                        <option id="">no value selected</option>
                         <option id="back">back</option>
                         <option id="base">base</option>
                         <option id="bottom">bottom</option>

@@ -2,11 +2,8 @@
     <section id="culturalCareInformation">
         <repeat id="accessRestrictionGroupList/accessRestrictionGroup" section="anthropology">
             <field id="accessRestrictionType" autocomplete="vocab-accessrestrictiontype" ui-type="enum" section="anthropology">
-                <!-- removing options block; adding vocab-accessrestrictiontype vocab; adding default value -->
+                <!-- removing options block; adding vocab-accessrestrictiontype vocab -->
                 <options action='delete'/>
-                <enum>
-                    <blank-value>(None selected)</blank-value>
-                </enum>
             </field>
         </repeat>
     </section>

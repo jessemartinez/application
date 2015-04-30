@@ -12,7 +12,7 @@
             See http://www.iso.org/iso/country_codes.htm and 
             http://www.iso.org/iso/home/standards/country_codes/country_names_and_code_elements_txt.htm -->    
                 <options>
-                    <option id="">Please select a value</option>
+                    <option id="">no value selected</option>
                     <option id="AF">AFGHANISTAN</option>
                     <option id="AX">ÅLAND ISLANDS</option>
                     <option id="AL">ALBANIA</option>
@@ -266,7 +266,7 @@
             </field>
             <field id="addressTypeOMCA" section="omca">
                 <options>
-                    <option id="">Please select a value</option>
+                    <option id="">no value selected</option>
                     <option id="business">business</option>
                     <option id="home">home</option>
                     <option id="mailing">mailing</option>

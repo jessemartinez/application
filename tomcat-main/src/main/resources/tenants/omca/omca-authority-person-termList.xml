@@ -5,7 +5,7 @@
                 <selector>personAuthority-termType</selector>
                 <!-- normalizing termType options list -->
                 <options>
-                    <option id="">Please select a value</option>
+                    <option id="">no value selected</option>
                     <option id="descriptor">Descriptor</option>
                     <option id="alternate-descriptor">Alternate descriptor</option>
                     <option id="used-for-term">Used for term</option>
@@ -14,7 +14,7 @@
             <field id="salutation">
                 <!-- adding default blank value -->
                 <options>
-                    <option id="">Please select a value</option>
+                    <option id="">no value selected</option>
                     <option id="dear">Dear</option>
                     <option id="hello">Hello</option>
                     <option id="to">To</option>

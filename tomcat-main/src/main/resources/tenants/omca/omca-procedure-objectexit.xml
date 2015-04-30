@@ -5,7 +5,7 @@
             <field id="exitMethod" ui-search="repeatable">
                 <!-- updating options list -->
                 <options>
-                    <option id="" default="yes">Please select a value</option>
+                    <option id="" default="yes">no value selected</option>
                     <option id="auction-house">Auction house</option>
                     <option id="sold">Sold</option>
                     <option id="destroyed">Destroyed</option>
@@ -20,7 +20,7 @@
         <field id="exitReason" ui-search="repeatable">
             <!-- updating options list -->
             <options>
-                <option id="" default="yes">Please select a value</option>
+                <option id="" default="yes">no value selected</option>
                 <option id="condition">Condition</option>
                 <option id="deaccession">Deaccession</option>
                 <option id="disposal">Disposal</option>

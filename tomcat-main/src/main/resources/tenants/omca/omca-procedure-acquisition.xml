@@ -5,7 +5,7 @@
             <selector>acquisition-acquisition-method</selector>
             <!-- updating options -->
             <options>
-                <option id="">Please select a value</option>
+                <option id="">no value selected</option>
                 <option id="bequest">Bequest</option>
                 <option id="exchange">Exchange</option>
                 <option id="gift">Gift</option>

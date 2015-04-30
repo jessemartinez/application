@@ -6,7 +6,7 @@
                 <!-- normalizing termType options list.
                      adding new term -->
                 <options>
-                    <option id="">Please select a value</option>
+                    <option id="">no value selected</option>
                     <option id="descriptor">Descriptor</option>
                     <option id="alternatedescriptor">Alternate descriptor</option>
                     <option id="usedforterm">Used for term</option>

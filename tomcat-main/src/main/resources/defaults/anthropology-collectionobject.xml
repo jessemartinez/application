@@ -266,7 +266,7 @@
             <field id="accessRestrictionType" section="anthropology">
                 <selector>collection-object-accessRestrictionType</selector>
                 <options>
-                    <option id="" default="yes">(none selected)</option>
+                    <option id="">no value selected</option>
                     <option id="displayVisualRestriction">display/visual</option>
                     <option id="handlingGenderRestriction">handling: gender</option> <!-- e.g., "Only men and post-menopausal women should handle this" -->
                     <option id="handlingOtherRestriction">handling: other</option> <!-- e.g., "Please do/don't wear gloves when handling this object" -->
@@ -281,7 +281,7 @@
             <field id="accessRestrictionLevel" section="anthropology">
                 <selector>collection-object-accessRestrictionLevel</selector>
                 <options>
-                    <option id="" default="yes">(none selected)</option>
+                    <option id="">no value selected</option>
                     <option id="preference">preference</option>
                     <option id="recommendation">recommendation</option>
                     <option id="restriction">restriction</option>

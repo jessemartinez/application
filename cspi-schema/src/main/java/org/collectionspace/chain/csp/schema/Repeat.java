@@ -156,7 +156,7 @@ public class Repeat extends FieldSetImpl implements FieldParent {
 
 		utils.initSet(section, "enum/default", new String[] { "" });
 		utils.initBoolean(section, "enum/@has-blank", true);
-		utils.initStrings(section, "enum/blank-value", "Please select a value");
+		utils.initStrings(section, "enum/blank-value", this.parent.enumBlankValue());
 
 		Set<String> minis = Util.getSetOrDefault(section, "/@mini", new String[] { "" });
 		if (minis.contains("number")) {

@@ -5,6 +5,9 @@
             <field id="numberType" in-tab="yes" autocomplete="vocab-numberType" ui-type="enum" seperate_ui_container="true">
                 <!-- removing options block; adding vocab-numberType vocab -->
                 <options action='delete'/>
+                <enum>
+                    <blank-value>no value selected</blank-value>
+                </enum>
             </field>
         </repeat>
         <repeat id="responsibleDepartments" has-primary="yes">
@@ -17,8 +20,8 @@
                 </enum>
             </field>
         </repeat>
-        <field id="collection" ui-search="repeatable" autocomplete="vocab-titletype" ui-type="enum" seperate_ui_container="true">
-            <!-- removing options block; adding vocab-numberType vocab -->
+        <field id="collection" ui-search="repeatable" autocomplete="vocab-collection" ui-type="enum" seperate_ui_container="true">
+            <!-- removing options block; adding vocab-collection vocab -->
             <options action='delete'/>
         </field>
         <field id="recordStatus" autocomplete="vocab-recordStatus" ui-type="enum" ui-search="repeatable" seperate_ui_container="true">
@@ -30,8 +33,8 @@
                 </enum>
         </field>
         <repeat id="titleGroupList/titleGroup">
-            <field id="titleType" autocomplete="vocab-collection" ui-type="enum" seperate_ui_container="true">
-                <!-- removing options block; adding vocab-collection vocab -->
+            <field id="titleType" autocomplete="vocab-titletype" ui-type="enum" seperate_ui_container="true">
+                <!-- removing options block; adding vocab-titletype vocab -->
                 <options action='delete'/>
             </field>
         </repeat>

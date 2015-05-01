@@ -288,7 +288,7 @@
             <option id="textile">Textile</option>
             <option id="toys">Toys</option>
             <option id="transportation">Transportation</option>
-            <option id="Works_on_paper">Works on Paper</option>
+            <option id="works_on_paper">Works on Paper</option>
         </options>
     </instance>
     <instance id="vocab-titletype">

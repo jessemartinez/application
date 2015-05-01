@@ -1,6 +1,51 @@
 <record id="contact" is-extension="true">
     <services-record-path id="omca">contacts_omca:http://collectionspace.org/services/contact/local/omca,contacts_omca</services-record-path>
     <section id="contactInformation">
+        <repeat id="emailGroupList/emailGroup">
+            <field id="emailType">
+                <!-- replacing default value -->
+                <options>
+                    <option id="">no value selected</option>
+                    <option id="business">business</option>
+                    <option id="personal">personal</option>
+                    <option id="other">other</option>
+                </options>
+            </field>
+        </repeat>
+        <repeat id="webAddressGroupList/webAddressGroup">
+            <field id="webAddressType">
+                <!-- replacing default value -->
+                <options>
+                    <option id="">no value selected</option>
+                    <option id="business">business</option>
+                    <option id="personal">personal</option>
+                    <option id="other">other</option>
+                </options>
+            </field>
+        </repeat>
+        <repeat id="telephoneNumberGroupList/telephoneNumberGroup">
+            <field id="telephoneNumberType">
+                <!-- replacing default value -->
+                <options>
+                    <option id="">no value selected</option>
+                    <option id="business">business</option>
+                    <option id="home">home</option>
+                    <option id="mobile">mobile</option>
+                    <option id="other">other</option>
+                </options>
+            </field>
+        </repeat>
+        <repeat id="faxNumberGroupList/faxNumberGroup">
+            <field id="faxNumberType">
+                <!-- replacing default value -->
+                <options>
+                    <option id="">no value selected</option>
+                    <option id="business">business</option>
+                    <option id="home">home</option>
+                    <option id="other">other</option>
+                </options>
+            </field>
+        </repeat>
         <repeat id="addressGroupOMCAList/addressGroupOMCA" section="omca">
             <field id="addressPlace1OMCA" section="omca"></field>
             <field id="addressPlace2OMCA" section="omca"></field>
@@ -8,9 +53,6 @@
             <field id="addressStateOrProvinceOMCA" section="omca"></field>
             <field id="addressPostCodeOMCA" section="omca"></field>
             <field id="addressCountryOMCA" section="omca">
-            <!-- Options conform to ISO-3166-1 List of Countries Codes, available free of charge for "non-commercial purposes." 
-            See http://www.iso.org/iso/country_codes.htm and 
-            http://www.iso.org/iso/home/standards/country_codes/country_names_and_code_elements_txt.htm -->    
                 <options>
                     <option id="">no value selected</option>
                     <option id="AF">AFGHANISTAN</option>

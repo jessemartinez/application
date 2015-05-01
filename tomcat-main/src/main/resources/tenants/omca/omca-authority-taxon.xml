@@ -27,6 +27,25 @@
                 <option id="variety">Variety</option>
             </options>
         </field>
+        <field id="taxonCurrency" ui-search="repeatable" seperate_ui_container="true">
+            <!-- replacing default value -->
+            <options>
+                <option id="">no value selected</option>
+                <option id="current">Current</option>
+                <option id="obsolete">Obsolete</option>
+                <option id="archaic">Archaic</option>
+            </options>
+        </field>
+        <repeat id="taxonAuthorGroupList/taxonAuthorGroup" has-primary="yes">
+            <field id="taxonAuthorType" seperate_ui_container="true">
+                <!-- replacing default value -->
+                <options>
+                    <option id="">no value selected</option>
+                    <option id="ascribed">Ascribed</option>
+                    <option id="parenthetical">Parenthetical</option>
+                </options>
+            </field>
+        </repeat>
         <repeat id="commonNameGroupList/commonNameGroup" has-primary="yes">
             <field id="commonName" ui-search="repeatable" autocomplete="concept-concept">
                 <!-- adding concept authority vocab -->

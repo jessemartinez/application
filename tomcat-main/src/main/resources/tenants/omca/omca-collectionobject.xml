@@ -22,20 +22,45 @@
             <options action='delete'/>
         </field>
         <field id="recordStatus" autocomplete="vocab-recordStatus" ui-type="enum" ui-search="repeatable" seperate_ui_container="true">
-                <!-- removing options block; adding vocab-recordStatus vocab -->
-                <options action='delete'/>
-                <!-- adding default recordStatus value -->
-                <enum>
-                    <default>urn:cspace:museumca.org:vocabularies:name(recordStatus):item:name(new)'New'</default>
-                </enum>
+            <!-- removing options block; adding vocab-recordStatus vocab -->
+            <options action='delete'/>
+            <!-- adding default recordStatus value -->
+            <enum>
+                <default>urn:cspace:museumca.org:vocabularies:name(recordStatus):item:name(new)'New'</default>
+            </enum>
         </field>
         <repeat id="titleGroupList/titleGroup">
+            <repeat id="titleTranslationSubGroupList/titleTranslationSubGroup">
+                <field id="titleTranslationLanguage" autocomplete="vocab-languages" ui-type="enum">
+                    <!-- overriding enum values -->
+                    <enum>
+                        <default/>
+                        <blank-value>no value selected</blank-value>
+                    </enum>
+                </field>
+            </repeat>
             <field id="titleType" autocomplete="vocab-titletype" ui-type="enum" seperate_ui_container="true">
                 <!-- removing options block; adding vocab-titletype vocab -->
                 <options action='delete'/>
             </field>
         </repeat>
         <repeat id="objectNameList/objectNameGroup">
+            <field id="objectNameCurrency" seperate_ui_container="true">
+                <!-- replacing default value -->
+                <options>
+                    <option id="">no value selected</option>
+                    <option id="current">Current</option>
+                    <option id="archaic">Archaic</option>
+                </options>
+            </field>
+            <field id="objectNameLevel" seperate_ui_container="true">
+                <!-- replacing default value -->
+                <options>
+                    <option id="">no value selected</option>
+                    <option id="group">Group</option>
+                    <option id="subgroup">Subgroup</option>
+                </options>
+            </field>
             <field id="objectNameSystem" autocomplete="vocab-objectnamesystem" ui-type="enum" seperate_ui_container="true">
                 <!-- removing options block; adding vocab-objectnamesystem vocab -->
                 <options action='delete'/>
@@ -51,6 +76,13 @@
                     <option id="typological">Typological</option>
                     <option id="questionable">Questionable</option>
                 </options>
+            </field>
+            <field id="objectNameLanguage" autocomplete="vocab-languages" ui-type="enum">
+                <!-- overriding enum values -->
+                <enum>
+                    <default/>
+                    <blank-value>no value selected</blank-value>
+                </enum>
             </field>
             <field id="objectName" autocomplete="concept-concept" ui-search="repeatable" mini="search,list">
                 <!-- adding concept authority -->
@@ -80,6 +112,14 @@
         </repeat>
     </section>
     <section id="descriptionInformation">
+        <field id="sex" ui-search="repeatable" seperate_ui_container="true">
+            <!-- replacing default value -->
+            <options>
+                <option id="">no value selected</option>
+                <option id="male">male</option>
+                <option id="female">female</option>
+            </options>
+        </field>
         <field id="phase" autocomplete="vocab-phase" ui-type="enum" ui-search="repeatable" seperate_ui_container="true">
             <!-- removing options block; adding vocab-phase vocab -->
             <options action='delete'/>
@@ -149,6 +189,15 @@
             </field>
         </repeat>
         <section id="contentInformation">
+            <repeat id="contentLanguages">
+                <field id="contentLanguage" autocomplete="vocab-languages" ui-type="enum">
+                    <!-- overriding enum values -->
+                    <enum>
+                        <default/>
+                        <blank-value>no value selected</blank-value>
+                    </enum>
+                </field>
+            </repeat>
             <repeat id="contentPlaces">
                 <field id="contentPlace" autocomplete="place-place">
                     <!-- adding place authority -->
@@ -158,6 +207,13 @@
         </section>
         <section id="textualInscriptionInformation">
             <repeat id="textualInscriptionGroupList/textualInscriptionGroup">
+                <field id="inscriptionContentLanguage" autocomplete="vocab-languages" ui-type="enum">
+                    <!-- overriding enum values -->
+                    <enum>
+                        <default/>
+                        <blank-value>no value selected</blank-value>
+                    </enum>
+                </field>
                 <field id="inscriptionContentPosition" seperate_ui_container="true">
                     <!-- updating options list -->
                     <options>
@@ -192,6 +248,27 @@
         <field id="argusMade" section="omca"></field>
     </section>
     <section id="objectHistoryAssociationInformation">
+        <field id="ownershipCategory" seperate_ui_container="true">
+            <!-- replacing default value -->
+            <options>
+                <option id="">no value selected</option>
+                <option id="company">company</option>
+                <option id="public">public</option>
+                <option id="private">private</option>
+            </options>
+        </field>
+        <field id="ownershipExchangeMethod" seperate_ui_container="true">
+            <!-- replacing default value -->
+            <options>
+                <option id="">no value selected</option>
+                <option id="bequest">bequest</option>
+                <option id="exchange">exchange</option>
+                <option id="gift">gift</option>
+                <option id="purchase">purchase</option>
+                <option id="transfer">transfer</option>
+                <option id="treasure">treasure</option>
+            </options>
+        </field>
         <section id="associationInformation">
             <repeat id="assocCulturalContextGroupList/assocCulturalContextGroup">
                 <field id="assocCulturalContext" autocomplete="vocab-culturalaffinity" ui-type="enum">

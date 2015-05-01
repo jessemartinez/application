@@ -13,6 +13,16 @@
                     <option id="commonName">Common name</option>
                 </options>
             </field>
+            <field id="taxonomicStatus" ui-search="repeatable" >
+                <!-- replacing default value -->
+                <options>
+                    <option id="">no value selected</option>
+                    <option id="valid">Valid</option>
+                    <option id="invalid">Invalid</option>
+                    <option id="accepted">Accepted</option>
+                    <option id="misapplied name">Misapplied Name</option>
+                </options>
+            </field>
         </repeat>
     </section>
 </record>

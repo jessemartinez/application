@@ -1,5 +1,17 @@
 <record id="acquisition" is-extension="true">
     <section id="acquisitionInformation">
+        <field id="acquisitionMethod" ui-search="repeatable" seperate_ui_container="true">
+            <!-- updating options list -->
+            <options>
+                <option id="Gift" default="yes">Gift</option>
+                <option id="Exchange">Exchange</option>
+                <option id="Commission">Commission</option>
+                <option id="Proposal">Proposal</option>
+                <option id="Purchase">Purchase</option>
+                <option id="Transfer">Transfer</option>
+                <option id="Treasure">Treasure</option>
+            </options>
+        </field>
         <repeat id="acquisitionFundingList/acquisitionFunding">
             <field id="acquisitionFundingCurrency" autocomplete="vocab-currency" ui-type="enum">
                 <!-- updating default value -->

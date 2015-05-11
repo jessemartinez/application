@@ -25,7 +25,6 @@
             <option id="Mural">Mural</option>
             <option id="Neon">Neon</option>
             <option id="New_media">New media</option>
-            <option id="Op_art">Op art</option>
             <option id="Painting">Painting</option>
             <option id="Pavers">Pavers</option>
             <option id="Photography">Photography</option>
@@ -45,9 +44,9 @@
         </options>
     </instance>
     <instance id="vocab-specialStatus">
-        <web-url>security</web-url>
-        <title-ref>security</title-ref>
-        <title>Security</title>
+        <web-url>specialStatus</web-url>
+        <title-ref>specialStatus</title-ref>
+        <title>specialStatus</title>
         <options>
             <option id="In_Progress">In Progress</option>
             <option id="Available_for_Adoption">Available for Adoption</option>

@@ -6,6 +6,22 @@
         </field>
     </section>
     <section id="identificationInformation">
+        <repeat id="otherNumberList/otherNumber">
+            <field id="numberType" in-tab="yes" seperate_ui_container="true">
+                <!-- updating options -->
+                <options>
+                    <option id="">Please select a value</option>
+                    <option id="lender">Lender</option>
+                    <option id="obsolete">Obsolete</option>
+                    <option id="previous">Previous</option>
+                    <option id="serial">Serial</option>
+                    <option id="unknown">Unknown</option>
+                    <option id="inventory number">Inventory number</option>
+                    <option id="object number">Object number</option>
+                    <option id="Drupal number">Drupal number</option>
+                </options>
+            </field>
+        </repeat>
         <field id="collection" ui-search="repeatable" seperate_ui_container="true">
             <!-- removing options block -->
             <options action="delete"/>

@@ -1,7 +1,7 @@
 <record id="location" is-extension="true">
     <services-record-path id="miami">locations_miami:http://collectionspace.org/services/location/local/miami,locations_miami</services-record-path>
     <section id="locationTermInformation">
-        <field id="addressAgency" autocomplete="vocab-addressAgency" ui-type="enum" section="miami"></field>
+        <!--field id="addressAgency" autocomplete="vocab-addressAgency" ui-type="enum" section="miami"></field-->
         <field id="addressRegion" autocomplete="vocab-addressRegion" ui-type="enum" section="miami"></field>
         <field id="addressBuilding" section="miami"></field>
         <field id="addressStreet" section="miami"></field>

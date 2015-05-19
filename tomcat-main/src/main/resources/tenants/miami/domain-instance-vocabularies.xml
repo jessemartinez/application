@@ -225,4 +225,14 @@
             <option id="Original_value">Original value</option>
         </options>
     </instance>
+    <instance id="vocab-recordObjectType">
+        <web-url>recordObjectType</web-url>
+        <title-ref>recordObjectType</title-ref>
+        <title>Record Object Type</title>
+        <options>
+            <option id="Sculpture">Sculpture</option>
+            <option id="Mural">Mural</option>
+            <option id="Interactive">Interactive</option>
+        </options>
+    </instance>
 </instances>

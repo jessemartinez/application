@@ -49,6 +49,7 @@
         <repeat id="securities" section="miami">
             <field id="security" autocomplete="vocab-security" ui-type="enum" section="miami"></field>
         </repeat>
+        <field id="recordObjectType" autocomplete="vocab-recordObjectType" ui-type="enum" section="miami"></field>
     </section>
     <section id="descriptionInformation">
         <repeat id="objectStatusList" services-type-anonymous="false">

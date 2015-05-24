@@ -235,4 +235,14 @@
             <option id="Interactive">Interactive</option>
         </options>
     </instance>
+    <instance id="vocab-videoType">
+        <web-url>videoType</web-url>
+        <title-ref>videoType</title-ref>
+        <title>Video Type</title>
+        <options>
+            <option id="Vimeo">Vimeo</option>
+            <option id="YouTube">YouTube</option>
+            <option id="Other">Other</option>
+        </options>
+    </instance>
 </instances>

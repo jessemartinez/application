@@ -50,6 +50,11 @@
             <field id="security" autocomplete="vocab-security" ui-type="enum" section="miami"></field>
         </repeat>
         <field id="recordObjectType" autocomplete="vocab-recordObjectType" ui-type="enum" section="miami"></field>
+        <repeat id="videoGroupList/videoGroup" section="miami">
+            <field id="videoType" autocomplete="vocab-videoType" ui-type="enum" section="miami"></field>
+            <field id="videoURL" ui-type="externalURL" section="miami"></field>
+            <field id="videoNote" section="miami"></field>
+        </repeat>
     </section>
     <section id="descriptionInformation">
         <repeat id="objectStatusList" services-type-anonymous="false">

@@ -6,9 +6,11 @@
         <options>
             <option id="Abstract">Abstract</option>
             <option id="Bronze">Bronze</option>
+            <option id="Ceiling_Treatment">Ceiling Treatment</option>
             <option id="Ceramic">Ceramic</option>
             <option id="Commemorative">Commemorative</option>
             <option id="Conceptual">Conceptual</option>
+            <option id="Digital_Art">Digital Art</option>
             <option id="Etching">Etching</option>
             <option id="Flooring">Flooring</option>
             <option id="Fountain">Fountain</option>
@@ -34,6 +36,7 @@
             <option id="Sound_art">Sound art</option>
             <option id="Technology">Technology</option>
             <option id="Terrazzo">Terrazzo</option>
+            <option id="Textile">Textile</option>
             <option id="Three_dimensional">Three dimensional</option>
             <option id="Tile">Tile</option>
             <option id="Transportation">Transportation</option>

@@ -1,6 +1,9 @@
 <record id="location" is-extension="true">
     <services-record-path id="miami">locations_miami:http://collectionspace.org/services/location/local/miami,locations_miami</services-record-path>
     <section id="locationTermInformation">
+        <field id="address" mini="list" ui-search="repeatable">
+            <!-- adding mini=list attribute -->
+        </field>
         <!--field id="addressAgency" autocomplete="vocab-addressAgency" ui-type="enum" section="miami"></field-->
         <field id="addressRegion" autocomplete="vocab-addressRegion" ui-type="enum" section="miami"></field>
         <field id="addressBuilding" section="miami"></field>
@@ -28,8 +31,8 @@
         </field>
         <!--=field id="addressFloorRoom" section="miami"></field-->
         <field id="addressDirection" section="miami"></field>
-        <field id="addressLongitude" ui-type="validated" datatype="float" section="miami"></field>
-        <field id="addressLatitude"  ui-type="validated" datatype="float" section="miami"></field>
+        <field id="addressLongitude" mini="list" ui-type="validated" datatype="float" section="miami"></field>
+        <field id="addressLatitude"  mini="list" ui-type="validated" datatype="float" section="miami"></field>
         <field id="locatedOutside" section="miami">
             <options>
                 <option id="">Please select a value</option>

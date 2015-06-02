@@ -22,12 +22,17 @@
                 </options>
             </field>
         </repeat>
+        <repeat id="responsibleDepartments">
+            <field id="responsibleDepartment" ui-search="repeatable" mini="search" seperate_ui_container="true">
+                <!-- removing mini=list attribute -->
+            </field>
+        </repeat>
         <field id="collection" ui-search="repeatable" seperate_ui_container="true">
             <!-- removing options block -->
             <options action="delete"/>
         </field>
-        <field id="recordStatus" ui-search="repeatable" autocomplete="vocab-recordStatus" ui-type="enum" seperate_ui_container="true">
-            <!-- removing options block; adding vocab-recordStatus vocab -->
+        <field id="recordStatus" mini="list" ui-search="repeatable" autocomplete="vocab-recordStatus" ui-type="enum" seperate_ui_container="true">
+            <!-- removing options block; adding vocab-recordStatus vocab; adding mimi=list attribute  -->
             <options action="delete"/>
         </field>
         <repeat id="titleGroupList/titleGroup">
@@ -58,8 +63,8 @@
     </section>
     <section id="descriptionInformation">
         <repeat id="objectStatusList" services-type-anonymous="false">
-            <field id="objectStatus" ui-search="repeatable" autocomplete="vocab-recordType" ui-type="enum" seperate_ui_container="true">
-                <!-- removing options block; adding vocab-recordType vocab -->
+            <field id="objectStatus" mini="list" ui-search="repeatable" autocomplete="vocab-recordType" ui-type="enum" seperate_ui_container="true">
+                <!-- removing options block; adding vocab-recordType vocab; adding mimi=list attribute -->
                 <options action="delete"/>
             </field>
         </repeat>

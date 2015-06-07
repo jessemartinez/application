@@ -25,30 +25,9 @@
                         <option id="width">width</option>
                     </options>
                 </field>
-                <field id="measurementUnit" seperate_ui_container="true">
-                    <!-- updating options block -->
-                    <options>
-                        <option id="">no value selected</option>
-                        <option id="carats">carats</option>
-                        <option id="centimeters">centimeters</option>
-                        <option id="cubic-centimeters">cubic centimeters</option>
-                        <option id="feet">feet</option>
-                        <option id="inches">inches</option>
-                        <option id="kilograms">kilograms</option>
-                        <option id="liters">liters</option>
-                        <option id="meters">meters</option>
-                        <option id="millimeters">millimeters</option>
-                        <option id="minutes">minutes</option>
-                        <option id="ounces">ounces</option>
-                        <option id="stories">stories</option>
-                        <option id="pixels">pixels</option>
-                        <option id="pixels-per-inch">pixels per inch</option>
-                        <option id="pounds">pounds</option>
-                        <option id="square-feet">square feet</option>
-                        <option id="stories">stories</option>
-                        <option id="troy-ounces">troy ounces</option>
-                        <option id="yards">yards</option>
-                    </options>
+                <field id="measurementUnit" autocomplete="vocab-measurementUnit" ui-type="enum" seperate_ui_container="true">
+                    <!-- removing options block; adding vocab-measurementUnit vocab -->
+                    <options action='delete'/>
                 </field>
                 <field id="measurementMethod" autocomplete="vocab-measurementmethod" ui-type="enum">
                     <!-- removing options block; adding vocab-measurementmethod vocab -->

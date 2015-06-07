@@ -499,6 +499,32 @@
             <option id="scale">scale</option>
         </options>
     </instance>
+    <instance id="vocab-measurementUnit">
+        <web-url>measurementUnit</web-url>
+        <title-ref>measurementUnit</title-ref>
+        <title>Dimension - Measurement unit</title>
+        <options>
+            <option id="carats">carats</option>
+            <option id="centimeters">centimeters</option>
+            <option id="cubic_centimeters">cubic centimeters</option>
+            <option id="feet">feet</option>
+            <option id="inches">inches</option>
+            <option id="kilograms">kilograms</option>
+            <option id="liters">liters</option>
+            <option id="meters">meters</option>
+            <option id="millimeters">millimeters</option>
+            <option id="minutes">minutes</option>
+            <option id="ounces">ounces</option>
+            <option id="stories">stories</option>
+            <option id="pixels">pixels</option>
+            <option id="pixels_per_inch">pixels per inch</option>
+            <option id="pounds">pounds</option>
+            <option id="square_feet">square feet</option>
+            <option id="stories">stories</option>
+            <option id="troy_ounces">troy ounces</option>
+            <option id="yards">yards</option>
+        </options>
+    </instance>
     <instance id="vocab-loaninstatus">
         <web-url>loaninstatus</web-url>
         <title-ref>loaninstatus</title-ref>

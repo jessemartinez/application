@@ -5,7 +5,7 @@
             <!-- removing mini attribute and setting in-title to be "no" -->
         </field>
         <repeat id="fairMarketGroupList/fairMarketGroup" section="miami">
-            <field id="fairMarketValue" autocomplete="vocab-fairMarketValue" ui-type="enum" in-title="yes" mini="summary,search,list,relate" section="miami"/>
+            <field id="fairMarketValue" autocomplete="vocab-fairMarketValue" ui-type="enum" in-title="yes" ui-search="repeatable" mini="summary,search,list,relate" section="miami"/>
             <field id="fairMarketCurrency" autocomplete="vocab-currency" ui-type="enum" section="miami"/>
             <field id="fairMarketAmount" ui-type="validated" datatype="float" section="miami"/>
             <field id="fairMarketDate" ui-type="date" datatype="date" section="miami"/>

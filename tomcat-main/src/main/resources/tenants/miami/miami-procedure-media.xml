@@ -10,14 +10,14 @@
                 <options action="delete"/>
             </field>
         </repeat>
-        <field id="mediaStatus" mini="list" section="miami">
+        <field id="mediaStatus" mini="list" ui-search="repeatable" section="miami">
             <options>
                 <option id="public" default="yes">public</option>
                 <option id="private">private (internal only)</option>
             </options>
         </field>
         <field id="mediaSummary" mini="summary,list,relate" in-title="yes" section="miami"></field>
-        <field id="primaryMedia" mini="search,list"  section="miami">
+        <field id="primaryMedia" mini="search,list" ui-search="repeatable" section="miami">
             <options>
                 <option id="" default="yes">no</option>
                 <option id="yes">yes</option>

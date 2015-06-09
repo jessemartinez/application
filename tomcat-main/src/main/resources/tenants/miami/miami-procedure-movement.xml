@@ -1,7 +1,7 @@
 <record id="movement" is-extension="true">
     <services-record-path id="miami">movements_miami:http://collectionspace.org/services/movement/local/miami,movements_miami</services-record-path>
     <section id="locationMovementInformation">
-        <field id="currentLocationAgency" autocomplete="vocab-addressAgency" ui-type="enum" section="miami"></field>
-        <field id="currentLocationFloorRoom" mini="search,list" section="miami"></field>
+        <field id="currentLocationAgency" autocomplete="vocab-addressAgency" ui-type="enum" ui-search="repeatable" section="miami"></field>
+        <field id="currentLocationFloorRoom" mini="list" ui-search="repeatable" section="miami"></field>
     </section>
 </record>

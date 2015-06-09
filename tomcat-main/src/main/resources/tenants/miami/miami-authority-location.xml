@@ -5,13 +5,13 @@
             <!-- adding mini=list attribute -->
         </field>
         <!--field id="addressAgency" autocomplete="vocab-addressAgency" ui-type="enum" section="miami"></field-->
-        <field id="addressRegion" autocomplete="vocab-addressRegion" ui-type="enum" section="miami"></field>
-        <field id="addressBuilding" section="miami"></field>
-        <field id="addressStreet" section="miami"></field>
-        <field id="addressCity" section="miami"></field>
-        <field id="addressState" section="miami"></field>
-        <field id="addressZipCode" section="miami"></field>
-        <field id="addressDistrict" section="miami">
+        <field id="addressRegion" autocomplete="vocab-addressRegion" ui-type="enum" ui-search="repeatable" section="miami"></field>
+        <field id="addressBuilding" ui-search="repeatable" section="miami"></field>
+        <field id="addressStreet" ui-search="repeatable" section="miami"></field>
+        <field id="addressCity" ui-search="repeatable" section="miami"></field>
+        <field id="addressState" ui-search="repeatable" section="miami"></field>
+        <field id="addressZipCode" ui-search="repeatable" section="miami"></field>
+        <field id="addressDistrict" ui-search="repeatable" section="miami">
             <options>
                 <option id="">Please select a value</option>
                 <option id="1">1</option>
@@ -30,10 +30,10 @@
             </options>
         </field>
         <!--=field id="addressFloorRoom" section="miami"></field-->
-        <field id="addressDirection" section="miami"></field>
+        <field id="addressDirection" ui-search="repeatable" section="miami"></field>
         <field id="addressLongitude" mini="list" ui-type="validated" datatype="float" section="miami"></field>
         <field id="addressLatitude"  mini="list" ui-type="validated" datatype="float" section="miami"></field>
-        <field id="locatedOutside" section="miami">
+        <field id="locatedOutside" ui-search="repeatable" section="miami">
             <options>
                 <option id="">Please select a value</option>
                 <option id="yes">yes</option>

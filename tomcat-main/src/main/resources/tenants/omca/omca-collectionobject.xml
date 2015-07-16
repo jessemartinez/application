@@ -1,6 +1,13 @@
 <record id="collection-object" is-extension="true">
     <services-record-path id="omca">collectionobjects_omca:http://collectionspace.org/services/collectionobject/local/omca,collectionobjects_omca</services-record-path>
     <section id="identificationInformation">
+        <field id="objectNumber">
+            <options>
+                <option id="omca_cataloging_intake" sample="IN2015.1.1">Intake</option>
+                <option id="omca_cataloging_accession" sample="2015.1.1">Accession</option>
+                <option id="omca_cataloging_loanin" sample="LI2015.1.1">Loans In</option>
+            </options>
+        </field>
         <repeat id="otherNumberList/otherNumber">
             <field id="numberType" in-tab="yes" autocomplete="vocab-numberType" ui-type="enum" seperate_ui_container="true">
                 <!-- removing options block; adding vocab-numberType vocab -->

@@ -1,6 +1,11 @@
 <record id="acquisition" is-extension="true">
     <services-record-path id="omca">acquisitions_omca:http://collectionspace.org/services/acquisition/local/omca,acquisitions_omca</services-record-path>
     <section id="acquisitionInformation">
+        <field id="acquisitionReferenceNumber">
+            <options>
+                <option id="omca_accession" sample="2015.1">Accession</option>
+            </options>
+        </field>
         <field id="acquisitionMethod" ui-search="repeatable" seperate_ui_container="true">
             <selector>acquisition-acquisition-method</selector>
             <!-- updating options -->

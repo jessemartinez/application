@@ -59,7 +59,7 @@
 
             <include src="base-other-dimension.xml,omca-other-dimension.xml" merge="xmlmerge.properties"/>
             <include src="base-other-hierarchy.xml"/>
-            <include src="base-other-idgenerator.xml"/>
+            <include src="base-other-idgenerator.xml,omca-other-idgenerator.xml" merge="xmlmerge.properties"/>
             <include src="base-other-structureddate.xml"/>
             <include src="base-other-termlist.xml"/>
             <include src="base-other-termlistitem.xml"/>

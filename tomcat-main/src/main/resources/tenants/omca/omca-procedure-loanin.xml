@@ -1,6 +1,11 @@
 <record id="loanin" is-extension="true">
     <services-record-path id="omca">loansin_omca:http://collectionspace.org/services/loanin/local/omca,loansin_omca</services-record-path>
     <section id="loaninInformation">
+        <field id="loanInNumber">
+            <options>
+                <option id="omca_loanin" sample="LI2015.1">Loan In</option>
+            </options>
+        </field>
         <field id="loanPurpose" ui-search="repeatable" seperate_ui_container="true" autocomplete="vocab-loanpurpose" ui-type="enum">
             <!-- removing options block; adding vocab-loanpurpose vocab -->
             <options action='delete'/>

@@ -1,6 +1,11 @@
 <record id="media" is-extension="true">
     <services-record-path id="omca">media_omca:http://collectionspace.org/services/media/local/omca,media_omca</services-record-path>
     <section id="mediaInformation">
+        <field id="identificationNumber">
+            <options>
+                <option id="omca_media" sample="MH2015.1">Media Resource</option>
+            </options>
+        </field>
         <repeat id="types">
             <field id="type" ui-search="repeatable" autocomplete="vocab-mediaType" ui-type="enum">
                 <!-- removing options block; adding vocab-mediaType vocab -->

@@ -6,6 +6,13 @@
         </field>
     </section>
     <section id="movementControlInformation">
+        <field id="movementReferenceNumber">
+            <options>
+                <option id="omca_location" sample="LOC2015.1">Location</option>
+                <option id="omca_movement" sample="MOV2015.1">Movement</option>
+                <option id="omca_inventory" sample="INV2015.1">Inventory</option>
+            </options>
+        </field>
         <field id="reasonForMove" ui-search="repeatable">
             <!-- replacing default value -->
             <options>

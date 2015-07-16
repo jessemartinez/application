@@ -1,6 +1,12 @@
 <record id="intake" is-extension="true">
     <services-record-path id="omca">intakes_omca:http://collectionspace.org/services/intake/local/omca,intakes_omca</services-record-path>
     <section id="objectEntryInformation">
+        <field id="entryNumber">
+            <!-- updating options list -->
+            <options>
+                <option id="intake" sample="IN2015.1">Intake</option>
+            </options>
+        </field>
         <field id="entryReason" ui-search="repeatable" autocomplete="vocab-entryReason" ui-type="enum" seperate_ui_container="true">
             <!-- removing options block; adding vocab-entryReason vocab -->
             <options action='delete'/>

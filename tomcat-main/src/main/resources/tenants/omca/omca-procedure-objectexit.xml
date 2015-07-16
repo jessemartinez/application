@@ -1,6 +1,11 @@
 <record id="objectexit" is-extension="true">
     <services-record-path id="omca">objectexit_omca:http://collectionspace.org/services/objectexit/local/omca,objectexit_omca</services-record-path>
     <section id="objectexitInformation">
+        <field id="exitNumber">
+            <options>
+                <option id="omca_objectexit" sample="OE2015.1">Object Exit</option>
+            </options>
+        </field>
         <repeat id="exitMethods">
             <field id="exitMethod" ui-search="repeatable">
                 <!-- updating options list -->

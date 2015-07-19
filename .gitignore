@@ -17,4 +17,5 @@ target/
 .DS_Store
 *.bindings.xml
 logs/
-tomcat-main/src/main/resources/tenants/miami/host-settings.xml
+war-entry/tmp/
+

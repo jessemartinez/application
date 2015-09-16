@@ -14,5 +14,6 @@
         </repeat>
         <field id="isPrimary" datatype="boolean" section="omca"></field>
         <field id="approveForPublic" datatype="boolean" section="omca"></field>
+        <field id="sortableIdentificationNumber" section="omca"></field>
     </section>
 </record>

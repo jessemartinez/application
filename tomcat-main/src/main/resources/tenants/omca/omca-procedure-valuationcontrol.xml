@@ -1,8 +1,10 @@
 <record id="valuationcontrol" is-extension="true">
+	<services-record-path id="omca">valuationcontrols_omca:http://collectionspace.org/services/valuationcontrol/local/omca,valuationcontrols_omca</services-record-path>
     <section id="objectValuationInformation">
         <field id="valueType" autocomplete="vocab-valueType" ui-type="enum" ui-search="repeatable" in-title="yes" mini="summary,search,list,relate">
             <!-- removing options block; adding vocab-valueType vocab -->
             <options action='delete'/>
         </field>
+        <field id="sortableValuationcontrolRefNumber" section="omca"></field>
     </section>
 </record>

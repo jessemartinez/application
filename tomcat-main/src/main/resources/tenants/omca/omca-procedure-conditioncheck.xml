@@ -38,6 +38,7 @@
         <field id="condition" ui-search="repeatable" in-title="yes" autocomplete="vocab-condition" ui-type="enum" seperate_ui_container="true" mini="summary,search,list,relate" section="omca"></field>
         <field id="conditionDate" ui-type="date" datatype="date" section="omca"></field>
         <field id="conditionNote" section="omca"></field>
+        <field id="sortableConditionCheckRefNumber" section="omca"></field>
     </section>
     <section id="objectRequirementInformation">
         <repeat id="salvagePriorityCodeGroupList/salvagePriorityCodeGroup">

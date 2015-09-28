@@ -91,6 +91,10 @@ public class Record implements FieldParent {
 	private Spec spec;
 	private FieldSet mini_summary, mini_number, display_name;
 	private String whoamI = ""; // Used for debugging purposes.
+
+	// Map field id to id of the field to be used for sorting
+	private Map<String, String> sortKeys = new HashMap<String, String>();
+
 	private HashSet<String> authTypeTokenSet = new HashSet<String>();
 	private Record lastAuthoriyProxy = null; // Used during Service binding generation.  Only the "baseAuthority" record ever uses this member.  Values would be things like PersonAuthority, OrgAuthority, and other authority records.
 
@@ -310,12 +314,40 @@ public class Record implements FieldParent {
 				fed.setSearchType("range");
 				fed.setType(searchf.getUIType());
 				fst.setType(searchf.getUIType());
+
+				if(searchf.getUIType().equals("computed")) {
+					Field field = (Field) searchf;
+					// Copy the necessary attributes into the start and end fields
+					fst.setUIFunc(field.getUIFunc());
+					fst.setDataType(field.getDataType());
+					fst.setLabel(field.getLabel());
+					fst.setReadOnly(field.isReadOnly());
+					fst.setUIArgs(suffixUIArgs(field.getUISearchArgs().equals("") ? field.getUIArgs() : field.getUISearchArgs(), RANGE_START_SUFFIX));
+					
+					fed.setUIFunc(field.getUIFunc());
+					fed.setDataType(field.getDataType());
+					fed.setLabel(field.getLabel());
+					fed.setReadOnly(field.isReadOnly());
+					fed.setUIArgs(suffixUIArgs(field.getUISearchArgs().equals("") ? field.getUIArgs() : field.getUISearchArgs(), RANGE_END_SUFFIX));
+				}
+
 				searchFieldFullList.put(fst.getID(), fst);
 				searchFieldFullList.put(fed.getID(), fed);
 			} else {
 				searchFieldFullList.put(searchf.getID(), searchf);
 			}
 		}
+	}
+
+	private String suffixUIArgs(String args, String suffix) {
+		String[] elements = args.split(",");
+
+		for (int i=0; i<elements.length; i++) {
+			String element = elements[i];
+			elements[i] = element + suffix;
+		}
+		
+		return StringUtils.join(elements, ",");
 	}
 
 	public void addNestedFieldList(String r) {
@@ -1333,5 +1365,13 @@ public class Record implements FieldParent {
 	@Override
 	public boolean isExpander() {
 		return false;
+	}
+
+	public void setSortKey(String fieldId, String sortFieldId) {
+		sortKeys.put(fieldId, sortFieldId);
+	}
+	
+	public String getSortKey(String fieldId) {
+		return sortKeys.get(fieldId);
 	}
 }

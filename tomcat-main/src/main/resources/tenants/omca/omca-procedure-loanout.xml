@@ -1,7 +1,8 @@
 <record id="loanout" is-extension="true">
     <services-record-path id="omca">loansout_omca:http://collectionspace.org/services/loanout/local/omca,loansout_omca</services-record-path>
     <section id="loanoutInformation">
-         <field id="loanOutNumber">
+         <field id="loanOutNumber" sortKey="sortableLoanOutNumber">
+            <!-- adding sortKey attribute -->
             <options>
                 <option id="omca_loanout" sample="LO2015.1">Loan Out</option>
             </options>
@@ -15,6 +16,8 @@
                 <!-- changing vocab to vocab-omcaloanoutstatus -->
             </field>
         </repeat>
-        <field id="sortableLoanOutNumber" section="omca"></field>
+        <field id="sortableLoanOutNumber" section="omca" mini="list" ui-type="computed" ui-args="loanOutNumber" ui-func="cspace.util.computeSortableObjectNumber" ui-readonly="true">
+            <!-- adding computed sortable ID number -->
+        </field>
     </section>
 </record>

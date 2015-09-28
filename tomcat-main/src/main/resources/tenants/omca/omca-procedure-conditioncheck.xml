@@ -35,10 +35,15 @@
             <!-- removing options block; adding vocab-conditionCheckReason vocab -->
             <options action='delete'/>
         </field>
+        <field id="conditionCheckRefNumber" sortKey="sortableConditionCheckRefNumber">
+            <!-- adding sortKey attribute -->
+        </field>
         <field id="condition" ui-search="repeatable" in-title="yes" autocomplete="vocab-condition" ui-type="enum" seperate_ui_container="true" mini="summary,search,list,relate" section="omca"></field>
         <field id="conditionDate" ui-type="date" datatype="date" section="omca"></field>
         <field id="conditionNote" section="omca"></field>
-        <field id="sortableConditionCheckRefNumber" section="omca"></field>
+        <field id="sortableConditionCheckRefNumber" section="omca" mini="list" ui-type="computed" ui-args="conditionCheckRefNumber" ui-func="cspace.util.computeSortableObjectNumber" ui-readonly="true">
+            <!-- A computed sortable ID number -->
+        </field>
     </section>
     <section id="objectRequirementInformation">
         <repeat id="salvagePriorityCodeGroupList/salvagePriorityCodeGroup">

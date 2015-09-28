@@ -1,7 +1,8 @@
 <record id="acquisition" is-extension="true">
     <services-record-path id="omca">acquisitions_omca:http://collectionspace.org/services/acquisition/local/omca,acquisitions_omca</services-record-path>
     <section id="acquisitionInformation">
-        <field id="acquisitionReferenceNumber">
+        <field id="acquisitionReferenceNumber" sortKey="sortableAcquisitionReferenceNumber">
+            <!-- adding sortKey attribute -->
             <options>
                 <option id="omca_accession" sample="2015.1">Accession</option>
             </options>
@@ -32,8 +33,9 @@
             </field>
             <field id="acquisitionFundingSourceProvisos"></field>
         </repeat>
-
-        <field id="sortableAcquisitionReferenceNumber" section="omca"></field>
+        <field id="sortableAcquisitionReferenceNumber" section="omca" mini="list" ui-type="computed" ui-args="acquisitionReferenceNumber" ui-func="cspace.util.computeSortableObjectNumber" ui-readonly="true">
+            <!-- adding computed sortable ID number -->
+        </field>
         <repeat id="contactGroupList/contactGroup" section="omca">
             <field id="contact" autocomplete="person-person" section="omca"></field>
             <field id="contactRole" autocomplete="vocab-contactrole" ui-type="enum" section="omca"></field>

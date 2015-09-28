@@ -1,7 +1,8 @@
 <record id="collection-object" is-extension="true">
     <services-record-path id="omca">collectionobjects_omca:http://collectionspace.org/services/collectionobject/local/omca,collectionobjects_omca</services-record-path>
     <section id="identificationInformation">
-        <field id="objectNumber" mini="number,search,list,relate" sortKey="sortableObjectNumber" ui-search="repeatable">
+        <field id="objectNumber" sortKey="sortableObjectNumber">
+            <!-- adding sortKey attribute -->
             <options>
                 <option id="omca_cataloging_intake" sample="IN2015.1.1">Intake</option>
                 <option id="omca_cataloging_accession" sample="2015.1.1">Accession</option>
@@ -117,9 +118,9 @@
             <field id="dhPage" section="omca"></field>
             <field id="dhNotes" section="omca"></field>
         </repeat>
-
-        <!-- A computed sortable object number -->
-        <field id="sortableObjectNumber" section="omca" mini="list" ui-type="computed" ui-args="objectNumber" ui-func="cspace.util.computeSortableObjectNumber" ui-readonly="true"></field>
+        <field id="sortableObjectNumber" section="omca" mini="list" ui-type="computed" ui-args="objectNumber" ui-func="cspace.util.computeSortableObjectNumber" ui-readonly="true">
+            <!-- adding computed sortable ID number -->
+        </field>
     </section>
     <section id="descriptionInformation">
         <field id="sex" ui-search="repeatable" seperate_ui_container="true">

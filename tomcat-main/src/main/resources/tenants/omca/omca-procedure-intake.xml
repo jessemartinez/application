@@ -1,7 +1,8 @@
 <record id="intake" is-extension="true">
     <services-record-path id="omca">intakes_omca:http://collectionspace.org/services/intake/local/omca,intakes_omca</services-record-path>
     <section id="objectEntryInformation">
-        <field id="entryNumber">
+        <field id="entryNumber" sortKey="sortableEntryNumber">
+            <!-- adding sortKey attribute -->
             <!-- updating options list -->
             <options>
                 <option id="intake" sample="IN2015.1">Intake</option>
@@ -16,7 +17,9 @@
                 <!-- adding omcaentrymethod vocab -->
             </field>
         </repeat>
-        <field id="sortableEntryNumber" section="omca"></field>
+        <field id="sortableEntryNumber" section="omca" mini="list" ui-type="computed" ui-args="entryNumber" ui-func="cspace.util.computeSortableObjectNumber" ui-readonly="true">
+            <!-- adding computed sortable ID number -->
+        </field>
         <repeat id="depositorOMCAGroupList/depositorOMCAGroup" section="omca">
             <field id="depositorOMCA" ui-search="repeatable" autocomplete="person-person,organization-organization" section="omca"></field>
             <field id="depositorsRequirementsOMCA" section="omca"></field>

@@ -11,8 +11,8 @@
             </options>
         </field>
         <repeat id="conditionCheckGroupList/conditionCheckGroup">
-            <field id="condition" ui-search="repeatable" seperate_ui_container="true" mini="">
-                <!-- removing mini attribute values -->
+            <field id="condition" ui-search="" seperate_ui_container="true" mini="">
+                <!-- removing mini and ui-search attribute values -->
             </field>
         </repeat>
         <repeat id="hazardGroupList/hazardGroup">

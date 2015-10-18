@@ -94,6 +94,9 @@
         <field id="omca_cataloging_loanin">
             <selector>c9366eed-8207-4d06-b55a-c9846dece67f</selector>
         </field>
+        <field id="omca_cataloging_loanin_alt">
+            <selector>6b6fdbee-fe3b-428a-9987-d4da96885bcc</selector>
+        </field>
         <!--
             This is the type for id generators - if you add a new record type that has an id_generator you need to:
             log into cspace db and look at table id_generators and find the csid for the record type

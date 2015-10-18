@@ -13,9 +13,10 @@
         <field id="objectNumber" sortKey="sortableObjectNumber">
             <!-- adding sortKey attribute -->
             <options>
-                <option id="omca_cataloging_intake" sample="IN2015.1.1">Intake</option>
                 <option id="omca_cataloging_accession" sample="2015.1.1">Accession</option>
+                <option id="omca_cataloging_intake" sample="IN2015.1.1">Intake</option>
                 <option id="omca_cataloging_loanin" sample="LI2015.1.1">Loans In</option>
+                <option id="omca_cataloging_loanin_alt" sample="EX2015.1.1">Loans In (EX)</option>
             </options>
         </field>
         <repeat id="otherNumberList/otherNumber">

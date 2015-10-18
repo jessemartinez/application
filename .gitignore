@@ -17,4 +17,5 @@ target/
 .DS_Store
 *.bindings.xml
 logs/
+war-entry/tmp/
 tomcat-main/src/main/resources/tenants/omca/host-settings.xml

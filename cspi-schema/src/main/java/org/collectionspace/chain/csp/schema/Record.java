@@ -90,7 +90,7 @@ public class Record implements FieldParent {
 	private Map<String, Map<String, FieldSet>> minidataset = new HashMap<String, Map<String, FieldSet>>();
 	private Spec spec;
 	private FieldSet mini_summary, mini_number, display_name;
-	private String whoamI = ""; // Used for debugging purposes.
+	public String whoamI = ""; // Used for debugging purposes.
 
 	// Map field id to id of the field to be used for sorting
 	private Map<String, String> sortKeys = new HashMap<String, String>();

@@ -1,0 +1,26 @@
+<record id="preferredPlace" in-recordlist="no" separate-record="false">
+    <section id="termInformation">
+        <repeat id="placeTermGroupList/placeTermGroup">
+            <field id="termType" ui-search="repeatable">
+                <selector>placeAuthority-termType</selector>
+                <!-- normalizing termType options list -->
+                <options>
+                    <option id="">no value selected</option>
+                    <option id="descriptor">Descriptor</option>
+                    <option id="alternatedescriptor">Alternate descriptor</option>
+                    <option id="usedforterm">Used for term</option>
+                </options>
+            </field>
+            <field id="historicalStatus">
+                <selector>placeAuthority-historicalStatus</selector>
+                <!-- changing options list behavior -->
+                <options>
+                    <option id="">no value selected</option>
+                    <option id="current">Current</option>
+                    <option id="historical">Historical</option>
+                    <option id="both">Both</option>
+                </options>
+            </field>
+        </repeat>
+    </section>
+</record>

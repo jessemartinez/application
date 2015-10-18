@@ -1,0 +1,61 @@
+<record id="conditioncheck" is-extension="true">
+    <services-record-path id="omca">conditionchecks_omca:http://collectionspace.org/services/conditioncheck/local/omca,conditionchecks_omca</services-record-path>
+    <section id="objectConditionInformation">
+        <field id="objectAuditCategory" ui-search="repeatable">
+            <!-- replacing default value -->
+            <options>
+                <option id="">no value selected</option>
+                <option id="low">Low</option>
+                <option id="medium">Medium</option>
+                <option id="high">High</option>
+            </options>
+        </field>
+        <repeat id="conditionCheckGroupList/conditionCheckGroup">
+            <field id="condition" ui-search="" seperate_ui_container="true" mini="">
+                <!-- removing mini and ui-search attribute values -->
+            </field>
+        </repeat>
+        <repeat id="hazardGroupList/hazardGroup">
+            <field id="hazard">
+                <!-- replacing default value -->
+                <options>
+                    <option id="">no value selected</option>
+                    <option id="poisonous">Poisonous</option>
+                    <option id="radioactive">Radioactive</option>
+                </options>
+            </field>
+        </repeat>
+    </section>
+    <section id="conditionCheckInformation">
+        <field id="conditionCheckMethod" autocomplete="vocab-conditionCheckMethod" ui-type="enum">
+            <!-- removing options block; adding vocab-conditionCheckMethod vocab -->
+            <options action='delete'/>
+        </field>
+        <field id="conditionCheckReason" autocomplete="vocab-conditionCheckReason" ui-type="enum">
+            <!-- removing options block; adding vocab-conditionCheckReason vocab -->
+            <options action='delete'/>
+        </field>
+        <field id="conditionCheckRefNumber" sortKey="sortableConditionCheckRefNumber">
+            <!-- adding sortKey attribute -->
+        </field>
+        <field id="condition" ui-search="repeatable" in-title="yes" autocomplete="vocab-condition" ui-type="enum" seperate_ui_container="true" mini="summary,search,list,relate" section="omca"></field>
+        <field id="conditionDate" ui-type="date" datatype="date" section="omca"></field>
+        <field id="conditionNote" section="omca"></field>
+        <field id="sortableConditionCheckRefNumber" section="omca" mini="list" ui-type="computed" ui-args="conditionCheckRefNumber" ui-func="cspace.util.computeSortableObjectNumber" ui-readonly="true">
+            <!-- A computed sortable ID number -->
+        </field>
+    </section>
+    <section id="objectRequirementInformation">
+        <repeat id="salvagePriorityCodeGroupList/salvagePriorityCodeGroup">
+            <field id="salvagePriorityCode">
+                <!-- replacing default value -->
+                <options>
+                    <option id="">no value selected</option>
+                    <option id="low">Low</option>
+                    <option id="medium">Medium</option>
+                    <option id="high">High</option>
+                </options>
+            </field>
+        </repeat>
+    </section>
+</record>

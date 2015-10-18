@@ -360,6 +360,7 @@ public class UISpec extends SchemaStructure implements WebMethod {
 		if(type.equals("")){type = "string";}
 		options.put("type",type);
 		options.put("label",f.getLabel());
+		options.put("readOnly", f.isReadOnly());
 		JSONObject decorator=getDecorator("fluid",null,"cspace.inputValidator",options,f.isReadOnly());
 		if(!f.isRefactored()){
 			if(f.hasContainer()){
@@ -387,7 +388,7 @@ public class UISpec extends SchemaStructure implements WebMethod {
 		JSONArray decorators = getExistingDecoratorsArray(out, fieldSelector);
 		out.put(fieldSelector,generateDataTypeValidator(fs,context, decorators));
 	}
-	
+
 	/**
 	 * Overwrite with output you need for this thing you are doing
 	 * @param out
@@ -400,6 +401,87 @@ public class UISpec extends SchemaStructure implements WebMethod {
 		String fieldSelector = getSelector(fs,context);
 		JSONArray decorators = getExistingDecoratorsArray(out, fieldSelector);
 		out.put(fieldSelector,actualExternalURL(fs,context, decorators));
+	}
+
+	/**
+	 * Generate the JSON needed by the UI to create a computed field.
+	 * @param f
+	 * @param context
+	 * @return
+	 * @throws JSONException
+	 */
+	protected JSONObject generateComputedField(FieldSet fs, UISpecRunContext context) throws JSONException {
+		Field f = (Field)fs;
+		JSONObject out=new JSONObject();
+		JSONArray decorators=new JSONArray();
+		JSONObject options = new JSONObject();
+		String type = f.getDataType();
+		if(type.equals("")){type = "string";}
+		options.put("type",type);
+		options.put("label",f.getLabel());
+		options.put("readOnly", f.isReadOnly());
+		
+		if (StringUtils.isNotEmpty(f.getUIFunc())) {
+			options.put("func",f.getUIFunc());
+		}
+		
+		if (StringUtils.isNotEmpty(f.getUIArgs())) {
+			options.put("args",f.getUIArgs().split(","));
+		}
+		
+		String root = "";
+		String elPath = "";
+		
+		// Determine the root and elPath. This is basically a reworking of displayAsplain(Field,UISpecRunContext), which
+		// really needs to be refactored so it doesn't have to be repeated here.
+		if(f.getParent().isExpander() ||  f.isRepeatSubRecord()){
+			root = "{row}";
+			String[] paths = f.getIDPath();
+			elPath = paths[paths.length - 1];
+		}
+		else if(f.getParent() instanceof Repeat){
+			Repeat rp = (Repeat)f.getParent();//remove bogus repeats used in search
+			if(!rp.getSearchType().equals("repeator") && !this.spectype.equals("search")){
+				root = "{row}";
+				String[] paths = f.getIDPath();
+				elPath = paths[paths.length - 1];
+			}
+			else if(this.spectype.equals("search")){
+				root = "{row}";
+				String[] paths = f.getIDPath();
+				elPath = paths[paths.length - 1];
+			}
+			else {
+				elPath = displayAsveryplainWithoutEnclosure(f,context);
+			}
+		}
+		else {
+			elPath = displayAsveryplainWithoutEnclosure(f,context);
+		}
+
+		options.put("root",root);
+		options.put("elPath",elPath);
+		
+		JSONObject decorator=getDecorator("fluid",null,"cspace.computedField",options,f.isReadOnly());
+		if(!f.isRefactored()){
+			if(f.hasContainer()){
+				decorator.put("container",getSelector(f,context));
+			}
+		}
+		decorators.put(decorator);
+		out.put("decorators",decorators);
+		out.put("value", actualFieldEntry(f,context));
+		return out;
+	}
+	/**
+	 * Write the JSON structure for a computed field.
+	 * @param out
+	 * @param fs
+	 * @param context
+	 * @throws JSONException 
+	 */
+	protected void actualComputedField(JSONObject out, FieldSet fs, UISpecRunContext context) throws JSONException{
+		out.put(getSelector(fs,context),generateComputedField(fs,context));
 	}
 	
 	/**

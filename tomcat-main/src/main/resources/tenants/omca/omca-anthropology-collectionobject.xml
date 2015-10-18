@@ -1,0 +1,10 @@
+<record id="collection-object" is-extension="true">
+    <section id="culturalCareInformation">
+        <repeat id="accessRestrictionGroupList/accessRestrictionGroup" section="anthropology">
+            <field id="accessRestrictionType" autocomplete="vocab-accessrestrictiontype" ui-type="enum" section="anthropology">
+                <!-- removing options block; adding vocab-accessrestrictiontype vocab -->
+                <options action='delete'/>
+            </field>
+        </repeat>
+    </section>
+</record>

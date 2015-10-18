@@ -111,6 +111,8 @@ public class Field extends FieldSetImpl {
 		utils.initStrings(section,"@with-csid","");
 
 		utils.initStrings(section,"@ui-func", "");
+		utils.initStrings(section,"@ui-args", "");
+		utils.initStrings(section,"@ui-search-args", "");
 		utils.initStrings(section,"@ui-type", "plain");
 		utils.initStrings(section,"@ui-search", "");
 		utils.initStrings(section,"@query-behavior", QUERY_BEHAVIOR_NORMAL);
@@ -160,6 +162,12 @@ public class Field extends FieldSetImpl {
 		}
 		for (String s : minis) {
 			this.parent.getRecord().addMiniDataSet(this, s);
+		}
+
+		String sortKey = Util.getStringOrDefault(section, "/@sortKey", "");
+		
+		if (StringUtils.isNotEmpty(sortKey)) {
+			this.parent.getRecord().setSortKey(utils.getString("@id"), sortKey);
 		}
 
 		utils.initBoolean(section,"@display-name",false);
@@ -241,6 +249,9 @@ public class Field extends FieldSetImpl {
 	public String getLabel() {
 		return utils.getString("label");
 	}
+	public void setLabel(String val) {
+		utils.setString("label",val);
+	}
 	public String getUIprefix(){
 		return getPreSelector() + utils.getString("parentID") + "-";
 	}
@@ -271,6 +282,22 @@ public class Field extends FieldSetImpl {
 	@Override
 	public String getUIFunc() {
 		return utils.getString("@ui-func");
+	}
+
+	public void setUIFunc(String val) {
+		utils.setString("@ui-func", val);
+	}
+
+	public String getUIArgs() {
+		return utils.getString("@ui-args");
+	}
+
+	public void setUIArgs(String val) {
+		utils.setString("@ui-args", val);
+	}
+
+	public String getUISearchArgs() {
+		return utils.getString("@ui-search-args");
 	}
 
 	public Boolean isInTitle() {
@@ -320,6 +347,10 @@ public class Field extends FieldSetImpl {
 	@Override
 	public boolean isServicesReadOnly(){
 		return utils.getBoolean("@services-readonly");
+	}
+
+	public void setReadOnly(boolean val){
+		utils.setBoolean("@ui-readonly", val);
 	}
 	
 	@Override
@@ -376,6 +407,10 @@ public class Field extends FieldSetImpl {
 	//XXX could be used for validation at the app layer
 	public String getDataType(){
 		return utils.getString("@datatype");
+	}
+
+	public void setDataType(String val){
+		utils.setString("@datatype", val);
 	}
 
 	void setType(String in) {

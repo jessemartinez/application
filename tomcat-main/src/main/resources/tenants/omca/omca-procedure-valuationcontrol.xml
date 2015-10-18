@@ -1,0 +1,15 @@
+<record id="valuationcontrol" is-extension="true">
+	<services-record-path id="omca">valuationcontrols_omca:http://collectionspace.org/services/valuationcontrol/local/omca,valuationcontrols_omca</services-record-path>
+    <section id="objectValuationInformation">
+    	<field id="valuationcontrolRefNumber" sortKey="sortableValuationcontrolRefNumber">
+            <!-- adding sortKey attribute -->
+        </field>
+        <field id="valueType" autocomplete="vocab-valueType" ui-type="enum" ui-search="repeatable" in-title="yes" mini="summary,search,list,relate">
+            <!-- removing options block; adding vocab-valueType vocab -->
+            <options action='delete'/>
+        </field>
+        <field id="sortableValuationcontrolRefNumber" section="omca" mini="list" ui-type="computed" ui-args="valuationcontrolRefNumber" ui-func="cspace.util.computeSortableObjectNumber" ui-readonly="true">
+            <!-- adding computed sortable ID number -->
+        </field>
+    </section>
+</record>

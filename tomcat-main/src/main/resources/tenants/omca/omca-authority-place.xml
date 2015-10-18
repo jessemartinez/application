@@ -1,0 +1,95 @@
+<record id="place" is-extension="true">
+    <services-record-path id="omca">places_omca:http://collectionspace.org/services/place/local/omca,places_omca</services-record-path>
+    <section id="placeAuthorityInformation">
+        <field id="placeType" autocomplete="vocab-placeType" ui-type="enum" ui-search="repeatable">
+            <!-- removing options block; adding vocab-placeType vocab -->
+            <options action='delete'/>
+        </field>
+        <field id="placeSource" autocomplete="citation-citation">
+            <!-- adding citation authority vocab -->
+        </field>
+        <field id="legacyArgusNotes" section="omca"></field>
+        <field id="legacyParents" section="omca"></field>
+        <field id="legacySeeAlso" section="omca"></field>
+    </section>
+    <section id="localityInformation">
+        <field id="vCoordSys">
+            <!-- replacing default value -->
+            <options>
+                <option id="">no value selected</option>
+                <option id="altitude-depth">Altitude depth</option>
+                <option id="latitude-longitude">Latitude and longitude</option>
+                <option id="national-grid-reference">National Grid reference</option>
+                <option id="utm">Universal Transverse Mercator (UTM)</option>
+            </options>
+        </field>
+        <field id="vSpatialReferenceSystem">
+            <!-- replacing default value -->
+            <options>
+                <option id="">no value selected</option>
+                <option id="epsg4326-wgs84">EPSG:4326-WGS84</option>
+                <option id="epsg4269-nad83">EPSG:4269-NAD83</option>
+                <option id="epsg4267-nad27">EPSG:4267-NAD27</option>
+                <option id="unknown">Unknown</option>
+            </options>
+        </field>
+        <field id="vCoordSource"/>
+        <field id="vCoordSourceRefId"/>
+        <field id="vUnitofMeasure">
+            <!-- replacing default value -->
+            <options>
+                <option id="">no value selected</option>
+                <option id="acres">acres</option>
+                <option id="centimeters">centimeters</option>
+                <option id="feet">feet</option>
+                <option id="hectares">hectares</option>
+                <option id="inches">inches</option>
+                <option id="kilometers">kilometers</option>
+                <option id="meters">meters</option>
+                <option id="miles">miles</option>
+                <option id="millimeters">millimeters</option>
+                <option id="square-feet">square feet</option>
+                <option id="square-meters">square meters</option>
+                <option id="square-yards">square yards</option>
+                <option id="stories">stories</option>
+            </options>
+        </field>
+    </section>
+    <section id="geoReferenceInformation">
+        <repeat id="placeGeoRefGroupList/placeGeoRefGroup">
+            <field id="geodeticDatum">
+                <!-- replacing default value -->
+                <options>
+                   <option id="">no value selected</option>
+                    <option id="epsg4326-wgs84">EPSG:4326-WGS84</option>
+                    <option id="epsg4269-nad83">EPSG:4269-NAD83</option>
+                    <option id="epsg4267-nad27">EPSG:4267-NAD27</option>
+                    <option id="unknown">Unknown</option>
+                </options>
+            </field>
+            <field id="geoRefProtocol">
+                <!-- replacing default value -->
+                <options>
+                    <option id="">no value selected</option>
+                    <option id="chapman-wieczorek-2006-guide-best-practices-georeferencing">Chapman,
+                        Wieczorek 2006, Guide to Best Practices for Georeferencing
+                    </option>
+                    <option id="manis-herpnet-ornis-georeferencing-guidelines">MaNIS/HerpNet/ORNIS
+                        Georeferencing Guidelines
+                    </option>
+                    <option id="georeferencing-dummies">Georeferencing For Dummies</option>
+                    <option id="biogeomancer">BioGeomancer</option>
+                </options>
+            </field>
+            <field id="geoRefVerificationStatus">
+                <!-- replacing default value -->
+                <options>
+                    <option id="">no value selected</option>
+                    <option id="unverified">Unverified</option>
+                    <option id="verified-data-custodian">Verified by data custodian</option>
+                    <option id="verified-contributor">Verified by contributor</option>
+                </options>
+            </field>
+        </repeat>
+    </section>
+</record>

@@ -1,0 +1,58 @@
+<record id="movement" is-extension="true">
+    <section id="locationMovementInformation">
+        <field id="currentLocationFitness" autocomplete="vocab-currentLocationFitness" ui-type="enum">
+            <!-- removing options block; adding vocab-currentLocationFitness vocab -->
+            <options action='delete'/>
+        </field>
+    </section>
+    <section id="movementControlInformation">
+        <field id="movementReferenceNumber">
+            <options>
+                <option id="omca_location" sample="LOC2015.1">Location</option>
+                <option id="omca_movement" sample="MOV2015.1">Movement</option>
+                <option id="omca_inventory" sample="INV2015.1">Inventory</option>
+            </options>
+        </field>
+        <field id="reasonForMove" ui-search="repeatable">
+            <!-- replacing default value -->
+            <options>
+                <option id="">no value selected</option>
+                <option id="conservation">Conservation</option>
+                <option id="exhibition">Exhibition</option>
+                <option id="inventory">Inventory</option>
+                <option id="loan">Loan</option>
+                <option id="newstoragelocation">New Storage Location</option>
+                <option id="photography">Photography</option>
+                <option id="research">Research</option>
+            </options>
+        </field>
+        <repeat id="movementMethods">
+            <field id="movementMethod" ui-search="repeatable">
+                <!-- replacing default value -->
+                <options>
+                    <option id="">no value selected</option>
+                    <option id="forklift">Forklift</option>
+                    <option id="handcarried">Handcarried</option>
+                    <option id="trolley">Trolley</option>
+                </options>
+            </field>
+        </repeat>
+    </section>
+    <section id="inventory">
+        <field id="inventoryActionRequired" autocomplete="vocab-inventoryActionRequired" ui-type="enum" ui-search="repeatable">
+            <!-- removing options block; adding vocab-inventoryActionRequired vocab -->
+            <options action='delete'/>
+        </field>
+        <field id="frequencyForInventory" ui-search="repeatable">
+            <!-- replacing default value -->
+            <options>
+                <option id="">no value selected</option>
+                <option id="daily">Daily</option>
+                <option id="weekly">Weekly</option>
+                <option id="monthly">Monthly</option>
+                <option id="semi-annually">Semi-annually</option>
+                <option id="annually">Annually</option>                            
+            </options>
+        </field>
+    </section>
+</record>

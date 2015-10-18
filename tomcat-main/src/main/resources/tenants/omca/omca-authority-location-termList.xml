@@ -1,0 +1,16 @@
+<record id="preferredSLA" in-recordlist="no" separate-record="false">
+    <section id="termInformation">
+        <repeat id="locTermGroupList/locTermGroup">
+            <field id="termType">
+                <selector>locationAuthority-termType</selector>
+                <!-- normalizing termType options list -->
+                <options>
+                    <option id="">no value selected</option>
+                    <option id="descriptor">Descriptor</option>
+                    <option id="alternatedescriptor">Alternate descriptor</option>
+                    <option id="usedforterm">Used for term</option>
+                </options>
+            </field>
+        </repeat>
+    </section>
+</record>

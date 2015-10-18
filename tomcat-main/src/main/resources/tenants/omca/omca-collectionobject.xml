@@ -1,5 +1,14 @@
 <record id="collection-object" is-extension="true">
     <services-record-path id="omca">collectionobjects_omca:http://collectionspace.org/services/collectionobject/local/omca,collectionobjects_omca</services-record-path>
+    <section id="coreInformation">
+        <field id="nametitle" mini="summary,search,list,relate" exists-in-services="false" service-field-alias="dhName">
+            <!-- updating merge fields -->
+            <merges>
+                <merge id="objectName" rank="1"/>
+                <merge id="dhName" rank="2"/>
+            </merges>
+        </field>
+    </section>
     <section id="identificationInformation">
         <field id="objectNumber" sortKey="sortableObjectNumber">
             <!-- adding sortKey attribute -->

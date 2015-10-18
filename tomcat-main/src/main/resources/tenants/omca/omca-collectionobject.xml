@@ -265,6 +265,11 @@
         <field id="accessory" section="omca"></field>
     </section>
     <section id="objectProductionInformation">
+        <repeat id="objectProductionPersonGroupList/objectProductionPersonGroup">
+            <field id="objectProductionPerson" ui-search="repeatable" mini="list" autocomplete="person-person">
+                <!-- adding mini=list attribute -->
+            </field>
+        </repeat>
         <field id="argusMade" section="omca"></field>
     </section>
     <section id="objectHistoryAssociationInformation">

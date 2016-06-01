@@ -1,0 +1,10 @@
+<record id="loanout">
+    <section id="loanoutInformation">
+        <field id="loanOutNumber">
+            <options>
+                <!-- adding custom number picker pattern -->
+                <option id="bm_loanout" sample="L2016.1">Loan Out</option>
+            </options>
+        </field>
+    </section>
+</record>

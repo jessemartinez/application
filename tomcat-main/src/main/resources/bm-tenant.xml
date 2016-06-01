@@ -23,7 +23,7 @@
 			<include src="base-procedure-groups.xml,bm-procedure-groups.xml" merge="xmlmerge.properties"/>
 			<include src="base-procedure-intake.xml,bm-procedure-intake.xml" merge="xmlmerge.properties"/>
 			<include src="base-procedure-loanin.xml"/>
-			<include src="base-procedure-loanout.xml"/>
+			<include src="base-procedure-loanout.xml,bm-procedure-loanout.xml" merge="xmlmerge.properties"/>
 			<include src="base-procedure-media.xml,extensions/fcart-profile-procedure-media.xml"
 					 merge="xmlmerge.properties"/>
 			<include src="base-procedure-valuationcontrol.xml"/>
@@ -67,7 +67,7 @@
 			<include src="base-other-dimension.xml,extensions/fcart-profile-other-dimension.xml"
 					 merge="xmlmerge.properties" />
 			<include src="base-other-hierarchy.xml"/>
-			<include src="base-other-idgenerator.xml"/>
+			<include src="base-other-idgenerator.xml,bm-other-idgenerator.xml" merge="xmlmerge.properties"/>
 			<include src="base-other-structureddate.xml"/>
 			<include src="base-other-termlist.xml"/>
 			<include src="base-other-termlistitem.xml"/>

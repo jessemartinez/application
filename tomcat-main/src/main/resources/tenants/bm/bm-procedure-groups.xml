@@ -1,0 +1,8 @@
+<record id="group">
+    <section id="groupInformation">
+        <field id="responsibleDepartment" autocomplete="vocab-groupresponsibledepartment" ui-type="enum">
+            <!-- removing static vocab and adding vocab-groupresponsibledepartment -->
+            <option/>
+        </field>
+    </section>
+</record>

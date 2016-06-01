@@ -1,0 +1,7 @@
+<record id="intake" is-extension="true">
+    <services-record-path id="bm">intakes_bm:http://collectionspace.org/services/intake/local/bm,intakes_bm</services-record-path>
+
+    <section id="objectEntryInformation">
+        <field id="receivedBy" autocomplete="person-person,person-ulan_pa,organization-organization" ui-search="repeatable" section="bm"></field>
+    </section>
+</record>

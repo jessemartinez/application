@@ -1,0 +1,7 @@
+<record id="acquisition" is-extension="true">
+    <services-record-path id="bm">acquisitions_bm:http://collectionspace.org/services/acquisition/local/bm,acquisitions_bm</services-record-path>
+    
+    <section id="acquisitionInformation">
+        <field id="acquisitionObjectCount" ui-search="range" ui-type="validated" datatype="integer" section="bm"></field>
+    </section>
+</record>

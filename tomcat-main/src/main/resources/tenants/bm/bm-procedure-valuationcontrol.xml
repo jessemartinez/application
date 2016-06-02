@@ -1,0 +1,10 @@
+<record id="valuationcontrol" is-extension="true">
+    <services-record-path id="bm">valuationcontrols_bm:http://collectionspace.org/services/valuationcontrol/local/bm,valuationcontrols_bm</services-record-path>
+
+    <section id="objectValuationInformation">
+        <repeat id="bmValueAmountsList/bmValueAmounts" section="bm">
+            <field id="bmValueAmount" ui-type="validated" datatype="float" section="bm"></field>
+            <field id="bmValueNote" section="bm"></field>
+        </repeat>
+    </section>
+</record>

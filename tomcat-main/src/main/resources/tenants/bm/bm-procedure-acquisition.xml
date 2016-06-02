@@ -2,6 +2,14 @@
     <services-record-path id="bm">acquisitions_bm:http://collectionspace.org/services/acquisition/local/bm,acquisitions_bm</services-record-path>
     
     <section id="acquisitionInformation">
+    	<field id="acquisitionReferenceNumber">
+            <options>
+            	<!-- adding custom number picker pattern -->
+                <option id="bm_accession" sample="2016.1">Accession</option>
+                <option id="archive" sample="AR2016.42">Archives</option>
+                <option id="library" sample="LIB2016.1">Library</option>
+            </options>
+        </field>
         <field id="acquisitionObjectCount" ui-search="range" ui-type="validated" datatype="integer" section="bm"></field>
     </section>
 </record>

@@ -12,5 +12,8 @@
         <field id="bm_objectexit">
             <selector>a8d7603e-7bcf-4be4-9003-2214a52716f4</selector>
         </field>
+        <field id="bm_accession">
+            <selector>74b23399-488d-41db-8e3e-88749a2afefc</selector>
+        </field>
     </section>
 </record>

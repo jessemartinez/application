@@ -6,5 +6,8 @@
         <field id="bm_inventory">
             <selector>c17f4fc9-0657-4160-a89e-a7f355c8ca08</selector>
         </field>
+        <field id="bm_media">
+            <selector>53742d00-4c95-4ebd-a335-bf9765a3fda5</selector>
+        </field>
     </section>
 </record>

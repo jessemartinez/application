@@ -24,7 +24,7 @@
 			<include src="base-procedure-intake.xml,bm-procedure-intake.xml" merge="xmlmerge.properties"/>
 			<include src="base-procedure-loanin.xml"/>
 			<include src="base-procedure-loanout.xml,bm-procedure-loanout.xml" merge="xmlmerge.properties"/>
-			<include src="base-procedure-media.xml,extensions/fcart-profile-procedure-media.xml"
+			<include src="base-procedure-media.xml,extensions/fcart-profile-procedure-media.xml,bm-procedure-media.xml"
 					 merge="xmlmerge.properties"/>
 			<include src="base-procedure-valuationcontrol.xml"/>
 			<include src="base-procedure-movement.xml,bm-procedure-movement.xml" merge="xmlmerge.properties"/>

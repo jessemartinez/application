@@ -3,5 +3,8 @@
         <field id="bm_loanout">
             <selector>f1f47afb-2509-4d0b-98b8-2f9dd421d76e</selector>
         </field>
+        <field id="bm_inventory">
+            <selector>c17f4fc9-0657-4160-a89e-a7f355c8ca08</selector>
+        </field>
     </section>
 </record>

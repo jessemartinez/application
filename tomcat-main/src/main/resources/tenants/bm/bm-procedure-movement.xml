@@ -1,0 +1,12 @@
+<record id="movement">
+    <section id="movementControlInformation">
+        <field id="movementReferenceNumber">
+            <options>
+                <!-- adding custom number picker pattern -->
+                <option id="bm_inventory" sample="INV2016.1">Inventory</option>
+                <!--option id="location" sample="LOC2010.1">Location</option-->
+                <!--option id="movement" sample="MV2010.1">Movement</option-->
+            </options>
+        </field>
+    </section>
+</record>

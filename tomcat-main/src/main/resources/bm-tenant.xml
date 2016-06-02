@@ -49,7 +49,7 @@
 			<!-- include src="base-authority-taxon.xml"/ -->
 			
 			<include src="base-authority-concept-termList.xml"/>
-			<include src="base-authority-concept.xml,extensions/fineart-authority-concept.xml"
+			<include src="base-authority-concept.xml,extensions/fineart-authority-concept.xml,bm-authority-concept.xml"
                     merge="xmlmerge.properties" />
 			<include src="base-authority-work-termList.xml"/>
 			<include src="base-authority-work.xml"/>

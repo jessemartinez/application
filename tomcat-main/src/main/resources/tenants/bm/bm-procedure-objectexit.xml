@@ -1,0 +1,10 @@
+<record id="objectexit">
+    <section id="objectexitInformation">
+        <field id="exitNumber">
+            <options>
+                <!-- adding custom number picker pattern -->
+                <option id="bm_objectexit" sample="X2016.1">Object Exit</option>
+            </options>
+        </field>
+    </section>
+</record>

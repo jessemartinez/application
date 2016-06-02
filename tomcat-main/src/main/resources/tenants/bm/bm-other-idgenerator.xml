@@ -9,5 +9,8 @@
         <field id="bm_media">
             <selector>53742d00-4c95-4ebd-a335-bf9765a3fda5</selector>
         </field>
+        <field id="bm_objectexit">
+            <selector>a8d7603e-7bcf-4be4-9003-2214a52716f4</selector>
+        </field>
     </section>
 </record>

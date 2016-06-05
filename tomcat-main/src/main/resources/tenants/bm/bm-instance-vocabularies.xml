@@ -1,0 +1,23 @@
+<instances>
+    <instance id="vocab-groupresponsibledepartment">
+        <web-url>groupresponsibledepartment</web-url>
+        <title-ref>groupresponsibledepartment</title-ref>
+        <title>Group Responsible Department</title>
+        <options>
+            <option id="exhibition_planning">Exhibition planning</option>
+            <option id="object_move">Object move</option>
+            <option id="research">Research</option>
+        </options>
+    </instance>
+    <instance id="vocab-bmnumbertype">
+        <web-url>bmnumbertype</web-url>
+        <title-ref>bmnumbertype</title-ref>
+        <title>Number Type</title>
+        <options>
+            <option id="leader">Leader</option>
+            <option id="previous">Previous</option>
+            <option id="inventory">Inventory</option>
+            <option id="fic">FIC</option>
+        </options>
+    </instance>
+</instances>

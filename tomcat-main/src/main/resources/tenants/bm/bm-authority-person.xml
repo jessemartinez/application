@@ -1,0 +1,20 @@
+<record id="person">
+    <instances id="person">
+        <instance id="person-person">
+            <web-url>person</web-url>
+            <title-ref>person</title-ref>
+            <title>Local Persons</title>
+        </instance>
+        <instance id="person-ulan_pa">
+            <web-url>ulan_pa</web-url>
+            <title-ref>ulan_pa</title-ref>
+            <title>ULAN Persons</title>
+        </instance>
+        <!-- adding new persons vocab -->
+        <instance id="person-namedcollection">
+            <web-url>namedcollection</web-url>
+            <title-ref>namedcollection</title-ref>
+            <title>Persons Named Collection</title>
+        </instance>
+    </instances>
+</record>

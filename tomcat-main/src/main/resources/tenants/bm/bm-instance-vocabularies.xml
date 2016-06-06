@@ -20,4 +20,102 @@
             <option id="fic">FIC</option>
         </options>
     </instance>
+    <instance id="vocab-bmcollection">
+        <web-url>bmcollection</web-url>
+        <title-ref>bmcollection</title-ref>
+        <title>Collection</title>
+        <options>
+            <option id="art_collection">Art Collection</option>
+            <option id="historical_object_collection">Historical Object Collection</option>
+            <option id="archive_collection">Archive Collection</option>
+            <option id="library_collection">Library Collection</option>
+        </options>
+    </instance>
+    <instance id="vocab-conditionstatus">
+        <web-url>conditionstatus</web-url>
+        <title-ref>conditionstatus</title-ref>
+        <title>Condition Status</title>
+        <options>
+            <option id="exhibitable_needs_no_work">Exhibitable/Needs no work</option>
+            <option id="exhibitable_needs_work">Exhibitable/Needs work</option>
+            <option id="not_exhibitable_stable">Not Exhibitable/stable</option>
+            <option id="in_jeopardy">In jeopardy</option>
+        </options>
+    </instance>
+    <instance id="vocab-originalstorageformat">
+        <web-url>originalstorageformat</web-url>
+        <title-ref>originalstorageformat</title-ref>
+        <title>Original Storage Format</title>
+        <options>
+            <option id="8mm">8mm</option>
+            <option id="16mm">16mm</option>
+            <option id="35mm">35mm</option>
+            <option id="50mm">50mm</option>
+            <option id="12in_78rpm_LP">12 in/78 rpm (LP)</option>
+            <option id="7in_33_1_2_rpm_single">7 in/33 1/2 rpm (single)</option>
+            <option id="12in_45_rpm_EP">12 in/45 rpm (EP)</option> 
+            <option id="aiff">AIFF</option>
+            <option id="mov">MOV</option>
+            <option id="mp3">MP3</option>
+            <option id="wav">WAV</option>
+        </options>
+    </instance>
+    <instance id="vocab-originalplaybackformate">
+        <web-url>originalplaybackformate</web-url>
+        <title-ref>originalplaybackformate</title-ref>
+        <title>Original Playback Format</title>
+        <options>
+            <option id="8track">8-track</option>
+            <option id="cassette">cassette</option>
+            <option id="cd">CD</option>
+            <option id="dvd">DVD</option>
+            <option id="magnetic_tape">Magnetic Tape</option>
+            <option id="reel_to_reel">reel-to-reel</option>
+            <option id="vinyl_record">vinyl record</option> 
+            <option id="vhs">VHS</option>
+        </options>
+    </instance>
+    <instance id="vocab-copiesprovided">
+        <web-url>originalplaybackformate</web-url>
+        <title-ref>originalplaybackformate</title-ref>
+        <title>Original Playback Format</title>
+        <options>
+            <option id="8track">8-track</option>
+            <option id="cassette">cassette</option>
+            <option id="cd">CD</option>
+            <option id="dvd">DVD</option>
+            <option id="hard_drive">hard drive</option>
+            <option id="magnetic_tape">Magnetic Tape</option>
+            <option id="mp3">MP3</option>
+            <option id="mov">MOV</option>
+            <option id="reel_to_reel">reel-to-reel</option>
+            <option id="thumb_drive">thumb drive</option>
+            <option id="vinyl_record">vinyl record</option> 
+            <option id="vhs">VHS</option>
+            <option id="wav">WAV</option>
+        </options>
+    </instance>
+    <instance id="vocab-bmratioformat">
+        <web-url>bmratioformat</web-url>
+        <title-ref>bmratioformat</title-ref>
+        <title>BM Ratio Format</title>
+        <options>
+            <option id="4x3">4:3</option>
+            <option id="3x2">3:2</option>
+            <option id="16x9">16:9</option>
+            <option id="5x3">5:3</option>
+            <option id="5x4">5:4</option>
+            <option id="1x1">1:1</option>
+        </options>
+    </instance>
+    <instance id="vocab-preferredcolorpalette">
+        <web-url>preferredcolorpalette</web-url>
+        <title-ref>preferredcolorpalette</title-ref>
+        <title>Preferred color palatte</title>
+        <options>
+            <option id="cmyk">CMYK</option>
+            <option id="hex">HEX</option>
+            <option id="rgb"> RGB</option>
+        </options>
+    </instance>
 </instances>

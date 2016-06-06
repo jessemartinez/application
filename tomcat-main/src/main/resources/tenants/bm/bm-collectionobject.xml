@@ -1,0 +1,62 @@
+<record id="collection-object"  is-extension="true">
+    <services-record-path id="bm">collectionobjects_bm:http://collectionspace.org/services/collectionobject/local/bm,collectionobjects_bm</services-record-path>
+
+    <section id="identificationInformation">
+        <repeat id="otherNumberList/otherNumber">
+            <field id="numberType" autocomplete="vocab-bmnumbertype" ui-type="enum">
+                <!-- adding nmnumbertype vocab -->
+                <options />
+            </field>
+        </repeat>
+        <field id="collection" autocomplete="vocab-bmcollection" ui-type="enum">
+            <!-- adding bmcollection vocab -->
+            <options />
+        </field>
+        <repeat id="objectNameList/objectNameGroup">
+            <field id="objectNameSystem" autocomplete="concept-category" seperate_ui_container="false">
+                <!-- adding concept-category vocab -->
+                <options />
+            </field>
+            <field id="objectNameType" autocomplete="concept-subcategory" seperate_ui_container="false">
+                <!-- adding concept-subcategory vocab -->
+                <options />
+            </field>
+            <field id="objectName" autocomplete="concept-objectname">
+                <!-- adding concept-objectname vocab -->
+            </field>
+        </repeat>
+        <field id="namedCollection" ui-search="repeatable" autocomplete="person-namedcollection" section="bm"></field>
+        <field id="approvedForWeb" ui-search="single" datatype="boolean" section="bm"></field>
+        <field id="conditionStatus" ui-search="repeatable" autocomplete="vocab-conditionstatus" ui-type="enum" section="bm"></field>
+    </section>
+    <section id="objectViewerContributionInformation">
+        <field id="viewersPersonalResponse" autocomplete="person-person">
+            <!-- adding person vocab -->
+        </field>
+    </section>
+    <section id="technicalSpecs" section="variablemedia">
+        <repeat id="filmVideoComponentsList/filmVideoComponentsGroup" section="variablemedia">
+            <field id="originalFormat" section="variablemedia" autocomplete="vocab-originalstorageformat" ui-type="enum">
+                <!-- converting to vocab-originalstorageformat -->
+            </field>
+            <field id="originalAudioFormat" section="variablemedia" autocomplete="vocab-originalplaybackformate" ui-type="enum">
+                <!-- converting to vocab-originalplaybackformate -->
+            </field>
+        </repeat>
+        <repeat id="copiesProvided" section="variablemedia">
+            <field id="copyProvidedOnAcquisition" section="variablemedia" autocomplete="vocab-copiesprovided" ui-type="enum">
+                <!-- converting to vocab-copiesprovided -->
+            </field>
+        </repeat>
+        <repeat id="ratioFormats" section="variablemedia">
+            <field id="ratioFormat" section="variablemedia" autocomplete="vocab-bmratioformat" ui-type="enum">
+                <!-- converting to vocab-bmratioformat -->
+            </field>
+        </repeat>
+        <repeat id="visualPreferencesList/visualPreferencesGroup" section="variablemedia">
+            <field id="colorPalette" section="variablemedia" autocomplete="vocab-preferredcolorpalette" ui-type="enum">
+                <!-- converting to vocab-preferredcolorpalette -->
+            </field>
+        </repeat>
+    </section>
+</record>

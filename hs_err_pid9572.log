@@ -1,0 +1,1479 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGBUS (0x7) at pc=0x00007fccf95d6fb7, pid=9572, tid=140517013243648
+#
+# JRE version: OpenJDK Runtime Environment (7.0_101) (build 1.7.0_101-b00)
+# Java VM: OpenJDK 64-Bit Server VM (24.95-b01 mixed mode linux-amd64 compressed oops)
+# Derivative: IcedTea 2.6.6
+# Distribution: Ubuntu 14.04 LTS, package 7u101-2.6.6-0ubuntu0.14.04.1
+# Problematic frame:
+# C  [libc.so.6+0x97fb7]
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please include
+# instructions on how to reproduce the bug and visit:
+#   http://icedtea.classpath.org/bugzilla
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fccb0002800):  JavaThread "localhost-startStop-2" daemon [_thread_in_native, id=10531, stack(0x00007fccaa98c000,0x00007fccaaa8d000)]
+
+siginfo:si_signo=SIGBUS: si_errno=0, si_code=2 (BUS_ADRERR), si_addr=0x00007fcce8777000
+
+Registers:
+RAX=0x000000001045be48, RBX=0x00007fccf03615b0, RCX=0x00007fccd831b1c0, RDX=0x00007fccd8321a80
+RSP=0x00007fccaaa89d28, RBP=0x00007fccaaa89d90, RSI=0x00007fcce8776998, RDI=0x00007fccd831ab40
+R8 =0x000000001045be38, R9 =0x000000001045be28, R10=0x000000001045be18, R11=0x00007fccd8000001
+R12=0x000000004372614a, R13=0x00007fcce877692a, R14=0x00007fccd819a9f0, R15=0x0000000000006461
+RIP=0x00007fccf95d6fb7, EFLAGS=0x0000000000010206, CSGSFS=0x319a000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007fccaaa89d28)
+0x00007fccaaa89d28:   00007fccf614413b 00007fccb0002800
+0x00007fccaaa89d38:   000000007373616c 00007fcc00006f4c
+0x00007fccaaa89d48:   000000006572f968 0000000079726f74
+0x00007fccaaa89d58:   0000000000006f4c 00007fccaaa89e00
+0x00007fccaaa89d68:   00007fccf0361d60 00007fccf03615b0
+0x00007fccaaa89d78:   00007fccaaa89e00 0000000002be77f0
+0x00007fccaaa89d88:   000000000e97ef4f 00007fccaaa89de0
+0x00007fccaaa89d98:   00007fccf6144d7d 0000000000000000
+0x00007fccaaa89da8:   00000036aaa89f70 00007fccaaa8a210
+0x00007fccaaa89db8:   00007fccaaa89e00 00007fccaaa8a258
+0x00007fccaaa89dc8:   00007fccaaa89e00 0000000000000036
+0x00007fccaaa89dd8:   00007fccb00029d8 00007fccaaa8a240
+0x00007fccaaa89de8:   00007fccf61429c8 00000001c201f960
+0x00007fccaaa89df8:   00007fccf03615b0 6f6d69732f6d6f63
+0x00007fccaaa89e08:   6f2f73666675746e 614a2f72616a656e
+0x00007fccaaa89e18:   6f4c7373616c4372 5255492472656461
+0x00007fccaaa89e28:   79726f746361464c 00007373616c632e
+0x00007fccaaa89e38:   00007fcc0000000d 00007fccc0487c90
+0x00007fccaaa89e48:   00007fccaaa89f70 00007fccaaa8aca0
+0x00007fccaaa89e58:   00007fccf5729851 00007fccf8e9d950
+0x00007fccaaa89e68:   00007fccf5729850 00000000aaa8ac90
+0x00007fccaaa89e78:   00007fccaaa8ac94 0000000000000000
+0x00007fccaaa89e88:   8eb455f21692be04 00007fccc201f960
+0x00007fccaaa89e98:   00007fccaaa8ada0 00007fccaaa8ac78
+0x00007fccaaa89ea8:   00000000eb8e34d0 00000000c1303480
+0x00007fccaaa89eb8:   00007fccaaa8ac74 00007fccaaa8ac68
+0x00007fccaaa89ec8:   00007fccaaa8ac6c 00007fccaaa8ac60
+0x00007fccaaa89ed8:   00007fccaaa8ac64 00007fccaaa8ac58
+0x00007fccaaa89ee8:   00007fccaa01015c 00007fccaaa8ac50
+0x00007fccaaa89ef8:   00007fccaaa89ea8 00007fccaaa89ee9
+0x00007fccaaa89f08:   0000000800000002 00007fccaaa8ac00
+0x00007fccaaa89f18:   00007fccaaa8ac44 00007fccaaa89f50 
+
+Instructions: (pc=0x00007fccf95d6fb7)
+0x00007fccf95d6f97:   10 4d 8d 42 20 49 8d 42 30 f3 46 0f 6f 04 11 66
+0x00007fccf95d6fa7:   44 0f 7f 01 f3 46 0f 6f 04 09 66 44 0f 7f 41 10
+0x00007fccf95d6fb7:   f3 46 0f 6f 04 01 66 44 0f 7f 41 20 f3 44 0f 6f
+0x00007fccf95d6fc7:   04 01 66 44 0f 7f 41 30 48 83 c1 40 48 39 ca 75 
+
+Register to memory mapping:
+
+RAX=0x000000001045be48 is an unknown value
+RBX=0x00007fccf03615b0 is an unknown value
+RCX=0x00007fccd831b1c0 is an unknown value
+RDX=0x00007fccd8321a80 is an unknown value
+RSP=0x00007fccaaa89d28 is pointing into the stack for thread: 0x00007fccb0002800
+RBP=0x00007fccaaa89d90 is pointing into the stack for thread: 0x00007fccb0002800
+RSI=0x00007fcce8776998 is an unknown value
+RDI=0x00007fccd831ab40 is an unknown value
+R8 =0x000000001045be38 is an unknown value
+R9 =0x000000001045be28 is an unknown value
+R10=0x000000001045be18 is an unknown value
+R11=0x00007fccd8000001 is an unknown value
+R12=0x000000004372614a is an unknown value
+R13=0x00007fcce877692a is an unknown value
+R14=0x00007fccd819a9f0 is an unknown value
+R15=0x0000000000006461 is an unknown value
+
+
+Stack: [0x00007fccaa98c000,0x00007fccaaa8d000],  sp=0x00007fccaaa89d28,  free space=1015k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libc.so.6+0x97fb7]
+C  [libzip.so+0x5d7d]  ZIP_GetEntry+0xcd
+C  [libzip.so+0x39c8]  Java_java_util_zip_ZipFile_getEntry+0xa8
+J 42  java.util.zip.ZipFile.getEntry(J[BZ)J (0 bytes) @ 0x00007fcced077bae [0x00007fcced077ae0+0xce]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 42  java.util.zip.ZipFile.getEntry(J[BZ)J (0 bytes) @ 0x00007fcced077b38 [0x00007fcced077ae0+0x58]
+J 47 C2 java.util.jar.JarFile.getEntry(Ljava/lang/String;)Ljava/util/zip/ZipEntry; (22 bytes) @ 0x00007fcced0753f0 [0x00007fcced075320+0xd0]
+J 1407 C2 sun.misc.URLClassPath.findResource(Ljava/lang/String;Z)Ljava/net/URL; (38 bytes) @ 0x00007fcced1b90c8 [0x00007fcced1b8f40+0x188]
+J 2318 C2 java.net.URLClassLoader$2.run()Ljava/lang/Object; (5 bytes) @ 0x00007fcced4e7ae8 [0x00007fcced4e7aa0+0x48]
+v  ~StubRoutines::call_stub
+J 2337  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object; (0 bytes) @ 0x00007fcced3d6143 [0x00007fcced3d60e0+0x63]
+J 2330 C2 java.net.URLClassLoader.findResource(Ljava/lang/String;)Ljava/net/URL; (37 bytes) @ 0x00007fcced4f4c44 [0x00007fcced4f4bc0+0x84]
+J 2327 C2 java.lang.ClassLoader.getResource(Ljava/lang/String;)Ljava/net/URL; (36 bytes) @ 0x00007fcced0dd16c [0x00007fcced0dd0e0+0x8c]
+J 2320 C2 org.apache.catalina.loader.WebappClassLoader.getResourceAsStream(Ljava/lang/String;)Ljava/io/InputStream; (354 bytes) @ 0x00007fcced7c6050 [0x00007fcced7c56e0+0x970]
+J 508 C2 org.apache.catalina.startup.ContextConfig.populateJavaClassCache(Ljava/lang/String;Lorg/apache/tomcat/util/bcel/classfile/JavaClass;)V (79 bytes) @ 0x00007fcced226f00 [0x00007fcced2240a0+0x2e60]
+J 2376 C2 org.apache.catalina.startup.ContextConfig.checkHandlesTypes(Lorg/apache/tomcat/util/bcel/classfile/JavaClass;)V (458 bytes) @ 0x00007fcced5b29b8 [0x00007fcced5b2920+0x98]
+J 539 C2 org.apache.catalina.startup.ContextConfig.processAnnotationsJar(Ljava/net/URL;Lorg/apache/catalina/deploy/WebXml;Z)V (299 bytes) @ 0x00007fcced24b380 [0x00007fcced24ac00+0x780]
+j  org.apache.catalina.startup.ContextConfig.processAnnotationsUrl(Ljava/net/URL;Lorg/apache/catalina/deploy/WebXml;Z)V+22
+j  org.apache.catalina.startup.ContextConfig.processAnnotations(Ljava/util/Set;Z)V+71
+j  org.apache.catalina.startup.ContextConfig.webConfig()V+344
+j  org.apache.catalina.startup.ContextConfig.configureStart()V+101
+j  org.apache.catalina.startup.ContextConfig.lifecycleEvent(Lorg/apache/catalina/LifecycleEvent;)V+57
+J 3247 C2 org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(Ljava/lang/String;Ljava/lang/Object;)V (49 bytes) @ 0x00007fcceda45584 [0x00007fcceda45460+0x124]
+j  org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(Ljava/lang/String;Ljava/lang/Object;)V+6
+j  org.apache.catalina.core.StandardContext.startInternal()V+584
+j  org.apache.catalina.util.LifecycleBase.start()V+210
+j  org.apache.catalina.core.ContainerBase.addChildInternal(Lorg/apache/catalina/Container;)V+170
+j  org.apache.catalina.core.ContainerBase.addChild(Lorg/apache/catalina/Container;)V+26
+j  org.apache.catalina.core.StandardHost.addChild(Lorg/apache/catalina/Container;)V+40
+j  org.apache.catalina.startup.HostConfig.deployWAR(Lorg/apache/catalina/util/ContextName;Ljava/io/File;)V+1665
+j  org.apache.catalina.startup.HostConfig$DeployWar.run()V+12
+j  java.util.concurrent.Executors$RunnableAdapter.call()Ljava/lang/Object;+4
+j  java.util.concurrent.FutureTask.run()V+42
+j  java.util.concurrent.ThreadPoolExecutor.runWorker(Ljava/util/concurrent/ThreadPoolExecutor$Worker;)V+95
+j  java.util.concurrent.ThreadPoolExecutor$Worker.run()V+5
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+=>0x00007fccb0002800 JavaThread "localhost-startStop-2" daemon [_thread_in_native, id=10531, stack(0x00007fccaa98c000,0x00007fccaaa8d000)]
+  0x00007fccd4092000 JavaThread "http-bio-8180-exec-19" daemon [_thread_blocked, id=10346, stack(0x00007fccaae91000,0x00007fccaaf92000)]
+  0x0000000004946800 JavaThread "http-bio-8180-exec-20" daemon [_thread_blocked, id=10345, stack(0x00007fccabcfd000,0x00007fccabdfe000)]
+  0x00007fccdc088000 JavaThread "http-bio-8180-exec-18" daemon [_thread_blocked, id=10344, stack(0x00007fcce00f6000,0x00007fcce01f7000)]
+  0x0000000001cf3800 JavaThread "http-bio-8180-exec-16" daemon [_thread_blocked, id=10342, stack(0x00007fccabbfc000,0x00007fccabcfd000)]
+  0x00007fcce4020000 JavaThread "http-bio-8180-exec-13" daemon [_thread_blocked, id=10214, stack(0x00007fccaaa8d000,0x00007fccaab8e000)]
+  0x00007fccac087000 JavaThread "http-bio-8180-exec-12" daemon [_thread_blocked, id=10212, stack(0x00007fccaac8f000,0x00007fccaad90000)]
+  0x00007fccac085800 JavaThread "http-bio-8180-exec-11" daemon [_thread_blocked, id=10211, stack(0x00007fccaad90000,0x00007fccaae91000)]
+  0x0000000004892000 JavaThread "MultiThreadedHttpConnectionManager cleanup" daemon [_thread_blocked, id=10201, stack(0x00007fccab7f4000,0x00007fccab8f5000)]
+  0x00007fccac009800 JavaThread "http-bio-8180-exec-10" daemon [_thread_blocked, id=10196, stack(0x00007fccabafb000,0x00007fccabbfc000)]
+  0x00007fccac007800 JavaThread "http-bio-8180-exec-6" daemon [_thread_blocked, id=10192, stack(0x00007fccabeff000,0x00007fccac000000)]
+  0x00007fcce4017800 JavaThread "http-bio-8180-exec-4" daemon [_thread_blocked, id=10190, stack(0x00007fcce24d6000,0x00007fcce25d7000)]
+  0x0000000004bbb000 JavaThread "net.sf.ehcache.CacheManager@23ef229e" daemon [_thread_blocked, id=10183, stack(0x00007fcce2f13000,0x00007fcce3014000)]
+  0x00007fccf053a800 JavaThread "ajp-bio-8009-AsyncTimeout" daemon [_thread_blocked, id=10090, stack(0x00007fcce29db000,0x00007fcce2adc000)]
+  0x00007fccf0538800 JavaThread "ajp-bio-8009-Acceptor-0" daemon [_thread_in_native, id=10089, stack(0x00007fcce2adc000,0x00007fcce2bdd000)]
+  0x00007fccf0172800 JavaThread "http-bio-8180-AsyncTimeout" daemon [_thread_blocked, id=10088, stack(0x00007fcce2c10000,0x00007fcce2d11000)]
+  0x00007fccf0171800 JavaThread "http-bio-8180-Acceptor-0" daemon [_thread_in_native, id=10087, stack(0x00007fcce2d11000,0x00007fcce2e12000)]
+  0x00007fccf0170000 JavaThread "ContainerBackgroundProcessor[StandardEngine[Catalina]]" daemon [_thread_blocked, id=10086, stack(0x00007fcce01f7000,0x00007fcce02f8000)]
+  0x00000000046ec000 JavaThread "com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2" daemon [_thread_blocked, id=9662, stack(0x00007fcce02f8000,0x00007fcce03f9000)]
+  0x00000000046eb000 JavaThread "com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1" daemon [_thread_blocked, id=9661, stack(0x00007fcce03f9000,0x00007fcce04fa000)]
+  0x00000000046ee000 JavaThread "com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0" daemon [_thread_blocked, id=9660, stack(0x00007fcce04fa000,0x00007fcce05fb000)]
+  0x0000000002bb5000 JavaThread "Timer-0" daemon [_thread_blocked, id=9659, stack(0x00007fcce05fb000,0x00007fcce06fc000)]
+  0x00000000048e1000 JavaThread "Store aclCache Spool Thread" daemon [_thread_blocked, id=9658, stack(0x00007fcce06fc000,0x00007fcce07fd000)]
+  0x0000000002c9b000 JavaThread "Quartz_Scheduler" daemon [_thread_blocked, id=9656, stack(0x00007fcce07fd000,0x00007fcce08fe000)]
+  0x000000000304c800 JavaThread "Quartz_Worker-1" daemon [_thread_blocked, id=9655, stack(0x00007fcce08fe000,0x00007fcce09ff000)]
+  0x00000000029f6000 JavaThread "Nuxeo-Convert-GC" daemon [_thread_blocked, id=9654, stack(0x00007fcce09ff000,0x00007fcce0b00000)]
+  0x0000000002797800 JavaThread "Nuxeo-Administrative-Statuses-Notify-Scheduler" daemon [_thread_blocked, id=9653, stack(0x00007fcce0b00000,0x00007fcce0c01000)]
+  0x0000000004e8a800 JavaThread "Thread-4" daemon [_thread_blocked, id=9652, stack(0x00007fcce0c01000,0x00007fcce0d02000)]
+  0x0000000003046800 JavaThread "Nuxeo-Work-elasticSearchIndexing-4" daemon [_thread_blocked, id=9623, stack(0x00007fcce0d02000,0x00007fcce0e03000)]
+  0x00000000029be800 JavaThread "Nuxeo-Work-elasticSearchIndexing-3" daemon [_thread_blocked, id=9622, stack(0x00007fcce0e03000,0x00007fcce0f04000)]
+  0x00000000029ba800 JavaThread "Nuxeo-Work-elasticSearchIndexing-2" daemon [_thread_blocked, id=9621, stack(0x00007fcce0f04000,0x00007fcce1005000)]
+  0x0000000002e15000 JavaThread "Nuxeo-Work-elasticSearchIndexing-1" daemon [_thread_blocked, id=9620, stack(0x00007fcce1005000,0x00007fcce1106000)]
+  0x0000000002e18000 JavaThread "Nuxeo-Work-fulltextUpdater-1" daemon [_thread_blocked, id=9619, stack(0x00007fcce1106000,0x00007fcce1207000)]
+  0x0000000002bdd000 JavaThread "Nuxeo-Work-pictureViewsGeneration-1" daemon [_thread_blocked, id=9618, stack(0x00007fcce1207000,0x00007fcce1308000)]
+  0x0000000003173800 JavaThread "Nuxeo-Work-default-4" daemon [_thread_blocked, id=9617, stack(0x00007fcce1308000,0x00007fcce1409000)]
+  0x0000000002a4c000 JavaThread "Nuxeo-Work-default-3" daemon [_thread_blocked, id=9616, stack(0x00007fcce1409000,0x00007fcce150a000)]
+  0x0000000002db1800 JavaThread "Nuxeo-Work-default-2" daemon [_thread_blocked, id=9615, stack(0x00007fcce150a000,0x00007fcce160b000)]
+  0x00000000030a8000 JavaThread "Nuxeo-Work-default-1" daemon [_thread_blocked, id=9614, stack(0x00007fcce160b000,0x00007fcce170c000)]
+  0x0000000003080000 JavaThread "PoolIdleReleaseTimer" daemon [_thread_blocked, id=9613, stack(0x00007fcce170c000,0x00007fcce180d000)]
+  0x0000000004db5000 JavaThread "RetryTimer" daemon [_thread_blocked, id=9612, stack(0x00007fcce180d000,0x00007fcce190e000)]
+  0x00007fccf06a3800 JavaThread "GC Daemon" daemon [_thread_blocked, id=9587, stack(0x00007fcce8577000,0x00007fcce8678000)]
+  0x00007fccf00bc800 JavaThread "Service Thread" daemon [_thread_blocked, id=9584, stack(0x00007fccf4038000,0x00007fccf4139000)]
+  0x00007fccf00ba800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=9583, stack(0x00007fccf4139000,0x00007fccf423a000)]
+  0x00007fccf00b7800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=9582, stack(0x00007fccf423a000,0x00007fccf433b000)]
+  0x00007fccf00b5000 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=9581, stack(0x00007fccf433b000,0x00007fccf443c000)]
+  0x00007fccf00b1800 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_in_native, id=9580, stack(0x00007fccf443c000,0x00007fccf453d000)]
+  0x00007fccf00a5000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=9579, stack(0x00007fccf4742000,0x00007fccf4843000)]
+  0x00007fccf007a800 JavaThread "Finalizer" daemon [_thread_blocked, id=9578, stack(0x00007fccf4843000,0x00007fccf4944000)]
+  0x00007fccf0078800 JavaThread "Reference Handler" daemon [_thread_blocked, id=9577, stack(0x00007fccf4944000,0x00007fccf4a45000)]
+  0x00007fccf000d000 JavaThread "main" [_thread_in_native, id=9573, stack(0x00007fccf9c23000,0x00007fccf9d24000)]
+
+Other Threads:
+  0x00007fccf0074800 VMThread [stack: 0x00007fccf4a45000,0x00007fccf4b46000] [id=9576]
+  0x00007fccf00c7800 WatcherThread [stack: 0x00007fccea2ff000,0x00007fccea400000] [id=9585]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 297984K, used 48321K [0x00000000eaa80000, 0x0000000100000000, 0x0000000100000000)
+  eden space 249856K, 6% used [0x00000000eaa80000,0x00000000eb9b2d70,0x00000000f9e80000)
+  from space 48128K, 68% used [0x00000000f9e80000,0x00000000fbe7da70,0x00000000fcd80000)
+  to   space 50688K, 0% used [0x00000000fce80000,0x00000000fce80000,0x0000000100000000)
+ ParOldGen       total 349696K, used 188001K [0x00000000c0000000, 0x00000000d5580000, 0x00000000eaa80000)
+  object space 349696K, 53% used [0x00000000c0000000,0x00000000cb798640,0x00000000d5580000)
+ PSPermGen       total 139776K, used 72694K [0x00000000a8000000, 0x00000000b0880000, 0x00000000c0000000)
+  object space 139776K, 52% used [0x00000000a8000000,0x00000000ac6fd908,0x00000000b0880000)
+
+Card table byte_map: [0x00007fccf5e7e000,0x00007fccf613f000] byte_map_base: 0x00007fccf593e000
+
+Polling page: 0x00007fccf9d31000
+
+Code Cache  [0x00007fcced000000, 0x00007fccedae0000, 0x00007fccf0000000)
+ total_blobs=3153 nmethods=2669 adapters=443 free_code_cache=38182Kb largest_free_block=38942528
+
+Compilation events (10 events):
+Event: 997.564 Thread 0x00007fccf00b7800 3253             org.apache.xerces.impl.XMLEntityScanner::scanLiteral (746 bytes)
+Event: 997.599 Thread 0x00007fccf00b7800 nmethod 3253 0x00007fcced4820d0 code [0x00007fcced482300, 0x00007fcced482fa8]
+Event: 997.745 Thread 0x00007fccf00ba800 3254 %           java.text.MessageFormat::subformat @ 12 (546 bytes)
+Event: 997.788 Thread 0x00007fccf00ba800 nmethod 3254% 0x00007fccedaaad90 code [0x00007fccedaab020, 0x00007fccedaabfd0]
+Event: 997.789 Thread 0x00007fccf00b7800 3255             java.text.MessageFormat::subformat (546 bytes)
+Event: 997.822 Thread 0x00007fccf00b7800 nmethod 3255 0x00007fccedaad210 code [0x00007fccedaad480, 0x00007fccedaae810]
+Event: 998.495 Thread 0x00007fccf00ba800 3256             java.net.URLStreamHandler::parseURL (1158 bytes)
+Event: 998.500 Thread 0x00007fccf00b7800 3257             java.net.URLStreamHandler::setURL (40 bytes)
+Event: 998.506 Thread 0x00007fccf00b7800 nmethod 3257 0x00007fccedaa8350 code [0x00007fccedaa84c0, 0x00007fccedaa8bf8]
+Event: 998.654 Thread 0x00007fccf00ba800 nmethod 3256 0x00007fccedad4890 code [0x00007fccedad4da0, 0x00007fccedad7b38]
+
+GC Heap History (10 events):
+Event: 683.128 GC heap before
+{Heap before GC invocations=78 (full 0):
+ PSYoungGen      total 268288K, used 267810K [0x00000000eaa80000, 0x00000000ffd00000, 0x0000000100000000)
+  eden space 245760K, 100% used [0x00000000eaa80000,0x00000000f9a80000,0x00000000f9a80000)
+  from space 22528K, 97% used [0x00000000f9a80000,0x00000000fb008b70,0x00000000fb080000)
+  to   space 50176K, 0% used [0x00000000fcc00000,0x00000000fcc00000,0x00000000ffd00000)
+ ParOldGen       total 349696K, used 326337K [0x00000000c0000000, 0x00000000d5580000, 0x00000000eaa80000)
+  object space 349696K, 93% used [0x00000000c0000000,0x00000000d3eb07e8,0x00000000d5580000)
+ PSPermGen       total 70144K, used 69851K [0x00000000a8000000, 0x00000000ac480000, 0x00000000c0000000)
+  object space 70144K, 99% used [0x00000000a8000000,0x00000000ac436f38,0x00000000ac480000)
+Event: 683.189 GC heap after
+Heap after GC invocations=78 (full 0):
+ PSYoungGen      total 297984K, used 8644K [0x00000000eaa80000, 0x0000000100000000, 0x0000000100000000)
+  eden space 247808K, 0% used [0x00000000eaa80000,0x00000000eaa80000,0x00000000f9c80000)
+  from space 50176K, 17% used [0x00000000fcc00000,0x00000000fd4713d0,0x00000000ffd00000)
+  to   space 48640K, 0% used [0x00000000f9c80000,0x00000000f9c80000,0x00000000fcc00000)
+ ParOldGen       total 349696K, used 347134K [0x00000000c0000000, 0x00000000d5580000, 0x00000000eaa80000)
+  object space 349696K, 99% used [0x00000000c0000000,0x00000000d52ff818,0x00000000d5580000)
+ PSPermGen       total 70144K, used 69851K [0x00000000a8000000, 0x00000000ac480000, 0x00000000c0000000)
+  object space 70144K, 99% used [0x00000000a8000000,0x00000000ac436f38,0x00000000ac480000)
+}
+Event: 683.189 GC heap before
+{Heap before GC invocations=79 (full 1):
+ PSYoungGen      total 297984K, used 8644K [0x00000000eaa80000, 0x0000000100000000, 0x0000000100000000)
+  eden space 247808K, 0% used [0x00000000eaa80000,0x00000000eaa80000,0x00000000f9c80000)
+  from space 50176K, 17% used [0x00000000fcc00000,0x00000000fd4713d0,0x00000000ffd00000)
+  to   space 48640K, 0% used [0x00000000f9c80000,0x00000000f9c80000,0x00000000fcc00000)
+ ParOldGen       total 349696K, used 347134K [0x00000000c0000000, 0x00000000d5580000, 0x00000000eaa80000)
+  object space 349696K, 99% used [0x00000000c0000000,0x00000000d52ff818,0x00000000d5580000)
+ PSPermGen       total 70144K, used 69851K [0x00000000a8000000, 0x00000000ac480000, 0x00000000c0000000)
+  object space 70144K, 99% used [0x00000000a8000000,0x00000000ac436f38,0x00000000ac480000)
+Event: 684.270 GC heap after
+Heap after GC invocations=79 (full 1):
+ PSYoungGen      total 297984K, used 0K [0x00000000eaa80000, 0x0000000100000000, 0x0000000100000000)
+  eden space 247808K, 0% used [0x00000000eaa80000,0x00000000eaa80000,0x00000000f9c80000)
+  from space 50176K, 0% used [0x00000000fcc00000,0x00000000fcc00000,0x00000000ffd00000)
+  to   space 48640K, 0% used [0x00000000f9c80000,0x00000000f9c80000,0x00000000fcc00000)
+ ParOldGen       total 349696K, used 179068K [0x00000000c0000000, 0x00000000d5580000, 0x00000000eaa80000)
+  object space 349696K, 51% used [0x00000000c0000000,0x00000000caedf1c8,0x00000000d5580000)
+ PSPermGen       total 139776K, used 69790K [0x00000000a8000000, 0x00000000b0880000, 0x00000000c0000000)
+  object space 139776K, 49% used [0x00000000a8000000,0x00000000ac427a70,0x00000000b0880000)
+}
+Event: 873.611 GC heap before
+{Heap before GC invocations=80 (full 1):
+ PSYoungGen      total 297984K, used 247808K [0x00000000eaa80000, 0x0000000100000000, 0x0000000100000000)
+  eden space 247808K, 100% used [0x00000000eaa80000,0x00000000f9c80000,0x00000000f9c80000)
+  from space 50176K, 0% used [0x00000000fcc00000,0x00000000fcc00000,0x00000000ffd00000)
+  to   space 48640K, 0% used [0x00000000f9c80000,0x00000000f9c80000,0x00000000fcc00000)
+ ParOldGen       total 349696K, used 179068K [0x00000000c0000000, 0x00000000d5580000, 0x00000000eaa80000)
+  object space 349696K, 51% used [0x00000000c0000000,0x00000000caedf1c8,0x00000000d5580000)
+ PSPermGen       total 139776K, used 72559K [0x00000000a8000000, 0x00000000b0880000, 0x00000000c0000000)
+  object space 139776K, 51% used [0x00000000a8000000,0x00000000ac6dbfe8,0x00000000b0880000)
+Event: 873.643 GC heap after
+Heap after GC invocations=80 (full 1):
+ PSYoungGen      total 296448K, used 6444K [0x00000000eaa80000, 0x00000000ffb80000, 0x0000000100000000)
+  eden space 247808K, 0% used [0x00000000eaa80000,0x00000000eaa80000,0x00000000f9c80000)
+  from space 48640K, 13% used [0x00000000f9c80000,0x00000000fa2cb098,0x00000000fcc00000)
+  to   space 47104K, 0% used [0x00000000fcd80000,0x00000000fcd80000,0x00000000ffb80000)
+ ParOldGen       total 349696K, used 179068K [0x00000000c0000000, 0x00000000d5580000, 0x00000000eaa80000)
+  object space 349696K, 51% used [0x00000000c0000000,0x00000000caedf1c8,0x00000000d5580000)
+ PSPermGen       total 139776K, used 72559K [0x00000000a8000000, 0x00000000b0880000, 0x00000000c0000000)
+  object space 139776K, 51% used [0x00000000a8000000,0x00000000ac6dbfe8,0x00000000b0880000)
+}
+Event: 998.179 GC heap before
+{Heap before GC invocations=81 (full 1):
+ PSYoungGen      total 296448K, used 254252K [0x00000000eaa80000, 0x00000000ffb80000, 0x0000000100000000)
+  eden space 247808K, 100% used [0x00000000eaa80000,0x00000000f9c80000,0x00000000f9c80000)
+  from space 48640K, 13% used [0x00000000f9c80000,0x00000000fa2cb098,0x00000000fcc00000)
+  to   space 47104K, 0% used [0x00000000fcd80000,0x00000000fcd80000,0x00000000ffb80000)
+ ParOldGen       total 349696K, used 179068K [0x00000000c0000000, 0x00000000d5580000, 0x00000000eaa80000)
+  object space 349696K, 51% used [0x00000000c0000000,0x00000000caedf1c8,0x00000000d5580000)
+ PSPermGen       total 139776K, used 72693K [0x00000000a8000000, 0x00000000b0880000, 0x00000000c0000000)
+  object space 139776K, 52% used [0x00000000a8000000,0x00000000ac6fd7a0,0x00000000b0880000)
+Event: 998.230 GC heap after
+Heap after GC invocations=81 (full 1):
+ PSYoungGen      total 296960K, used 26441K [0x00000000eaa80000, 0x0000000100000000, 0x0000000100000000)
+  eden space 249856K, 0% used [0x00000000eaa80000,0x00000000eaa80000,0x00000000f9e80000)
+  from space 47104K, 56% used [0x00000000fcd80000,0x00000000fe752680,0x00000000ffb80000)
+  to   space 48128K, 0% used [0x00000000f9e80000,0x00000000f9e80000,0x00000000fcd80000)
+ ParOldGen       total 349696K, used 182138K [0x00000000c0000000, 0x00000000d5580000, 0x00000000eaa80000)
+  object space 349696K, 52% used [0x00000000c0000000,0x00000000cb1de908,0x00000000d5580000)
+ PSPermGen       total 139776K, used 72693K [0x00000000a8000000, 0x00000000b0880000, 0x00000000c0000000)
+  object space 139776K, 52% used [0x00000000a8000000,0x00000000ac6fd7a0,0x00000000b0880000)
+}
+Event: 999.148 GC heap before
+{Heap before GC invocations=82 (full 1):
+ PSYoungGen      total 296960K, used 276297K [0x00000000eaa80000, 0x0000000100000000, 0x0000000100000000)
+  eden space 249856K, 100% used [0x00000000eaa80000,0x00000000f9e80000,0x00000000f9e80000)
+  from space 47104K, 56% used [0x00000000fcd80000,0x00000000fe752680,0x00000000ffb80000)
+  to   space 48128K, 0% used [0x00000000f9e80000,0x00000000f9e80000,0x00000000fcd80000)
+ ParOldGen       total 349696K, used 182138K [0x00000000c0000000, 0x00000000d5580000, 0x00000000eaa80000)
+  object space 349696K, 52% used [0x00000000c0000000,0x00000000cb1de908,0x00000000d5580000)
+ PSPermGen       total 139776K, used 72694K [0x00000000a8000000, 0x00000000b0880000, 0x00000000c0000000)
+  object space 139776K, 52% used [0x00000000a8000000,0x00000000ac6fd908,0x00000000b0880000)
+Event: 999.257 GC heap after
+Heap after GC invocations=82 (full 1):
+ PSYoungGen      total 297984K, used 32758K [0x00000000eaa80000, 0x0000000100000000, 0x0000000100000000)
+  eden space 249856K, 0% used [0x00000000eaa80000,0x00000000eaa80000,0x00000000f9e80000)
+  from space 48128K, 68% used [0x00000000f9e80000,0x00000000fbe7da70,0x00000000fcd80000)
+  to   space 50688K, 0% used [0x00000000fce80000,0x00000000fce80000,0x0000000100000000)
+ ParOldGen       total 349696K, used 188001K [0x00000000c0000000, 0x00000000d5580000, 0x00000000eaa80000)
+  object space 349696K, 53% used [0x00000000c0000000,0x00000000cb798640,0x00000000d5580000)
+ PSPermGen       total 139776K, used 72694K [0x00000000a8000000, 0x00000000b0880000, 0x00000000c0000000)
+  object space 139776K, 52% used [0x00000000a8000000,0x00000000ac6fd908,0x00000000b0880000)
+}
+
+Deoptimization events (10 events):
+Event: 875.037 Thread 0x00007fccac007800 Uncommon trap: reason=null_check action=make_not_entrant pc=0x00007fcceda4347c method=com.sun.xml.bind.v2.runtime.output.NamespaceContextImpl.declareNsUri(Ljava/lang/String;Ljava/lang/String;Z)I @ 423
+Event: 997.167 Thread 0x00007fccf0170000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007fcced16f3cc method=java.util.Hashtable.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; @ 61
+Event: 997.167 Thread 0x00007fccf0170000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007fcced16f3cc method=java.util.Hashtable.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; @ 61
+Event: 997.172 Thread 0x00007fccf0170000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fcced3ea10c method=java.util.concurrent.locks.AbstractQueuedSynchronizer.release(I)Z @ 5
+Event: 997.197 Thread 0x00007fccb0002800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fcced5a0f3c method=java.util.Date.getTimeImpl()J @ 14
+Event: 997.197 Thread 0x00007fccb0002800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fcced690b68 method=java.util.Date.normalize()Lsun/util/calendar/BaseCalendar$Date; @ 45
+Event: 997.491 Thread 0x00007fccb0002800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007fcced737ac4 method=org.apache.catalina.core.ContainerBase.getLoader()Lorg/apache/catalina/Loader; @ 23
+Event: 997.491 Thread 0x00007fccb0002800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fcceda451a8 method=java.io.FilterInputStream.read([B)I @ 5
+Event: 997.492 Thread 0x00007fccb0002800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fcceda451a8 method=java.io.FilterInputStream.read([B)I @ 5
+Event: 997.492 Thread 0x00007fccb0002800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fcced4f0d28 method=org.apache.naming.resources.ResourceCache.find([Lorg/apache/naming/resources/CacheEntry;Ljava/lang/String;)I @ 9
+
+Internal exceptions (10 events):
+Event: 997.543 Thread 0x00007fccb0002800 Threw 0x00000000eed777f8 at /build/openjdk-7-9duhBW/openjdk-7-7u101-2.6.6/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 997.543 Thread 0x00007fccb0002800 Threw 0x00000000eed83480 at /build/openjdk-7-9duhBW/openjdk-7-7u101-2.6.6/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 997.543 Thread 0x00007fccb0002800 Threw 0x00000000eed85ce0 at /build/openjdk-7-9duhBW/openjdk-7-7u101-2.6.6/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 997.543 Thread 0x00007fccb0002800 Threw 0x00000000eed88620 at /build/openjdk-7-9duhBW/openjdk-7-7u101-2.6.6/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 997.543 Thread 0x00007fccb0002800 Threw 0x00000000eed8a9d0 at /build/openjdk-7-9duhBW/openjdk-7-7u101-2.6.6/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 997.544 Thread 0x00007fccb0002800 Threw 0x00000000eed8d2a8 at /build/openjdk-7-9duhBW/openjdk-7-7u101-2.6.6/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 997.581 Thread 0x00007fccb0002800 Threw 0x00000000ef0a6158 at /build/openjdk-7-9duhBW/openjdk-7-7u101-2.6.6/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 998.444 Thread 0x00007fccb0002800 Threw 0x00000000eebbb750 at /build/openjdk-7-9duhBW/openjdk-7-7u101-2.6.6/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 998.444 Thread 0x00007fccb0002800 Threw 0x00000000eebcdf38 at /build/openjdk-7-9duhBW/openjdk-7-7u101-2.6.6/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 998.444 Thread 0x00007fccb0002800 Threw 0x00000000eebe3bf8 at /build/openjdk-7-9duhBW/openjdk-7-7u101-2.6.6/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+
+Events (10 events):
+Event: 999.283 Thread 0x00007fccb0002800 DEOPT PACKING pc=0x00007fcced84e77c sp=0x00007fccaaa8acd0
+Event: 999.283 Thread 0x00007fccb0002800 DEOPT UNPACKING pc=0x00007fcced03920f sp=0x00007fccaaa8a960 mode 1
+Event: 999.284 Thread 0x00007fccb0002800 DEOPT PACKING pc=0x00007fcced84e77c sp=0x00007fccaaa8acd0
+Event: 999.284 Thread 0x00007fccb0002800 DEOPT UNPACKING pc=0x00007fcced03920f sp=0x00007fccaaa8a960 mode 1
+Event: 999.285 Thread 0x00007fccb0002800 DEOPT PACKING pc=0x00007fcced84e77c sp=0x00007fccaaa8acd0
+Event: 999.285 Thread 0x00007fccb0002800 DEOPT UNPACKING pc=0x00007fcced03920f sp=0x00007fccaaa8a960 mode 1
+Event: 999.285 Thread 0x00007fccb0002800 DEOPT PACKING pc=0x00007fcced84e77c sp=0x00007fccaaa8acd0
+Event: 999.285 Thread 0x00007fccb0002800 DEOPT UNPACKING pc=0x00007fcced03920f sp=0x00007fccaaa8a960 mode 1
+Event: 999.286 Thread 0x00007fccb0002800 DEOPT PACKING pc=0x00007fcced84e77c sp=0x00007fccaaa8acd0
+Event: 999.286 Thread 0x00007fccb0002800 DEOPT UNPACKING pc=0x00007fcced03920f sp=0x00007fccaaa8a960 mode 1
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 fd:01 1578407                            /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
+00600000-00601000 r--p 00000000 fd:01 1578407                            /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
+00601000-00602000 rw-p 00001000 fd:01 1578407                            /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
+01c84000-04fd7000 rw-p 00000000 00:00 0                                  [heap]
+a8000000-b0880000 rw-p 00000000 00:00 0 
+b0880000-c0000000 rw-p 00000000 00:00 0 
+c0000000-d5580000 rw-p 00000000 00:00 0 
+d5580000-eaa80000 rw-p 00000000 00:00 0 
+eaa80000-100000000 rw-p 00000000 00:00 0 
+7fccaa88b000-7fccaa88e000 ---p 00000000 00:00 0 
+7fccaa88e000-7fccaa98c000 rw-p 00000000 00:00 0 
+7fccaa98c000-7fccaa98f000 ---p 00000000 00:00 0 
+7fccaa98f000-7fccaaa8d000 rw-p 00000000 00:00 0                          [stack:10531]
+7fccaaa8d000-7fccaaa90000 ---p 00000000 00:00 0 
+7fccaaa90000-7fccaab8e000 rw-p 00000000 00:00 0                          [stack:10214]
+7fccaab8e000-7fccaab91000 ---p 00000000 00:00 0 
+7fccaab91000-7fccaac8f000 rw-p 00000000 00:00 0 
+7fccaac8f000-7fccaac92000 ---p 00000000 00:00 0 
+7fccaac92000-7fccaad90000 rw-p 00000000 00:00 0                          [stack:10212]
+7fccaad90000-7fccaad93000 ---p 00000000 00:00 0 
+7fccaad93000-7fccaae91000 rw-p 00000000 00:00 0                          [stack:10211]
+7fccaae91000-7fccaae94000 ---p 00000000 00:00 0 
+7fccaae94000-7fccaaf92000 rw-p 00000000 00:00 0                          [stack:10346]
+7fccab7f4000-7fccab7f7000 ---p 00000000 00:00 0 
+7fccab7f7000-7fccab8f5000 rw-p 00000000 00:00 0                          [stack:10201]
+7fccab8f5000-7fccab8fa000 r-xp 00000000 fd:01 393713                     /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+7fccab8fa000-7fccabaf9000 ---p 00005000 fd:01 393713                     /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+7fccabaf9000-7fccabafa000 r--p 00004000 fd:01 393713                     /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+7fccabafa000-7fccabafb000 rw-p 00005000 fd:01 393713                     /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+7fccabafb000-7fccabafe000 ---p 00000000 00:00 0 
+7fccabafe000-7fccabbfc000 rw-p 00000000 00:00 0                          [stack:10196]
+7fccabbfc000-7fccabbff000 ---p 00000000 00:00 0 
+7fccabbff000-7fccabcfd000 rw-p 00000000 00:00 0                          [stack:10342]
+7fccabcfd000-7fccabd00000 ---p 00000000 00:00 0 
+7fccabd00000-7fccabdfe000 rw-p 00000000 00:00 0                          [stack:10345]
+7fccabdfe000-7fccabe01000 ---p 00000000 00:00 0 
+7fccabe01000-7fccabeff000 rw-p 00000000 00:00 0 
+7fccabeff000-7fccabf02000 ---p 00000000 00:00 0 
+7fccabf02000-7fccac000000 rw-p 00000000 00:00 0                          [stack:10192]
+7fccac000000-7fccac0ef000 rw-p 00000000 00:00 0 
+7fccac0ef000-7fccb0000000 ---p 00000000 00:00 0 
+7fccb0000000-7fccb0110000 rw-p 00000000 00:00 0 
+7fccb0110000-7fccb4000000 ---p 00000000 00:00 0 
+7fccb4000000-7fccb4021000 rw-p 00000000 00:00 0 
+7fccb4021000-7fccb8000000 ---p 00000000 00:00 0 
+7fccb8000000-7fccb806f000 rw-p 00000000 00:00 0 
+7fccb806f000-7fccbc000000 ---p 00000000 00:00 0 
+7fccbc000000-7fccbec91000 rw-p 00000000 00:00 0 
+7fccbec91000-7fccc0000000 ---p 00000000 00:00 0 
+7fccc0000000-7fccc3fff000 rw-p 00000000 00:00 0 
+7fccc3fff000-7fccc4000000 ---p 00000000 00:00 0 
+7fccc4000000-7fccc41d7000 rw-p 00000000 00:00 0 
+7fccc41d7000-7fccc8000000 ---p 00000000 00:00 0 
+7fccc8000000-7fccc8047000 rw-p 00000000 00:00 0 
+7fccc8047000-7fcccc000000 ---p 00000000 00:00 0 
+7fcccc000000-7fcccc02c000 rw-p 00000000 00:00 0 
+7fcccc02c000-7fccd0000000 ---p 00000000 00:00 0 
+7fccd0000000-7fccd0021000 rw-p 00000000 00:00 0 
+7fccd0021000-7fccd4000000 ---p 00000000 00:00 0 
+7fccd4000000-7fccd4219000 rw-p 00000000 00:00 0 
+7fccd4219000-7fccd8000000 ---p 00000000 00:00 0 
+7fccd8000000-7fccd8335000 rw-p 00000000 00:00 0 
+7fccd8335000-7fccdc000000 ---p 00000000 00:00 0 
+7fccdc000000-7fccdc384000 rw-p 00000000 00:00 0 
+7fccdc384000-7fcce0000000 ---p 00000000 00:00 0 
+7fcce00eb000-7fcce00f6000 r--s 0005f000 fd:01 1056634                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/xstream-1.3.1.jar
+7fcce00f6000-7fcce00f9000 ---p 00000000 00:00 0 
+7fcce00f9000-7fcce01f7000 rw-p 00000000 00:00 0                          [stack:10344]
+7fcce01f7000-7fcce01fa000 ---p 00000000 00:00 0 
+7fcce01fa000-7fcce02f8000 rw-p 00000000 00:00 0                          [stack:10086]
+7fcce02f8000-7fcce02fb000 ---p 00000000 00:00 0 
+7fcce02fb000-7fcce03f9000 rw-p 00000000 00:00 0                          [stack:9662]
+7fcce03f9000-7fcce03fc000 ---p 00000000 00:00 0 
+7fcce03fc000-7fcce04fa000 rw-p 00000000 00:00 0                          [stack:9661]
+7fcce04fa000-7fcce04fd000 ---p 00000000 00:00 0 
+7fcce04fd000-7fcce05fb000 rw-p 00000000 00:00 0                          [stack:9660]
+7fcce05fb000-7fcce05fe000 ---p 00000000 00:00 0 
+7fcce05fe000-7fcce06fc000 rw-p 00000000 00:00 0                          [stack:9659]
+7fcce06fc000-7fcce06ff000 ---p 00000000 00:00 0 
+7fcce06ff000-7fcce07fd000 rw-p 00000000 00:00 0                          [stack:9658]
+7fcce07fd000-7fcce0800000 ---p 00000000 00:00 0 
+7fcce0800000-7fcce08fe000 rw-p 00000000 00:00 0                          [stack:9656]
+7fcce08fe000-7fcce0901000 ---p 00000000 00:00 0 
+7fcce0901000-7fcce09ff000 rw-p 00000000 00:00 0                          [stack:9655]
+7fcce09ff000-7fcce0a02000 ---p 00000000 00:00 0 
+7fcce0a02000-7fcce0b00000 rw-p 00000000 00:00 0                          [stack:9654]
+7fcce0b00000-7fcce0b03000 ---p 00000000 00:00 0 
+7fcce0b03000-7fcce0c01000 rw-p 00000000 00:00 0                          [stack:9653]
+7fcce0c01000-7fcce0c04000 ---p 00000000 00:00 0 
+7fcce0c04000-7fcce0d02000 rw-p 00000000 00:00 0                          [stack:9652]
+7fcce0d02000-7fcce0d05000 ---p 00000000 00:00 0 
+7fcce0d05000-7fcce0e03000 rw-p 00000000 00:00 0                          [stack:9623]
+7fcce0e03000-7fcce0e06000 ---p 00000000 00:00 0 
+7fcce0e06000-7fcce0f04000 rw-p 00000000 00:00 0                          [stack:9622]
+7fcce0f04000-7fcce0f07000 ---p 00000000 00:00 0 
+7fcce0f07000-7fcce1005000 rw-p 00000000 00:00 0                          [stack:9621]
+7fcce1005000-7fcce1008000 ---p 00000000 00:00 0 
+7fcce1008000-7fcce1106000 rw-p 00000000 00:00 0                          [stack:9620]
+7fcce1106000-7fcce1109000 ---p 00000000 00:00 0 
+7fcce1109000-7fcce1207000 rw-p 00000000 00:00 0                          [stack:9619]
+7fcce1207000-7fcce120a000 ---p 00000000 00:00 0 
+7fcce120a000-7fcce1308000 rw-p 00000000 00:00 0                          [stack:9618]
+7fcce1308000-7fcce130b000 ---p 00000000 00:00 0 
+7fcce130b000-7fcce1409000 rw-p 00000000 00:00 0                          [stack:9617]
+7fcce1409000-7fcce140c000 ---p 00000000 00:00 0 
+7fcce140c000-7fcce150a000 rw-p 00000000 00:00 0                          [stack:9616]
+7fcce150a000-7fcce150d000 ---p 00000000 00:00 0 
+7fcce150d000-7fcce160b000 rw-p 00000000 00:00 0                          [stack:9615]
+7fcce160b000-7fcce160e000 ---p 00000000 00:00 0 
+7fcce160e000-7fcce170c000 rw-p 00000000 00:00 0                          [stack:9614]
+7fcce170c000-7fcce170f000 ---p 00000000 00:00 0 
+7fcce170f000-7fcce180d000 rw-p 00000000 00:00 0                          [stack:9613]
+7fcce180d000-7fcce1810000 ---p 00000000 00:00 0 
+7fcce1810000-7fcce190e000 rw-p 00000000 00:00 0                          [stack:9612]
+7fcce190e000-7fcce1911000 ---p 00000000 00:00 0 
+7fcce1911000-7fcce1947000 rw-p 00000000 00:00 0 
+7fcce1947000-7fcce194a000 ---p 00000000 00:00 0 
+7fcce194a000-7fcce1980000 rw-p 00000000 00:00 0 
+7fcce1980000-7fcce1981000 r--p 00000000 00:00 0 
+7fcce1981000-7fcce1982000 r--s 00000000 fd:01 1454030                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.organization.doctype.shared.Organization.jar
+7fcce1982000-7fcce1984000 r--s 00002000 fd:01 1453563                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/org.collectionspace.services.listener.updateobjectlocationonmove-4.3.jar
+7fcce1984000-7fcce1985000 r--s 00000000 fd:01 1454065                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.media.doctype.shared.Media.jar
+7fcce1985000-7fcce1986000 r--s 00000000 fd:01 1454076                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.person.schema.persons_naturalhistory.jar
+7fcce1986000-7fcce1987000 r--s 00000000 fd:01 1454081                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.taxon.doctype.shared.Taxon.jar
+7fcce1987000-7fcce1988000 r--s 00000000 fd:01 1453780                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.shared.schema.collectionspace_core.jar
+7fcce1988000-7fcce1989000 r--s 00000000 fd:01 1454061                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.blob.doctype.shared.Blob.jar
+7fcce1989000-7fcce198a000 r--s 00000000 fd:01 1454070                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.acquisition.schema.acquisitions_bm.jar
+7fcce198a000-7fcce198b000 r--s 00000000 fd:01 1454041                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.place.schema.places_common.jar
+7fcce198b000-7fcce198c000 r--s 00000000 fd:01 1454077                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.person.doctype.lifesci.PersonTenant2.jar
+7fcce198c000-7fcce198d000 r--s 00000000 fd:01 1454090                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.media.schema.media_bm.jar
+7fcce198d000-7fcce198e000 r--s 00000000 fd:01 1454032                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.collectionobject.schema.collectionobjects_variablemedia.jar
+7fcce198e000-7fcce198f000 r--s 00000000 fd:01 1454059                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.group.doctype.shared.Group.jar
+7fcce198f000-7fcce1990000 r--s 00000000 fd:01 1454170                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.valuationcontrol.doctype.bm.ValuationcontrolTenant55.jar
+7fcce1990000-7fcce1991000 r--s 00000000 fd:01 1454075                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.material.doctype.shared.Materialitem.jar
+7fcce1991000-7fcce1992000 r--s 00000000 fd:01 1454015                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.loanin.schema.loansin_common.jar
+7fcce1992000-7fcce1993000 r--s 00000000 fd:01 1454023                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.organization.schema.organizations_common.jar
+7fcce1993000-7fcce1994000 r--s 00000000 fd:01 1454019                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.contact.schema.contacts_common.jar
+7fcce1994000-7fcce1995000 r--s 00000000 fd:01 1454039                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.exhibition.schema.exhibitions_common.jar
+7fcce1995000-7fcce1996000 r--s 00000000 fd:01 1454064                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.media.schema.media_common.jar
+7fcce1996000-7fcce1997000 r--s 00001000 fd:01 1454001                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/org.collectionspace.services.batch.3rdparty.nuxeo-4.3.jar
+7fcce1997000-7fcce1998000 r--s 00000000 fd:01 1454057                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.vocabularyitem.doctype.shared.Vocabularyitem.jar
+7fcce1998000-7fcce1999000 r--s 00000000 fd:01 1454040                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.exhibition.doctype.shared.Exhibition.jar
+7fcce1999000-7fcce199a000 r--s 00001000 fd:01 1453600                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/org.collectionspace.services.listener.updateimagederivatives-4.3.jar
+7fcce199a000-7fcce199b000 r--s 00000000 fd:01 1454063                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.valuationcontrol.doctype.shared.Valuationcontrol.jar
+7fcce199b000-7fcce199c000 r--s 00000000 fd:01 1454013                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.location.schema.locations_common.jar
+7fcce199c000-7fcce199d000 r--s 00000000 fd:01 1454011                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.person.schema.persons_common.jar
+7fcce199d000-7fcce199e000 r--s 00000000 fd:01 1454060                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.blob.schema.blobs_common.jar
+7fcce199e000-7fcce199f000 r--s 00000000 fd:01 1454058                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.group.schema.groups_common.jar
+7fcce199f000-7fcce19a0000 r--s 00001000 fd:01 1453857                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/org.collectionspace.services.relation.3rdparty.nuxeo-4.3.jar
+7fcce19a0000-7fcce19a1000 r--s 00000000 fd:01 1454068                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.conditioncheck.doctype.shared.Conditioncheck.jar
+7fcce19a1000-7fcce19a2000 r--s 00000000 fd:01 1454071                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.acquisition.doctype.bm.AcquisitionTenant55.jar
+7fcce19a2000-7fcce19a3000 r--s 00000000 fd:01 1454080                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.taxon.schema.taxon_common.jar
+7fcce19a3000-7fcce19a4000 r--s 00000000 fd:01 1454038                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.movement.doctype.shared.Movement.jar
+7fcce19a4000-7fcce19a5000 r--s 00000000 fd:01 1454056                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.vocabularyitem.schema.vocabularyitems_common.jar
+7fcce19a5000-7fcce19a6000 r--s 00000000 fd:01 1454052                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.intake.doctype.shared.Intake.jar
+7fcce19a6000-7fcce19a7000 r--s 00000000 fd:01 1454017                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.loanout.schema.loansout_common.jar
+7fcce19a7000-7fcce19a8000 r--s 00001000 fd:01 1452564                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/org.collectionspace.services.3rdparty.nuxeo.collectionspace_core-4.3.jar
+7fcce19a8000-7fcce19a9000 r--s 00000000 fd:01 1454079                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.collectionobject.doctype.lifesci.CollectionObjectTenant2.jar
+7fcce19a9000-7fcce19aa000 r--s 00000000 fd:01 1454031                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.collectionobject.schema.collectionobjects_common.jar
+7fcce19aa000-7fcce19ab000 r--s 00000000 fd:01 1454066                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.concept.doctype.shared.Conceptitem.jar
+7fcce19ab000-7fcce19ac000 r--s 00000000 fd:01 1453909                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.intake.schema.intakes_bm.jar
+7fcce19ac000-7fcce19ad000 r--s 00000000 fd:01 1454012                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.person.doctype.shared.Person.jar
+7fcce19ad000-7fcce19ae000 r--s 00000000 fd:01 1454036                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.conservation.doctype.shared.Conservation.jar
+7fcce19ae000-7fcce19af000 r--s 00000000 fd:01 1454010                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.concept.doctype.fcart.ConceptitemTenant1000.jar
+7fcce19af000-7fcce19b0000 r--s 00000000 fd:01 1454091                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.media.doctype.bm.MediaTenant55.jar
+7fcce19b0000-7fcce19b1000 r--s 00000000 fd:01 1454043                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.objectexit.schema.objectexit_common.jar
+7fcce19b1000-7fcce19b2000 r--s 00000000 fd:01 1453856                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/org.collectionspace.services.workflow.3rdparty.nuxeo-4.3.jar
+7fcce19b2000-7fcce19b3000 r--s 00000000 fd:01 1454042                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.place.doctype.shared.Placeitem.jar
+7fcce19b3000-7fcce19b4000 r--s 00000000 fd:01 1454045                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.work.schema.works_common.jar
+7fcce19b4000-7fcce19b5000 r--s 00000000 fd:01 1454022                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.acquisition.doctype.shared.Acquisition.jar
+7fcce19b5000-7fcce19b6000 r--s 00000000 fd:01 1454078                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.collectionobject.schema.collectionobjects_naturalhistory.jar
+7fcce19b6000-7fcce19b8000 r--s 00000000 fd:01 1454006                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/org.collectionspace.services.dimension.3rdparty.nuxeo-4.3.jar
+7fcce19b8000-7fcce19b9000 r--s 00000000 fd:01 1454054                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.conditioncheck.schema.conditionchecks_common.jar
+7fcce19b9000-7fcce19ba000 r--s 00000000 fd:01 1454021                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.acquisition.schema.acquisitions_common.jar
+7fcce19ba000-7fcce19bb000 r--s 00000000 fd:01 1454062                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.valuationcontrol.schema.valuationcontrols_common.jar
+7fcce19bb000-7fcce19bc000 r--s 00000000 fd:01 1454034                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.collectionobject.doctype.fcart.CollectionObjectTenant1000.jar
+7fcce19bc000-7fcce19bd000 r--s 00000000 fd:01 1454008                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.concept.schema.concepts_common.jar
+7fcce19bd000-7fcce19be000 r--s 00000000 fd:01 1454074                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.material.schema.materials_common.jar
+7fcce19be000-7fcce19bf000 r--s 00000000 fd:01 1454069                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.concept.doctype.bm.ConceptitemTenant55.jar
+7fcce19bf000-7fcce19c0000 r--s 00000000 fd:01 1454053                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.conditioncheck.schema.conditionchecks_variablemedia.jar
+7fcce19c0000-7fcce19c1000 r--s 00000000 fd:01 1454037                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.movement.schema.movements_common.jar
+7fcce19c1000-7fcce19c2000 r--s 00000000 fd:01 1454035                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.conservation.schema.conservation_common.jar
+7fcce19c2000-7fcce19c3000 r--s 00000000 fd:01 1454055                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.conditioncheck.doctype.fcart.ConditioncheckTenant1000.jar
+7fcce19c3000-7fcce19c4000 r--s 00000000 fd:01 1454051                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.intake.schema.intakes_common.jar
+7fcce19c4000-7fcce19c5000 r--s 00000000 fd:01 1454033                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.collectionobject.schema.collectionobjects_fineart.jar
+7fcce19c5000-7fcce19c6000 r--s 00000000 fd:01 1454050                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.citation.doctype.shared.Citation.jar
+7fcce19c6000-7fcce19c7000 r--s 00000000 fd:01 1454047                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.report.schema.reports_common.jar
+7fcce19c7000-7fcce19c8000 r--s 00000000 fd:01 1454048                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.report.doctype.shared.Report.jar
+7fcce19c8000-7fcce19c9000 r--s 00000000 fd:01 1454016                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.loanin.doctype.shared.Loanin.jar
+7fcce19c9000-7fcce19ca000 r--s 00000000 fd:01 1454049                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.citation.schema.citations_common.jar
+7fcce19ca000-7fcce19cb000 r--s 00000000 fd:01 1454087                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.valuationcontrol.schema.valuationcontrols_bm.jar
+7fcce19cb000-7fcce19cc000 r--s 00001000 fd:01 1453564                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/org.collectionspace.services.listener.updaterelationsondelete-4.3.jar
+7fcce19cc000-7fcce19ce000 r--s 00000000 fd:01 1454000                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/org.collectionspace.services.imports.3rdparty.nuxeo-4.3.jar
+7fcce19ce000-7fcce19cf000 r--s 00000000 fd:01 1454044                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.objectexit.doctype.shared.ObjectExit.jar
+7fcce19cf000-7fcce19d0000 r--s 00000000 fd:01 1454014                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.location.doctype.shared.Locationitem.jar
+7fcce19d0000-7fcce19d1000 r--s 00000000 fd:01 1454072                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.collectionobject.doctype.bm.CollectionObjectTenant55.jar
+7fcce19d1000-7fcce19d2000 r--s 00000000 fd:01 1453821                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.collectionobject.schema.collectionobjects_bm.jar
+7fcce19d2000-7fcce19d3000 r--s 00000000 fd:01 1454067                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.collectionobject.doctype.shared.CollectionObject.jar
+7fcce19d3000-7fcce19d4000 r--s 00000000 fd:01 1454020                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.contact.doctype.shared.Contact.jar
+7fcce19d4000-7fcce19d5000 r--s 00000000 fd:01 1454009                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.concept.schema.concepts_fineart.jar
+7fcce19d5000-7fcce19d6000 r--s 00000000 fd:01 1454073                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.conditioncheck.doctype.bm.ConditioncheckTenant55.jar
+7fcce19d6000-7fcce19d7000 r--s 00000000 fd:01 1453910                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.intake.doctype.bm.IntakeTenant55.jar
+7fcce19d7000-7fcce19d8000 r--s 00000000 fd:01 1454046                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.work.doctype.shared.Workitem.jar
+7fcce19d8000-7fcce19da000 r--s 00000000 fd:01 1454007                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/org.collectionspace.services.publicitem.3rdparty.nuxeo-4.3.jar
+7fcce19da000-7fcce19db000 r--s 00000000 fd:01 1454018                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/plugins/collectionspace.loanout.doctype.shared.Loanout.jar
+7fcce19db000-7fcce19dc000 r--s 00002000 fd:01 1707510                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-runtime-reload-6.0.jar
+7fcce19dc000-7fcce19de000 r--s 00003000 fd:01 1707508                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-runtime-metrics-6.0.jar
+7fcce19de000-7fcce19e0000 r--s 00010000 fd:01 1707494                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-runtime-deploy-6.0-HF15.jar
+7fcce19e0000-7fcce19e2000 r--s 00009000 fd:01 1707495                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-runtime-jtajca-6.0-HF09.jar
+7fcce19e2000-7fcce19e3000 r--s 00008000 fd:01 1707491                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-runtime-datasource-6.0-HF12.jar
+7fcce19e3000-7fcce19e6000 r--s 0000e000 fd:01 1707507                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-runtime-management-6.0.jar
+7fcce19e6000-7fcce19e8000 r--s 00018000 fd:01 1707509                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-runtime-osgi-6.0.jar
+7fcce19e8000-7fcce19ea000 r--s 00007000 fd:01 1707567                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/commons-csv-1.0.jar
+7fcce19ea000-7fcce19ec000 r--s 0000e000 fd:01 1708396                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/lucene-join-4.7.2.jar
+7fcce19ec000-7fcce19f4000 r--s 00055000 fd:01 1708467                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/xsom-20081112.jar
+7fcce19f4000-7fcce19f6000 r--s 00015000 fd:01 1707939                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jboss-seam-pdf-2.3.1.Final.jar
+7fcce19f6000-7fcce1a02000 r--s 000a6000 fd:01 1708385                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jxl-2.6.12.jar
+7fcce1a02000-7fcce1a06000 r--s 00034000 fd:01 1707923                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jackson-core-asl-1.8.1.jar
+7fcce1a06000-7fcce1a0a000 r--s 00018000 fd:01 1707675                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/geronimo-connector-2.2.1-NX1.jar
+7fcce1a0a000-7fcce1a20000 r--s 000eb000 fd:01 1708444                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/shared-ldap-0.9.7.jar
+7fcce1a20000-7fcce1a2f000 r--s 00081000 fd:01 1708281                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/joda-time-2.6.jar
+7fcce1a2f000-7fcce1a33000 r--s 00024000 fd:01 1708465                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/xmlschema-core-2.0.3.jar
+7fcce1a33000-7fcce1a39000 r--s 00054000 fd:01 1707586                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/cxf-rt-frontend-jaxws-2.6.8.jar
+7fcce1a39000-7fcce1a3d000 r--s 00013000 fd:01 1708443                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/shared-asn1-0.9.7.jar
+7fcce1a3d000-7fcce1a40000 r--s 00006000 fd:01 1707671                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/ejb-api-3.0.jar
+7fcce1a40000-7fcce1ad8000 r--s 00420000 fd:01 1708434                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/poi-ooxml-schemas-3.10-FINAL.jar
+7fcce1ad8000-7fcce1adb000 r--s 00015000 fd:01 1708398                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/lucene-misc-4.7.2.jar
+7fcce1adb000-7fcce1add000 r--s 0000b000 fd:01 1707955                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jempbox-1.8.9.jar
+7fcce1add000-7fcce1ae2000 r--s 00052000 fd:01 1708430                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/phloc-css-3.3.1.jar
+7fcce1ae2000-7fcce1af1000 r--s 0009f000 fd:01 1707908                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/guice-3.0.jar
+7fcce1af1000-7fcce1af7000 r--s 0004d000 fd:01 1707954                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jedis-2.7.0.jar
+7fcce1af7000-7fcce1afa000 r--s 0001f000 fd:01 1708279                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jmock-2.5.1.jar
+7fcce1afa000-7fcce1afc000 r--s 0000a000 fd:01 1708401                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/lucene-sandbox-4.7.2.jar
+7fcce1afc000-7fcce1b05000 r--s 0005d000 fd:01 1707958                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jersey-core-1.17.1-minimal.jar
+7fcce1b05000-7fcce1b0c000 r--s 00059000 fd:01 1707560                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/chemistry-opencmis-server-bindings-0.12.0-NX2.jar
+7fcce1b0c000-7fcce1b1c000 r--s 000e8000 fd:01 1708412                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/mvel2-2.2.4.FinalNX01.jar
+7fcce1b1c000-7fcce1b21000 r--s 00039000 fd:01 1708431                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/plexus-utils-1.5.6.jar
+7fcce1b21000-7fcce1b24000 r--s 00019000 fd:01 1707902                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/google-api-client-1.12.0-beta.jar
+7fcce1b24000-7fcce1b26000 r--s 00007000 fd:01 1707555                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/chemistry-opencmis-client-api-0.12.0.jar
+7fcce1b26000-7fcce1b2c000 r--s 0002e000 fd:01 1708399                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/lucene-queries-4.7.2.jar
+7fcce1b2c000-7fcce1b4f000 r--s 001ae000 fd:01 1707956                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jena-2.6.4-NX.jar
+7fcce1b4f000-7fcce1b8c000 r--s 0024f000 fd:01 1708464                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/xmlbeans-2.3.0.jar
+7fcce1b8c000-7fcce1b91000 r--s 00044000 fd:01 1707522                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/FastInfoset-1.2.13.jar
+7fcce1b91000-7fcce1b95000 r--s 0001e000 fd:01 1707936                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jboss-el-1.0_02.CR6.jar
+7fcce1b95000-7fcce1b98000 r--s 0000d000 fd:01 1707914                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/hibernate-validator-3.1.0.GA.jar
+7fcce1b98000-7fcce1b9c000 r--s 0001c000 fd:01 1707938                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jboss-seam-excel-2.3.1.Final.jar
+7fcce1b9c000-7fcce1b9d000 r--s 00002000 fd:01 1707550                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/batik-ext-1.7.jar
+7fcce1b9d000-7fcce1ba0000 r--s 0001f000 fd:01 1708395                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/lucene-highlighter-4.7.2.jar
+7fcce1ba0000-7fcce1ba2000 r--s 00009000 fd:01 1708277                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jmd-0.8.1-tomasol-3e60e36137.jar
+7fcce1ba2000-7fcce1ba3000 r--s 00003000 fd:01 1708292                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jta-1.1.jar
+7fcce1ba3000-7fcce1ba5000 r--s 00002000 fd:01 1708445                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/shared-ldap-constants-0.9.7.jar
+7fcce1ba5000-7fcce1bb6000 r--s 000d0000 fd:01 1707935                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jaxb-impl-2.2.7.jar
+7fcce1bb6000-7fcce1bee000 r--s 0011c000 fd:01 1708456                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/unoil-3.1.0.jar
+7fcce1bee000-7fcce1bf0000 r--s 00011000 fd:01 1708282                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jodconverter-core-3.0-NX10.jar
+7fcce1bf0000-7fcce1bf3000 r--s 00014000 fd:01 1707531                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/antisamy-1.5.3.jar
+7fcce1bf3000-7fcce1bf9000 r--s 0003d000 fd:01 1708446                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/snakeyaml-1.13.jar
+7fcce1bf9000-7fcce1bfb000 r--s 00001000 fd:01 1708280                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jmock-junit4-2.5.1.jar
+7fcce1bfb000-7fcce1bfd000 r--s 00004000 fd:01 1708291                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jstl-1.1.2.jar
+7fcce1bfd000-7fcce1c04000 r--s 00058000 fd:01 1708469                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/yarfraw-0.92.jar
+7fcce1c04000-7fcce1c06000 r--s 00005000 fd:01 1707578                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/cors-filter-1.7.1.jar
+7fcce1c06000-7fcce1c08000 r--s 00010000 fd:01 1708413                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/neethi-3.0.2.jar
+7fcce1c08000-7fcce1c0b000 r--s 0000b000 fd:01 1708458                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/webdav-jaxrs-1.1.1.jar
+7fcce1c0b000-7fcce1c10000 r--s 00040000 fd:01 1707910                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/hibernate-annotations-3.4.0.GA.jar
+7fcce1c10000-7fcce1c13000 r--s 0001b000 fd:01 1708414                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/nekohtml-1.9.12.jar
+7fcce1c13000-7fcce1c19000 r--s 00055000 fd:01 1707583                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/cxf-rt-core-2.6.8.jar
+7fcce1c19000-7fcce1c1b000 r--s 0000a000 fd:01 1708278                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jmimemagic-0.1.2.jar
+7fcce1c1b000-7fcce1c1c000 r--s 00008000 fd:01 1708397                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/lucene-memory-4.7.2.jar
+7fcce1c1c000-7fcce1c1f000 r--s 0000a000 fd:01 1708428                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/persistence-api-1.0.jar
+7fcce1c1f000-7fcce1c23000 r--s 0001b000 fd:01 1707543                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/apacheds-schema-bootstrap-1.5.1.jar
+7fcce1c23000-7fcce1c25000 r--s 00014000 fd:01 1708404                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/metadata-extractor-2.3.1.jar
+7fcce1c25000-7fcce1c33000 r--s 00088000 fd:01 1708420                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/org.osgi.compendium-4.2.0.jar
+7fcce1c33000-7fcce1c3c000 r--s 00083000 fd:01 1708452                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/testng-5.14.10.jar
+7fcce1c3c000-7fcce1c47000 r--s 00085000 fd:01 1708411                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/mongo-java-driver-2.12.1.jar
+7fcce1c47000-7fcce1c71000 r--s 001fb000 fd:01 1707546                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/arq-2.8.8.jar
+7fcce1c71000-7fcce1c77000 r--s 00031000 fd:01 1707934                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jaxb-core-2.2.7.jar
+7fcce1c77000-7fcce1c7c000 r--s 0002c000 fd:01 1707668                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/cxf-rt-ws-policy-2.6.8.jar
+7fcce1c7c000-7fcce1c7d000 r--s 00000000 fd:01 1707933                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/javax.inject-1.jar
+7fcce1c7d000-7fcce1c80000 r--s 0001c000 fd:01 1708263                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jersey-servlet-1.17.1.jar
+7fcce1c80000-7fcce1c83000 r--s 00016000 fd:01 1708419                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/org.eclipse.equinox.p2.cudf-1.17-NX.jar
+7fcce1c83000-7fcce1c93000 r--s 0011f000 fd:01 1708435                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/poi-scratchpad-3.10-FINAL.jar
+7fcce1c93000-7fcce1c96000 r--s 00040000 fd:01 1707928                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/javacc-4.0.jar
+7fcce1c96000-7fcce1c98000 r--s 0001d000 fd:01 1708453                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/tomcat-jdbc-7.0.56.jar
+7fcce1c98000-7fcce1c9a000 r--s 0000c000 fd:01 1708462                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/xbean-naming-3.9.jar
+7fcce1c9a000-7fcce1ceb000 r--s 00934000 fd:01 1707919                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/icu4j-51.1.jar
+7fcce1ceb000-7fcce1ced000 r--s 00010000 fd:01 1707680                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/geronimo-transaction-2.2.1.jar
+7fcce1ced000-7fcce1cf0000 r--s 00018000 fd:01 1708394                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/lucene-grouping-4.7.2.jar
+7fcce1cf0000-7fcce1cf3000 r--s 00009000 fd:01 1708457                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/validation-api-1.0.0.GA.jar
+7fcce1cf3000-7fcce1cf5000 r--s 0000f000 fd:01 1707569                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/commons-fileupload-1.3.1.jar
+7fcce1cf5000-7fcce1cf8000 r--s 00023000 fd:01 1707920                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/iri-0.8.jar
+7fcce1cf8000-7fcce1cfa000 r--s 00002000 fd:01 1707539                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/apacheds-core-shared-1.5.1.jar
+7fcce1cfa000-7fcce1d02000 r--s 0005a000 fd:01 1708392                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/lucene-codecs-4.7.2.jar
+7fcce1d02000-7fcce1d09000 r--s 00045000 fd:01 1708410                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/mina-core-1.1.2.jar
+7fcce1d09000-7fcce1d2b000 r--s 001bb000 fd:01 1708432                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/poi-3.10-FINAL.jar
+7fcce1d2b000-7fcce1d2d000 r--s 00013000 fd:01 1708463                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/xml-resolver-1.2.jar
+7fcce1d2d000-7fcce1d30000 r--s 00025000 fd:01 1707568                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/commons-dbcp-1.4.jar
+7fcce1d30000-7fcce1d32000 r--s 00008000 fd:01 1708454                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/tomcat-juli-7.0.56.jar
+7fcce1d32000-7fcce1d39000 r--s 00067000 fd:01 1708436                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/quartz-1.8.6.jar
+7fcce1d39000-7fcce1d3b000 r--s 0000e000 fd:01 1707528                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/activation-1.1.jar
+7fcce1d3b000-7fcce1d5e000 r--s 00211000 fd:01 1707912                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/hibernate-core-3.3.2.GA.jar
+7fcce1d5e000-7fcce1d62000 r--s 00029000 fd:01 1708450                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/stax2-api-3.1.1.jar
+7fcce1d62000-7fcce1d6f000 r--s 0009d000 fd:01 1708284                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jsf-api-2.2.6.jar
+7fcce1d6f000-7fcce1d74000 r--s 00032000 fd:01 1707957                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jericho-html-3.2.jar
+7fcce1d74000-7fcce1d79000 r--s 00068000 fd:01 1707532                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/antlr-2.7.7.jar
+7fcce1d79000-7fcce1d90000 r--s 00121000 fd:01 1707937                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jboss-seam-2.3.1.Final.NX02.jar
+7fcce1d90000-7fcce1d92000 r--s 0000c000 fd:01 1708293                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/juh-3.1.0.jar
+7fcce1d92000-7fcce1d94000 r--s 00004000 fd:01 1707526                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/Operations-0.9.5.jar
+7fcce1d94000-7fcce1d96000 r--s 00005000 fd:01 1708449                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/stax-api-1.0.jar
+7fcce1d96000-7fcce1dbb000 r--s 00172000 fd:01 1707553                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/bcprov-jdk15-1.45.jar
+7fcce1dbb000-7fcce1dbf000 r--s 0001d000 fd:01 1707573                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/commons-jexl-1.1.jar
+7fcce1dbf000-7fcce1dc3000 r--s 00022000 fd:01 1707557                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/chemistry-opencmis-client-impl-0.12.0.jar
+7fcce1dc3000-7fcce1dc6000 r--s 0001b000 fd:01 1707913                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/hibernate-entitymanager-3.4.0.GA.jar
+7fcce1dc6000-7fcce1dc9000 r--s 00018000 fd:01 1707575                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/commons-pool2-2.0.jar
+7fcce1dc9000-7fcce1ded000 r--s 001aa000 fd:01 1707907                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/guava-13.0.1.jar
+7fcce1ded000-7fcce1df3000 r--s 00045000 fd:01 1707570                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/commons-httpclient-3.1.jar
+7fcce1df3000-7fcce1df5000 r--s 00014000 fd:01 1708266                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jline-0.9.94.jar
+7fcce1df5000-7fcce1df6000 r--s 00000000 fd:01 1708408                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/metrics-log4j-3.0.0.jar
+7fcce1df6000-7fcce1df8000 r--s 00011000 fd:01 1707590                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/cxf-rt-ws-addr-2.6.8.jar
+7fcce1df8000-7fcce1e05000 r--s 00083000 fd:01 1707566                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/commons-collections-3.2.2.jar
+7fcce1e05000-7fcce1e08000 r--s 00013000 fd:01 1707945                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jdbm-1.0.jar
+7fcce1e08000-7fcce1e17000 r--s 00085000 fd:01 1708092                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jersey-server-1.17.1.jar
+7fcce1e17000-7fcce1e1a000 r--s 00018000 fd:01 1707940                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jboss-seam-remoting-2.3.1.Final.NX02.jar
+7fcce1e1a000-7fcce1e1c000 r--s 0000c000 fd:01 1707905                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/google-oauth-client-1.12.0-beta.jar
+7fcce1e1c000-7fcce1e34000 r--s 003cd000 fd:01 1708427                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/pdfbox-1.8.9.jar
+7fcce1e34000-7fcce1e3b000 r--s 00076000 fd:01 1707577                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/core-1.0-b02.jar
+7fcce1e3b000-7fcce1e3d000 r--s 0000e000 fd:01 1708409                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/mimepull-1.9.4.jar
+7fcce1e3d000-7fcce1e41000 r--s 0002b000 fd:01 1708403                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/lucene-suggest-4.7.2.jar
+7fcce1e41000-7fcce1e4a000 r--s 0005f000 fd:01 1708439                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/richfaces-a4j-4.5.0.Alpha3.jar
+7fcce1e4a000-7fcce1e51000 r--s 0003f000 fd:01 1707918                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/httpcore-4.3.3.jar
+7fcce1e51000-7fcce1e5e000 r--s 000ba000 fd:01 1707925                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jaudiotagger-2.0.3.jar
+7fcce1e5e000-7fcce1e5f000 r--s 0000a000 fd:01 1707547                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/asm-3.1.jar
+7fcce1e5f000-7fcce1e62000 r--s 0001b000 fd:01 1708466                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/xpp3-1.1.4c-clean.jar
+7fcce1e62000-7fcce1e65000 r--s 00013000 fd:01 1707673                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/ezmorph-1.0.4.jar
+7fcce1e65000-7fcce1e83000 r--s 00233000 fd:01 1708285                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jsf-impl-2.2.6-NX01.jar
+7fcce1e83000-7fcce1efd000 r--s 00575000 fd:01 1707909                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/gwt-servlet-2.5.1.jar
+7fcce1efd000-7fcce1f01000 r--s 0002e000 fd:01 1708425                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/org.sat4j.pb-2.3.1.jar
+7fcce1f01000-7fcce1f08000 r--s 00045000 fd:01 1707549                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/batik-css-1.7.jar
+7fcce1f08000-7fcce1f0d000 r--s 00048000 fd:01 1707669                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/dom4j-1.6.1.jar
+7fcce1f0d000-7fcce1f0f000 r--s 00017000 fd:01 1708455                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/tranql-connector-1.8.jar
+7fcce1f0f000-7fcce1f15000 r--s 00070000 fd:01 1708460                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/woodstox-core-asl-4.2.0.jar
+7fcce1f15000-7fcce1f18000 r--s 00022000 fd:01 1707562                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/com.noelios.restlet-1.0.7.jar
+7fcce1f18000-7fcce1f1a000 r--s 00017000 fd:01 1708418                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/org.eclipse.equinox.common-3.6.0.v20100503.jar
+7fcce1f1a000-7fcce1f1d000 r--s 00024000 fd:01 1708287                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/json-lib-2.4-jdk15.jar
+7fcce1f1d000-7fcce1f4a000 r--s 00192000 fd:01 1708429                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/phloc-commons-3.9.2.jar
+7fcce1f4a000-7fcce1f4d000 r--s 00018000 fd:01 1708402                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/lucene-spatial-4.7.2.jar
+7fcce1f4d000-7fcce1f4e000 r--s 00002000 fd:01 1707545                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/apacheds-utils-1.5.1.jar
+7fcce1f4e000-7fcce1f50000 r--s 0000d000 fd:01 1708415                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/oauth-20090531.jar
+7fcce1f50000-7fcce1f56000 r--s 00019000 fd:01 1707558                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/chemistry-opencmis-commons-api-0.12.0.jar
+7fcce1f56000-7fcce1f61000 r--s 00085000 fd:01 1707917                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/httpclient-4.3.3.jar
+7fcce1f61000-7fcce1f6e000 r--s 00071000 fd:01 1708468                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/xstream-1.4.6.jar
+7fcce1f6e000-7fcce1f73000 r--s 00038000 fd:01 1708421                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/org.osgi.core-4.2.0.jar
+7fcce1f73000-7fcce1f77000 r--s 00053000 fd:01 1707579                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/cssparser-0.9.14.jar
+7fcce1f77000-7fcce1f7a000 r--s 00022000 fd:01 1707533                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/antlr-runtime-3.1.3.jar
+7fcce1f7a000-7fcce1f7c000 r--s 00014000 fd:01 1707926                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/java-cup-0.11a.jar
+7fcce1f7c000-7fcce1f7f000 r--s 0001d000 fd:01 1707551                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/batik-util-1.7.jar
+7fcce1f7f000-7fcce1f88000 r--s 00058000 fd:01 1708448                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/standard-1.1.2.jar
+7fcce1f88000-7fcce1f8a000 r--s 0000c000 fd:01 1707929                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/javasimon-core-2.5.0.jar
+7fcce1f8a000-7fcce1f8c000 r--s 00000000 fd:01 1707534                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/aopalliance-1.0.jar
+7fcce1f8c000-7fcce1f90000 r--s 0002a000 fd:01 1707572                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/commons-io-2.4.jar
+7fcce1f90000-7fcce1f93000 r--s 00007000 fd:01 1707576                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/connector-api-1.5.jar
+7fcce1f93000-7fcce1f94000 r--s 00001000 fd:01 1707927                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/java-property-utils-1.9.jar
+7fcce1f94000-7fcce1fbc000 r--s 0029b000 fd:01 1707906                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/groovy-all-1.5.7.jar
+7fcce1fbc000-7fcce1fc3000 r--s 00050000 fd:01 1707561                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/chemistry-opencmis-server-support-0.12.0.jar
+7fcce1fc3000-7fcce1fcf000 r--s 00108000 fd:01 1707921                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/itext-2.1.7.jar
+7fcce1fcf000-7fcce1fd1000 r--s 0000d000 fd:01 1707544                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/apacheds-schema-registries-1.5.1.jar
+7fcce1fd1000-7fcce1fd6000 r--s 00032000 fd:01 1707588                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/cxf-rt-transports-http-2.6.8.jar
+7fcce1fd6000-7fcce1fd7000 r--s 00004000 fd:01 1708437                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/relaxngDatatype-20020414.jar
+7fcce1fd7000-7fcce1fd9000 r--s 00003000 fd:01 1707542                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/apacheds-protocol-shared-1.5.1.jar
+7fcce1fd9000-7fcce1fda000 r--s 00001000 fd:01 1708416                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/oauth-provider-20090531.jar
+7fcce1fda000-7fcce1fdb000 r--s 00001000 fd:01 1708288                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jsr250-api-1.0.jar
+7fcce1fdb000-7fcce1fe2000 r--s 0003a000 fd:01 1707565                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/commons-codec-1.9.jar
+7fcce1fe2000-7fcce1fe9000 r--s 0004d000 fd:01 1707556                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/chemistry-opencmis-client-bindings-0.12.0-NX2.jar
+7fcce1fe9000-7fcce1ff0000 r--s 0007d000 fd:01 1708264                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jetty-6.1.26.jar
+7fcce1ff0000-7fcce1ff4000 r--s 00023000 fd:01 1707922                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/itext-rtf-2.1.7.jar
+7fcce1ff4000-7fcce1ffc000 r--s 0008a000 fd:01 1707932                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/javassist-3.9.0.GA.jar
+7fcce1ffc000-7fcce2000000 r--s 0002a000 fd:01 1708461                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/wsdl4j-1.6.3.jar
+7fcce2000000-7fcce2004000 r--s 00032000 fd:01 1707674                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/fontbox-1.8.9.jar
+7fcce2004000-7fcce201a000 r--s 0012d000 fd:01 1708440                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/richfaces-core-4.5.0.Alpha3.jar
+7fcce201a000-7fcce2114000 r--s 00b17000 fd:01 1707672                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/elasticsearch-1.1.2.jar
+7fcce2114000-7fcce2117000 r--s 00018000 fd:01 1708384                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jurt-3.1.0.jar
+7fcce2117000-7fcce2119000 r--s 00008000 fd:01 1707930                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/javasimon-jdbc3-2.5.0.jar
+7fcce2119000-7fcce2122000 r--s 00057000 fd:01 1708400                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/lucene-queryparser-4.7.2.jar
+7fcce2122000-7fcce212d000 r--s 00034000 fd:01 1708441                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/ridl-3.1.0.jar
+7fcce212d000-7fcce212e000 r--s 00000000 fd:01 1707943                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jcip-annotations-1.0.jar
+7fcce212e000-7fcce2130000 r--s 0000e000 fd:01 1707587                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/cxf-rt-frontend-simple-2.6.8.jar
+7fcce2130000-7fcce2132000 r--s 00002000 fd:01 1707537                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/apacheds-constants-1.5.1.jar
+7fcce2132000-7fcce2140000 r--s 000ee000 fd:01 1708433                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/poi-ooxml-3.10-FINAL.jar
+7fcce2140000-7fcce2150000 r--s 00185000 fd:01 1708391                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/lucene-analyzers-common-4.7.2.jar
+7fcce2150000-7fcce2154000 r--s 00027000 fd:01 1707520                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/EditableImage-0.9.5.jar
+7fcce2154000-7fcce2156000 r--s 00004000 fd:01 1707536                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/apacheds-btree-base-1.5.1.jar
+7fcce2156000-7fcce2158000 r--s 0000a000 fd:01 1708290                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jsr311-api-1.1.1.jar
+7fcce2158000-7fcce215d000 r--s 0002e000 fd:01 1707903                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/google-http-client-1.12.0-beta.jar
+7fcce215d000-7fcce215f000 r--s 0000b000 fd:01 1707540                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/apacheds-jdbm-store-1.5.1.jar
+7fcce215f000-7fcce2161000 r--s 00006000 fd:01 1707944                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jcommander-1.12.jar
+7fcce2161000-7fcce2164000 r--s 0000e000 fd:01 1707911                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/hibernate-commons-annotations-3.1.0.GA.jar
+7fcce2164000-7fcce2167000 r--s 00012000 fd:01 1708405                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/metrics-core-3.0.0.jar
+7fcce2167000-7fcce2168000 r--s 00003000 fd:01 1708442                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/sac-1.3.jar
+7fcce2168000-7fcce217b000 r--s 00128000 fd:01 1707529                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/ant-1.7.0.jar
+7fcce217b000-7fcce217d000 r--s 00008000 fd:01 1707582                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/cxf-rt-bindings-xml-2.6.8.jar
+7fcce217d000-7fcce217e000 r--s 00002000 fd:01 1707530                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/ant-launcher-1.7.0.jar
+7fcce217e000-7fcce2180000 r--s 00001000 fd:01 1707941                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jboss-seam-rss-2.3.1.Final.jar
+7fcce2180000-7fcce218b000 r--s 0008b000 fd:01 1707538                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/apacheds-core-1.5.1.jar
+7fcce218b000-7fcce218c000 r--s 00000000 fd:01 1708423                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/org.restlet.ext.fileupload-1.0.7.jar
+7fcce218c000-7fcce21b3000 r--s 00219000 fd:01 1708393                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/lucene-core-4.7.2.jar
+7fcce21b3000-7fcce21b8000 r--s 0005d000 fd:01 1708459                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/wem-2.0.2.jar
+7fcce21b8000-7fcce21c4000 r--s 00097000 fd:01 1707924                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jackson-mapper-asl-1.8.1.jar
+7fcce21c4000-7fcce21c9000 r--s 0003b000 fd:01 1707942                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jboss-seam-ui-2.3.1.Final.jar
+7fcce21c9000-7fcce21cc000 r--s 00006000 fd:01 1708289                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jsr305-1.3.9.jar
+7fcce21cc000-7fcce21cd000 r--s 00001000 fd:01 1707904                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/google-http-client-jackson-1.12.0-beta.jar
+7fcce21cd000-7fcce21e7000 r--s 00115000 fd:01 1707670                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/ehcache-core-2.5.2.jar
+7fcce21e7000-7fcce21e9000 r--s 00009000 fd:01 1708286                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/json-20070829.jar
+7fcce21e9000-7fcce21ee000 r--s 00033000 fd:01 1707552                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/bcmail-jdk15-1.45.jar
+7fcce21ee000-7fcce21f2000 r--s 00028000 fd:01 1708265                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/jetty-util-6.1.26.jar
+7fcce21f2000-7fcce21f4000 r--s 0000e000 fd:01 1708426                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/oro-2.0.8.jar
+7fcce21f4000-7fcce21f9000 r--s 0002b000 fd:01 1707581                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/cxf-rt-bindings-soap-2.6.8.jar
+7fcce21f9000-7fcce21fe000 r--s 00035000 fd:01 1707564                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/commons-beanutils-1.9.2.jar
+7fcce21fe000-7fcce2200000 r--s 00003000 fd:01 1707931                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/javasimon-jmx-2.5.0.jar
+7fcce2200000-7fcce2201000 r--s 00002000 fd:01 1708406                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/metrics-graphite-3.0.0.jar
+7fcce2201000-7fcce2203000 r--s 00006000 fd:01 1708407                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/metrics-jvm-3.0.0.jar
+7fcce2203000-7fcce2211000 r--s 00092000 fd:01 1707559                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/chemistry-opencmis-commons-impl-0.12.0.jar
+7fcce2211000-7fcce2219000 r--s 00091000 fd:01 1707916                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/hsqldb-1.8.0.1.jar
+7fcce2219000-7fcce221c000 r--s 00015000 fd:01 1707574                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/commons-pool-1.5.4.jar
+7fcce221c000-7fcce221e000 r--s 00017000 fd:01 1708447                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/spatial4j-0.4.1.jar
+7fcce221e000-7fcce2312000 r--s 00981000 fd:01 1707548                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/aws-java-sdk-1.6.4.jar
+7fcce2312000-7fcce2314000 r--s 00012000 fd:01 1707915                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/howl-1.0.1-1.jar
+7fcce2314000-7fcce2315000 r--s 00003000 fd:01 1707563                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/com.noelios.restlet.ext.servlet-1.0.7.jar
+7fcce2315000-7fcce231b000 r--s 0003c000 fd:01 1708424                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/org.sat4j.core-2.3.1.jar
+7fcce231b000-7fcce232e000 r--s 000e5000 fd:01 1707580                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/cxf-api-2.6.8.jar
+7fcce232e000-7fcce2422000 r--s 0072a000 fd:01 1708438                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/richfaces-4.5.0.Alpha3.jar
+7fcce2422000-7fcce2427000 r--s 00040000 fd:01 1707554                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/bsh-2.0b4.jar
+7fcce2427000-7fcce2428000 r--s 00003000 fd:01 1707535                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/apacheds-bootstrap-extract-1.5.1.jar
+7fcce2428000-7fcce242f000 r--s 00036000 fd:01 1707541                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/apacheds-kerberos-shared-1.5.1.jar
+7fcce242f000-7fcce2432000 r--s 00028000 fd:01 1708422                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/org.restlet-1.0.7.jar
+7fcce2432000-7fcce2435000 r--s 00027000 fd:01 1708451                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/stringtemplate-3.2.jar
+7fcce2435000-7fcce2438000 r--s 0001a000 fd:01 1707584                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/cxf-rt-databinding-jaxb-2.6.8.jar
+7fcce2438000-7fcce243b000 r--s 00014000 fd:01 1708417                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/org.eclipse.core.jobs-3.5.0.v20100515.jar
+7fcce243b000-7fcce2442000 r--s 000b2000 fd:01 1708283                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/lib/js-1.7R1.jar
+7fcce2442000-7fcce2448000 r--s 00033000 fd:01 1707490                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-runtime-6.0-HF12.jar
+7fcce2448000-7fcce2449000 r--s 00002000 fd:01 1707489                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-reindex-fulltext-6.0.jar
+7fcce2449000-7fcce244a000 r--s 00001000 fd:01 1707488                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-versioning-core-6.0.jar
+7fcce244a000-7fcce244b000 r--s 00001000 fd:01 1707487                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-versioning-api-6.0.jar
+7fcce244b000-7fcce244d000 r--s 00002000 fd:01 1707486                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-url-core-6.0.jar
+7fcce244d000-7fcce244f000 r--s 00002000 fd:01 1707485                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-url-api-6.0-HF10.jar
+7fcce244f000-7fcce2450000 r--s 00005000 fd:01 1707484                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-uidgen-core-6.0.jar
+7fcce2450000-7fcce2451000 r--s 00005000 fd:01 1707483                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-types-core-6.0.jar
+7fcce2451000-7fcce2452000 r--s 00004000 fd:01 1707482                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-types-api-6.0.jar
+7fcce2452000-7fcce2453000 r--s 00001000 fd:01 1707481                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-tag-api-6.0.jar
+7fcce2453000-7fcce2455000 r--s 00001000 fd:01 1707480                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-search-api-6.0.jar
+7fcce2455000-7fcce2458000 r--s 00006000 fd:01 1707479                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-relations-api-6.0.jar
+7fcce2458000-7fcce245a000 r--s 00011000 fd:01 1707478                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-query-api-6.0-HF21.jar
+7fcce245a000-7fcce245c000 r--s 00011000 fd:01 1707477                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-oauth-6.0.jar
+7fcce245c000-7fcce245e000 r--s 00007000 fd:01 1707476                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-mimetype-core-6.0-HF18.jar
+7fcce245e000-7fcce245f000 r--s 00001000 fd:01 1707475                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-mimetype-api-6.0.jar
+7fcce245f000-7fcce2461000 r--s 00005000 fd:01 1707474                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-login-token-6.0-HF04.jar
+7fcce2461000-7fcce2462000 r--s 00002000 fd:01 1707473                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-login-digest-6.0.jar
+7fcce2462000-7fcce2464000 r--s 00000000 fd:01 1707472                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-login-default-6.0.jar
+7fcce2464000-7fcce2465000 r--s 00005000 fd:01 1707471                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-login-6.0.jar
+7fcce2465000-7fcce2467000 r--s 000dc000 fd:01 1707470                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-lang-ext-6.0-HF15.jar
+7fcce2467000-7fcce2468000 r--s 00011000 fd:01 1707469                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-lang-6.0-HF15.jar
+7fcce2468000-7fcce246a000 r--s 00003000 fd:01 1707468                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-io-core-6.0.jar
+7fcce246a000-7fcce246c000 r--s 00001000 fd:01 1707467                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-io-client-6.0.jar
+7fcce246c000-7fcce246d000 r--s 00001000 fd:01 1707466                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-io-api-6.0.jar
+7fcce246d000-7fcce246f000 r--s 00000000 fd:01 1707465                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-imaging-preview-6.0.jar
+7fcce246f000-7fcce2472000 r--s 0000c000 fd:01 1707464                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-imaging-core-6.0-HF14.jar
+7fcce2472000-7fcce2474000 r--s 00001000 fd:01 1707463                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-imaging-convert-6.0.jar
+7fcce2474000-7fcce2476000 r--s 00008000 fd:01 1707462                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-imaging-api-6.0-HF03.jar
+7fcce2476000-7fcce2478000 r--s 00005000 fd:01 1707461                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-htmlsanitizer-6.0.jar
+7fcce2478000-7fcce247a000 r--s 00003000 fd:01 1707460                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-filemanager-core-listener-6.0.jar
+7fcce247a000-7fcce247c000 r--s 00009000 fd:01 1707459                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-filemanager-core-6.0-HF20.jar
+7fcce247c000-7fcce247d000 r--s 00001000 fd:01 1707458                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-filemanager-api-6.0-HF01.jar
+7fcce247d000-7fcce247f000 r--s 00002000 fd:01 1707457                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-el-6.0-HF02.jar
+7fcce247f000-7fcce2480000 r--s 00002000 fd:01 1707456                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-dublincore-6.0.jar
+7fcce2480000-7fcce2481000 r--s 00003000 fd:01 1707455                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-default-config-6.0-HF11.jar
+7fcce2481000-7fcce2483000 r--s 0000a000 fd:01 1707454                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-convert-6.0-HF08.jar
+7fcce2483000-7fcce2485000 r--s 00005000 fd:01 1707453                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-commandline-executor-6.0-HF03.jar
+7fcce2485000-7fcce2487000 r--s 00001000 fd:01 1707452                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-api-6.0.jar
+7fcce2487000-7fcce2488000 r--s 00001000 fd:01 1707451                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-platform-6.0.jar
+7fcce2488000-7fcce248b000 r--s 00030000 fd:01 1707450                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-opencmis-impl-6.0-HF20.jar
+7fcce248b000-7fcce248d000 r--s 0000a000 fd:01 1707449                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-opencmis-bindings-6.0-HF12.jar
+7fcce248d000-7fcce248e000 r--s 00002000 fd:01 1707448                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-logs-viewer-6.0-HF02.jar
+7fcce248e000-7fcce2490000 r--s 0000e000 fd:01 1707447                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-launcher-commons-6.0-HF21.jar
+7fcce2490000-7fcce2492000 r--s 00008000 fd:01 1707446                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-invite-6.0-HF18.jar
+7fcce2492000-7fcce2495000 r--s 0001f000 fd:01 1707445                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-elasticsearch-core-6.0-HF20.jar
+7fcce2495000-7fcce2496000 r--s 00001000 fd:01 1707444                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-dmk-adaptor-6.0.jar
+7fcce2496000-7fcce2497000 r--s 00005000 fd:01 1707443                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-core-storage-sql-ra-6.0-HF06.jar
+7fcce2497000-7fcce2499000 r--s 00001000 fd:01 1707442                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-core-storage-sql-management-6.0.jar
+7fcce2499000-7fcce249f000 r--s 0007d000 fd:01 1707441                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-core-storage-sql-6.0-HF21.jar
+7fcce249f000-7fcce24a0000 r--s 00007000 fd:01 1707440                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-core-storage-mongodb-6.0-HF20.jar
+7fcce24a0000-7fcce24a1000 r--s 00011000 fd:01 1707439                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-core-storage-dbs-6.0-HF17.jar
+7fcce24a1000-7fcce24a4000 r--s 00014000 fd:01 1707438                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-core-storage-6.0-HF20.jar
+7fcce24a4000-7fcce24a7000 r--s 00012000 fd:01 1707437                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-core-schema-6.0-HF12.jar
+7fcce24a7000-7fcce24a9000 r--s 0000f000 fd:01 1707436                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-core-redis-6.0-HF21.jar
+7fcce24a9000-7fcce24ac000 r--s 00012000 fd:01 1707435                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-core-query-6.0-HF11.jar
+7fcce24ac000-7fcce24ae000 r--s 00004000 fd:01 1707434                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-core-persistence-6.0-HF06.jar
+7fcce24ae000-7fcce24b0000 r--s 00007000 fd:01 1707433                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-core-management-jtajca-6.0.jar
+7fcce24b0000-7fcce24b3000 r--s 0000e000 fd:01 1707432                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-core-management-6.0-HF01.jar
+7fcce24b3000-7fcce24b6000 r--s 0000f000 fd:01 1707431                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-core-io-6.0-HF07.jar
+7fcce24b6000-7fcce24b9000 r--s 00022000 fd:01 1707430                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-core-event-6.0-HF19.jar
+7fcce24b9000-7fcce24bb000 r--s 0000a000 fd:01 1707429                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-core-convert-plugins-6.0-HF07.jar
+7fcce24bb000-7fcce24bc000 r--s 00001000 fd:01 1707428                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-core-convert-api-6.0.jar
+7fcce24bc000-7fcce24be000 r--s 00006000 fd:01 1707427                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-core-convert-6.0.jar
+7fcce24be000-7fcce24bf000 r--s 00003000 fd:01 1707426                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-core-cache-6.0.jar
+7fcce24bf000-7fcce24c0000 r--s 00003000 fd:01 1707425                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-core-binarymanager-s3-6.0.jar
+7fcce24c0000-7fcce24c6000 r--s 0003a000 fd:01 1707424                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-core-api-6.0-HF18.jar
+7fcce24c6000-7fcce24ca000 r--s 00026000 fd:01 1707423                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-core-6.0-HF19.jar
+7fcce24ca000-7fcce24ce000 r--s 00026000 fd:01 1707422                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-common-6.0-HF12.jar
+7fcce24ce000-7fcce24d2000 r--s 00020000 fd:01 1707421                    /usr/local/share/apache-tomcat-7.0.57/nuxeo-server/bundles/nuxeo-automation-io-6.0-HF18.jar
+7fcce24d6000-7fcce24d9000 ---p 00000000 00:00 0 
+7fcce24d9000-7fcce25d7000 rw-p 00000000 00:00 0                          [stack:10190]
+7fcce25d7000-7fcce25da000 ---p 00000000 00:00 0 
+7fcce25da000-7fcce26d8000 rw-p 00000000 00:00 0 
+7fcce26d8000-7fcce26db000 ---p 00000000 00:00 0 
+7fcce26db000-7fcce27d9000 rw-p 00000000 00:00 0 
+7fcce27de000-7fcce27df000 rw-p 00000000 00:00 0 
+7fcce27df000-7fcce27e2000 r--s 021f9000 fd:01 1055738                    /usr/local/share/apache-tomcat-7.0.57/lib/csmake.jar
+7fcce27e2000-7fcce27e4000 r--s 00005000 fd:01 1056595                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/xpp3_min-1.1.4c.jar
+7fcce27e4000-7fcce27e7000 r--s 00018000 fd:01 1056631                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/xom-1.0.jar
+7fcce27e7000-7fcce27ec000 r--s 00016000 fd:01 1056652                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/xml-apis-1.0.b2.jar
+7fcce27ec000-7fcce2800000 r--s 000e3000 fd:01 1056669                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/xercesImpl-2.6.2.jar
+7fcce2800000-7fcce2825000 r--s 002dc000 fd:01 1056664                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/xalan-2.6.0.jar
+7fcce2825000-7fcce2827000 r--s 00000000 fd:01 1056632                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/which4j-0.21.jar
+7fcce2827000-7fcce2829000 r--s 00002000 fd:01 1056563                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/wagon-ssh-external-1.0-beta-2.jar
+7fcce2829000-7fcce282b000 r--s 00005000 fd:01 1056624                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/wagon-ssh-common-1.0-beta-2.jar
+7fcce282b000-7fcce282c000 r--s 00005000 fd:01 1056638                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/wagon-ssh-1.0-beta-2.jar
+7fcce282c000-7fcce282e000 r--s 0000a000 fd:01 1056657                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/wagon-provider-api-1.0-beta-2.jar
+7fcce282e000-7fcce282f000 r--s 00002000 fd:01 1056577                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/wagon-http-shared-1.0-beta-2.jar
+7fcce282f000-7fcce2831000 r--s 00002000 fd:01 1056614                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/wagon-http-lightweight-1.0-beta-2.jar
+7fcce2831000-7fcce2832000 r--s 00002000 fd:01 1056674                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/wagon-file-1.0-beta-2.jar
+7fcce2832000-7fcce2835000 r--s 00017000 fd:01 1056566                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/tomcat-main-4.3.jar
+7fcce2835000-7fcce283f000 r--s 00c54000 fd:01 1056578                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/terracotta-toolkit-1.6-runtime-5.0.0.jar
+7fcce283f000-7fcce2846000 r--s 00032000 fd:01 1056593                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/spring-tx-3.0.5.RELEASE.jar
+7fcce2846000-7fcce284e000 r--s 0004a000 fd:01 1056587                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/spring-orm-3.0.5.RELEASE.jar
+7fcce284e000-7fcce2858000 r--s 00055000 fd:01 1056601                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/spring-jdbc-3.0.5.RELEASE.jar
+7fcce2858000-7fcce285c000 r--s 00026000 fd:01 1056650                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/spring-expression-3.0.5.RELEASE.jar
+7fcce285c000-7fcce2865000 r--s 00055000 fd:01 1056590                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/spring-core-3.0.5.RELEASE.jar
+7fcce2865000-7fcce2877000 r--s 00092000 fd:01 1056612                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/spring-context-3.0.5.RELEASE.jar
+7fcce2877000-7fcce2883000 r--s 0007c000 fd:01 1056673                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/spring-beans-3.0.5.RELEASE.jar
+7fcce2883000-7fcce2884000 r--s 0000c000 fd:01 1056589                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/spring-asm-3.0.5.RELEASE.jar
+7fcce2884000-7fcce288d000 r--s 00046000 fd:01 1056662                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/spring-aop-3.0.5.RELEASE.jar
+7fcce288d000-7fcce288e000 r--s 00002000 fd:01 1056588                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/slf4j-log4j12-1.5.6.jar
+7fcce288e000-7fcce2890000 r--s 00004000 fd:01 1056639                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/slf4j-api-1.5.6.jar
+7fcce2890000-7fcce2893000 r--s 0000f000 fd:01 1056637                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/resteasy-multipart-provider-3.0.9.Final.jar
+7fcce2893000-7fcce28a4000 r--s 000ba000 fd:01 1056615                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/resteasy-jaxrs-3.0.9.Final.jar
+7fcce28a4000-7fcce28a6000 r--s 00010000 fd:01 1056581                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/resteasy-jaxb-provider-3.0.9.Final.jar
+7fcce28a6000-7fcce28aa000 r--s 0001f000 fd:01 1056584                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/resteasy-client-3.0.9.Final.jar
+7fcce28aa000-7fcce28ae000 r--s 00033000 fd:01 1056594                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/plexus-utils-2.0.5.jar
+7fcce28ae000-7fcce28b1000 r--s 0000a000 fd:01 1056582                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/plexus-io-1.0.jar
+7fcce28b1000-7fcce28b3000 r--s 0000d000 fd:01 1056611                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/plexus-interpolation-1.13.jar
+7fcce28b3000-7fcce28b5000 r--s 00002000 fd:01 1056620                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/plexus-interactivity-api-1.0-alpha-4.jar
+7fcce28b5000-7fcce28bc000 r--s 00029000 fd:01 1056609                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/plexus-container-default-1.0-alpha-9-stable-1.jar
+7fcce28bc000-7fcce28c0000 r--s 00028000 fd:01 1056571                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/plexus-archiver-1.0.jar
+7fcce28c0000-7fcce28c1000 r--s 00007000 fd:01 1056573                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/org.collectionspace.services.common-api-4.3.jar
+7fcce28c1000-7fcce28c3000 r--s 00013000 fd:01 1056567                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/org.collectionspace.services.client-4.3.jar
+7fcce28c3000-7fcce28c5000 r--s 0000a000 fd:01 1056636                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/module-xml_merge-common-3.1.jar
+7fcce28c5000-7fcce28c7000 r--s 0000b000 fd:01 1056644                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/module-jmx-3.1.jar
+7fcce28c7000-7fcce28cf000 r--s 0003d000 fd:01 1056574                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/module-core-3.1.jar
+7fcce28cf000-7fcce28d1000 r--s 00011000 fd:01 1056565                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/maven-war-plugin-2.1.1.jar
+7fcce28d1000-7fcce28d2000 r--s 0000b000 fd:01 1056608                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/maven-settings-2.0.6.jar
+7fcce28d2000-7fcce28d3000 r--s 00005000 fd:01 1056648                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/maven-repository-metadata-2.0.6.jar
+7fcce28d3000-7fcce28d4000 r--s 00002000 fd:01 1056647                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/maven-reporting-api-2.0.6.jar
+7fcce28d4000-7fcce28d7000 r--s 0001a000 fd:01 1056599                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/maven-project-2.0.6.jar
+7fcce28d7000-7fcce28d9000 r--s 00007000 fd:01 1056597                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/maven-profile-2.0.6.jar
+7fcce28d9000-7fcce28db000 r--s 00006000 fd:01 1056569                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/maven-plugin-registry-2.0.6.jar
+7fcce28db000-7fcce28dd000 r--s 00004000 fd:01 1056618                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/maven-plugin-parameter-documenter-2.0.6.jar
+7fcce28dd000-7fcce28df000 r--s 00008000 fd:01 1056621                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/maven-plugin-descriptor-2.0.6.jar
+7fcce28df000-7fcce28e1000 r--s 00002000 fd:01 1056598                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/maven-plugin-api-2.0.6.jar
+7fcce28e1000-7fcce28e2000 r--s 00002000 fd:01 1056591                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/maven-monitor-2.0.6.jar
+7fcce28e2000-7fcce28e5000 r--s 00013000 fd:01 1056646                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/maven-model-2.0.6.jar
+7fcce28e5000-7fcce28e7000 r--s 00007000 fd:01 1056575                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/maven-filtering-1.0-beta-2.jar
+7fcce28e7000-7fcce28e9000 r--s 00002000 fd:01 1056667                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/maven-error-diagnostics-2.0.6.jar
+7fcce28e9000-7fcce28ed000 r--s 00022000 fd:01 1056663                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/maven-core-2.0.6.jar
+7fcce28ed000-7fcce28ef000 r--s 0000c000 fd:01 1056610                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/maven-artifact-manager-2.0.6.jar
+7fcce28ef000-7fcce28f3000 r--s 00012000 fd:01 1056580                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/maven-artifact-2.0.6.jar
+7fcce28f3000-7fcce28f4000 r--s 00004000 fd:01 1056586                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/maven-archiver-2.4.1.jar
+7fcce28f4000-7fcce28fb000 r--s 00067000 fd:01 1056568                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/mail-1.4.1.jar
+7fcce28fb000-7fcce2904000 r--s 0006d000 fd:01 1056552                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/log4j-1.2.16.jar
+7fcce2904000-7fcce2905000 r--s 00002000 fd:01 1056613                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/jxutils-4.3.jar
+7fcce2905000-7fcce2908000 r--s 0001f000 fd:01 1056553                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/jtidy-4aug2000r7-dev.jar
+7fcce2908000-7fcce290a000 r--s 0000b000 fd:01 1056633                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/jsr173_api-1.0.jar
+7fcce290a000-7fcce290c000 r--s 00008000 fd:01 1056579                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/json-20080701.jar
+7fcce290c000-7fcce290f000 r--s 0001b000 fd:01 1056576                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/jsch-0.1.27.jar
+7fcce290f000-7fcce291e000 r--s 00076000 fd:01 1056617                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/joda-time-1.6.2.jar
+7fcce291e000-7fcce2920000 r--s 00017000 fd:01 1056551                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/jmxtools-1.4.2.jar
+7fcce2920000-7fcce2925000 r--s 0002e000 fd:01 1056640                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/jmxremote_optional-1.4.2.jar
+7fcce2925000-7fcce2928000 r--s 00023000 fd:01 1056651                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/jdom-1.0.jar
+7fcce2928000-7fcce292a000 r--s 00003000 fd:01 1056665                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/jcl-over-slf4j-1.5.6.jar
+7fcce292a000-7fcce292b000 r--s 00000000 fd:01 1056583                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/jcip-annotations-1.0.jar
+7fcce292b000-7fcce292c000 r--s 00004000 fd:01 1056585                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/jboss-annotations-api_1.1_spec-1.0.1.Final.jar
+7fcce292c000-7fcce2930000 r--s 00017000 fd:01 1056670                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/jaxrs-api-3.0.9.Final.jar
+7fcce2930000-7fcce2936000 r--s 00032000 fd:01 1056603                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/jaxen-1.1.1.jar
+7fcce2936000-7fcce2947000 r--s 000d0000 fd:01 1056659                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/jaxb-impl-2.2.7.jar
+7fcce2947000-7fcce294d000 r--s 00031000 fd:01 1056645                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/jaxb-core-2.2.7.jar
+7fcce294d000-7fcce2951000 r--s 00015000 fd:01 1056605                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/jaxb-api-2.2.7.jar
+7fcce2951000-7fcce2952000 r--s 00005000 fd:01 1056653                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/istack-commons-runtime-2.16.jar
+7fcce2952000-7fcce2953000 r--s 00000000 fd:01 1056660                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/inject-1.0.jar
+7fcce2953000-7fcce2965000 r--s 00245000 fd:01 1056604                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/icu4j-2.6.1.jar
+7fcce2965000-7fcce296b000 r--s 0003f000 fd:01 1056654                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/httpcore-4.3.2.jar
+7fcce296b000-7fcce2976000 r--s 00085000 fd:01 1056607                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/httpclient-4.3.3.jar
+7fcce2976000-7fcce297b000 r--s 00014000 fd:01 1056596                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/hibernate-jpa-2.0-api-1.0.0.Final.jar
+7fcce297b000-7fcce2989000 r--s 0008f000 fd:01 1056668                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/google-collections-1.0.jar
+7fcce2989000-7fcce298b000 r--s 00000000 fd:01 1056641                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/general-utils-4.3.jar
+7fcce298b000-7fcce298c000 r--s 000e0000 fd:01 1056649                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/ehcache-terracotta-2.6.0.jar
+7fcce298c000-7fcce29a7000 r--s 0012b000 fd:01 1056656                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/ehcache-core-2.6.0.jar
+7fcce29a7000-7fcce29a9000 r--s 0000a000 fd:01 1056550                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/dtdparser-1.21.jar
+7fcce29a9000-7fcce29aa000 r--s 00001000 fd:01 1056661                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/doxia-sink-api-1.0-alpha-7.jar
+7fcce29aa000-7fcce29af000 r--s 00048000 fd:01 1056616                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/dom4j-1.6.1.jar
+7fcce29af000-7fcce29b2000 r--s 00038000 fd:01 1056592                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/cspi-webui-4.3.jar
+7fcce29b2000-7fcce29b5000 r--s 00022000 fd:01 1056658                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/cspi-services-4.3.jar
+7fcce29b5000-7fcce29b7000 r--s 00013000 fd:01 1056600                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/cspi-schema-4.3.jar
+7fcce29b7000-7fcce29b9000 r--s 00008000 fd:01 1056672                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/cspi-installation-4.3.jar
+7fcce29b9000-7fcce29bb000 r--s 00009000 fd:01 1056627                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/csp-impl-4.3.jar
+7fcce29bb000-7fcce29bd000 r--s 00003000 fd:01 1056643                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/csp-helper-4.3.jar
+7fcce29bd000-7fcce29bf000 r--s 00003000 fd:01 1454195                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/csp-helper-4.3.jar (deleted)
+7fcce29bf000-7fcce29c1000 r--s 00003000 fd:01 1056572                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/csp-api-4.3.jar
+7fcce29c1000-7fcce29c5000 r--s 0003c000 fd:01 1056570                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/commons-lang-2.4.jar
+7fcce29c5000-7fcce29c8000 r--s 00024000 fd:01 1056625                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/commons-io-2.0.1.jar
+7fcce29c8000-7fcce29ce000 r--s 00045000 fd:01 1056630                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/commons-httpclient-3.1.jar
+7fcce29ce000-7fcce29db000 r--s 00083000 fd:01 1056626                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/commons-collections-3.2.2.jar
+7fcce29db000-7fcce29de000 ---p 00000000 00:00 0 
+7fcce29de000-7fcce2adc000 rw-p 00000000 00:00 0                          [stack:10090]
+7fcce2adc000-7fcce2adf000 ---p 00000000 00:00 0 
+7fcce2adf000-7fcce2bdd000 rw-p 00000000 00:00 0                          [stack:10089]
+7fcce2bdd000-7fcce2be8000 r--s 00203000 fd:01 1578473                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar
+7fcce2be8000-7fcce2be9000 r--s 00002000 fd:01 1056549                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/cspi-file-4.3.jar
+7fcce2be9000-7fcce2bec000 r--s 0000c000 fd:01 1056619                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/commons-fileupload-1.2.1.jar
+7fcce2bec000-7fcce2bee000 r--s 0000a000 fd:01 1056655                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/commons-codec-1.3.jar
+7fcce2bee000-7fcce2bf9000 r--s 000bc000 fd:01 1056564                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/aspectjmatcher-1.6.10.jar
+7fcce2bf9000-7fcce2c10000 r--s 0015b000 fd:01 1056666                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/ant-1.8.1.jar
+7fcce2c10000-7fcce2c13000 ---p 00000000 00:00 0 
+7fcce2c13000-7fcce2d11000 rw-p 00000000 00:00 0                          [stack:10088]
+7fcce2d11000-7fcce2d14000 ---p 00000000 00:00 0 
+7fcce2d14000-7fcce2e12000 rw-p 00000000 00:00 0                          [stack:10087]
+7fcce2e12000-7fcce2e15000 ---p 00000000 00:00 0 
+7fcce2e15000-7fcce2f13000 rw-p 00000000 00:00 0 
+7fcce2f13000-7fcce2f16000 ---p 00000000 00:00 0 
+7fcce2f16000-7fcce3014000 rw-p 00000000 00:00 0                          [stack:10183]
+7fcce3014000-7fcce308c000 r-xp 00000000 fd:01 1452273                    /usr/lib/x86_64-linux-gnu/nss/libfreebl3.so
+7fcce308c000-7fcce328c000 ---p 00078000 fd:01 1452273                    /usr/lib/x86_64-linux-gnu/nss/libfreebl3.so
+7fcce328c000-7fcce328e000 r--p 00078000 fd:01 1452273                    /usr/lib/x86_64-linux-gnu/nss/libfreebl3.so
+7fcce328e000-7fcce328f000 rw-p 0007a000 fd:01 1452273                    /usr/lib/x86_64-linux-gnu/nss/libfreebl3.so
+7fcce328f000-7fcce3293000 rw-p 00000000 00:00 0 
+7fcce3293000-7fcce3347000 r-xp 00000000 fd:01 917675                     /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+7fcce3347000-7fcce3547000 ---p 000b4000 fd:01 917675                     /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+7fcce3547000-7fcce3549000 r--p 000b4000 fd:01 917675                     /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+7fcce3549000-7fcce354b000 rw-p 000b6000 fd:01 917675                     /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+7fcce354b000-7fcce354c000 rw-p 00000000 00:00 0 
+7fcce354c000-7fcce358c000 r-xp 00000000 fd:01 1452271                    /usr/lib/x86_64-linux-gnu/nss/libsoftokn3.so
+7fcce358c000-7fcce378c000 ---p 00040000 fd:01 1452271                    /usr/lib/x86_64-linux-gnu/nss/libsoftokn3.so
+7fcce378c000-7fcce378d000 r--p 00040000 fd:01 1452271                    /usr/lib/x86_64-linux-gnu/nss/libsoftokn3.so
+7fcce378d000-7fcce378e000 rw-p 00041000 fd:01 1452271                    /usr/lib/x86_64-linux-gnu/nss/libsoftokn3.so
+7fcce378e000-7fcce37c7000 r-xp 00000000 fd:01 919397                     /usr/lib/x86_64-linux-gnu/libnspr4.so
+7fcce37c7000-7fcce39c6000 ---p 00039000 fd:01 919397                     /usr/lib/x86_64-linux-gnu/libnspr4.so
+7fcce39c6000-7fcce39c7000 r--p 00038000 fd:01 919397                     /usr/lib/x86_64-linux-gnu/libnspr4.so
+7fcce39c7000-7fcce39c8000 rw-p 00039000 fd:01 919397                     /usr/lib/x86_64-linux-gnu/libnspr4.so
+7fcce39c8000-7fcce39cb000 rw-p 00000000 00:00 0 
+7fcce39cb000-7fcce39ce000 r-xp 00000000 fd:01 919396                     /usr/lib/x86_64-linux-gnu/libplds4.so
+7fcce39ce000-7fcce3bcd000 ---p 00003000 fd:01 919396                     /usr/lib/x86_64-linux-gnu/libplds4.so
+7fcce3bcd000-7fcce3bce000 r--p 00002000 fd:01 919396                     /usr/lib/x86_64-linux-gnu/libplds4.so
+7fcce3bce000-7fcce3bcf000 rw-p 00003000 fd:01 919396                     /usr/lib/x86_64-linux-gnu/libplds4.so
+7fcce3bcf000-7fcce3bd3000 r-xp 00000000 fd:01 919398                     /usr/lib/x86_64-linux-gnu/libplc4.so
+7fcce3bd3000-7fcce3dd2000 ---p 00004000 fd:01 919398                     /usr/lib/x86_64-linux-gnu/libplc4.so
+7fcce3dd2000-7fcce3dd3000 r--p 00003000 fd:01 919398                     /usr/lib/x86_64-linux-gnu/libplc4.so
+7fcce3dd3000-7fcce3dd4000 rw-p 00004000 fd:01 919398                     /usr/lib/x86_64-linux-gnu/libplc4.so
+7fcce3dd4000-7fcce3df9000 r-xp 00000000 fd:01 919400                     /usr/lib/x86_64-linux-gnu/libnssutil3.so
+7fcce3df9000-7fcce3ff9000 ---p 00025000 fd:01 919400                     /usr/lib/x86_64-linux-gnu/libnssutil3.so
+7fcce3ff9000-7fcce3fff000 r--p 00025000 fd:01 919400                     /usr/lib/x86_64-linux-gnu/libnssutil3.so
+7fcce3fff000-7fcce4000000 rw-p 0002b000 fd:01 919400                     /usr/lib/x86_64-linux-gnu/libnssutil3.so
+7fcce4000000-7fcce4091000 rw-p 00000000 00:00 0 
+7fcce4091000-7fcce8000000 ---p 00000000 00:00 0 
+7fcce8000000-7fcce8002000 r--s 00009000 fd:01 1056622                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/commons-cli-1.2.jar
+7fcce8002000-7fcce8004000 r--s 00008000 fd:01 1056606                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/classworlds-1.1.jar
+7fcce8004000-7fcce800a000 r--s 00049000 fd:01 1056671                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/cglib-nodep-2.2.jar
+7fcce800a000-7fcce8011000 r--s 0004e000 fd:01 1056623                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/apache-mime4j-0.6.jar
+7fcce8011000-7fcce8013000 r--s 00000000 fd:01 1056602                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/aopalliance-1.0.jar
+7fcce8013000-7fcce801d000 r--s 000ae000 fd:01 1578459                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar
+7fcce801d000-7fcce8150000 r-xp 00000000 fd:01 919401                     /usr/lib/x86_64-linux-gnu/libnss3.so
+7fcce8150000-7fcce834f000 ---p 00133000 fd:01 919401                     /usr/lib/x86_64-linux-gnu/libnss3.so
+7fcce834f000-7fcce8354000 r--p 00132000 fd:01 919401                     /usr/lib/x86_64-linux-gnu/libnss3.so
+7fcce8354000-7fcce8356000 rw-p 00137000 fd:01 919401                     /usr/lib/x86_64-linux-gnu/libnss3.so
+7fcce8356000-7fcce8357000 rw-p 00000000 00:00 0 
+7fcce8357000-7fcce8359000 r--s 00002000 fd:01 1056548                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/ant-launcher-1.8.1.jar
+7fcce8359000-7fcce835b000 r--s 0000e000 fd:01 1056635                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/activation-1.1.jar
+7fcce835b000-7fcce8360000 r--s 00043000 fd:01 1056642                    /usr/local/share/apache-tomcat-7.0.57/webapps/collectionspace/WEB-INF/lib/FastInfoset-1.2.12.jar
+7fcce8360000-7fcce8370000 r-xp 00000000 fd:01 1578427                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libj2pkcs11.so
+7fcce8370000-7fcce856f000 ---p 00010000 fd:01 1578427                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libj2pkcs11.so
+7fcce856f000-7fcce8570000 r--p 0000f000 fd:01 1578427                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libj2pkcs11.so
+7fcce8570000-7fcce8571000 rw-p 00010000 fd:01 1578427                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libj2pkcs11.so
+7fcce8571000-7fcce8573000 r--s 00018000 fd:01 1578416                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar
+7fcce8573000-7fcce8577000 r--s 0004f000 fd:01 1578491                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar
+7fcce8577000-7fcce857a000 ---p 00000000 00:00 0 
+7fcce857a000-7fcce8678000 rw-p 00000000 00:00 0                          [stack:9587]
+7fcce8678000-7fcce8680000 r--s 0008c000 fd:01 1055799                    /usr/local/share/apache-tomcat-7.0.57/lib/jasper.jar
+7fcce8680000-7fcce8682000 r--s 0000e000 fd:01 1055816                    /usr/local/share/apache-tomcat-7.0.57/lib/lucene-join-4.7.2.jar
+7fcce8682000-7fcce868a000 r--s 00055000 fd:01 1055811                    /usr/local/share/apache-tomcat-7.0.57/lib/xsom-20081112.jar
+7fcce868a000-7fcce86a2000 r--s 00115000 fd:01 1055790                    /usr/local/share/apache-tomcat-7.0.57/lib/xercesImpl-2.9.1.jar
+7fcce86a2000-7fcce86a9000 r--s 00035000 fd:01 1056415                    /usr/local/share/apache-tomcat-7.0.57/lib/spring-security-web-3.0.5.RELEASE.jar
+7fcce86a9000-7fcce86b5000 r--s 0007c000 fd:01 1055847                    /usr/local/share/apache-tomcat-7.0.57/lib/spring-beans-3.0.5.RELEASE.jar
+7fcce86b5000-7fcce86b6000 r--s 0000a000 fd:01 1055851                    /usr/local/share/apache-tomcat-7.0.57/lib/tomcat-i18n-fr.jar
+7fcce86b6000-7fcce86b8000 r--s 00005000 fd:01 1056373                    /usr/local/share/apache-tomcat-7.0.57/lib/cspace-services-authn.jar
+7fcce86b8000-7fcce86b9000 r--s 00002000 fd:01 1056417                    /usr/local/share/apache-tomcat-7.0.57/lib/slf4j-log4j12-1.6.1.jar
+7fcce86b9000-7fcce86bc000 r--s 00015000 fd:01 1055783                    /usr/local/share/apache-tomcat-7.0.57/lib/lucene-misc-4.7.2.jar
+7fcce86bc000-7fcce86be000 r--s 00006000 fd:01 1056380                    /usr/local/share/apache-tomcat-7.0.57/lib/cspace-services-authz.jar
+7fcce86be000-7fcce86c0000 r--s 00002000 fd:01 1055747                    /usr/local/share/apache-tomcat-7.0.57/lib/jboss-logging-spi-2.1.0.GA.jar
+7fcce86c0000-7fcce86c2000 r--s 0000a000 fd:01 1055789                    /usr/local/share/apache-tomcat-7.0.57/lib/lucene-sandbox-4.7.2.jar
+7fcce86c2000-7fcce86c8000 r--s 0002e000 fd:01 1055804                    /usr/local/share/apache-tomcat-7.0.57/lib/lucene-queries-4.7.2.jar
+7fcce86c8000-7fcce86d1000 r--s 00046000 fd:01 1055817                    /usr/local/share/apache-tomcat-7.0.57/lib/spring-aop-3.0.5.RELEASE.jar
+7fcce86d1000-7fcce86d2000 r--s 00003000 fd:01 1055809                    /usr/local/share/apache-tomcat-7.0.57/lib/nuxeo-runtime-launcher-6.0.jar
+7fcce86d2000-7fcce86d5000 r--s 0001f000 fd:01 1055853                    /usr/local/share/apache-tomcat-7.0.57/lib/lucene-highlighter-4.7.2.jar
+7fcce86d5000-7fcce86e2000 r--s 0008b000 fd:01 1055735                    /usr/local/share/apache-tomcat-7.0.57/lib/jbosssx.jar
+7fcce86e2000-7fcce86e4000 r--s 00003000 fd:01 1055733                    /usr/local/share/apache-tomcat-7.0.57/lib/jcl-over-slf4j-1.7.5.jar
+7fcce86e4000-7fcce86f3000 r--s 000c2000 fd:01 1055746                    /usr/local/share/apache-tomcat-7.0.57/lib/freemarker-2.3.11.jar
+7fcce86f3000-7fcce86f4000 r--s 00008000 fd:01 1055813                    /usr/local/share/apache-tomcat-7.0.57/lib/lucene-memory-4.7.2.jar
+7fcce86f4000-7fcce86f7000 r--s 00023000 fd:01 1055745                    /usr/local/share/apache-tomcat-7.0.57/lib/jdom-1.0.jar
+7fcce86f7000-7fcce86fb000 r--s 00026000 fd:01 1055858                    /usr/local/share/apache-tomcat-7.0.57/lib/spring-expression-3.0.5.RELEASE.jar
+7fcce86fb000-7fcce8705000 r--s 00057000 fd:01 1055815                    /usr/local/share/apache-tomcat-7.0.57/lib/spring-web-3.0.5.RELEASE.jar
+7fcce8705000-7fcce870e000 r--s 0006f000 fd:01 1055742                    /usr/local/share/apache-tomcat-7.0.57/lib/log4j-1.2.17.jar
+7fcce870e000-7fcce8710000 r--s 0001f000 fd:01 1055801                    /usr/local/share/apache-tomcat-7.0.57/lib/catalina-ha.jar
+7fcce8710000-7fcce8714000 r--s 00036000 fd:01 1055821                    /usr/local/share/apache-tomcat-7.0.57/lib/tomcat-dbcp.jar
+7fcce8714000-7fcce8716000 r--s 00010000 fd:01 1055736                    /usr/local/share/apache-tomcat-7.0.57/lib/tomcat-i18n-es.jar
+7fcce8716000-7fcce8728000 r--s 00175000 fd:01 1055823                    /usr/local/share/apache-tomcat-7.0.57/lib/catalina.jar
+7fcce8728000-7fcce8732000 r--s 00042000 fd:01 1056383                    /usr/local/share/apache-tomcat-7.0.57/lib/spring-security-core-3.0.5.RELEASE.jar
+7fcce8732000-7fcce8735000 r--s 00011000 fd:01 1056381                    /usr/local/share/apache-tomcat-7.0.57/lib/spring-security-acl-3.0.5.RELEASE.jar
+7fcce8735000-7fcce8737000 r--s 00007000 fd:01 1055819                    /usr/local/share/apache-tomcat-7.0.57/lib/nuxeo-runtime-tomcat-adapter-6.0.jar
+7fcce8737000-7fcce873a000 r--s 00018000 fd:01 1055803                    /usr/local/share/apache-tomcat-7.0.57/lib/lucene-grouping-4.7.2.jar
+7fcce873a000-7fcce873d000 r--s 00016000 fd:01 1055806                    /usr/local/share/apache-tomcat-7.0.57/lib/spring-context-support-3.0.5.RELEASE.jar
+7fcce873d000-7fcce8745000 r--s 0005a000 fd:01 1055739                    /usr/local/share/apache-tomcat-7.0.57/lib/lucene-codecs-4.7.2.jar
+7fcce8745000-7fcce8747000 r--s 0000a000 fd:01 1056418                    /usr/local/share/apache-tomcat-7.0.57/lib/module-xml_merge-common-3.1.jar
+7fcce8747000-7fcce8748000 r--s 00007000 fd:01 1055794                    /usr/local/share/apache-tomcat-7.0.57/lib/tomcat-juli-adapters.jar
+7fcce8748000-7fcce8772000 r--s 0028a000 fd:01 1055798                    /usr/local/share/apache-tomcat-7.0.57/lib/derby-10.10.1.1.jar
+7fcce8772000-7fcce8774000 r--s 0000c000 fd:01 1055734                    /usr/local/share/apache-tomcat-7.0.57/lib/catalina-ant.jar
+7fcce8774000-7fcce8778000 r--s 021f9000 fd:01 1055738                    /usr/local/share/apache-tomcat-7.0.57/lib/csmake.jar
+7fcce8778000-7fcce877a000 r--s 0000c000 fd:01 1055826                    /usr/local/share/apache-tomcat-7.0.57/lib/el-api.jar
+7fcce877a000-7fcce877e000 r--s 0003b000 fd:01 1055731                    /usr/local/share/apache-tomcat-7.0.57/lib/catalina-tribes.jar
+7fcce877e000-7fcce8780000 r--s 0001d000 fd:01 1055824                    /usr/local/share/apache-tomcat-7.0.57/lib/tomcat-jdbc.jar
+7fcce8780000-7fcce878d000 r--s 00189000 fd:01 1055767                    /usr/local/share/apache-tomcat-7.0.57/lib/h2-1.4.177-NX01.jar
+7fcce878d000-7fcce8791000 r--s 0002b000 fd:01 1055784                    /usr/local/share/apache-tomcat-7.0.57/lib/lucene-suggest-4.7.2.jar
+7fcce8791000-7fcce8792000 r--s 00007000 fd:01 1055854                    /usr/local/share/apache-tomcat-7.0.57/lib/tomcat-util.jar
+7fcce8792000-7fcce87a4000 r--s 00092000 fd:01 1055802                    /usr/local/share/apache-tomcat-7.0.57/lib/spring-context-3.0.5.RELEASE.jar
+7fcce87a4000-7fcce87a7000 r--s 00018000 fd:01 1055827                    /usr/local/share/apache-tomcat-7.0.57/lib/lucene-spatial-4.7.2.jar
+7fcce87a7000-7fcce87aa000 r--s 0002e000 fd:01 1055741                    /usr/local/share/apache-tomcat-7.0.57/lib/servlet-api.jar
+7fcce87aa000-7fcce87b2000 r--s 00075000 fd:01 1055795                    /usr/local/share/apache-tomcat-7.0.57/lib/mail-1.4.5.jar
+7fcce87b2000-7fcce87b4000 r--s 00000000 fd:01 1055786                    /usr/local/share/apache-tomcat-7.0.57/lib/aopalliance-1.0.jar
+7fcce87b4000-7fcce87be000 r--s 00055000 fd:01 1055848                    /usr/local/share/apache-tomcat-7.0.57/lib/spring-jdbc-3.0.5.RELEASE.jar
+7fcce87be000-7fcce87bf000 r--s 00001000 fd:01 1055796                    /usr/local/share/apache-tomcat-7.0.57/lib/tomcat-api.jar
+7fcce87bf000-7fcce87c5000 r--s 00088000 fd:01 1055737                    /usr/local/share/apache-tomcat-7.0.57/lib/postgresql-9.2-1002.jdbc4.jar
+7fcce87c5000-7fcce87cc000 r--s 00032000 fd:01 1055850                    /usr/local/share/apache-tomcat-7.0.57/lib/spring-tx-3.0.5.RELEASE.jar
+7fcce87cc000-7fcce87d0000 r--s 0002e000 fd:01 1055732                    /usr/local/share/apache-tomcat-7.0.57/lib/ehcache-1.6.2.jar
+7fcce87d0000-7fcce87dc000 r--s 000b0000 fd:01 1055808                    /usr/local/share/apache-tomcat-7.0.57/lib/tomcat-coyote.jar
+7fcce87dc000-7fcce87e5000 r--s 00055000 fd:01 1050726                    /usr/local/share/apache-tomcat-7.0.57/lib/spring-core-3.0.5.RELEASE.jar
+7fcce87e5000-7fcce87ea000 r--s 00041000 fd:01 1055825                    /usr/local/share/apache-tomcat-7.0.57/lib/commons-lang-2.6.jar
+7fcce87ea000-7fcce87f2000 r--s 0004a000 fd:01 1055793                    /usr/local/share/apache-tomcat-7.0.57/lib/spring-orm-3.0.5.RELEASE.jar
+7fcce87f2000-7fcce8816000 rw-p 00000000 00:00 0 
+7fcce8816000-7fcce8910000 r--s 00b17000 fd:01 1055812                    /usr/local/share/apache-tomcat-7.0.57/lib/elasticsearch-1.1.2.jar
+7fcce8910000-7fcce8920000 r--s 00185000 fd:01 1055800                    /usr/local/share/apache-tomcat-7.0.57/lib/lucene-analyzers-common-4.7.2.jar
+7fcce8920000-7fcce8947000 r--s 00219000 fd:01 1055785                    /usr/local/share/apache-tomcat-7.0.57/lib/lucene-core-4.7.2.jar
+7fcce8947000-7fcce894f000 r-xp 00000000 fd:01 1578447                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7fcce894f000-7fcce8b4e000 ---p 00008000 fd:01 1578447                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7fcce8b4e000-7fcce8b4f000 r--p 00007000 fd:01 1578447                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7fcce8b4f000-7fcce8b50000 rw-p 00008000 fd:01 1578447                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7fcce8b50000-7fcce8b81000 rw-p 00000000 00:00 0 
+7fcce8b81000-7fcce8bbe000 r-xp 00000000 fd:01 393511                     /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7fcce8bbe000-7fcce8dbd000 ---p 0003d000 fd:01 393511                     /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7fcce8dbd000-7fcce8dbe000 r--p 0003c000 fd:01 393511                     /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7fcce8dbe000-7fcce8dbf000 rw-p 0003d000 fd:01 393511                     /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7fcce8dbf000-7fcce8dc6000 r-xp 00000000 fd:01 921447                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7fcce8dc6000-7fcce8fc5000 ---p 00007000 fd:01 921447                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7fcce8fc5000-7fcce8fc6000 r--p 00006000 fd:01 921447                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7fcce8fc6000-7fcce8fc7000 rw-p 00007000 fd:01 921447                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7fcce8fc7000-7fcce8fde000 r-xp 00000000 fd:01 393249                     /lib/x86_64-linux-gnu/libresolv-2.19.so
+7fcce8fde000-7fcce91de000 ---p 00017000 fd:01 393249                     /lib/x86_64-linux-gnu/libresolv-2.19.so
+7fcce91de000-7fcce91df000 r--p 00017000 fd:01 393249                     /lib/x86_64-linux-gnu/libresolv-2.19.so
+7fcce91df000-7fcce91e0000 rw-p 00018000 fd:01 393249                     /lib/x86_64-linux-gnu/libresolv-2.19.so
+7fcce91e0000-7fcce91e2000 rw-p 00000000 00:00 0 
+7fcce91e2000-7fcce9202000 r-xp 00000000 fd:01 393377                     /lib/x86_64-linux-gnu/libselinux.so.1
+7fcce9202000-7fcce9401000 ---p 00020000 fd:01 393377                     /lib/x86_64-linux-gnu/libselinux.so.1
+7fcce9401000-7fcce9402000 r--p 0001f000 fd:01 393377                     /lib/x86_64-linux-gnu/libselinux.so.1
+7fcce9402000-7fcce9403000 rw-p 00020000 fd:01 393377                     /lib/x86_64-linux-gnu/libselinux.so.1
+7fcce9403000-7fcce9405000 rw-p 00000000 00:00 0 
+7fcce9405000-7fcce9408000 r-xp 00000000 fd:01 920171                     /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4002.0
+7fcce9408000-7fcce9607000 ---p 00003000 fd:01 920171                     /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4002.0
+7fcce9607000-7fcce9608000 r--p 00002000 fd:01 920171                     /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4002.0
+7fcce9608000-7fcce9609000 rw-p 00003000 fd:01 920171                     /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4002.0
+7fcce9609000-7fcce970f000 r-xp 00000000 fd:01 393346                     /lib/x86_64-linux-gnu/libglib-2.0.so.0.4002.0
+7fcce970f000-7fcce990e000 ---p 00106000 fd:01 393346                     /lib/x86_64-linux-gnu/libglib-2.0.so.0.4002.0
+7fcce990e000-7fcce990f000 r--p 00105000 fd:01 393346                     /lib/x86_64-linux-gnu/libglib-2.0.so.0.4002.0
+7fcce990f000-7fcce9910000 rw-p 00106000 fd:01 393346                     /lib/x86_64-linux-gnu/libglib-2.0.so.0.4002.0
+7fcce9910000-7fcce9911000 rw-p 00000000 00:00 0 
+7fcce9911000-7fcce9960000 r-xp 00000000 fd:01 920172                     /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.4002.0
+7fcce9960000-7fcce9b60000 ---p 0004f000 fd:01 920172                     /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.4002.0
+7fcce9b60000-7fcce9b61000 r--p 0004f000 fd:01 920172                     /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.4002.0
+7fcce9b61000-7fcce9b62000 rw-p 00050000 fd:01 920172                     /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.4002.0
+7fcce9b62000-7fcce9cce000 r-xp 00000000 fd:01 920174                     /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.4002.0
+7fcce9cce000-7fcce9ecd000 ---p 0016c000 fd:01 920174                     /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.4002.0
+7fcce9ecd000-7fcce9ed1000 r--p 0016b000 fd:01 920174                     /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.4002.0
+7fcce9ed1000-7fcce9ed3000 rw-p 0016f000 fd:01 920174                     /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.4002.0
+7fcce9ed3000-7fcce9ed5000 rw-p 00000000 00:00 0 
+7fcce9ed5000-7fcce9eec000 r-xp 00000000 fd:01 1578432                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnet.so
+7fcce9eec000-7fccea0eb000 ---p 00017000 fd:01 1578432                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnet.so
+7fccea0eb000-7fccea0ec000 r--p 00016000 fd:01 1578432                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnet.so
+7fccea0ec000-7fccea0ed000 rw-p 00017000 fd:01 1578432                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnet.so
+7fccea0ed000-7fccea0fd000 r-xp 00000000 fd:01 1578456                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnio.so
+7fccea0fd000-7fccea2fd000 ---p 00010000 fd:01 1578456                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnio.so
+7fccea2fd000-7fccea2fe000 r--p 00010000 fd:01 1578456                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnio.so
+7fccea2fe000-7fccea2ff000 rw-p 00011000 fd:01 1578456                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnio.so
+7fccea2ff000-7fccea300000 ---p 00000000 00:00 0 
+7fccea300000-7fcced000000 rw-p 00000000 00:00 0                          [stack:9585]
+7fcced000000-7fccedae0000 rwxp 00000000 00:00 0 
+7fccedae0000-7fccf0814000 rw-p 00000000 00:00 0 
+7fccf0814000-7fccf4000000 ---p 00000000 00:00 0 
+7fccf4000000-7fccf4003000 r--s 0002b000 fd:01 1056382                    /usr/local/share/apache-tomcat-7.0.57/lib/spring-security-config-3.0.5.RELEASE.jar
+7fccf4003000-7fccf4004000 r--s 0000c000 fd:01 1055856                    /usr/local/share/apache-tomcat-7.0.57/lib/spring-asm-3.0.5.RELEASE.jar
+7fccf4004000-7fccf400d000 r--s 00057000 fd:01 1055818                    /usr/local/share/apache-tomcat-7.0.57/lib/lucene-queryparser-4.7.2.jar
+7fccf400d000-7fccf400f000 r--s 00005000 fd:01 1056416                    /usr/local/share/apache-tomcat-7.0.57/lib/slf4j-api-1.6.1.jar
+7fccf400f000-7fccf4011000 r--s 00007000 fd:01 1055792                    /usr/local/share/apache-tomcat-7.0.57/lib/websocket-api.jar
+7fccf4011000-7fccf4014000 r--s 0001c000 fd:01 1055820                    /usr/local/share/apache-tomcat-7.0.57/lib/jasper-el.jar
+7fccf4014000-7fccf4026000 r--s 00220000 fd:01 1055822                    /usr/local/share/apache-tomcat-7.0.57/lib/ecj-4.4.jar
+7fccf4026000-7fccf4028000 r--s 0000a000 fd:01 1055744                    /usr/local/share/apache-tomcat-7.0.57/lib/tomcat-i18n-ja.jar
+7fccf4028000-7fccf402c000 r--s 0002d000 fd:01 1055788                    /usr/local/share/apache-tomcat-7.0.57/lib/tomcat7-websocket.jar
+7fccf402c000-7fccf402f000 r--s 00013000 fd:01 1055748                    /usr/local/share/apache-tomcat-7.0.57/lib/jsp-api.jar
+7fccf402f000-7fccf4030000 r--s 00003000 fd:01 1055730                    /usr/local/share/apache-tomcat-7.0.57/lib/annotations-api.jar
+7fccf4030000-7fccf4034000 r--s 0003c000 fd:01 1578489                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+7fccf4034000-7fccf4038000 r--s 00085000 fd:01 1578488                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/localedata.jar
+7fccf4038000-7fccf403b000 ---p 00000000 00:00 0 
+7fccf403b000-7fccf4139000 rw-p 00000000 00:00 0                          [stack:9584]
+7fccf4139000-7fccf413c000 ---p 00000000 00:00 0 
+7fccf413c000-7fccf423a000 rw-p 00000000 00:00 0                          [stack:9583]
+7fccf423a000-7fccf423d000 ---p 00000000 00:00 0 
+7fccf423d000-7fccf433b000 rw-p 00000000 00:00 0                          [stack:9582]
+7fccf433b000-7fccf433e000 ---p 00000000 00:00 0 
+7fccf433e000-7fccf443c000 rw-p 00000000 00:00 0                          [stack:9581]
+7fccf443c000-7fccf443f000 ---p 00000000 00:00 0 
+7fccf443f000-7fccf453d000 rw-p 00000000 00:00 0                          [stack:9580]
+7fccf453d000-7fccf4541000 r-xp 00000000 fd:01 1578450                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libdt_socket.so
+7fccf4541000-7fccf4740000 ---p 00004000 fd:01 1578450                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libdt_socket.so
+7fccf4740000-7fccf4741000 r--p 00003000 fd:01 1578450                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libdt_socket.so
+7fccf4741000-7fccf4742000 rw-p 00004000 fd:01 1578450                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libdt_socket.so
+7fccf4742000-7fccf4745000 ---p 00000000 00:00 0 
+7fccf4745000-7fccf4843000 rw-p 00000000 00:00 0                          [stack:9579]
+7fccf4843000-7fccf4846000 ---p 00000000 00:00 0 
+7fccf4846000-7fccf4944000 rw-p 00000000 00:00 0                          [stack:9578]
+7fccf4944000-7fccf4947000 ---p 00000000 00:00 0 
+7fccf4947000-7fccf4a45000 rw-p 00000000 00:00 0                          [stack:9577]
+7fccf4a45000-7fccf4a46000 ---p 00000000 00:00 0 
+7fccf4a46000-7fccf54fb000 rw-p 00000000 00:00 0                          [stack:9576]
+7fccf54fb000-7fccf56ad000 r--s 01d32000 fd:01 1578471                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar
+7fccf56ad000-7fccf5a66000 rw-p 00000000 00:00 0 
+7fccf5a66000-7fccf5a67000 ---p 00000000 00:00 0 
+7fccf5a67000-7fccf5b67000 rw-p 00000000 00:00 0                          [stack:9575]
+7fccf5b67000-7fccf5b68000 ---p 00000000 00:00 0 
+7fccf5b68000-7fccf5cad000 rw-p 00000000 00:00 0                          [stack:9574]
+7fccf5cad000-7fccf5d28000 rw-p 00000000 00:00 0 
+7fccf5d28000-7fccf5dd3000 rw-p 00000000 00:00 0 
+7fccf5dd3000-7fccf5e7e000 rw-p 00000000 00:00 0 
+7fccf5e7e000-7fccf5ec3000 rw-p 00000000 00:00 0 
+7fccf5ec3000-7fccf5f3e000 rw-p 00000000 00:00 0 
+7fccf5f3e000-7fccf5fe9000 rw-p 00000000 00:00 0 
+7fccf5fe9000-7fccf6093000 rw-p 00000000 00:00 0 
+7fccf6093000-7fccf613e000 rw-p 00000000 00:00 0 
+7fccf613e000-7fccf613f000 rw-p 00000000 00:00 0 
+7fccf613f000-7fccf6147000 r-xp 00000000 fd:01 1578438                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7fccf6147000-7fccf6346000 ---p 00008000 fd:01 1578438                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7fccf6346000-7fccf6347000 r--p 00007000 fd:01 1578438                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7fccf6347000-7fccf6348000 rw-p 00008000 fd:01 1578438                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7fccf6348000-7fccf6352000 r-xp 00000000 fd:01 393719                     /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7fccf6352000-7fccf6551000 ---p 0000a000 fd:01 393719                     /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7fccf6551000-7fccf6552000 r--p 00009000 fd:01 393719                     /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7fccf6552000-7fccf6553000 rw-p 0000a000 fd:01 393719                     /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7fccf6553000-7fccf655e000 r-xp 00000000 fd:01 393711                     /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7fccf655e000-7fccf675d000 ---p 0000b000 fd:01 393711                     /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7fccf675d000-7fccf675e000 r--p 0000a000 fd:01 393711                     /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7fccf675e000-7fccf675f000 rw-p 0000b000 fd:01 393711                     /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7fccf675f000-7fccf6776000 r-xp 00000000 fd:01 393707                     /lib/x86_64-linux-gnu/libnsl-2.19.so
+7fccf6776000-7fccf6975000 ---p 00017000 fd:01 393707                     /lib/x86_64-linux-gnu/libnsl-2.19.so
+7fccf6975000-7fccf6976000 r--p 00016000 fd:01 393707                     /lib/x86_64-linux-gnu/libnsl-2.19.so
+7fccf6976000-7fccf6977000 rw-p 00017000 fd:01 393707                     /lib/x86_64-linux-gnu/libnsl-2.19.so
+7fccf6977000-7fccf6979000 rw-p 00000000 00:00 0 
+7fccf6979000-7fccf6982000 r-xp 00000000 fd:01 393706                     /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7fccf6982000-7fccf6b81000 ---p 00009000 fd:01 393706                     /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7fccf6b81000-7fccf6b82000 r--p 00008000 fd:01 393706                     /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7fccf6b82000-7fccf6b83000 rw-p 00009000 fd:01 393706                     /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7fccf6b83000-7fccf6e4c000 r--p 00000000 fd:01 923282                     /usr/lib/locale/locale-archive
+7fccf6e4c000-7fccf6e4e000 r-xp 00000000 fd:01 1578418                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnpt.so
+7fccf6e4e000-7fccf704e000 ---p 00002000 fd:01 1578418                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnpt.so
+7fccf704e000-7fccf704f000 r--p 00002000 fd:01 1578418                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnpt.so
+7fccf704f000-7fccf7050000 rw-p 00003000 fd:01 1578418                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnpt.so
+7fccf7050000-7fccf708a000 r-xp 00000000 fd:01 1578419                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjdwp.so
+7fccf708a000-7fccf7289000 ---p 0003a000 fd:01 1578419                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjdwp.so
+7fccf7289000-7fccf728a000 r--p 00039000 fd:01 1578419                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjdwp.so
+7fccf728a000-7fccf728b000 rw-p 0003a000 fd:01 1578419                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjdwp.so
+7fccf728b000-7fccf72b6000 r-xp 00000000 fd:01 1578423                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7fccf72b6000-7fccf74b6000 ---p 0002b000 fd:01 1578423                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7fccf74b6000-7fccf74b7000 r--p 0002b000 fd:01 1578423                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7fccf74b7000-7fccf74b9000 rw-p 0002c000 fd:01 1578423                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7fccf74b9000-7fccf74c9000 r-xp 00000000 fd:01 1578424                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7fccf74c9000-7fccf76c8000 ---p 00010000 fd:01 1578424                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7fccf76c8000-7fccf76ca000 r--p 0000f000 fd:01 1578424                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7fccf76ca000-7fccf76cb000 rw-p 00011000 fd:01 1578424                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7fccf76cb000-7fccf76d2000 r-xp 00000000 fd:01 393715                     /lib/x86_64-linux-gnu/librt-2.19.so
+7fccf76d2000-7fccf78d1000 ---p 00007000 fd:01 393715                     /lib/x86_64-linux-gnu/librt-2.19.so
+7fccf78d1000-7fccf78d2000 r--p 00006000 fd:01 393715                     /lib/x86_64-linux-gnu/librt-2.19.so
+7fccf78d2000-7fccf78d3000 rw-p 00007000 fd:01 393715                     /lib/x86_64-linux-gnu/librt-2.19.so
+7fccf78d3000-7fccf78e9000 r-xp 00000000 fd:01 393221                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fccf78e9000-7fccf7ae8000 ---p 00016000 fd:01 393221                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fccf7ae8000-7fccf7ae9000 rw-p 00015000 fd:01 393221                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fccf7ae9000-7fccf7bee000 r-xp 00000000 fd:01 393701                     /lib/x86_64-linux-gnu/libm-2.19.so
+7fccf7bee000-7fccf7ded000 ---p 00105000 fd:01 393701                     /lib/x86_64-linux-gnu/libm-2.19.so
+7fccf7ded000-7fccf7dee000 r--p 00104000 fd:01 393701                     /lib/x86_64-linux-gnu/libm-2.19.so
+7fccf7dee000-7fccf7def000 rw-p 00105000 fd:01 393701                     /lib/x86_64-linux-gnu/libm-2.19.so
+7fccf7def000-7fccf7ed5000 r-xp 00000000 fd:01 917531                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7fccf7ed5000-7fccf80d4000 ---p 000e6000 fd:01 917531                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7fccf80d4000-7fccf80dc000 r--p 000e5000 fd:01 917531                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7fccf80dc000-7fccf80de000 rw-p 000ed000 fd:01 917531                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7fccf80de000-7fccf80f3000 rw-p 00000000 00:00 0 
+7fccf80f3000-7fccf8c18000 r-xp 00000000 fd:01 1578436                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7fccf8c18000-7fccf8e18000 ---p 00b25000 fd:01 1578436                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7fccf8e18000-7fccf8eb2000 r--p 00b25000 fd:01 1578436                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7fccf8eb2000-7fccf8ed5000 rw-p 00bbf000 fd:01 1578436                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7fccf8ed5000-7fccf8f04000 rw-p 00000000 00:00 0 
+7fccf8f04000-7fccf8f1c000 r-xp 00000000 fd:01 393502                     /lib/x86_64-linux-gnu/libz.so.1.2.8
+7fccf8f1c000-7fccf911b000 ---p 00018000 fd:01 393502                     /lib/x86_64-linux-gnu/libz.so.1.2.8
+7fccf911b000-7fccf911c000 r--p 00017000 fd:01 393502                     /lib/x86_64-linux-gnu/libz.so.1.2.8
+7fccf911c000-7fccf911d000 rw-p 00018000 fd:01 393502                     /lib/x86_64-linux-gnu/libz.so.1.2.8
+7fccf911d000-7fccf9136000 r-xp 00000000 fd:01 393708                     /lib/x86_64-linux-gnu/libpthread-2.19.so
+7fccf9136000-7fccf9335000 ---p 00019000 fd:01 393708                     /lib/x86_64-linux-gnu/libpthread-2.19.so
+7fccf9335000-7fccf9336000 r--p 00018000 fd:01 393708                     /lib/x86_64-linux-gnu/libpthread-2.19.so
+7fccf9336000-7fccf9337000 rw-p 00019000 fd:01 393708                     /lib/x86_64-linux-gnu/libpthread-2.19.so
+7fccf9337000-7fccf933b000 rw-p 00000000 00:00 0 
+7fccf933b000-7fccf933e000 r-xp 00000000 fd:01 393703                     /lib/x86_64-linux-gnu/libdl-2.19.so
+7fccf933e000-7fccf953d000 ---p 00003000 fd:01 393703                     /lib/x86_64-linux-gnu/libdl-2.19.so
+7fccf953d000-7fccf953e000 r--p 00002000 fd:01 393703                     /lib/x86_64-linux-gnu/libdl-2.19.so
+7fccf953e000-7fccf953f000 rw-p 00003000 fd:01 393703                     /lib/x86_64-linux-gnu/libdl-2.19.so
+7fccf953f000-7fccf96f9000 r-xp 00000000 fd:01 393716                     /lib/x86_64-linux-gnu/libc-2.19.so
+7fccf96f9000-7fccf98f9000 ---p 001ba000 fd:01 393716                     /lib/x86_64-linux-gnu/libc-2.19.so
+7fccf98f9000-7fccf98fd000 r--p 001ba000 fd:01 393716                     /lib/x86_64-linux-gnu/libc-2.19.so
+7fccf98fd000-7fccf98ff000 rw-p 001be000 fd:01 393716                     /lib/x86_64-linux-gnu/libc-2.19.so
+7fccf98ff000-7fccf9904000 rw-p 00000000 00:00 0 
+7fccf9904000-7fccf9911000 r-xp 00000000 fd:01 1578453                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7fccf9911000-7fccf9b10000 ---p 0000d000 fd:01 1578453                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7fccf9b10000-7fccf9b11000 r--p 0000c000 fd:01 1578453                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7fccf9b11000-7fccf9b12000 rw-p 0000d000 fd:01 1578453                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7fccf9b12000-7fccf9b35000 r-xp 00000000 fd:01 393709                     /lib/x86_64-linux-gnu/ld-2.19.so
+7fccf9b35000-7fccf9b37000 r--s 00008000 fd:01 1055877                    /usr/local/share/apache-tomcat-7.0.57/bin/tomcat-juli.jar
+7fccf9b37000-7fccf9b38000 r--s 00005000 fd:01 1055868                    /usr/local/share/apache-tomcat-7.0.57/bin/commons-daemon.jar
+7fccf9b38000-7fccf9b3c000 r--s 00034000 fd:01 1578486                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+7fccf9b3c000-7fccf9b3f000 r--s 0000f000 fd:01 1578487                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+7fccf9b3f000-7fccf9b87000 rw-p 00000000 00:00 0 
+7fccf9b87000-7fccf9c1b000 rw-p 00000000 00:00 0 
+7fccf9c1b000-7fccf9c23000 rw-s 00000000 fd:01 262252                     /tmp/hsperfdata_cspace/9572
+7fccf9c23000-7fccf9c26000 ---p 00000000 00:00 0 
+7fccf9c26000-7fccf9d29000 rw-p 00000000 00:00 0                          [stack:9573]
+7fccf9d29000-7fccf9d2a000 r--s 00006000 fd:01 1055881                    /usr/local/share/apache-tomcat-7.0.57/bin/bootstrap.jar
+7fccf9d2a000-7fccf9d2b000 r--s 00002000 fd:01 1578484                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/dnsns.jar
+7fccf9d2b000-7fccf9d2d000 r--s 00012000 fd:01 1578485                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/zipfs.jar
+7fccf9d2d000-7fccf9d2f000 r--s 00006000 fd:01 1049715                    /usr/share/java/java-atk-wrapper.jar
+7fccf9d2f000-7fccf9d31000 rw-p 00000000 00:00 0 
+7fccf9d31000-7fccf9d32000 r--p 00000000 00:00 0 
+7fccf9d32000-7fccf9d34000 rw-p 00000000 00:00 0 
+7fccf9d34000-7fccf9d35000 r--p 00022000 fd:01 393709                     /lib/x86_64-linux-gnu/ld-2.19.so
+7fccf9d35000-7fccf9d36000 rw-p 00023000 fd:01 393709                     /lib/x86_64-linux-gnu/ld-2.19.so
+7fccf9d36000-7fccf9d37000 rw-p 00000000 00:00 0 
+7ffe371eb000-7ffe3720c000 rw-p 00000000 00:00 0                          [stack]
+7ffe37227000-7ffe37229000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Djava.util.logging.config.file=/usr/local/share/apache-tomcat-7.0.57/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Dslf4j.detectLoggerNameMismatch=true -Dlog4j.debug=true -Dnuxeo.home.dir=/usr/local/share/apache-tomcat-7.0.57/nxserver -Dnuxeo.log.dir=/usr/local/share/apache-tomcat-7.0.57/nxserver/log -Dfile.encoding=UTF-8 -Xms512m -Xmx1024m -XX:MaxPermSize=256m -Xmx1024m -XX:MaxPermSize=384m -agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=n -Djava.endorsed.dirs=/usr/local/share/apache-tomcat-7.0.57/endorsed -Dcatalina.base=/usr/local/share/apache-tomcat-7.0.57 -Dcatalina.home=/usr/local/share/apache-tomcat-7.0.57 -Djava.io.tmpdir=/usr/local/share/apache-tomcat-7.0.57/temp 
+java_command: org.apache.catalina.startup.Bootstrap start
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+SHELL=/bin/bash
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x9561e0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x9561e0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x7cc4d0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: SIG_IGN, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGXFSZ: [libjvm.so+0x7cc4d0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x7cc4d0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x7cc370], sa_mask[0]=0x00000000, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x7cc550], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: SIG_IGN, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGTERM: [libjvm.so+0x7cc550], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x7cc550], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTRAP: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Ubuntu 14.04 (trusty)
+uname:Linux 3.13.0-85-generic #129-Ubuntu SMP Thu Mar 17 20:50:15 UTC 2016 x86_64
+libc:glibc 2.19 NPTL 2.19 
+rlimit: STACK 8192k, CORE 0k, NPROC 31457, NOFILE 4096, AS infinity
+load average:0.87 0.33 0.29
+
+/proc/meminfo:
+MemTotal:        4048240 kB
+MemFree:          688180 kB
+Buffers:          227844 kB
+Cached:          1599476 kB
+SwapCached:            0 kB
+Active:          2477068 kB
+Inactive:         698976 kB
+Active(anon):    1386992 kB
+Inactive(anon):    15536 kB
+Active(file):    1090076 kB
+Inactive(file):   683440 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:            175120 kB
+Writeback:             0 kB
+AnonPages:       1348768 kB
+Mapped:            86376 kB
+Shmem:             53760 kB
+Slab:             129676 kB
+SReclaimable:     113668 kB
+SUnreclaim:        16008 kB
+KernelStack:        1696 kB
+PageTables:        16136 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     2024120 kB
+Committed_AS:    1901356 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       14176 kB
+VmallocChunk:   34359717116 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   1126400 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       36856 kB
+DirectMap2M:     2060288 kB
+DirectMap1G:     2097152 kB
+
+
+CPU:total 2 (1 cores per cpu, 1 threads per core) family 6 model 63 stepping 2, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, erms, tsc
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2650L v3 @ 1.80GHz
+stepping	: 2
+microcode	: 0x1
+cpu MHz		: 1799.998
+cache size	: 30720 KB
+physical id	: 0
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon rep_good nopl eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm arat xsaveopt vnmi ept fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid
+bogomips	: 3599.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 40 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2650L v3 @ 1.80GHz
+stepping	: 2
+microcode	: 0x1
+cpu MHz		: 1799.998
+cache size	: 30720 KB
+physical id	: 1
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon rep_good nopl eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm arat xsaveopt vnmi ept fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid
+bogomips	: 3599.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 40 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 4048240k(688180k free), swap 0k(0k free)
+
+vm_info: OpenJDK 64-Bit Server VM (24.95-b01) for linux-amd64 JRE (1.7.0_101-b00), built on Apr 24 2016 20:39:29 by "buildd" with gcc 4.8.2
+
+time: Sun Jun  5 18:54:45 2016
+elapsed time: 999 seconds
+

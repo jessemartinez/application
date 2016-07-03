@@ -2,6 +2,17 @@
     <services-record-path id="bm">valuationcontrols_bm:http://collectionspace.org/services/valuationcontrol/local/bm,valuationcontrols_bm</services-record-path>
 
     <section id="objectValuationInformation">
+        <field id="valueType">
+            <!-- updating options list -->
+            <options>
+                <option id="">Please select a value</option>
+                <option id="Current Value">Current Value</option>
+                <option id="Original Value">Original Value</option>
+                <option id="Appraiser Value">Appraiser Value</option>
+                <option id="Purchase Price">Purchase Price</option>
+                <option id="Auction Hammer Price">Auction Hammer Price</option>
+            </options>
+        </field>
         <repeat id="bmValueAmountsList/bmValueAmounts" section="bm">
             <field id="bmValueAmount" ui-type="validated" datatype="float" section="bm"></field>
             <field id="bmValueNote" section="bm"></field>

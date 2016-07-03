@@ -10,6 +10,17 @@
                 <option id="library" sample="LIB2016.1">Library</option>
             </options>
         </field>
+        <field id="acquisitionMethod">
+            <!-- updating options list -->
+            <options>
+                <option id="exchange">Exchange</option>
+                <option id="found in collections">Found in Collections</option>
+                <option id="gift">Gift</option>
+                <option id="purchase">Purchase</option>
+                <option id="transfer">Transfer</option>
+                <option id="unknown">Unknown</option>
+            </options>
+        </field>
         <field id="acquisitionObjectCount" ui-search="range" ui-type="validated" datatype="integer" section="bm"></field>
     </section>
 </record>

@@ -14,7 +14,7 @@
         <title-ref>bmnumbertype</title-ref>
         <title>Number Type</title>
         <options>
-            <option id="leader">Leader</option>
+            <option id="lender">Lender</option>
             <option id="previous">Previous</option>
             <option id="inventory">Inventory</option>
             <option id="fic">FIC</option>

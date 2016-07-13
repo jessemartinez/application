@@ -6,5 +6,15 @@
                 <option id="bm_objectexit" sample="X2016.1">Object Exit</option>
             </options>
         </field>
+        <repeat id="exitMethods">
+            <field id="exitMethod" ui-search="repeatable" autocomplete="vocab-exitmethod" ui-type="enum">
+                <!-- removing options list; adding exitmethod vocb -->
+                <options />
+            </field>
+        </repeat>
+        <field id="exitReason" ui-search="repeatable" autocomplete="vocab-exitreason" ui-type="enum">
+            <!-- removing options list; adding exitreason vocb -->
+            <options />
+        </field>
     </section>
 </record>

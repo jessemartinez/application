@@ -194,4 +194,24 @@
             <option id="sound">Sound</option>
         </options>
     </instance>
+    <instance id="vocab-exitmethod">
+        <web-url>exitmethod</web-url>
+        <title-ref>exitmethod</title-ref>
+        <title>Exit method</title>
+        <options>
+            <option id="courier">Courier</option>
+            <option id="in_person">In Person</option>
+            <option id="post">Post</option>
+        </options>
+    </instance>
+    <instance id="vocab-exitreason">
+        <web-url>exitreason</web-url>
+        <title-ref>exitreason</title-ref>
+        <title>Exit reason</title>
+        <options>
+            <option id="deaccession">Deaccession</option>
+            <option id="disposal">Disposal</option>
+            <option id="return_of_loan">Return of Loan</option>
+        </options>
+    </instance>
 </instances>

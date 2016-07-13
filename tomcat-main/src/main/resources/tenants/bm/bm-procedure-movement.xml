@@ -9,4 +9,10 @@
             </options>
         </field>
     </section>
+    <section id="inventory">
+        <field id="inventoryActionRequired" ui-search="repeatable" autocomplete="vocab-inventoryactionrequired" ui-type="enum">
+            <!-- removing options list; adding inventoryactionrequired vocb -->
+            <options />
+        </field>
+    </section>
 </record>

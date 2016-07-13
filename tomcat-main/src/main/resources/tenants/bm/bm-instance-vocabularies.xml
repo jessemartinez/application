@@ -172,4 +172,14 @@
             <option id="longterm_collections_management_and_storage">Long-term collections management and storage</option>
         </options>
     </instance>
+    <instance id="vocab-inventoryactionrequired">
+        <web-url>inventoryactionrequired</web-url>
+        <title-ref>inventoryactionrequired</title-ref>
+        <title>Inventory action required</title>
+        <options>
+            <option id="conservation">Conservation</option>
+            <option id="preservation">Preservation</option>
+            <option id="rehousing">Re-housing</option>
+        </options>
+    </instance>
 </instances>

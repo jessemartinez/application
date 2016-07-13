@@ -118,4 +118,17 @@
             <option id="rgb">RGB</option>
         </options>
     </instance>
+    <instance id="vocab-acquisitionmethod">
+        <web-url>acquisitionmethod</web-url>
+        <title-ref>acquisitionmethod</title-ref>
+        <title>Acquisition method</title>
+        <options>
+            <option id="exchange">Exchange</option>
+            <option id="found_in_collections">Found in Collections</option>
+            <option id="gift">Gift</option>
+            <option id="purchase">Purchase</option>
+            <option id="transfer">Transfer</option>
+            <option id="unknown">Unknown</option>
+        </options>
+    </instance>
 </instances>

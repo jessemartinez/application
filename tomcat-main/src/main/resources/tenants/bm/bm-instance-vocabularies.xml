@@ -182,4 +182,16 @@
             <option id="rehousing">Re-housing</option>
         </options>
     </instance>
+    <instance id="vocab-mediatypes">
+        <web-url>mediatypes</web-url>
+        <title-ref>mediatypes</title-ref>
+        <title>Media types</title>
+        <options>
+            <option id="dataset">Dataset</option>
+            <option id="document">Document</option>
+            <option id="moving_image">Moving Image</option>
+            <option id="still_image">Still Image</option>
+            <option id="sound">Sound</option>
+        </options>
+    </instance>
 </instances>

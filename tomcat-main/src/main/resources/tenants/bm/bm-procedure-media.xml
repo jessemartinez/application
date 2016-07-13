@@ -7,6 +7,12 @@
                 <option id="bm_media" sample="MR2016.1">Media Resource</option>
             </options>
         </field>
+        <repeat id="types">
+            <field id="type" ui-search="repeatable" autocomplete="vocab-mediatypes" ui-type="enum">
+                <!-- removing options list; adding mediatypes vocb -->
+                <options />
+            </field>
+        </repeat>
         <field id="boilerplatePhotoCredit" section="bm"></field>
     </section>
 </record>

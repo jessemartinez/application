@@ -147,4 +147,15 @@
             <option id="stolen">Stolen</option>
         </options>
     </instance>
+    <instance id="vocab-entryreason">
+        <web-url>entryreason</web-url>
+        <title-ref>entryreason</title-ref>
+        <title>Entry reason</title>
+        <options>
+            <option id="enquiry">Enquiry</option>
+            <option id="consideration">Consideration</option>
+            <option id="commission">Commission</option>
+            <option id="loan">Loan</option>
+        </options>
+    </instance>
 </instances>

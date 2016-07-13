@@ -131,4 +131,20 @@
             <option id="unknown">Unknown</option>
         </options>
     </instance>
+    <instance id="vocab-completeness">
+        <web-url>completeness</web-url>
+        <title-ref>completeness</title-ref>
+        <title>Completeness</title>
+        <options>
+            <option id="broken">Broken</option>
+            <option id="complete">Complete</option>
+            <option id="cracked">Cracked</option>
+            <option id="dented">Dented</option>
+            <option id="incomplete">Incomplete</option>
+            <option id="mended">Mended</option>
+            <option id="missing">Missing</option>
+            <option id="rippedtorn">Ripped/torn</option>
+            <option id="stolen">Stolen</option>
+        </options>
+    </instance>
 </instances>

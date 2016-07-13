@@ -1,20 +1,9 @@
 <record id="conditioncheck">
     <section id="objectConditionInformation">
         <repeat id="completenessGroupList/completenessGroup">
-            <field id="completeness">
-                <!-- updating options list -->
-                <options>
-                    <option id="" default="yes">Please select a value</option>
-                    <option id="broken">Broken</option>
-                    <option id="complete">Complete</option>
-                    <option id="cracked">Cracked</option>
-                    <option id="dented">Dented</option>
-                    <option id="incomplete">Incomplete</option>
-                    <option id="mended">Mended</option>
-                    <option id="missing">Missing</option>
-                    <option id="ripped/torn">Ripped/torn</option>
-                    <option id="stolen">Stolen</option>
-                </options>
+            <field id="completeness" autocomplete="vocab-completeness" ui-type="enum">
+                <!-- removing options list; adding completeness vocb -->
+                <options />
             </field>
         </repeat>
     </section>

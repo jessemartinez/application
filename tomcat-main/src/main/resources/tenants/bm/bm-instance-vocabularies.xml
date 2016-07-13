@@ -115,7 +115,7 @@
         <options>
             <option id="cmyk">CMYK</option>
             <option id="hex">HEX</option>
-            <option id="rgb"> RGB</option>
+            <option id="rgb">RGB</option>
         </options>
     </instance>
 </instances>

@@ -158,4 +158,18 @@
             <option id="loan">Loan</option>
         </options>
     </instance>
+    <instance id="vocab-loanpurpose">
+        <web-url>loanpurpose</web-url>
+        <title-ref>loanpurpose</title-ref>
+        <title>Loan purpose</title>
+        <options>
+            <option id="exhibition">Exhibition</option>
+            <option id="research">Research</option>
+            <option id="scientific_or_exhibit_preparation">Scientific or exhibit preparation</option>
+            <option id="analysis">Analysis</option>
+            <option id="photography">Photography</option>
+            <option id="conservation_or_other_requested_services">Conservation or other requested services</option>
+            <option id="longterm_collections_management_and_storage">Long-term collections management and storage</option>
+        </options>
+    </instance>
 </instances>

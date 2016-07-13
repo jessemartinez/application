@@ -1,0 +1,8 @@
+<record id="loanin">
+    <section id="loaninInformation">
+        <field id="loanPurpose" ui-search="repeatable" seperate_ui_container="true" autocomplete="vocab-loanpurpose" ui-type="enum">
+            <!-- removing options list; adding acquisitionmethod vocb -->
+            <options />
+        </field>
+    </section>
+</record>

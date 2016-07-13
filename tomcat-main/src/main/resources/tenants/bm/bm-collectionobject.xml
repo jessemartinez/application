@@ -29,6 +29,52 @@
         <field id="approvedForWeb" ui-search="single" datatype="boolean" section="bm"></field>
         <field id="conditionStatus" ui-search="repeatable" autocomplete="vocab-conditionstatus" ui-type="enum" section="bm"></field>
     </section>
+    <section id="descriptionInformation">
+        <section id="contentInformation">
+            <repeat id="contentPositions">
+                <field id="contentPosition" seperate_ui_container="true" autocomplete="vocab-contentposition" ui-type="enum">
+                    <!-- removing options list; adding contentposition vocb -->
+                    <options />
+                </field>
+            </repeat>
+            <repeat id="contentObjectGroupList/contentObjectGroup">
+                <field id="contentObjectType" seperate_ui_container="true" autocomplete="vocab-contentobjecttype" ui-type="enum">
+                    <!-- removing options list; adding contentobjecttype vocb -->
+                    <options />
+                </field>
+            </repeat>
+        </section>
+        <section id="textualInscriptionInformation">
+            <repeat id="textualInscriptionGroupList/textualInscriptionGroup">
+                <field id="inscriptionContentPosition" seperate_ui_container="true" autocomplete="vocab-inscriptioncontentposition" ui-type="enum">
+                    <!-- removing options list; adding inscriptioncontentposition vocb -->
+                    <options />
+                </field>
+                <field id="inscriptionContentType" seperate_ui_container="true" autocomplete="vocab-inscriptioncontenttype" ui-type="enum">
+                    <!-- removing options list; adding inscriptioncontenttype vocb -->
+                    <options />
+                </field>
+            </repeat>
+        </section>
+        <section id="nonTextualInscriptionInformation">
+            <repeat id="nonTextualInscriptionGroupList/nonTextualInscriptionGroup">
+                <field id="inscriptionDescriptionPosition" seperate_ui_container="true" autocomplete="vocab-inscriptiondescriptionposition" ui-type="enum">
+                    <!-- removing options list; adding inscriptiondescriptionposition vocb -->
+                    <options />
+                </field>
+                <field id="inscriptionDescriptionType" seperate_ui_container="true" autocomplete="vocab-inscriptiondescriptiontype" ui-type="enum">
+                    <!-- removing options list; adding inscriptiondescriptiontype vocb -->
+                    <options />
+                </field>
+            </repeat>
+        </section>
+    </section>
+    <section id="objectHistoryAssociationInformation">
+        <field id="ownershipCategory" autocomplete="vocab-ownershipcategory" ui-type="enum">
+            <!-- removing options list; adding ownershipcategory vocb -->
+            <options />
+        </field>
+    </section>
     <section id="objectViewerContributionInformation">
         <field id="viewersPersonalResponse" autocomplete="person-person">
             <!-- adding person vocab -->

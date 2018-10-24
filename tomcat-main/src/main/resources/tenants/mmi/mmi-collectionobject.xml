@@ -50,7 +50,7 @@
 		<repeat id="responsibleDepartments" has-primary="yes">
 			<selector>object-identification-responsible-department</selector>
 			<!-- updated option values -->
-			<field id="responsibleDepartment" ui-search="repeatable" mini="search" seperate_ui_container="true">
+			<field id="responsibleDepartment" ui-search="repeatable" mini="search,list" seperate_ui_container="true">
 				<selector>object-identification-responsible-department</selector>
 				<options>
 					<option id="notyetassigned" default="yes">Not yet assigned</option>
@@ -104,9 +104,9 @@
 			</repeat>
 			<!--
 			This repeatable field group conflicts with the "contentWorksGroupList/contentWorksGroup" of
-			the Variable Media schema extension.
+			the Variable Media schema extension. List/Group container has been renamed to "mmiContentWorkList/mmiContentWorkGroup"
 			-->
-			<repeat id="contentWorkList/contentWorkGroup" section="mmi">
+			<repeat id="mmiContentWorkList/mmiContentWorkGroup" section="mmi">
 				<field id="contentWork" autocomplete="work-work" ui-search="repeatable" section="mmi" >
 					<selector>object-content-contentWork</selector>
 				</field>

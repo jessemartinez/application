@@ -8,7 +8,7 @@
     </instances>
     <section id="locationTermInformation">
        <!-- changed term list from dynamic to static -->
-       <field id="locationType">
+       <field id="locationType" ui-search="repeatable">
             <selector>location-type</selector>
             <options>
                 <option id="">Please select a value</option>

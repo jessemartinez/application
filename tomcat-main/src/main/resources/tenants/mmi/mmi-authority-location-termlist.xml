@@ -2,7 +2,7 @@
     <section id="termInformation">
         <repeat id="locTermGroupList/locTermGroup">
             <!-- updated option values -->
-            <field id="termStatus">
+            <field id="termStatus" ui-search="repeatable" seperate_ui_container="true" mini="search,list,relate">
                 <options>
                     <option id="">Please select a value</option>
                     <option id="quickadded">Quick added</option>

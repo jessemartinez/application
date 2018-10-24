@@ -13,6 +13,7 @@
                 <selector>acquisition-mmiAcquisitionDate</selector>
             </field>
         </repeat>
+        <!-- updated option values -->
         <field id="acquisitionMethod" ui-search="repeatable" seperate_ui_container="true">
 			<selector>acquisition-acquisition-method</selector>
             <options>
@@ -26,6 +27,7 @@
         </field>
         <field id="acquisitionExtent" section="mmi" datatype="largetext" />
 		<repeat id="acquisitionSources">
+            <!-- change autocomplete to only use person-person -->
 			<field id="acquisitionSource" mini="summary,search,list,relate" in-title="yes"
 				ui-search="repeatable" autocomplete="person-person">
 				<selector>acquisition-acquisitionSource</selector>

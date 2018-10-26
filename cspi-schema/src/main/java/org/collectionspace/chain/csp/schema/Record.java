@@ -54,6 +54,7 @@ public class Record implements FieldParent {
 
 	protected SchemaUtils utils = new SchemaUtils();
 
+	private String configFileSrcName = null; // The tenant config file name -e.g, botgarden-tenant.xml
 	private Map<String, Structure> structure = new HashMap<String, Structure>();
 	private Map<String, Map<String, String>> uisection = new HashMap<String, Map<String, String>>();
 	private List<FieldSet> selfRenderers = new ArrayList<FieldSet>();
@@ -97,11 +98,22 @@ public class Record implements FieldParent {
 	private HashSet<String> authTypeTokenSet = new HashSet<String>();
 	private Record lastAuthoriyProxy = null; // Used during Service binding generation.  Only the "baseAuthority" record ever uses this member.  Values would be things like PersonAuthority, OrgAuthority, and other authority records.
 
+	// Map field id to id of the field to be used for sorting
+	private Map<String, String> sortKeys = new HashMap<String, String>();
+	
 	/* Service stuff */
 	private Map<String, String> services_record_paths = new HashMap<String, String>();
 	private Map<String, String> services_instances_paths = new HashMap<String, String>();
 	private Map<String, Field> services_filter_param = new HashMap<String, Field>();
 
+	public String getConfigFileName() {
+		return this.configFileSrcName;
+	}
+	
+	public void setConfigFileName(String fileName) {
+		this.configFileSrcName = fileName;
+	}
+	
 	public Record getLastAuthorityProxy() {
 		return this.lastAuthoriyProxy;
 	}
@@ -261,6 +273,7 @@ public class Record implements FieldParent {
 		return this.whoamI;
 	}
 
+	@Override
 	public boolean isTrueRepeatField() {
 		return false;
 	}
@@ -315,6 +328,23 @@ public class Record implements FieldParent {
 				fed.setSearchType("range");
 				fed.setType(searchf.getUIType());
 				fst.setType(searchf.getUIType());
+				
+				if (searchf.getUIType().equals("computed")) {
+					Field field = (Field) searchf;
+					// Copy the necessary attributes into the start and end fields
+					fst.setUIFunc(field.getUIFunc());
+					fst.setDataType(field.getDataType());
+					fst.setLabel(field.getLabel());
+					fst.setReadOnly(field.isReadOnly());
+					fst.setUIArgs(suffixUIArgs(field.getUISearchArgs().equals("") ? field.getUIArgs() : field.getUISearchArgs(), RANGE_START_SUFFIX));
+					
+					fed.setUIFunc(field.getUIFunc());
+					fed.setDataType(field.getDataType());
+					fed.setLabel(field.getLabel());
+					fed.setReadOnly(field.isReadOnly());
+					fed.setUIArgs(suffixUIArgs(field.getUISearchArgs().equals("") ? field.getUIArgs() : field.getUISearchArgs(), RANGE_END_SUFFIX));
+				}
+				
 				searchFieldFullList.put(fst.getID(), fst);
 				searchFieldFullList.put(fed.getID(), fed);
 			} else {
@@ -323,6 +353,17 @@ public class Record implements FieldParent {
 		}
 	}
 
+	private String suffixUIArgs(String args, String suffix) {
+		String[] elements = args.split(",");
+
+		for (int i=0; i<elements.length; i++) {
+			String element = elements[i];
+			elements[i] = element + suffix;
+		}
+		
+		return StringUtils.join(elements, ",");
+	}
+	
 	public void addNestedFieldList(String r) {
 		nestedFieldList.put(r, r);
 	}
@@ -499,7 +540,12 @@ public class Record implements FieldParent {
 	}
 
 	/** end field functions **/
-
+	@Override
+	public String toString() {
+		return getID();
+	}
+	
+	@Override
 	public String getID() {
 		return utils.getString("@id");
 	}
@@ -627,6 +673,7 @@ public class Record implements FieldParent {
 		return null;
 	}
 
+	@Override
 	public String enumBlankValue() {
 		return utils.getString("enum-blank");
 	}
@@ -1346,6 +1393,7 @@ public class Record implements FieldParent {
 		//out.put(this.getID(), record);
 	}
 
+	@Override
 	public Record getRecord() {
 		return this;
 	}
@@ -1369,5 +1417,13 @@ public class Record implements FieldParent {
 	@Override
 	public boolean isExpander() {
 		return false;
+	}
+	
+	public void setSortKey(String fieldId, String sortFieldId) {
+		sortKeys.put(fieldId, sortFieldId);
+	}
+	
+	public String getSortKey(String fieldId) {
+		return sortKeys.get(fieldId);
 	}
 }

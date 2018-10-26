@@ -23,7 +23,7 @@
 		<ui-props-cache-timeout>2592000</ui-props-cache-timeout>
 	</admin>
 	<email>
-		<baseurl>http://localhost:@JEE_PORT@</baseurl>
+		<baseurl>http://qa.collectionspace.org:@JEE_PORT@</baseurl>
 		<from>admin@core.collectionspace.org</from>
 		<to></to>
 		<!-- if specified then all emails will send to this address - used for debugging -->
@@ -53,7 +53,7 @@
 				<id>1</id>
 				<name>core.collectionspace.org</name>
 				<version>0.1</version>
-				<display-name>Collectionspace Core Tenant</display-name>
+				<display-name>CollectionSpace Core Tenant</display-name>
 				<create-disabled>${CSPACE_CORE_CREATE_DISABLED_OPT}</create-disabled>
 			</tenant>
 			<repository>
@@ -93,18 +93,18 @@
 			<find-page>myCollectionSpace</find-page>
 			<tmp-schema-path></tmp-schema-path>
 			<mappings>
-				<map>
+				<map id="record">
 					<recordtype>record</recordtype>
 					<file>/core/html/record.html</file>
 				</map>
-				<map>
+				<map id="authority">
 					<recordtype>authority</recordtype>
 					<file>/core/html/record.html</file>
 					<configure>
 						<meta id="recordType">{instance/web-url}</meta>
 					</configure>
 				</map>
-				<map>
+				<map id="procedure">
 					<url></url>
 					<recordtype>procedure</recordtype>
 					<file>/core/html/record.html</file>

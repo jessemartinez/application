@@ -165,6 +165,8 @@ public class ServicesConnection {
 				// XXX Not sure if or when this ever actually writes to stderr?
 				body_data = new TeeInputStream(body_data, System.err);
 			}
+			
+			boolean releaseConnection = true;
 			try {
 				HttpClient client = makeClient(creds, cache);
 
@@ -185,7 +187,7 @@ public class ServicesConnection {
 					perflog.debug(System.currentTimeMillis() + ",\"" + Thread.currentThread().getName() + "\",svc,app," + requestContext + "HttpClient.executeMethod done");
 				}
 
-				out.setResponse(method, response);
+				releaseConnection = out.setResponse(method, response);
 			} catch (ConnectionException ce) {
 				throw new ConnectionException(ce.getMessage(), ce.getStatus(), base_url + "/" + uri, ce);
 			} catch (ExistException ee) {
@@ -193,8 +195,18 @@ public class ServicesConnection {
 			} catch (Exception e) {
 				throw new ConnectionException(e.getMessage(), 0, base_url + "/" + uri, e);
 			} finally {
-				method.releaseConnection();
-
+				if (releaseConnection == true) {
+					method.releaseConnection();
+					// Only release the connection if we know the associated response stream has been
+					// read and processed. The response streams are instances of AutoCloseInputStream, which will automatically
+					// close after being read. Also, the AutoCloseInputStream response streams will close their corresponding HttpMethod instance connection
+					// once their data has been completely consumed.
+				}
+				
+				if (log.isTraceEnabled()) {
+					log.trace("HTTP connection pool size: " + manager.getConnectionsInPool());
+				}
+				
 				if (log.isWarnEnabled()) {
 					if (manager.getConnectionsInPool() >= MAX_SERVICES_CONNECTIONS) {
 						log.warn("reached max services connection limit of " + MAX_SERVICES_CONNECTIONS);
@@ -259,6 +271,12 @@ public class ServicesConnection {
 		return out;
 	}
 
+	public ReturnedDocument getBatchDocument(RequestMethod method_type,String uri,Document body,CSPRequestCredentials creds,CSPRequestCache cache) throws ConnectionException {
+		ReturnedDocument out=new ReturnedDocument();
+		doRequest(out,method_type,uri,makeDocumentSource(body),creds,cache);
+		return out;
+	}
+	
 	public ReturnedURL getPublishedReportDocumentURL(RequestMethod method_type,String uri,Document body,CSPRequestCredentials creds,CSPRequestCache cache) throws ConnectionException {
 		ReturnedURL out=new ReturnedURL();
 		doRequest(out,method_type,uri,makeDocumentSource(body),creds,cache);

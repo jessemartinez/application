@@ -18,6 +18,10 @@
     value="${tenants.dir}/${template.tenant.shortname}/${settings.file.name}"/>
   <property name="tenant.settings.file" value="${tenants.dir}/${tenant.shortname}/${settings.file.name}"/>
   
+	<target name="bamboo">
+		<ant antfile="war-entry/build.xml" target="bamboo" inheritAll="false" />
+	</target>
+	
   <!-- This target inherits from an existing target in the imported
        utility routines buildfile, and adds its own behavior specific to this
        CollectionSpace source code layer. -->
@@ -59,6 +63,7 @@
   
   <target name="update-text-in-tenant-settings"
     depends="update-tenant-id-in-tenant-settings,
+    update-disabled-flag-in-tenant-settings,
     update-tenant-internet-domain-in-tenant-settings,
     update-tenant-shortname-in-tenant-settings">
   </target>
@@ -73,6 +78,16 @@
       file="${tenant.settings.file}"
       match="&lt;id&gt;(.*)&lt;/id&gt;"
       replace="&lt;id&gt;${tenant.id}&lt;/id&gt;">
+    </replaceregexp>
+  </target>
+  
+  <target name="update-disabled-flag-in-tenant-settings">
+    <!-- Ensure that even if the template tenant is disabled, -->
+    <!-- the new, cloned tenant will always be created as 'enabled'. -->
+    <replaceregexp
+      file="${tenant.settings.file}"
+      match="&lt;create-disabled&gt;(.*)&lt;/create-disabled&gt;"
+      replace="&lt;create-disabled&gt;false&lt;/create-disabled&gt;">
     </replaceregexp>
   </target>
 

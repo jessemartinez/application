@@ -21,6 +21,7 @@ import java.util.Set;
 
 import javax.servlet.http.HttpSession;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.exception.ExceptionUtils;
 import org.collectionspace.chain.util.misc.JSON;
@@ -47,6 +48,7 @@ public class CompositeWebUIRequestPart implements UIRequest {
 	private String mime_type_out="";
 	private boolean failure=false;
 	private Exception exception;
+	private Integer status = null;
 	
 	public CompositeWebUIRequestPart(WebUIRequest parent,JSONObject query) throws JSONException, UIException {
 		this.parent=parent;
@@ -76,9 +78,11 @@ public class CompositeWebUIRequestPart implements UIRequest {
 		}
 	}
 	
+	@Override
 	public int getCacheMaxAgeSeconds() {
 		return 0;
 	}
+	@Override
 	public void setCacheMaxAgeSeconds(int cacheMaxAgeSeconds) {
 		// Ignore this for now. Caching composite requests is not really clear.
 	}
@@ -166,9 +170,11 @@ public class CompositeWebUIRequestPart implements UIRequest {
 			throw new UIException("Cannot get request body, JSONException",e);
 		}
 	}
+	@Override
 	public byte[] getbyteBody() throws UIException {
 		return null;
 	}
+	@Override
 	public String getFileName() throws UIException{
 		return "";
 	}
@@ -179,6 +185,7 @@ public class CompositeWebUIRequestPart implements UIRequest {
 		return jsonString;
 	}
 
+	@Override
 	public String getContentType() throws UIException{
 		return null;
 	}
@@ -221,6 +228,7 @@ public class CompositeWebUIRequestPart implements UIRequest {
 	@Override
 	public UISession getSession() throws UIException { return parent.getSession(); }
 
+	@Override
 	public  HttpSession getHttpSession() { return null; }
 
 
@@ -250,6 +258,7 @@ public class CompositeWebUIRequestPart implements UIRequest {
 		pw.flush();
 	}
 	
+	@Override
 	public void sendUnknown(String data, String contenttype, String contentDisposition) throws UIException {
 
 		mime_type_out=contenttype;
@@ -258,10 +267,22 @@ public class CompositeWebUIRequestPart implements UIRequest {
 		pw.flush();
 	}
 
+	@Override
 	public void sendUnknown(byte[] data, String contenttype, String contentDisposition) throws UIException {
 		mime_type_out=contenttype;
 		try {
 			body_out.write(data);
+			body_out.flush();
+		} catch (IOException e) {
+			throw new UIException("Could not write data",e);
+		}
+	}
+	
+	@Override
+	public void sendUnknown(InputStream data, String contenttype, String contentDisposition) throws UIException {
+		mime_type_out=contenttype;
+		try {
+			IOUtils.copy(data, body_out);
 			body_out.flush();
 		} catch (IOException e) {
 			throw new UIException("Could not write data",e);
@@ -312,5 +333,21 @@ public class CompositeWebUIRequestPart implements UIRequest {
 		PrintWriter pw=new PrintWriter(body_out);
 		pw.print(url);
 		pw.flush();
+	}
+
+	@Override
+	public String getTenant() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setStatus(int status) {
+		this.status  = status;
+	}
+
+	@Override
+	public Integer getStatus() {
+		return status;
 	}
 }

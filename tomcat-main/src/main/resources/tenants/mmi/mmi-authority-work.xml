@@ -25,5 +25,13 @@
                 </options>
             </field>
         </repeat>
+        <repeat id="creatorGroupList/creatorGroup">
+            <!-- change autocomplete to only use person-person,person-person_shared -->
+            <field id="creator" ui-search="repeatable" autocomplete="person-person,person-person_shared"/>
+        </repeat>
+        <repeat id="publisherGroupList/publisherGroup">
+            <!-- change autocomplete to only use person-person,person-person_shared -->
+            <field id="publisher" ui-search="repeatable" autocomplete="person-person,person-person_shared"/>
+        </repeat>
     </section>
 </record>

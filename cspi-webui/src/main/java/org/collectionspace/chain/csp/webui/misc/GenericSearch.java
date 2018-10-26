@@ -9,17 +9,17 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+import org.apache.commons.lang.StringUtils;
+
 import org.collectionspace.chain.csp.webui.main.WebMethod;
 import org.collectionspace.chain.csp.schema.Field;
 import org.collectionspace.chain.csp.schema.FieldParent;
 import org.collectionspace.chain.csp.schema.FieldSet;
-import org.collectionspace.chain.csp.schema.Instance;
 import org.collectionspace.chain.csp.schema.Record;
 import org.collectionspace.chain.csp.schema.Repeat;
 import org.collectionspace.csp.api.ui.UIException;
@@ -237,7 +237,16 @@ public class GenericSearch {
 								//convert sortKey
 								fs = r.getFieldFullList(fieldname); // CSPACE-4909: Getting null with fieldname = "movements_common:locationDate"
 							}
-							if(fs.hasMergeData()){ //if this field is made up of multi merged fields in the UI then just pick the first field to sort on as services doesn't search on merged fields.
+							
+							if (fs == null) {
+								String msg = String.format("Undefined field name '%s' specified in query for '%s' records.",
+										fieldname, r.whoamI);
+								UIException e = new UIException(msg);
+								log.error(msg, e);
+								throw e;
+							}
+							
+							if (fs.hasMergeData()) { //if this field is made up of multi merged fields in the UI then just pick the first field to sort on as services doesn't search on merged fields.
 								Field f = (Field)fs;
 								for(String fm : f.getAllMerge()){
 									if(fm!=null){
@@ -247,10 +256,16 @@ public class GenericSearch {
 								}
 							}
 							fieldname = fs.getID();
-							FieldSet tmp = fs;
-							fieldname = getSearchSpecifierForField(fs, true);
+							String sortFieldname = r.getSortKey(fieldname);
 							
-	
+							if (StringUtils.isNotEmpty(sortFieldname)) {
+								log.debug("Found sort key " + sortFieldname + " for " + fieldname);
+								fs = r.getFieldFullList(sortFieldname);
+							}
+							
+							FieldSet tmp = fs; // for debugging only
+							fieldname = getSearchSpecifierForField(fs, true);
+
 							String tablebase = r.getServicesRecordPath(fs.getSection()).split(":",2)[0];
 							String newvalue = tablebase+":"+fieldname;
 							restriction.put(restrict,newvalue);
@@ -448,6 +463,11 @@ public class GenericSearch {
 			log.error("buildQueryClauseForItem: fieldName does not map to a FieldSet:"+fieldName);
 			return queryClause;
 		}
+		
+		String datatype = "";
+		if (fieldSet instanceof Field) {
+			datatype = ((Field)fieldSet).getDataType();
+		}
 
 		// Used, e.g., when a base entry field is used to compute the actual search field;
 		// do not want to build query term for the base entry field 
@@ -516,7 +536,27 @@ public class GenericSearch {
 					// Leave queryClause empty and fall through
 	            }
 			}
-		} else if(item instanceof String) {	// Includes fields of types String, int, float, authRefs
+		} else if (datatype.equals(FieldSet.DATATYPE_BOOLEAN)) {
+			Boolean value = null; 
+			
+			if (item instanceof String) {
+				String valueString = (String) item;
+				
+				if (!valueString.isEmpty()) {
+					value = Boolean.parseBoolean((String) item);
+				}
+			} else if (item instanceof Boolean) { 
+				value = (Boolean) item;
+			}else {
+				log.error("GenericSearch.buildQuery field of type boolean not passed boolean or string value: "
+						+ fieldName );
+			}
+			
+			if (value != null) {
+				queryClause = "(" + getSchemaQualifiedSearchSpecifierForField(r, fieldName, fieldSet)
+						+ (value ? " = 1": " = 0") + ")";
+			}
+		} else if (item instanceof String) {	// Includes fields of types String, int, float, authRefs
 			String value = (String)item;
 			String wrapChar = getQueryValueWrapChar(fieldSet);
 			if(!value.isEmpty()) {
